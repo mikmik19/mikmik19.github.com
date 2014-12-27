@@ -30,9 +30,6 @@ dt {
     height: 100px;
     border-right: 1px solid #999; 
 }
-dd {
-    
-}
 
 dd p {
     padding-left: 180px;
