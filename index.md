@@ -92,5 +92,5 @@ dl .clearfix {
 <div class="clear"></div>
 <h2>Publications list</h2>
 <div class="cite"> 
-Jakobsen, B., Niss, K., & Olsen, N. B. (2005). Dielectric and shear mechanical alpha and beta relaxations in seven glass-forming liquids. The Journal of chemical physics, 123(23), 234511.
+
 </di>
