@@ -4,6 +4,17 @@ title: Home
 permalink: /
 ---
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-58194853-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 <style type="text/css">
 * { margin: 0; padding: 0; }
 body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
@@ -67,7 +78,7 @@ dl .clearfix {
         <dt>Experience</dt>
         <dd>
             <p><strong>Sep-Oct 2014:</strong> Philosophy of science<br>
-            <strong>Sep-Oct 2013:</strong> Introduction to quantitate data analysis w. MatLab<br>
+            <strong>Sep-Oct 2013:</strong> Introduction to quantitative data analysis w. MatLab<br>
             <strong>Feb-Mar 2013:</strong> Physics with the philosophy of science</p>
         </dd>
         </div>
@@ -91,6 +102,43 @@ dl .clearfix {
 
 <div class="clear"></div>
 <h2>Publications list</h2>
-<div class="cite"> 
 
-</di>
+<style type="text/css">
+table.gridtable {
+    font-family: verdana,arial,sans-serif;
+    font-size:12px;
+    border-width: 0px;
+    border-collapse: collapse;
+}
+table.gridtable th {
+    border-width: 0px;
+    padding: 4px;
+    border-style: solid;
+}
+table.gridtable td {
+    padding: 8px;
+}
+
+td:nth-child(3) {background: rgb(0,255,0);}
+</style>
+
+<table class="gridtable">
+<tbody><tr>
+  <th>Year published</th>
+  <th>Reference</th>
+  <th># of times cited</th>
+</tr>
+<tr>
+<td>2015</td>
+<td>Jensen, Mikkel Hartmann. "Fake bogus reference for style testing" JCP 123.45 (2015): 123456.</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
