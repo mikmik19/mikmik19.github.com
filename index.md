@@ -125,7 +125,7 @@ table.gridtable th {
 table.gridtable td {
     padding: 8px;
 }
-td:nth-child(3) {background: rgb(1,1,1);}
+<!--td:nth-child(3) {background: rgb(1,1,1);}-->
 </style>
 
 
