@@ -102,9 +102,17 @@ dl .clearfix {
 
 <div class="clear"></div>
 <h2>Publications list</h2>
-<p>
-Jensen, Mikkel Hartmann, et al. "A systematic study of the isothermal crystallization of the mono-alcohol n-butanol monitored by dielectric spectroscopy." The Journal of chemical physics 143.13 (2015): 134501.
-</p>
+<table style="width:80%">
+    <tr>
+    <td>(1)</td>
+    </tr>
+    <tr>
+    <td>Jensen, Mikkel Hartmann, et al. "A systematic study of the isothermal crystallization of the mono-alcohol n-butanol monitored by dielectric spectroscopy." The Journal of chemical physics 143.13 (2015): 134501</td>
+    </tr>
+    <tr>
+    <td>Cited 0 times</td>
+  </tr>
+</table>
 <style type="text/css">
 table.gridtable {
     font-family: verdana,arial,sans-serif;
