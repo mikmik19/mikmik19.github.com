@@ -75,7 +75,7 @@ dl .clearfix {
         </div>
               
         <div class="clearfix">         
-        <dt>Experience</dt>
+        <dt>Teaching experience</dt>
         <dd>
             <p><strong>Sep-Oct 2014:</strong> Philosophy of science<br>
             <strong>Sep-Oct 2013:</strong> Introduction to quantitative data analysis w. MatLab<br>
