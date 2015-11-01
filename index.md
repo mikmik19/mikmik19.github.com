@@ -105,8 +105,8 @@ dl .clearfix {
 <table style="width:100%" cellpadding="5" cellspacing="5">
     <tr>
         <td valign="top">(1)</td>
-        <td valign="top" >Jensen, Mikkel Hartmann, et al. "A systematic study of the isothermal crystallization of the mono-alcohol n-butanol monitored by dielectric spectroscopy." The Journal of chemical physics 143.13 (2015): 134501</td>
-        <td valign="top">Cited 0 times</td>
+        <td valign="top">Jensen, Mikkel Hartmann, et al. "A systematic study of the isothermal crystallization of the mono-alcohol n-butanol monitored by dielectric spectroscopy." The Journal of chemical physics 143.13 (2015): 134501</td>
+        <td valign="top" style="white-space:nowrap;">Cited 0 times</td>
     </tr>
 </table>
 <style type="text/css">
