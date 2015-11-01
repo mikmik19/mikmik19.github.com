@@ -110,6 +110,7 @@ dl .clearfix {
     </tr>
 </table>
 <style type="text/css">
+
 table.gridtable {
     font-family: verdana,arial,sans-serif;
     font-size:12px;
@@ -124,8 +125,7 @@ table.gridtable th {
 table.gridtable td {
     padding: 8px;
 }
-
-td:nth-child(3) {background: rgb(0,255,0);}
+td:nth-child(3) {background: rgb(0,0,0);}
 </style>
 
 
