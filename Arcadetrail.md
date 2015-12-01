@@ -55,7 +55,7 @@ dl .clearfix {
     <div id="objective">
         <img src="/images/me2.jpg" alt="Photo of Cthulu" id="pic" width = "150" />
         <p>
-            Testing the test
+            Testing the test test
         </p>
     </div>
 </div>
