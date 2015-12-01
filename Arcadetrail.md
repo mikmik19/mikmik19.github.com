@@ -51,8 +51,7 @@ dl .clearfix {
 }
 </style>
 
-<div id="page-wrap">
-        
+<div id="page-wrap">   
     <div id="objective">
         <img src="/images/me2.jpg" alt="Photo of Cthulu" id="pic" width = "150" />
         <p>
@@ -60,16 +59,6 @@ dl .clearfix {
         </p>
     </div>
 </div>
-
-<div class="clear"></div>
-<h2>Publications list</h2>
-<table style="width:100%" cellpadding="5" cellspacing="5">
-    <tr>
-        <td valign="top">(1)</td>
-        <td valign="top">Jensen, Mikkel Hartmann, et al. "A systematic study of the isothermal crystallization of the mono-alcohol n-butanol monitored by dielectric spectroscopy." The Journal of chemical physics 143.13 (2015): 134501</td>
-        <td valign="top" style="white-space:nowrap;">Cited 0 times</td>
-    </tr>
-</table>
 <style type="text/css">
 
 table.gridtable {
