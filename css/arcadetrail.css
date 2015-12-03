@@ -46,3 +46,50 @@ table.gridtable th {
 table.gridtable td {
     padding: 8px;
 }
+
+/* THE CSS NEEDED TO RUN MADS' D3 EXAMPLE */
+.axis text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crisp-edges;
+}
+
+.dot:hover {
+  stroke: black;
+  stroke-width: 1px;
+  cursor: pointer;
+}
+
+/* The scatter plot */
+
+#scatter {
+  display: block;
+  margin: 0px auto;
+}
+
+/* The log plot */
+#log-plot {
+  display: block;
+  margin: 0px auto;
+}
+
+#log-plot .dot {
+  fill: rgba(22, 96, 167, 0.2);
+}
+
+
+/* The following styles are for the document, not the SVG elements. */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    max-width: 800px;
+    margin: 0px auto;
+}

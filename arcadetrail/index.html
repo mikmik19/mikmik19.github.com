@@ -2,17 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Arcade Trails</title>
-        <link rel="stylesheet" href="/css/arcadetrail.css" media="screen" charset="utf-8">
+        <title>D3 Example</title>
+        <!-- Including the font from google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <!-- Including the libraries -->
+        <script src="/lib/d3.js" charset="utf-8"></script>
+        <script src="lib/d3.min.js" charset="utf-8"></script>
+        <script src="lib/c3.min.js" charset="utf-8"></script>
+        <!-- Including the CSS -->
+        <script src="/libs/d3/d3.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="/css/c3.min.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="/css/main.css" media="screen" charset="utf-8">
     </head>
     <body>
-        <div id="page-wrap">
-            <div id="objective">
-                <img src="/images/me2.jpg" alt="Photo of Cthulu" id="pic" width = "150" />
-                <p>
-                    Test
-                </p>
-            </div>
-        </div>
+            <h1> Overview of the Arcade Trail Data Base </h1>
+            <p> Here we show how the number of games in the Arcade Trail data base has grown since the scrapers started doing their work in May 2015.</p>
+            <svg id='Arcade_Trail_Game_Growth' width="600" height="300"/>
+            <p> Since most of the games are collected with scrapers that are focusing on newly released and announced games most of the games in the Arcade Trail data base are rather new. The older games have either been added manually or through the link-up with a users steam account </p>
+            <svg id='Arcade_Trail_Genre_Distribution' width="600" height="300"/>
+            <p> Not all the scraped games come with a complete data set. For example, not all games have a release date. This may be because the a game was added without a release date, but it may simply be because the release date is unknown.</p>
+        <!-- We include our scripts in the bottom to make sure that the browser
+             has rendered the SVG elements that we're going to modify in our
+             script files.
+        -->
+        <script src="/js/Arcade_Trail_Game_Growth.js"></script> 
+        <script src="/js/Arcade_Trail_Genre_Distribution.js"></script>
+        <script src="/js/Arcade_Trail_Release_Date_Distribution.js"></script>
+        <script src="/js/Arcade_Trail_Missing_Release_Date.js"></script>
+        <script src="/js/User_Comparison_Release_Date_Distribution.js"></script>
+        <script src="/js/User_Comparison_Genre_Distribution.js"></script>
+        <script src="/js/User_Comparison_Library_Cost.js"></script>
+        <script src="/js/Arcade_Trail_Missing_Genre.js"></script>
     </body>
 </html>
