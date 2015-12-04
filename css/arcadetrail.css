@@ -69,20 +69,20 @@ table.gridtable td {
 
 /* The scatter plot */
 
-#scatter {
+#Arcade_Trail_Game_Growth {
   display: block;
   margin: 0px auto;
 }
 
 /* The log plot */
-#log-plot {
+#Arcade_Trail_Genre_Distribution {
   display: block;
-  margin: 0px auto;
+  margin: 0pc auto;
 }
-
-#log-plot .dot {
-  fill: rgba(22, 96, 167, 0.2);
+.bar {
+  fill: orange;
 }
+/* FOR THE 
 
 
 /* The following styles are for the document, not the SVG elements. */
