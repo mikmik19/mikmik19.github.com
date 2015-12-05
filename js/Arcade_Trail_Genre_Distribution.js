@@ -66,9 +66,10 @@
             .attr('padding',2);
 
         bar.enter().append('text')
-        .attr('x', -margin.left)
-        .attr('y', function(d) { return yScale(d[ID])+7 })
-        .text(function(d) {return d[Genre]});
+            .attr('x', -5)
+            .attr('y', function(d) { return yScale(d[ID])+7 })
+            .text(function(d) {return d[Genre]})
+            .style("text-anchor", "end");
 
         bar.exit().remove();
     }
