@@ -5,7 +5,7 @@
         left: 90,
         top: 30,
         right: 30,
-        bottom: 30,
+        bottom: 50,
     };
 
     var outerWidth = parseInt(svg.attr('width'));
@@ -35,6 +35,23 @@
 
     var xAxis = d3.svg.axis().scale(xScale).orient('bottom');
     var yAxis = d3.svg.axis().scale(yScale).orient('left');
+
+    /* a-axis label */
+    svg.append('text')
+        .attr('x',outerWidth/2)
+        .attr('y',outerHeight- margin.bottom/6)
+        .style('anchor-text','middle')
+        .text('Month of year');
+
+    /* y-axis label */
+    svg.append('text')
+        .attr('transform','rotate(270)')
+        .attr('x',-220)
+        .attr('y',35)
+        .style('anchor-text','middle')
+        .text('Games in Arcade Trail');
+
+
 
     function render(data) {
         xScale.domain(d3.extent(data, function(d) { return d[month]; }));
