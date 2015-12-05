@@ -3,7 +3,7 @@
 
     var margin = {
         left: 50,
-        top: 30,
+        top: 50,
         right: 30,
         bottom: 30,
     };
@@ -37,9 +37,16 @@
     
     var yAxis = d3.svg.axis()
         .scale(yScale)
-        .ticks([32])
+        .ticks([])
         .orient('left');
     
+    svg.append("text")
+        .attr("x",  outerWidth/2)
+        .attr("y",  20)
+        .style("text-anchor", "middle")
+        .text("Number of games in genre");
+
+
     function render(data) {
         xScale.domain(d3.extent(data, function(d) { return d[Num_games]; }));
         yScale.domain([d3.min(data, function(d) { return d[ID]; })-0.5, d3.max(data, function(d) { return d[ID]; })+0.5]);
@@ -58,12 +65,19 @@
             .attr('padding',2);
 
         bar.exit().remove();
+
+        // Doing the labeling
+        svg.append("text")             
+        .attr("x",  20)
+        .attr("y",  function(d) { return yScale(d[ID]) - 5; })
+        .style("text-anchor", "left")
+        .text("test");
     }
 
     function parse(d) {
         d[Num_games] = parseFloat(d[Num_games]);
         d[ID] = parseFloat(d[ID]);
-
+    //    d[Genre] = parseFloat(d[Genre]);
         return d;
     }
 
