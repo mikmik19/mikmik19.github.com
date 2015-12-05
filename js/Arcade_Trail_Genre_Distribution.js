@@ -16,6 +16,7 @@
     var id = 'id';
     var num_games = 'num_games';
     var genre = 'genre';
+    var num_votes = 'num_votes';
 
     var g = svg.append('g')
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
@@ -72,11 +73,20 @@
             .style("text-anchor", "end");
 
         bar.exit().remove();
+
+        bar.enter().append('rect')
+            .attr('x', 2)
+            .attr('y', function(d) { return yScale(d[id])-3; })
+            .attr('height', innerHeight/66)
+            .attr('width', function(d) { return xScale(d[num_votes]); })
+            .attr('fill', 'grey' )
+            .attr('padding',2);
     }
 
     function parse(d) {
         d[num_games] = parseFloat(d[num_games]);
         d[id] = parseFloat(d[id]);
+        d[num_votes] = parseFloat(d[num_votes]);
         return d;
     }
 

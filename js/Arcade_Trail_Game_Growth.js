@@ -51,12 +51,9 @@
         .style('anchor-text','middle')
         .text('Games in Arcade Trail');
 
-
-
     function render(data) {
         xScale.domain(d3.extent(data, function(d) { return d[month]; }));
         yScale.domain(d3.extent(data, function(d) { return d[cum_games]; }));
-
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -72,9 +69,8 @@
             .attr('cy', function(d) { return yScale(d[cum_games]); })
             .attr('fill', 'orange');
 
-        // Exit
         circles.exit().remove();
-    
+
         var bar = g.selectAll('rect').data(data);
 
         bar.enter().append('rect')
