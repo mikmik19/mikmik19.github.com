@@ -55,7 +55,7 @@
         // with two elements representing the max and min of the given column.
         xScale.domain(d3.extent(data, function(d) { return d[xColumn]; }));
         yScale.domain(d3.extent(data, function(d) { return d[yColumn]; }));
-        
+
 
         // Render our x and y axis
         xAxisG.call(xAxis);
@@ -88,5 +88,5 @@
         return d;
     }
 
-    d3.csv('/data/Arcade_Trail_Game_Growth.csv', parse, render);
+    d3.csv('/data/arcade_trail_game_growth.csv', parse, render);
 })();

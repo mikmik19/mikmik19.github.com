@@ -27,19 +27,19 @@
 
     var xScale = d3.scale.linear()
         .range([0,innerWidth]);
-    
+
     var yScale = d3.scale.linear()
         .range([0, innerHeight]);
 
     var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient('top');
-    
+
     var yAxis = d3.svg.axis()
         .scale(yScale)
         .ticks([])
         .orient('left');
-    
+
     svg.append("text")
         .attr("x",  outerWidth/2)
         .attr("y",  20)
@@ -64,7 +64,7 @@
             .attr('fill', 'orange' )
             .attr('padding',2);
 
-        bar.enter().append('text')             
+        bar.enter().append('text')
         .attr('x', -margin.left)
         .attr('y', function(d) { return yScale(d[ID])+7 })
         .text("test");
@@ -79,5 +79,5 @@
         return d;
     }
 
-    d3.csv('/data/Genres_Summary.csv', parse, render);
+    d3.csv('/data/genres_summary.csv', parse, render);
 })();
