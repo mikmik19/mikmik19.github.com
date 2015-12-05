@@ -1,18 +1,32 @@
-x,y,s
-1,1001,a
-2,688,a
-3,2,a
-4,3,a
-5,1190,a
-6,53,a
-7,11,a
-8,9,a
-9,372,a
-10,66,a
-11,2,a
-12,17,a
-13,265,a
-14,66,a
-15,435,a
-16,90,a
-17,1,a
+id,genre,num_games
+1,Indie,1477
+2,Action,1272
+3,Adventure,863
+4,Strategy,543
+5,RPG,497
+6,Casual,474
+7,Simulation,321
+8,Early Access,262
+9,Free to Play,99
+10,Racing,87
+11,Sports,79
+12,Massively Multiplayer,69
+13,Shooter,29
+14,Platformer,14
+15,Puzzle,12
+16,Design & Illustration,11
+17,Utilities,9
+18,Web Publishing,7
+19,Animation & Modeling,6
+20,Education,4
+21,Hidden Objects,3
+22,Fighting,3
+23,Video Production,3
+24,Photo Editing,1
+25,Horror,1
+26,Software Training,1
+27,Survival,1
+28,Audio Production,1
+29,Accounting,1
+30,Music,1
+31,Sandbox,1

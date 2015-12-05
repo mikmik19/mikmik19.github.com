@@ -13,9 +13,9 @@
     var innerWidth = outerWidth - margin.left - margin.right;
     var innerHeight = outerHeight - margin.top - margin.bottom;
 
-    var ID = 'ID';
-    var Num_games = 'Num_Games';
-    var Genre = 'Genre';
+    var id = 'id';
+    var num_games = 'num_games';
+    var genre = 'genre';
 
     var g = svg.append('g')
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
@@ -42,15 +42,15 @@
         .orient('left');
 
     svg.append("text")
-        .attr("x",  outerWidth/2)
+        .attr("x",  outerWidth/2 + margin.left/2)
         .attr("y",  20)
         .style("text-anchor", "middle")
         .text("Number of games in genre");
 
 
     function render(data) {
-        xScale.domain(d3.extent(data, function(d) { return d[Num_games]; }));
-        yScale.domain([d3.min(data, function(d) { return d[ID]; })-0.5, d3.max(data, function(d) { return d[ID]; })+0.5]);
+        xScale.domain(d3.extent(data, function(d) { return d[num_games]; }));
+        yScale.domain([d3.min(data, function(d) { return d[id]; })-0.5, d3.max(data, function(d) { return d[id]; })+0.5]);
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -59,26 +59,26 @@
 
         bar.enter().append('rect')
             .attr('x', 2)
-            .attr('y', function(d) { return yScale(d[ID]) - 9; })
+            .attr('y', function(d) { return yScale(d[id]) - 9; })
             .attr('height', innerHeight/33)
-            .attr('width', function(d) { return xScale(d[Num_games]); })
+            .attr('width', function(d) { return xScale(d[num_games]); })
             .attr('fill', 'orange' )
             .attr('padding',2);
 
         bar.enter().append('text')
             .attr('x', -5)
-            .attr('y', function(d) { return yScale(d[ID])+7 })
-            .text(function(d) {return d[Genre]})
+            .attr('y', function(d) { return yScale(d[id])+7 })
+            .text(function(d) {return d[genre]})
             .style("text-anchor", "end");
 
         bar.exit().remove();
     }
 
     function parse(d) {
-        d[Num_games] = parseFloat(d[Num_games]);
-        d[ID] = parseFloat(d[ID]);
+        d[num_games] = parseFloat(d[num_games]);
+        d[id] = parseFloat(d[id]);
         return d;
     }
 
-    d3.csv('/data/genres_summary.csv', parse, render);
+    d3.csv('/data/arcade_trail_genre_distribution.csv', parse, render);
 })();
