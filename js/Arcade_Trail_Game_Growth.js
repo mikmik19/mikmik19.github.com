@@ -8,7 +8,7 @@
      * Various constant variables that we have here for convenience.
      */
     var margin = {
-        left: 30,
+        left: 90,
         top: 30,
         right: 30,
         bottom: 30,
