@@ -23,7 +23,6 @@
     // for the x and y coordinates respectively and the series.
     var xColumn = 'x';
     var yColumn = 'y';
-    var seriesColumn = 's';
 
     /**
      * Create the `g` SVG elements  that we're going to use for our rendering of the
@@ -40,19 +39,9 @@
     var yAxisG = g.append('g')
         .attr('class', 'axis');
 
-    /**
-     * Define our scales.
-     */
+    /** Define our scales. */
     var xScale = d3.scale.linear().range([0, innerWidth]);
-
-    // NOTE: (0,0) in the SVG coordinate system is the upper left corner of the SVG
-    // element. Thus we have to inverse the max/min of the y axises to get (0,0) to
-    // be in the lower left corner as expected.
     var yScale = d3.scale.linear().range([innerHeight, 0]);
-
-    // Here we define which colors our series should be mapped to.
-    var seriesScale = d3.scale.ordinal()
-        .range(['#1f77b4', '#ff7f0e', '#2ca02c']);
 
     /**
      * Set up our axises using d3.svg.axis and our scales.
@@ -60,15 +49,13 @@
     var xAxis = d3.svg.axis().scale(xScale).orient('bottom');
     var yAxis = d3.svg.axis().scale(yScale).orient('left');
 
-    /**
-     * Describe how we want to visualize our data.
-     */
+    /** Describe how we want to visualize our data. */
     function render(data) {
         // Set the domain of the scales (input ranges). d3.extend returns an array
         // with two elements representing the max and min of the given column.
         xScale.domain(d3.extent(data, function(d) { return d[xColumn]; }));
         yScale.domain(d3.extent(data, function(d) { return d[yColumn]; }));
-        seriesScale.domain(data.map(function(d) { d[seriesColumn]; }));
+        
 
         // Render our x and y axis
         xAxisG.call(xAxis);
@@ -88,15 +75,13 @@
         circles
             .attr('cx', function(d) { return xScale(d[xColumn]); })
             .attr('cy', function(d) { return yScale(d[yColumn]); })
-            .attr('fill', function(d) { return seriesScale(d[seriesColumn]); });
+            .attr('fill', 'orange');
 
         // Exit
         circles.exit().remove();
     }
 
-    /**
-     * Parse the data and invoke our render funciton
-     */
+    /** Parse the data and invoke our render funciton */
     function parse(d) {
         d[xColumn] = parseFloat(d[xColumn]);
         d[yColumn] = parseFloat(d[yColumn]);
