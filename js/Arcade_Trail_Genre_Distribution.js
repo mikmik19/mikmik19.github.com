@@ -15,59 +15,48 @@
 
     // The name of the columns from the CSV file that should be used
     // for the x and y coordinates respectively and the series.
-    var xColumn = 'ID';
-    var yColumn = 'Number';
+    var ID = 'ID';
+    var Num_games = 'Num_Games';
 
     var g = svg.append('g')
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
 
     var xAxisG = g.append('g')
-        .attr('transform', 'translate(0, ' + innerHeight + ')')
+        .attr('transform', 'translate(0)')
         .attr('class', 'axis');
 
     var yAxisG = g.append('g')
         .attr('class', 'axis');
 
-    var xScale = d3.scale.linear().range([0, innerWidth]);
+    var xScale = d3.scale.linear().range([innerWidth, 0]);
+    var yScale = d3.scale.linear().range([0, innerHeight]);
 
-    var yScale = d3.scale.linear().range([innerHeight, 0]);
-
-    var seriesScale = d3.scale.ordinal()
-        .range(['#1f77b4', '#ff7f0e', '#2ca02c']);
-
-    var xAxis = d3.svg.axis().scale(xScale).orient('bottom');
-    var yAxis = d3.svg.axis().scale(yScale).orient('left');
+    var xAxis = d3.svg.axis().scale(xScale).orient('left');
+    var yAxis = d3.svg.axis().scale(yScale).orient('top');
+    
 
     function render(data) {
-        // Set the domain of the scales (input ranges). d3.extend returns an array
-        // with two elements representing the max and min of the given column.
-        xScale.domain(d3.extent(data, function(d) { return d[xColumn]; }));
-        yScale.domain(d3.extent(data, function(d) { return d[yColumn]; }));
+        xScale.domain(d3.extent(data, function(d) { return d[Num_games]; }));
+        yScale.domain(d3.extent(data, function(d) { return d[ID]; }));
 
-        // Render our x and y axis
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
 
-        // Bind the data
         var bar = g.selectAll('rect').data(data);
 
-        // Create circle svg elements for each data entry
         bar.enter().append('rect')
-            .attr('r', 5)
-            .attr('class', 'dot')
-            .attr('x', function(d) { return xScale(d[xColumn]); })
-            .attr('y', function(d) { return yScale(d[yColumn]); })
-            .attr('width', 10)
-            .attr('height', function(d) { return innerHeight-yScale(d[yColumn]); })
+            .attr('x', 0)
+            .attr('y', function(d) { return yScale(d[ID]); })
+            .attr('height', 12)
+            .attr('width', function(d) { return innerWidth - xScale(d[Num_games]); })
             .attr('fill', 'orange' );
 
-        // ExitinnerHeight
         bar.exit().remove();
     }
 
     function parse(d) {
-        d[xColumn] = parseFloat(d[xColumn]);
-        d[yColumn] = parseFloat(d[yColumn]);
+        d[Num_games] = parseFloat(d[Num_games]);
+        d[ID] = parseFloat(d[ID]);
         return d;
     }
 
