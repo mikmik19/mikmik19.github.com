@@ -2,7 +2,7 @@
     var svg = d3.select('#Arcade_Trail_Genre_Distribution');
 
     var margin = {
-        left: 100,
+        left: 180,
         top: 50,
         right: 30,
         bottom: 30,
@@ -15,6 +15,7 @@
 
     var ID = 'ID';
     var Num_games = 'Num_Games';
+    var Genre = 'Genre';
 
     var g = svg.append('g')
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
@@ -37,7 +38,7 @@
 
     var yAxis = d3.svg.axis()
         .scale(yScale)
-        .ticks([])
+        .ticks([0])
         .orient('left');
 
     svg.append("text")
@@ -67,7 +68,7 @@
         bar.enter().append('text')
         .attr('x', -margin.left)
         .attr('y', function(d) { return yScale(d[ID])+7 })
-        .text("test");
+        .text(function(d) {return d[Genre]});
 
         bar.exit().remove();
     }
@@ -75,7 +76,6 @@
     function parse(d) {
         d[Num_games] = parseFloat(d[Num_games]);
         d[ID] = parseFloat(d[ID]);
-    //    d[Genre] = parseFloat(d[Genre]);
         return d;
     }
 
