@@ -22,7 +22,6 @@
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
 
     var xAxisG = g.append('g')
-        .attr('transform', 'translate(0)')
         .attr('class', 'axis');
 
     var yAxisG = g.append('g')
