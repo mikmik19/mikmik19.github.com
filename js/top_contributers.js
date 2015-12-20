@@ -43,7 +43,7 @@
         .orient('left');
 
     svg.append("text")
-        .attr("x",  outerWidth/2 + margin.left/2)
+        .attr("x",  innerWidth/2 + margin.left)
         .attr("y",  20)
         .style("text-anchor", "middle")
         .text("Contributions");
