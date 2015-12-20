@@ -7,7 +7,7 @@
 
     var margin = {
         left: 15,
-        top: 15,
+        top: 30,
         right: 15,
         bottom: 15,
     };
@@ -34,6 +34,13 @@
         .attr("d", arc)
         .attr('transform', 'translate(' + outerWidth/2 + ',' + outerHeight/2 + ')');
 
+    
+    svg.append('text')
+        .attr('x',innerWidth/2 - margin.left)
+        .attr('y',margin.top/2)
+        .style('anchor-text','middle')
+        .text('Have tagline');
+    /*
     svg.append('text')
         .attr('x',outerWidth/2 + margin.right)
         .attr('y',margin.top)
@@ -45,7 +52,7 @@
         .attr('y',margin.top)
         .style('anchor-text','end')
         .text('Missing');
-
+    */
     /* TODO: 
         - adding numbers and legends figure 
         - load the data from the csv file 'missing_content_tagline.csv'

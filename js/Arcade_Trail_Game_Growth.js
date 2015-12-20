@@ -51,6 +51,8 @@
         .style('anchor-text','middle')
         .text('Games in Arcade Trail');
 
+
+
     function render(data) {
         xScale.domain(d3.extent(data, function(d) { return d[month]; }));
         yScale.domain(d3.extent(data, function(d) { return d[cum_games]; }));
@@ -58,20 +60,42 @@
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
 
+        /*
         var circles = g.selectAll('circle').data(data);
 
         circles.enter().append('circle')
             .attr('r', 5)
-            .attr('class', 'dot');
-
-        circles
+            .attr('class', 'dot')
             .attr('cx', function(d) { return xScale(d[month]); })
             .attr('cy', function(d) { return yScale(d[cum_games]); })
             .attr('fill', 'orange');
 
         circles.exit().remove();
 
-        var bar = g.selectAll('rect').data(data);
+        
+        var line = d3.svg.line()
+            .x(function(d) { return xScale(d[month]); })
+            .y(function(d) { return yScale(d[cum_games]); });
+
+        g.append('path')
+            .datum(data)
+            .attr('class', 'line')
+            .attr('d', line)
+            .attr('fill', 'orange');
+        */
+
+        var area = d3.svg.area()
+            .x(function(d) { return xScale(d[month]); })
+            .y0(innerHeight)
+            .y1(function(d) { return yScale(d[cum_games]); });
+
+        g.append('path')
+            .datum(data)
+            .attr('class','area')
+            .attr('d',area)
+            .attr('fill','orange');
+
+        /* var bar = g.selectAll('rect').data(data);
 
         bar.enter().append('rect')
             .attr('x', function(d) { return xScale(d[month]) - 10; })
@@ -81,7 +105,7 @@
             .attr('fill', 'grey' )
             .attr('padding',2);
 
-        bar.exit().remove();    
+        bar.exit().remove(); */    
     }
 
     function parse(d) {

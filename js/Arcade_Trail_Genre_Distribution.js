@@ -74,13 +74,13 @@
 
         bar.exit().remove();
 
-        bar.enter().append('rect')
+        /*bar.enter().append('rect')
             .attr('x', 2)
             .attr('y', function(d) { return yScale(d[id])-3; })
             .attr('height', innerHeight/66)
             .attr('width', function(d) { return xScale(d[num_votes]); })
             .attr('fill', 'grey' )
-            .attr('padding',2);
+            .attr('padding',2); */
     }
 
     function parse(d) {
