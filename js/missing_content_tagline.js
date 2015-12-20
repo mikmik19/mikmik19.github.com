@@ -18,7 +18,7 @@
     var innerHeight = outerHeight - margin.top - margin.bottom;
     var radius = Math.min(innerWidth, innerHeight) / 2;
 
-    var color = d3.scale.category20();
+    var color = ['#ff9900','#ffffff']; /* d3.scale.category10(); */
 
     var pie = d3.layout.pie();
 
@@ -30,7 +30,7 @@
         .data(pie(dataset.apples))
         .enter()
         .append("path")
-        .attr("fill", function(d, i) { return color(i); })
+        .attr("fill", function(d,i) { return color[i]; }) /* function(d, i) { return color(i); } */
         .attr("d", arc)
         .attr('transform', 'translate(' + outerWidth/2 + ',' + outerHeight/2 + ')');
 
