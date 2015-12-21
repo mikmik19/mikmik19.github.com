@@ -1,4 +1,4 @@
-month,num_games,cum_games
+month,num,cum_num
 5,116,116
 6,142,258
 7,175,433
@@ -6,4 +6,4 @@ month,num_games,cum_games
 9,204,839
 10,492,1331
 11,1051,2382
-12,127,2509
+12,377,2759

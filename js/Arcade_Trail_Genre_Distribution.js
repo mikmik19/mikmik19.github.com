@@ -51,7 +51,7 @@
 
     function render(data) {
         xScale.domain(d3.extent(data, function(d) { return d[num_games]; }));
-        yScale.domain([d3.min(data, function(d) { return d[id]; })-0.5, d3.max(data, function(d) { return d[id]; })+0.5]);
+        yScale.domain([0.5, data.length + 0.5]);
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -60,15 +60,15 @@
 
         bar.enter().append('rect')
             .attr('x', 2)
-            .attr('y', function(d) { return yScale(d[id]) - 9; })
-            .attr('height', innerHeight/33)
+            .attr('y',  function(d,i) {return yScale(i)+14;} )
+            .attr('height', innerHeight/37)
             .attr('width', function(d) { return xScale(d[num_games]); })
             .attr('fill', 'orange' )
             .attr('padding',2);
 
         bar.enter().append('text')
             .attr('x', -5)
-            .attr('y', function(d) { return yScale(d[id])+7 })
+            .attr('y', function(d,i) {return yScale(i)+ 30;})
             .text(function(d) {return d[genre]})
             .style("text-anchor", "end");
 

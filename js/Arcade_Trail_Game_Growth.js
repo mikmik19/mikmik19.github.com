@@ -14,8 +14,8 @@
     var innerHeight = outerHeight - margin.top - margin.bottom;
 
     var month = 'month';
-    var num_games = 'num_games'
-    var cum_games = 'cum_games';
+    var num = 'num'
+    var cum_num = 'cum_num';
 
     var g = svg.append('g')
         .attr('transform', 'translate('+ margin.left +', '+ margin.top +')');
@@ -53,9 +53,9 @@
 
 
 
-    function render(data) {
-        xScale.domain(d3.extent(data, function(d) { return d[month]; }));
-        yScale.domain(d3.extent(data, function(d) { return d[cum_games]; }));
+    function render(d) {
+        xScale.domain(d3.extent(d, function(d) { return d[month]; }));
+        yScale.domain(d3.extent(d, function(d) { return d[cum_num]; }));
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -67,7 +67,7 @@
             .attr('r', 5)
             .attr('class', 'dot')
             .attr('cx', function(d) { return xScale(d[month]); })
-            .attr('cy', function(d) { return yScale(d[cum_games]); })
+            .attr('cy', function(d) { return yScale(d[cum_num]); })
             .attr('fill', 'orange');
 
         circles.exit().remove();
@@ -75,7 +75,7 @@
         
         var line = d3.svg.line()
             .x(function(d) { return xScale(d[month]); })
-            .y(function(d) { return yScale(d[cum_games]); });
+            .y(function(d) { return yScale(d[cum_num]); });
 
         g.append('path')
             .datum(data)
@@ -87,10 +87,10 @@
         var area = d3.svg.area()
             .x(function(d) { return xScale(d[month]); })
             .y0(innerHeight)
-            .y1(function(d) { return yScale(d[cum_games]); });
+            .y1(function(d) { return yScale(d[cum_num]); });
 
         g.append('path')
-            .datum(data)
+            .datum(d)
             .attr('class','area')
             .attr('d',area)
             .attr('fill','orange');
@@ -99,9 +99,9 @@
 
         bar.enter().append('rect')
             .attr('x', function(d) { return xScale(d[month]) - 10; })
-            .attr('y', function(d) {  return yScale(d[num_games]); } )
+            .attr('y', function(d) {  return yScale(d[num]); } )
             .attr('width', 20)
-            .attr('height', function(d) {  return innerHeight- yScale(d[num_games]); })
+            .attr('height', function(d) {  return innerHeight- yScale(d[num]); })
             .attr('fill', 'grey' )
             .attr('padding',2);
 
@@ -110,8 +110,8 @@
 
     function parse(d) {
         d[month] = parseFloat(d[month]);
-        d[num_games] = parseFloat(d[num_games]);
-        d[cum_games] = parseFloat(d[cum_games]);
+        d[num] = parseFloat(d[num]);
+        d[cum_num] = parseFloat(d[cum_num]);
         return d;
     }
 

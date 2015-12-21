@@ -1,32 +1,32 @@
-id,genre,num_games,num_votes
-1,Indie,1477,193
-2,Action,1272,144
-3,Adventure,863,169
-4,Strategy,543,141
-5,RPG,497,92
-6,Casual,474,41
-7,Simulation,321,92
-8,Early Access,262,37
-9,Free to Play,99,1
-10,Racing,87,21
-11,Sports,79,24
-12,Massively Multiplayer,69,23
-13,Shooter,29,51
-14,Platformer,14,19
-15,Puzzle,12,4
-16,Design & Illustration,11,0
-17,Utilities,9,0
+id,genre,num_games,votes
+2,Indie,1621,203
+1,Action,1415,258
+8,Adventure,939,168
+3,Strategy,602,99
+7,RPG,555,122
+9,Casual,535,36
+10,Simulation,350,148
+4,Early Access,280,19
+5,Free to Play,114,4
+11,Racing,103,20
+12,Sports,86,6
+6,Massively Multiplayer,83,25
+27,Shooter,37,40
+24,Puzzle,21,15
+25,Platformer,20,23
+17,Design & Illustration,11,0
+14,Utilities,10,0
 18,Web Publishing,7,0
-19,Animation & Modeling,6,
-20,Education,4,1
-21,Fighting,3,1
-22,Hidden Objects,3,1
-23,Video Production,3,0
-24,Audio Production,1,
-25,Horror,1,1
-26,Sandbox,1,0
-27,Music,1,
-28,Software Training,1,
-29,Accounting,1,
-30,Photo Editing,1,
-31,Survival,1,
+21,Animation & Modeling,6,0
+32,Hidden Objects,5,0
+16,Education,4,1
+28,Horror,4,4
+15,Video Production,3,0
+31,Fighting,3,1
+26,Survival,3,
+13,Audio Production,2,0
+29,Sandbox,2,0
+20,Software Training,1,0
+33,Accounting,1,0
+30,Music,1,
+19,Photo Editing,1,
