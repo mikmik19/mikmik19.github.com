@@ -1,6 +1,6 @@
 (function(){
     var svg = d3.select('#top_contributers');
-    
+
     var margin = {
         left: 110,
         top: 50,
@@ -54,7 +54,7 @@
             d3.extent(data, function(d) { return d[num_contributions]; })
             );
         yScale.domain([
-            d3.min(data, function(d) { return d[id]; })-0.5, 
+            d3.min(data, function(d) { return d[id]; })-0.5,
             d3.max(data, function(d) { return d[id]; })+0.5
             ]);
 
@@ -63,7 +63,16 @@
 
         var bar = g.selectAll('rect').data(data);
 
-        bar.enter().append('rect')
+        bar.enter().append('text')
+            .attr('x', -5)
+            .attr('y', function(d) { return yScale(d[id]) +6;})
+            .text(function(d) {return d[username]})
+            .style("text-anchor", "end");
+
+        var gs = bar.enter().append('g')
+            .attr('class','bar');
+
+        gs.append('rect')
             .attr('x', 1)
             .attr('y', function(d) { return yScale(d[id]) -8; })
             .attr('height', innerHeight/11)
@@ -71,12 +80,11 @@
             .attr('fill', 'orange' )
             .attr('padding',2);
 
-        bar.enter().append('text')
-            .attr('x', -5)
-            .attr('y', function(d) { return yScale(d[id]) +6})
-            .text(function(d) {return d[username]})
-            .style("text-anchor", "end");
-
+        gs.append('text')
+            .attr('x', function(d) {return xScale(d.num_contributions)+5;})
+            .attr('y', function(d) { return yScale(d.id) +6 ;})
+            .attr('class','value')
+            .text( function(d) { return d.num_contributions ;});
         bar.exit().remove();
     }
 

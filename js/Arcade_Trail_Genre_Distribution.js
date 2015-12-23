@@ -4,7 +4,7 @@
     var margin = {
         left: 180,
         top: 50,
-        right: 30,
+        right: 80,
         bottom: 30,
     };
 
@@ -58,21 +58,30 @@
 
         var bar = g.selectAll('rect').data(data);
 
-        bar.enter().append('rect')
-            .attr('x', 2)
-            .attr('y',  function(d,i) {return yScale(i)+14;} )
-            .attr('height', innerHeight/37)
-            .attr('width', function(d) { return xScale(d[num_games]); })
-            .attr('fill', 'orange' )
-            .attr('padding',2);
-
         bar.enter().append('text')
             .attr('x', -5)
             .attr('y', function(d,i) {return yScale(i)+ 30;})
             .text(function(d) {return d[genre]})
             .style("text-anchor", "end");
 
+        var gs = bar.enter().append('g').attr('class', 'bar');
+
+        gs.append('rect')
+            .attr('x', 2)
+            .attr('y',  function(d,i) {return yScale(i)+14;} )
+            .attr('height', innerHeight/37)
+            .attr('width', function(d) { return xScale(d[num_games]); })
+            .attr('padding',2);
+
+        gs.append('text')
+            .attr('x', function(d) { return xScale(d[num_games]) +5 ;})
+            .attr('y', function(d,i) {return yScale(i)+30;})
+            .attr('class', 'value')
+            .text( function(d) {return d.num_games ;} );
+
         bar.exit().remove();
+
+        
 
         /*bar.enter().append('rect')
             .attr('x', 2)

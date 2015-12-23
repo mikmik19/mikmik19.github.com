@@ -4,10 +4,10 @@
 	/* loading and parsing the d */
 	d3.csv('/data/top_submitters.csv', parse, render);
 
-	function parse(data){
-		data[num_submits] = parseFloat(data[num_submits]);
-		data[id] = parseFloat(data[id]);
-		return data;
+	function parse(d){
+		d.num_submits = parseFloat(d.num_submits);
+		d.id = parseFloat(d.id);
+		return d;
 	}
 	
 	var num_submits = 'num_submits';
@@ -60,11 +60,11 @@
 	/* rendering the d */
 	function render(data){
 		xScale.domain(
-			d3.extent(data, function(data) { return data[num_submits]; })
+			d3.extent(data, function(d) { return d.num_submits; })
 			);
 		yScale.domain([
-			d3.min(data, function(data) { return data[id] -0.5; } ),
-			d3.max(data, function(data) { return data[id] +0.5; } )
+			d3.min(data, function(d) { return d.id -0.5; } ),
+			d3.max(data, function(d) { return d.id +0.5; } )
 			]);
 
 		xAxisG.call(xAxis);
@@ -72,18 +72,26 @@
 
 		var bar = g.selectAll('rect').data(data);
 
-		bar.enter().append('rect')
+		bar.enter().append('text')
+        	.attr('x',-5)
+        	.attr('y', function(d){ return yScale(d.id) +6;})
+        	.text(function(d){ return d.username; } )
+        	.style('text-anchor','end'); 
+
+      	var gs = bar.enter().append('g')
+      		.attr('class','bar')
+
+		gs.append('rect')
 			.attr('x',1)
-			.attr('y', function(data){ return yScale(data[id]) -8; } )
+			.attr('y', function(d){ return yScale(d.id) -8; } )
 			.attr('height', innerHeight/11)
-            .attr('width', function(data) { return xScale(data[num_submits]); })
+            .attr('width', function(d) { return xScale(d.num_submits); })
             .attr('fill', 'orange' )
             .attr('padding',2);
-
-        bar.enter().append('text')
-        	.attr('x',-5)
-        	.attr('y', function(data){ return yScale(data[id]) +6;})
-        	.text(function(data){ return data[username]; } )
-        	.style('text-anchor','end');    
+        gs.append('text')
+        	.attr('x', function(d) {return xScale(d.num_submits) +5;})
+        	.attr('y', function(d) {return yScale(d.id) +6;})
+        	.attr('class','value')
+        	.text( function(d) { return d.num_submits ;})
 	}
 })();
