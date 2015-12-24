@@ -4,7 +4,7 @@
     var margin = {
         left: 110,
         top: 50,
-        right: 30,
+        right: 45,
         bottom: 30,
     };
 
@@ -50,13 +50,13 @@
 
 
     function render(data) {
-        xScale.domain(
-            d3.extent(data, function(d) { return d[num_contributions]; })
-            );
-        yScale.domain([
-            d3.min(data, function(d) { return d[id]; })-0.5,
-            d3.max(data, function(d) { return d[id]; })+0.5
-            ]);
+      xScale.domain(
+        d3.extent([
+          -0.5,
+          d3.max(data, function(d) { return d.num_contributions +1;})
+        ])
+      );
+      yScale.domain([0.5, data.length + 0.5]);
 
         xAxisG.call(xAxis);
         yAxisG.call(yAxis);
@@ -65,7 +65,7 @@
 
         bar.enter().append('text')
             .attr('x', -5)
-            .attr('y', function(d) { return yScale(d[id]) +6;})
+            .attr('y', function(d,i) { return yScale(i) +28;})
             .text(function(d) {return d[username]})
             .style("text-anchor", "end");
 
@@ -78,15 +78,15 @@
 
         gs.append('rect')
             .attr('x', 1)
-            .attr('y', function(d) { return yScale(d[id]) -8; })
-            .attr('height', innerHeight/11)
-            .attr('width', function(d) { return xScale(d[num_contributions]); })
+            .attr('y', function(d,i) { return yScale(i) +14; })
+            .attr('height', innerHeight/12)
+            .attr('width', function(d) { return xScale(d.num_contributions); })
             .attr('fill', 'orange' )
             .attr('padding',2);
 
         gs.append('text')
             .attr('x', function(d) {return xScale(d.num_contributions)+5;})
-            .attr('y', function(d) { return yScale(d.id) +8 ;})
+            .attr('y', function(d,i) { return yScale(i) +28 ;})
             .attr('class','value')
             .text( function(d) { return d.num_contributions ;});
         bar.exit().remove();

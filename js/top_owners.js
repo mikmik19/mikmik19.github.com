@@ -1,15 +1,15 @@
 (function(){
-	var svg = d3.select('#top_submitters');
+	var svg = d3.select('#top_owners');
 
 	/* loading and parsing the d */
-	d3.csv('/data/top_submitters.csv', parse, render);
+	d3.csv('/data/top_owners.csv', parse, render);
 
 	function parse(d){
-		d.num_submits = parseFloat(d.num_submits);
+		d.num_games_owned = parseFloat(d.num_games_owned);
 		return d;
 	}
 
-	var num_submits = 'num_submits';
+	var num_games_owned = 'num_games_owned';
 	var username = 'username';
 
 	/* drawing the canvas */
@@ -53,14 +53,14 @@
 		.attr('x',margin.left + innerWidth/2)
 		.attr('y',20)
 		.style('text-anchor','middle')
-		.text('Submissions');
+		.text('Games owned');
 
 	/* rendering the d */
 	function render(data){
 		xScale.domain(
 			d3.extent([
 				-0.5,
-				d3.max(data, function(d) { return d.num_submits +1;})
+				d3.max(data, function(d) { return d.num_games_owned +1;})
 			])
 		);
 		yScale.domain([0.5, data.length + 0.5]);
@@ -72,7 +72,7 @@
 
 		bar.enter().append('text')
         	.attr('x',-5)
-        	.attr('y', function(d,i){ return yScale(i) +28;})
+        	.attr('y', function(d,i){ return yScale(i) + 28;})
         	.text(function(d){ return d.username; } )
         	.style('text-anchor','end');
 
@@ -87,13 +87,15 @@
 			.attr('x',1)
 			.attr('y', function(d,i){ return yScale(i) +14; } )
 			.attr('height', innerHeight/12)
-            .attr('width', function(d) { return xScale(d.num_submits); })
+            .attr('width', function(d) {
+							return xScale(d.num_games_owned);
+						})
             .attr('fill', 'orange' )
             .attr('padding',2);
         gs.append('text')
-        	.attr('x', function(d) {return xScale(d.num_submits) +5;})
+        	.attr('x', function(d) {return xScale(d.num_games_owned) +5;})
         	.attr('y', function(d,i) {return yScale(i) +28;})
         	.attr('class','value')
-        	.text( function(d) { return d.num_submits ;})
+        	.text( function(d) { return d.num_games_owned ;})
 	}
 })();
