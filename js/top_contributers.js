@@ -70,7 +70,11 @@
             .style("text-anchor", "end");
 
         var gs = bar.enter().append('g')
-            .attr('class','bar');
+            .attr('class','bar')
+            .on('click', function (d,i) {
+              var elem = d3.select(this);
+              elem.classed("selected", !elem.classed("selected"));
+            });
 
         gs.append('rect')
             .attr('x', 1)
@@ -82,7 +86,7 @@
 
         gs.append('text')
             .attr('x', function(d) {return xScale(d.num_contributions)+5;})
-            .attr('y', function(d) { return yScale(d.id) +6 ;})
+            .attr('y', function(d) { return yScale(d.id) +8 ;})
             .attr('class','value')
             .text( function(d) { return d.num_contributions ;});
         bar.exit().remove();

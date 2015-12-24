@@ -38,10 +38,12 @@ body {
   display: none;
 }
 
-.bar:hover rect {
+.bar:hover rect,
+.bar.selected rect {
   fill: #2eb82e;
 }
 
-.bar:hover .value {
+.bar:hover .value,
+.bar.selected .value {
   display: block;
 }

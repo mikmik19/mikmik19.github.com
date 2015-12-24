@@ -9,7 +9,7 @@
 		d.id = parseFloat(d.id);
 		return d;
 	}
-	
+
 	var num_submits = 'num_submits';
 	var id = 'id';
 	var username = 'username';
@@ -43,7 +43,7 @@
 	var xAxis = d3.svg.axis()
 		.scale(xScale)
 		.ticks([4])
-		.orient('top');				
+		.orient('top');
 
 	var yAxis = d3.svg.axis()
 		.scale(yScale)
@@ -76,10 +76,14 @@
         	.attr('x',-5)
         	.attr('y', function(d){ return yScale(d.id) +6;})
         	.text(function(d){ return d.username; } )
-        	.style('text-anchor','end'); 
+        	.style('text-anchor','end');
 
       	var gs = bar.enter().append('g')
       		.attr('class','bar')
+					.on('click', function (d,i) {
+						var elem = d3.select(this);
+						elem.classed("selected", !elem.classed("selected"));
+					});
 
 		gs.append('rect')
 			.attr('x',1)
@@ -90,7 +94,7 @@
             .attr('padding',2);
         gs.append('text')
         	.attr('x', function(d) {return xScale(d.num_submits) +5;})
-        	.attr('y', function(d) {return yScale(d.id) +6;})
+        	.attr('y', function(d) {return yScale(d.id) +8;})
         	.attr('class','value')
         	.text( function(d) { return d.num_submits ;})
 	}

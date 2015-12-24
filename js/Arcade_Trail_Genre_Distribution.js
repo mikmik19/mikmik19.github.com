@@ -64,7 +64,12 @@
             .text(function(d) {return d[genre]})
             .style("text-anchor", "end");
 
-        var gs = bar.enter().append('g').attr('class', 'bar');
+        var gs = bar.enter().append('g')
+            .attr('class', 'bar')
+            .on('click', function (d,i) {
+              var elem = d3.select(this);
+              elem.classed("selected", !elem.classed("selected"));
+            });
 
         gs.append('rect')
             .attr('x', 2)
@@ -81,7 +86,7 @@
 
         bar.exit().remove();
 
-        
+
 
         /*bar.enter().append('rect')
             .attr('x', 2)
