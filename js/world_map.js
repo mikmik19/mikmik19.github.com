@@ -1,5 +1,5 @@
-var width = 960,
-    height = 960;
+var width = 750,
+    height = 750;
 
 var projection = d3.geo.mercator()
     .scale((width + 1) / 2 / Math.PI)
@@ -21,7 +21,7 @@ svg.append("path")
     .attr("d", path);
 
 
-d3.json("http://bl.ocks.org/mbostock/raw/4090846/world-110m.json", function(error, world) {
+d3.json("/data/world-110m.json", function(error, world) {
   if (error) throw error;
 
   svg.insert("path", ".graticule")
