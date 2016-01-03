@@ -1,0 +1,19 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+.axis text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crisp-edges;
+}
