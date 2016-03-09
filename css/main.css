@@ -9,7 +9,7 @@ body {  font: 16px Helvetica, Sans-Serif;
 .clear { clear: both; }
 .cite {float: right; font-size: 10px;}
 
-h1 { font-size: 42px; margin: 0 0 6px 0; position: relative; }
+h1 { font-size: 42px; margin: 20px 0 10px 0; position: relative; }
 h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
 p { margin: 0 0 16px 0; }
 a { color: #999; text-decoration: none;}
