@@ -1,7 +1,42 @@
 /* The following styles are for the document, not the SVG elements. */
-body {
-    font-family: 'Open Sans', sans-serif;
-    width: 80%;
-    max-width: 800px;
-    margin: 10px auto;
+
+body {  font: 16px Helvetica, Sans-Serif;
+        line-height: 24px;
+        background: url(images/noise.jpg);
+        width: 80%;
+        max-width: 800px;
+        margin: auto;}
+.clear { clear: both; }
+.cite {float: right; font-size: 10px;}
+
+h1 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
+p { margin: 0 0 16px 0; }
+a { color: #999; text-decoration: none;}
+ul { margin: 0 0 32px 17px; }
+
+#pic { float: right; padding: 0px 0px 30px 40px; }
+
+
+#objective
+p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+dl { padding-top: 40px; }
+dt {
+    width: 130px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 26px 0 0;
+    float: left;
+    height: 100px;
+    border-right: 1px solid #999;
+}
+
+dd p {
+    padding-left: 180px;
+}
+
+dl .clearfix {
+    padding-bottom: 20px;
 }
