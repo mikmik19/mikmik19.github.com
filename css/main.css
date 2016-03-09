@@ -1,0 +1,7 @@
+/* The following styles are for the document, not the SVG elements. */
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    max-width: 800px;
+    margin: 10px auto;
+}
