@@ -30,16 +30,16 @@ ul { margin: 0 0 32px 17px; }
 
 #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
 dl { padding-top: 40px; }
-dt { 
+dt {
     width: 130px;
     font-style: italic;
     font-weight: bold;
     font-size: 18px;
-    text-align: right; 
+    text-align: right;
     padding: 0 26px 0 0;
     float: left;
     height: 100px;
-    border-right: 1px solid #999; 
+    border-right: 1px solid #999;
 }
 
 dd p {
@@ -52,16 +52,21 @@ dl .clearfix {
 </style>
 
 <div id="page-wrap">
-        
+
     <div id="objective">
         <img src="/images/me2.jpg" alt="Photo of Cthulu" id="pic" width = "150" />
         <p>
-            I am a Dane living in Odense with my girlfriend. I consider myself to be a very motivated student. I like doing experimental physics because I find the mixture of theoretical modeling and practical know-how appealing, and I find the process of gathering data both exciting and motivating. I particularly like doing scattering experiments because of the flexibility of the different scattering techniques: One can study both structure and dynamics in a broad range of length- and timescales. In my spare time I run long distances, read, travel, take pretty pictures, and play video games. 
+            I am a Dane living in Odense with my girlfriend. I consider myself to be a very motivated student. I like doing experimental physics because I find the mixture of theoretical modeling and practical know-how appealing, and I find the process of gathering data both exciting and motivating. I particularly like doing scattering experiments because of the flexibility of the different scattering techniques: One can study both structure and dynamics in a broad range of length- and timescales. In my spare time I run long distances, read, travel, take pretty pictures, and play video games.
+
+            If you wan't to know more you can check out my profiles at:
+            <a href="https://dk.linkedin.com/in/mikkelhartmann"> LinkedIn </a>,
+            <a href="http://orcid.org/0000-0001-5609-2723"> ORCiD </a> or
+            <a href="https://scholar.google.dk/citations?user=a_1mkF4AAAAJ&hl=da"> Google Scholar </a>.
         </p>
     </div>
-    
+
     <div class="clear"></div>
-    
+
     <dl>
 
         <div class="clearfix">
@@ -70,10 +75,10 @@ dl .clearfix {
             <p><strong>Dec 2013-2016:</strong> Ph.d. in Experimental physics from Roskilde University and Laboratoire Léon Brillouin<br>
             <strong>Sep 2011-2013:</strong> Master in mathematics and physics from Roskilde University<br>
             <strong>Sep 2008-2011:</strong> Bachelor in mathematics and physics from Roskilde University</p>
-               
+
         </dd>
         </div>
-              
+
         <div class="clearfix">         
         <dt>Teaching experience</dt>
         <dd>
@@ -83,7 +88,7 @@ dl .clearfix {
             <strong>Feb-Mar 2013:</strong> Physics with the philosophy of science</p>
         </dd>
         </div>
-        
+
         <div class="clearfix">
         <dt>Language and skills</dt>
         <dd>
@@ -91,12 +96,12 @@ dl .clearfix {
             <p>MatLab (scientific usage), LaTex (scientific usage), Octave (basic knowledge), R (basic knowledge)</p>
         </dd>
         </div>
-        
+
         <div class="clearfix">
         <dt>Hobbies</dt>
         <dd><p>Reading books, photography, traveling, and running</p></dd>
         </div>
-        
+
     </dl>
 
 </div>
@@ -127,12 +132,3 @@ table.gridtable td {
     padding: 8px;
 }
 </style>
-
-
-
-
-
-
-
-
-
