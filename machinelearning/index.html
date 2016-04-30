@@ -11,56 +11,50 @@
         <script src="/libs/d3.geo.projection.min.js"></script>
         <script src="/libs/topojson.js"></script>
 
-        <!-- libraries for the choropleth map -->
-        <script src="/libs/d3.geomap.dependencies.min.js"></script>
-        <script src="/libs/d3.geomap.min.js"></script>
+        <!-- including the JS to make math look nice -->
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
         <!-- Including the CSS -->
         <link rel="stylesheet" href="/css/arcadetrail.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="/css/d3.geomap.css" media="screen" charset="utf-8">
     </head>
 
     <body>
-            <h1> Overview of the Arcade Trail Data Base </h1>
+            <h1> Learning Machine Learning </h1>
+            <h2> Introduction </h2>
+            <p>So first a bit about myself. Im 26 year old. I’m currently a Ph.d.
+              student in experimental physics and I have a master’s degree in
+              mathematica and physics from the University at Roskilde. While I use
+              MatLab every day for controlling experiments, analysing data and
+              making pretty figures, I have had no formal training in any programming
+              language. All I know about MatLab I know though using the “help X”
+              function in MatLab or through Googling “How to X in MatLab”. Over
+              the last three years I have become quite efficient in MatLab, but
+              I often run into problems where my fundamental knowledge about
+              programming languages become dauntingly obvious.</p>
 
-            <h2> The growth of the Arcade Trail database </h2>
-            <p> The Arcade Trail data base has grown since the scrapers started doing their work in May 2015.</p>
-            <svg id='Arcade_Trail_Game_Growth' width="600" height="300"/>
+              <p>So before starting this Machine Learning project I had a firm understanding
+              of mathematics and experience with numerical programming.</p>
 
-            <h2> The genre distribution </h2>
-            <p> We allow for games to have several genres. Not suprisingly, this makes Indie to most frequent genre on Arcade Trail.</p>
-            <svg id='Arcade_Trail_Genre_Distribution' width="600" height="800"/>
+              <p>In the beginning of January 2016 I decided to follow Coursera's
+              Machine Learning course taught by Andrew Ng.</p>
+            <h2> A walkthough of the collaberative filtering method </h2>
+            <p> In this blog post we will implement a machine learning algorithm
+              to recommend games to users based on the game they like owe and like.
+              The data is from www.arcadetrail.com — check it out, its awesome.</p>
 
-            <h2> The Arcade Trail users </h2>
-            <p> The content of Arcade trail is curated by the community. We rely on the users to submit games and fill in information about the games. The top ten submitters and contributers are listed below:</p>
-            <svg id='top_submitters' width="230" height="300"/>
-            <svg id='top_contributers' width="230" height="300"/>
-            <svg id='top_owners' width="230" height="300"/>
+            <p> Technically, the type of recommender system we will implement is
+              called collaborative filtering. We will construct at Matrix with the
+              shape \( (# users)x(# games) \). This matrix
+              contains all the votes and game ownerships for each user. The matrix
+              is incomplete in the sense that not every user will have voted for
+              every game. The aim is to establish which games a user might like,
+              that is, we will fill out the missing parts of the \(R\) matrix.
+              $$ \theta X = R^* $$
+              We do this by finding the matrixes \( X \) and \( \Theta \)  whose
+              inner product gives the filled out matrix \( R^* \).
+            </p>
 
-            <h2> Help us curate the database </h2>
-            <p>Want to help us keep the database up to date? Here is what we need:</p>
-            <svg id='missing_content_tagline' width="150" height="150"/>
-
-            <h2> Distribution of votes across the globe </h2>
-            <script src="/js/world_map.js"></script>
-
-            <div id="map"></div>
-            <script src="/js/choropleth_map.js"></script>
-
-
-
-        <!-- Including scripts -->
-        <script src="/js/Arcade_Trail_Game_Growth.js"></script>
-        <script src="/js/Arcade_Trail_Genre_Distribution.js"></script>
-        <script src="/js/missing_content_tagline.js"></script>
-        <script src="/js/top_contributers.js"></script>
-        <script src="/js/top_submitters.js"></script>
-        <script src="/js/top_owners.js"></script>
-
-        <!-- <script src="/js/Arcade_Trail_Release_Date_Distribution.js"></script>
-        <script src="/js/Arcade_Trail_Missing_Release_Date.js"></script>
-        <script src="/js/User_Comparison_Release_Date_Distribution.js"></script>
-        <script src="/js/User_Comparison_Genre_Distribution.js"></script>
-        <script src="/js/User_Comparison_Library_Cost.js"></script>
-        <script src="/js/Arcade_Trail_Missing_Genre.js"></script> -->
     </body>
 </html>

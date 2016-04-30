@@ -72,7 +72,7 @@
 
         circles.exit().remove();
 
-        
+
         var line = d3.svg.line()
             .x(function(d) { return xScale(d[month]); })
             .y(function(d) { return yScale(d[cum_num]); });
@@ -105,7 +105,7 @@
             .attr('fill', 'grey' )
             .attr('padding',2);
 
-        bar.exit().remove(); */    
+        bar.exit().remove(); */
     }
 
     function parse(d) {
