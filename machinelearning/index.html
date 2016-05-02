@@ -32,28 +32,64 @@
               function in MatLab or through Googling “How to X in MatLab”. Over
               the last three years I have become quite efficient in MatLab, but
               I often run into problems where my fundamental knowledge about
-              programming languages become dauntingly obvious.</p>
-
-              <p>So before starting this Machine Learning project I had a firm understanding
-              of mathematics and experience with numerical programming.</p>
-
-              <p>In the beginning of January 2016 I decided to follow Coursera's
+              programming languages become dauntingly obvious.
+            </p>
+            <p>So before starting this Machine Learning project I had a firm understanding
+              of mathematics and experience with numerical programming.
+            </p>
+            <p>In the beginning of January 2016 I decided to follow Coursera's
               Machine Learning course taught by Andrew Ng.</p>
-            <h2> A walkthough of the collaberative filtering method </h2>
+            <p>This blogpost will be divided into three parts. In part one I will
+              go through the algorithm behind the reccomender system we will be
+              building. If you are allready familiar with the collaborative filtering
+              method you may wish to skim this part quickly. In the second part
+              I will show how I built the reccomender system in Python. This was
+              my first encounter with Python, so anyone new to Python may find
+              it interesting. Anyone experience experience in Python my well cringe
+              at ineffectiveness of my coding. In the last part I will reflect on
+              what I've learned building this thing in Pythons focusing on the
+              challanges I think other in similar positins will face.
+            </p>
+            <h2> A walkthough of the collaberative filtering method -
+              The main ideas and the mathematics </h2>
             <p> In this blog post we will implement a machine learning algorithm
               to recommend games to users based on the game they like owe and like.
               The data is from www.arcadetrail.com — check it out, its awesome.</p>
 
-            <p> Technically, the type of recommender system we will implement is
+            <p>Technically, the type of recommender system we will implement is
               called collaborative filtering. We will construct at Matrix with the
               shape \( (# users)x(# games) \). This matrix
               contains all the votes and game ownerships for each user. The matrix
               is incomplete in the sense that not every user will have voted for
               every game. The aim is to establish which games a user might like,
               that is, we will fill out the missing parts of the \(R\) matrix.
-              $$ \theta X = R^* $$
+              $$ \theta\cdot X = R^* $$
               We do this by finding the matrixes \( X \) and \( \Theta \)  whose
               inner product gives the filled out matrix \( R^* \).
+            </p>
+            <p>To ge the matrices \( X \) and \( \Theta \) we could simply try out
+              numbers untill we hit ones with a reasonable inner product. But this
+              would be a tedious task. What we want is for the computer to do all
+              the heavy lifting. For this we must come up with an expression that
+              we can then minimize. This is expression is usually called the cost
+              function, presumably because it is the penalty the coomputer must
+              suffer for putting up a wrong answer. The cost function we will use
+              is:
+              $$ J(X,\Theta, R) =
+              \frac{1}{2} \Sigma \Sigma \left( \Theta\cdot X  - Y \right)^{2} +
+              \frac{\lambda}{2} \cdot \Sigma \Theta^{2}
+              + \frac{\lambda}{2} \cdot \Sigma X^{2}
+              $$
+              The first term is the squared difference between the prediction votes
+              and the acutal votes. The last two term are regularization terms.
+              These are included to help the gradient decent algorithm converge.
+            </p>
+            <p>Since we are dealing with \( # user + # games \) parameters to be
+              fitted it is nescessary to supply the gradient of the cost function.
+            </p<>
+            <h2>The Python implementation</h2>
+            <p>First we must construct our \( R \) matrix. To do this we must
+              load the ratings.
             </p>
 
     </body>
