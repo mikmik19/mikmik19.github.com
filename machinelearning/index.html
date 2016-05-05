@@ -23,7 +23,7 @@
     </head>
 
     <body>
-            <h1> Learning Machine Learning </h1>
+            <h1> Learning Machine Learning</h1>
             <p>
               In this blog post we will implement a machine learning algorithm
               to recommend games to users based on the game they like owe and like.
@@ -48,21 +48,23 @@
             <p>
               So before starting this Machine Learning project I had a firm understanding
               of mathematics and experience with numerical programming.
-            </p>
-            <p>
               In the beginning of January 2016 I decided to follow
               <a href="https://www.coursera.org/learn/machine-learning/">Coursera's
               Machine Learning course taught</a> by
-              <a href="http://www.andrewng.org/"> Andrew Ng</a>.
+              <a href="http://www.andrewng.org/"> Andrew Ng</a>. The course is
+              excellent and I would reccomend it to anyone interesting in getting
+              into machine learning. I found reccomender systems particularly
+              interesting which is why I am writing about it now.
             </p>
-              This blogpost will be divided into three parts. In part one I will
+            <p>
+              This blogpost will be divided into three parts. In sections one I will
               go through the algorithm behind the reccomender system we will be
               building. If you are allready familiar with the collaborative filtering
-              method you may wish to skim this part quickly. In the second part
+              method you may wish to skim this part quickly. In the second section
               I will show how I built the reccomender system in Python. This was
               my first encounter with Python, so anyone new to Python may find
               it interesting. Anyone experience experience in Python my well cringe
-              at ineffectiveness of my coding. In the last part I will reflect on
+              at ineffectiveness of my coding. In the thirs section I will reflect on
               what I've learned building this thing in Pythons focusing on the
               challanges I think other in similar positins will face.
             </p>
@@ -328,7 +330,12 @@ def getting_reccomendations(R,Theta,X,titles,user_names,user_id):
             This concludes the Python implementation of the collaberative filtering
             reccomender system.
           </p>
-          <h2>What remains to be done </h2>
+          <h2>What remains to be done?</h2>
+          <p>
+            I have not discussed how to select the right values of \( \lambda \)
+            let alone how ones tests the quality of the reccomendations. This will
+            be the subject of another blog post.
+          </p>
           <p>
             Building this reccomender system was fun. However, there are a number
             of obvious improvements. For example, I know my older brother is not
@@ -336,11 +343,9 @@ def getting_reccomendations(R,Theta,X,titles,user_names,user_id):
             for him I find: Counter-Strike, Counter-Strike: Source,
             Counter-Strike: Condition Zero, Counter-Strike: Global Offensive and
             Half-Life 2: Deathmatch. Clearly the reccomender system would really
-            like for him to try out Counter Strike.
-          </p>
-          <P>
-            Luckily there is such a thing as a  content based reccomender
-            system! This is what I will be playing with next.
+            like for him to try out Counter Strike. Luckily there is such a thing
+            as a  content based reccomender system! I will write about this in
+            the future.
           </p>
     </body>
 </html>
