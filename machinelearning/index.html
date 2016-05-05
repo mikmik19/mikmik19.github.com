@@ -89,7 +89,8 @@
               product would give \( R^* \) the wrong size.
             </p>
             <p>
-              In principle this is all there is to it.
+              In principle this is all there is to it. Once you have your
+              \( X \) and \( \Theta \) matrices you are done.
             </p>
             <p>
               To get the matrices \( X \) and \( \Theta \) we could simply try out
@@ -107,8 +108,8 @@
               + \frac{\lambda}{2}\sum X^{2}
               $$
               Here \( A^2 \) is shorthand for squaring every entry in \( A \).
-              That is \(A^2 = A \circ A \) and not \( A \cdot A \) with \( \circ \)
-              being is the symbol for the
+              That is \(A^2 = A \circ A \) and not \( A \cdot A \) or \( AA \)
+              with \( \circ \) being is the symbol for the
               <a href="https://en.wikipedia.org/wiki/Hadamard_product_(matrices)">
               entrywise product</a> and \( \cdot \) and the
               <a href="https://en.wikipedia.org/wiki/Dot_product">dot product</a>
@@ -120,7 +121,7 @@
               and the acutal votes. If the the difference is high the cost is high.
               The next two term are regularization terms. They are there to increase
               the cost of the using high values for the parameters. \( \lambda \)
-              is a parameter we can chose freely, depending on how much we wish to
+              is a scalar we can chose freely, depending on how much we wish to
               supress high parameter values. If you use a very low value of \( \lambda
               \) chances are your optimization code will take ages to run and
               produce terribly results. So in the end the cost function produces a
@@ -129,7 +130,10 @@
             </p>
             <p>
               Since we are dealing with \( # user + # games \) parameters the
-              optimizaing code need some extra help to run smoothly.
+              optimizaing code need some extra help to run smoothly. This is done
+              by supplying the gradient of the cost function. That is, we must
+              know how much \( J \) changes when we change any one of the numbers
+              in \( \Theta \) and \( X \).
             </p>
             <p>
               The gradient of \( X \) is given by:
@@ -149,8 +153,9 @@
               respectively. As, of course, they should.
             </p>
             <p>
-              Supplying the optimization code with the cost function and the
-              gradient it will find the best values for \( X \) and \( \Theta \).
+              With the cost function and its gradient defined we can run the
+              optimization code and get the \( \Theta \) and \( X \) matrices
+              than are the used to calculate the reccomendations.
             </p>
             <p>
                To get the reccomendation for a specific user we simply need to
