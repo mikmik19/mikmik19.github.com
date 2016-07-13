@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Strings, Arrays and Matrices</title>
+        <!-- Including the font from google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,600,400italic,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+        <!-- including the JS to make math look nice -->
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <!-- including script for code snippets -->
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=python&amp;skin=desert"></script>
+        <!-- Including the CSS -->
+        <link rel="stylesheet" href="/css/arcadetrail.css" media="screen" charset="utf-8">
+    </head>
+
+    <body>
+            <h1> Strings, Arrays and Matrices</h1>
+            <p>
+              My first experience with programming was with MatLab. It is also
+              pretty much my only experience with programming. Recently I decided
+              to learn Python.
+
+              I’ve run into several problems because I did not properly understand
+              the differs structures Python supplies and the additional structures
+              that the Numpy package adds. The differences and similarities between
+              Python Lists, Numpy arrays and Numpy Matrices got me confused. In this
+              post I attempt to clarify the differences.
+
+              The post is inteded for my fututure self, but feel free to read along.
+            </p>
+            <h2> Strings </h2>
+            <p>
+            So first up we have the list. So lets create a list and call it myList:
+<pre class="prettyprint">
+>>> myList = [‘a’,’b’,’c']
+</pre>
+            myList is a list containing the elements a, b, c. In this list the elements
+            are strings, but i could be numbers. List of numbers have caused
+            quite some confusion for me, because they look like vectors.
+
+            Another thing is how one can append of remove things easily.
+<pre class="prettyprint">
+>>> myList.append(‘d’)
+</pre> will append the
+            string "d" to the list. If I want to remove an element I simply
+            type
+<pre class="prettyprint">
+>>> myList.remove(‘a’)
+</pre>
+            and I remove the element ‘a’ from the list.
+
+            List of numbers might be useful, but they are not vectors. If I have
+            the list
+<pre class="prettyprint">
+A = [1,2]
+</pre>
+            Typing A+1 will get you into trouble:
+<pre class="prettyprint">
+>>> A+1
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate list (not "int") to list
+</pre>
+            This is becuse a string is not a vector and the + operator works
+            differntly with strings that what you would expect for vectors. So
+            we need a way to get vectors.
+
+            <h2> Numpy arrays</h2>
+            One way to get vectors in Python is to use the Numpy package. Now, if
+            you want to get the vector A = [1 2] you have to use the functions
+            that Numpy gives you. So lets import the Numpy package.
+<pre class="prettyprint">
+>>> import numpy as np
+</pre>
+            To create the vector A mentioned above one would have to type
+<pre class="prettyprint">
+>>> A = numpy.array([1,2])
+</pre>
+            So you are
+            giving a python list of numbers to the array function. This will give
+            you the array structure
+<pre class="prettyprint">
+>>> array([1,2])
+</pre>
+            and this works like vectors should. if you type
+<pre class="prettyprint">
+>>> A*2
+array([2,4])
+</pre>
+            you get an array and you can do all the stuff you usually do with
+            vectors.
+
+            If I want to access the first element of the vector I type A[0] which
+            in this case would give me back 1.
+
+            So you get vectors by feeding a list of numbers to the Numpy .array
+            function. If you want a a 3 by 3 matrix you have to supply a list of
+            lists, like so:
+<pre class="prettyprint">
+>>> C = numpy.array([[1,2,3],[4,5,6],[7,8,9]])
+</pre>
+            <h2> Numpy matrices </h2>
+            An alternative to creating the multidimensional arrays is to create a matrix
+            using the .matrix function. E.g.
+<pre class="prettyprint">
+>>> a = np.matrix([[1, 2],[ 3 4]])
+</pre>
+            with this function you can also feed it another kind of string
+<pre class="prettyprint">
+>>> a = np.matrix('1 2; 3 4')
+</pre>
+            For MatLab using this syntax will be more familiar. But I prefer to give a
+            list of strings so the syntax stays consistent across the differnt types.
+
+            The difference between a 2-dimensional array created using the numpy.array function
+            and the .matrix function is that the matrix is a special kind of two dimensional
+            array. The matrix structure retains its 2-D nature through operations. It has
+            certain special operators, such as * (matrix multiplication) and ** (matrix power).
+
+            <h2> Neat tricks </h2>
+            But you can do a lot of other stuff that you could not do with lists.
+
+            Something I quite like about lists in Python is the convenient way
+            of looping through the elements of the list. E.g. the code
+<pre class="prettyprint">
+>>> for x in myList:
+...   print(x)
+...
+a
+b
+c
+</pre>
+          We can still use the cool looping technique from before, so if we write
+<pre class="prettyprint">
+>>> for i in C:
+>>>   print(i)
+</pre>
+          it will print out each row of the matrix.
+          One function I particularly like is the .where function. Say we want to find all
+          the elements in the Matrix C where the value is above some threshold, T. Then
+          we would write
+<pre class="prettyprint">
+>>> n,m = numpy.where(C>T). If we use T = 3
+</pre>
+          we would get
+<pre class="prettyprint">
+>>> n = array([1, 1, 1, 2, 2, 2])
+</pre>
+and
+<pre class="prettyprint">
+>>> m =  array([0, 1, 2, 0, 1, 2]).
+</pre>
+        If we now want to change those values to zero we can simply type
+<pre class="prettyprint">
+C[n,m] = 0
+</pre>
+        Pretty neat if you ask me.
+        <h2> Conclusion </h2>
+    </p>
+  </body>
+</html>
