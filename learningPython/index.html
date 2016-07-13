@@ -20,17 +20,18 @@
     <body>
             <h1> Strings, Arrays and Matrices</h1>
             <p>
-              My first experience with programming was with MatLab. It is also
-              pretty much my only experience with programming. Recently I decided
+              My first experience with programming was using MatLab to do data
+              analysis for physics reports in school and later in my Ph.d. It is also
+              pretty much my only experience with programming other than brief
+              brief periods of using Octave and R. So recently I decided
               to learn Python.
 
-              I’ve run into several problems because I did not properly understand
-              the differs structures Python supplies and the additional structures
-              that the Numpy package adds. The differences and similarities between
-              Python Lists, Numpy arrays and Numpy Matrices got me confused. In this
-              post I attempt to clarify the differences.
-
-              The post is inteded for my fututure self, but feel free to read along.
+              In using Python to write machile learning algortihms I ran into
+              several problems because I did not properly understand
+              the differs structures supplied by Python and Numpy package. The
+              differences and similarities between Python Lists, Numpy arrays and
+              Numpy Matrices got me confused. In this post I attempt to clarify the
+              differences.
             </p>
             <h2> Strings </h2>
             <p>
@@ -42,7 +43,7 @@
             are strings, but i could be numbers. List of numbers have caused
             quite some confusion for me, because they look like vectors.
 
-            Another thing is how one can append of remove things easily.
+<!--            Another thing is how one can append of remove things easily.
 <pre class="prettyprint">
 >>> myList.append(‘d’)
 </pre> will append the
@@ -52,7 +53,7 @@
 >>> myList.remove(‘a’)
 </pre>
             and I remove the element ‘a’ from the list.
-
+-->
             List of numbers might be useful, but they are not vectors. If I have
             the list
 <pre class="prettyprint">
@@ -78,7 +79,7 @@ TypeError: can only concatenate list (not "int") to list
 </pre>
             To create the vector A mentioned above one would have to type
 <pre class="prettyprint">
->>> A = numpy.array([1,2])
+>>> A = np.array([1,2])
 </pre>
             So you are
             giving a python list of numbers to the array function. This will give
@@ -101,7 +102,7 @@ array([2,4])
             function. If you want a a 3 by 3 matrix you have to supply a list of
             lists, like so:
 <pre class="prettyprint">
->>> C = numpy.array([[1,2,3],[4,5,6],[7,8,9]])
+>>> C = np.array([[1,2,3],[4,5,6],[7,8,9]])
 </pre>
             <h2> Numpy matrices </h2>
             An alternative to creating the multidimensional arrays is to create a matrix
@@ -121,7 +122,7 @@ array([2,4])
             array. The matrix structure retains its 2-D nature through operations. It has
             certain special operators, such as * (matrix multiplication) and ** (matrix power).
 
-            <h2> Neat tricks </h2>
+<!--            <h2> Neat tricks </h2>
             But you can do a lot of other stuff that you could not do with lists.
 
             Something I quite like about lists in Python is the convenient way
@@ -159,7 +160,49 @@ and
 C[n,m] = 0
 </pre>
         Pretty neat if you ask me.
-        <h2> Conclusion </h2>
+-->
+        <h2> Summary </h2>
+        <p>
+          I've compiled a summary table of how the structures react to different
+          operations:
+        </p>
+        <table style="width:100%">
+          <tr>
+            <th></th>
+            <th>List</th>
+            <th>Numpy Array</th>
+            <th>Numpy Matrix</th>
+          </tr>
+          <tr>
+            <td>Generation:</td>
+            <td>A = ['1','2','3']</td>
+            <td>A = np.array(['1','2','3'])</td>
+            <td>A = np.matrix(['1','2','3'])</td>
+          </tr>
+          <tr>
+            <td>Addition:</td>
+            <td>A+1 produces an error</td>
+            <td>A+1 = array([2,3,4])</td>
+            <td>A+1 = matrix([2,3,4])</td>
+          </tr>
+          <tr>
+            <td>Scalar product:</td>
+            <td>A*2 = ['1','2','3','1','2','3']</td>
+            <td>A*2 = array([2,4,6])</td>
+            <td>A*2 = matrix([2,4,6])</td>
+          </tr>
+          <tr>
+            <td>Dot product:</td>
+            <td>A*2 produces an error</td>
+            <td>dot(A,A) = array([2,4,6])</td>
+            <td>A*A = matrix([2,4,6])</td>
+          </tr>
+        </table>
+        <p>
+          So there is definitely some ambiguity built into the system, but for me
+          the takeaway is that I should probably just use the .matrix function
+          whenever I want to work with vectors.
+        </p>
     </p>
   </body>
 </html>
