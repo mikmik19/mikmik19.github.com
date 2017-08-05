@@ -10,7 +10,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position:relative;
-  width: 100%;
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
   padding: 10px 10px;
@@ -18,7 +18,7 @@
 }
 .page.container {
   position:relative;
-  width: 55%;
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
   padding: 10px 10px;
@@ -45,6 +45,9 @@
 @media (min-width: 401px) {
   .container {
     width: 100%;
+    padding: 64px 32px; }
+  .page.container {
+    width: 55%;
     padding: 64px 32px; }
 }
 
@@ -286,29 +289,6 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-
-/* Lists
-–––––––––––––––––––––––––––––––––––––––––––––––––– 
-ul {
-  list-style: circle inside; 
-}
-ol {
-  list-style: decimal inside; }
-ol, ul {
-  padding-left: 0;
-  margin-top: 0; }
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
-
-*/
-
-
 /* Code
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 code {
@@ -338,31 +318,6 @@ td:first-child {
 th:last-child,
 td:last-child {
   padding-right: 0; }
-
-
-/* Spacing
-–––––––––––––––––––––––––––––––––––––––––––––––––– 
-button,
-.button {
-  margin-bottom: 1rem; }
-input,
-textarea,
-select,
-fieldset {
-  margin-bottom: 1rem; }
-pre,
-blockquote,
-dl,
-figure,
-table,
-p,
-ul,
-ol
-form {
-  margin-bottom: 1.25rem; }
-
- */
-
 
 p {
   margin-bottom: 1.25rem;
