@@ -1,31 +1,23 @@
 ---
 layout: default
 ---
-
 <div class="home">
     {% include main-header.html %}
-  
-<h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-  <ul class="post-list">
+    {{ content }}
     {% for post in site.posts %}
       <div class=post-snippet>
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <h2 class="post-list-title">
-            <a class="post-link" href="{{ post.url | relative_url }}">
+        <h3 class="post-list-title">
+            <a href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
             </a>
             <span class="post-meta">
                 ({{ post.date | date: date_format }})
             </span>
-        </h2>
-        <p class="small-font">
+        </h3>
+        <p>
             {{ post.text-snippet}}
         </p>
-        
-      </dic>
+      </div>
     {% endfor %}
-  </ul>
-
 </div>
