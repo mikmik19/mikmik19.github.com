@@ -5,6 +5,10 @@ date:   2017-07-22 13:34:36 +0200
 categories: Blog-posts
 text-snippet: At work I have been building a classifier using a data set with an extreme class balance -- in some cases as much as 2000 negative cases to each positive case. Based on the area under the receiver-operator characteristics (ROC) curve I thought my results were great, but then I looked at the precision-recall (PR) curve and realized that my classifier would be useless in the real world.
 ---
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 At work I have been building a classifier using a data set with an extreme class balance -- in some cases as much as 2000 negative cases to each positive case. Based on the area under the receiver-operator characteristics (ROC) curve I thought my results were great, but then I looked at the precision-recall (PR) curve and realized that my classifier would be useless in the real world.
 
 The root of the problem is the class imbalance -- the ROC curve was designed to abstract away class imbalance, so it does not give a good picture of how the classifier will perform in extreme cases. The PR curve presentes the results of you classifier, as they would be on the particular data set you are testing in. So it is very specific. So the two curves are in a sense complementary. However, if you are only shown one (or even worse, are only given the area under the curve), you have to be careful about drawing any conclusion about the quality of the classifier. 
