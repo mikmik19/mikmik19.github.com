@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A collection of interesting links"
-date:   2016-07-22 13:34:36 +0200
+date:   2017-07-20 12:34:36 +0200
 categories: link-collections
 text-snippet: Links that I have found useful or informative for work or personal machine learning projects.
 ---
