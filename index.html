@@ -1,0 +1,36 @@
+---
+layout: default
+title: Mikkel Hartmann Jensen
+---
+
+<div id="home">
+  <div class="authorinfo box">
+    <p class="bio">
+      I am Machine Learning Engineer at <a href="http://www.makewise.io/"> MakeWise</a> 
+      where I work on a clinical decision support system. I have Ph.D. in experimental physics which 
+      taught me that I prefer data analysis over conducting physical experiment.
+    </p>
+    <br>
+  </div>
+  <div class="posts">
+  {% for post in site.posts %}
+    {% assign currentdate = post.date | date: "%Y" %}
+    {% if currentdate != date %}
+      {% unless forloop.first %}
+      </ul>
+      {% endunless %}
+      <h2 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h2>
+      <ul>
+    {% assign date = currentdate %}
+    {% endif %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span class="date">{{ post.date | date_to_string }}</span>
+        </li>
+    {% if forloop.last %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+</div>

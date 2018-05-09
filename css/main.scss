@@ -3,8 +3,6 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
 $base-font-family:  Helvetica, "Helvetica Neue", Arial, sans-serif;
 $base-font-size:   16px;
@@ -26,20 +24,12 @@ $grey-color-light: #b1b1b1;
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    650px;
 
 $on-palm:          550px;
 $on-laptop:        780px;
 
 
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -67,3 +57,91 @@ $on-laptop:        780px;
         "color",
         "syntax-highlighting"
 ;
+/*****************************/
+/* Headder */
+/*****************************/
+
+.menu {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  
+    a  {
+      text-decoration: none;
+    }
+  
+    > a {
+      display: flex;
+      align-items: center;
+      color: inherit;
+    }
+  
+    > a img {
+      padding: 0;
+      margin-right: 10px;
+      border-radius: 45px;
+    }
+  
+    ul {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+  
+    ul li {
+      &:first-child {
+        padding-left: 0;
+      }
+      padding-left: 1em;
+    }
+}
+
+
+/*****************************/
+/* Posts */
+/*****************************/
+
+.artilce_title {
+    text-align: center;
+    margin: 0px;
+    font-size: 5rem;
+    padding-bottom: 0.2em;
+    line-height: 5.5rem;
+}
+
+.posts h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.posts ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.posts li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0px;
+}
+
+$scroll-indicator-height: 10px;
+/*****************************/
+/* Scroll progress indicator */
+/*****************************/
+
+.scroll-indicator-container {
+    height: $scroll-indicator-height;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  
+    .scroll-indicator-progress {
+      height: 100%;
+      background-color: $color-red;
+    }
+  }
