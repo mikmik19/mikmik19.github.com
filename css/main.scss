@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family:  Helvetica, "Helvetica Neue", Arial, sans-serif;
+// $base-font-family:  Helvetica, "Helvetica Neue", Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -103,12 +103,23 @@ $on-laptop:        780px;
 /* Posts */
 /*****************************/
 
+/* Posts headder */
+.appetizer {
+    color: #99999a;
+}
+
+/* Posts sestions */
 .artilce_title {
     text-align: center;
-    margin: 0px;
+    margin: 30px;
     font-size: 5rem;
     padding-bottom: 0.2em;
     line-height: 5.5rem;
+}
+
+.posts h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .posts h2 {
@@ -142,6 +153,6 @@ $scroll-indicator-height: 10px;
   
     .scroll-indicator-progress {
       height: 100%;
-      background-color: $color-red;
+      background-color: green;
     }
   }

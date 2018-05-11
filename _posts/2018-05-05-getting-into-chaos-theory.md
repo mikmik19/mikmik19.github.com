@@ -5,7 +5,7 @@ date:   2018-05-06 10:15:00 +0200
 categories: getting-into
 text-snippet: Links that I have found useful or informative for getting started with Chaos Theory.
 ---
-Recently I had to learn about Chaos Theoryat work. This is a list of links that I found particularly interesting during the learning process.
+Recently I had to learn about Chaos Theory at work. This is a list of links that I found particularly interesting during the learning process.
 
 Popular science books on the subject:
 1. [Sync: The Emerging Science of Spontaneous Order by Steven H. Strogatz](https://www.goodreads.com/book/show/354421.Sync)

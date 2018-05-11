@@ -4,15 +4,17 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="artilce_header">
+    <div class="appetizer">
+      {{ page.excerpt }}
+    </div>
     <h1 
       class="artilce_title" itemprop="name headline">{{ page.title }}
     </h1>
   </header>
-
   <div class="scroll-indicator-container">
-      <div class="scroll-indicator-progress"></div>
+    <div class="scroll-indicator-progress"></div>
   </div>
   <div class="article-content" itemprop="articleBody">
-    {{ page.content }}
+    {{ page.content | remove: page.excerpt }}
   </div>
 </article>
