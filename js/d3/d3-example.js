@@ -7,6 +7,10 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
 var x = d3.scale.linear().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
 
+// Scale the range of the data
+x.domain([-1, 1]);
+y.domain([-1, 1]);
+
 // Define the axes
 var xAxis = d3.svg.axis().scale(x)
     .orient("bottom").ticks(5);
@@ -23,41 +27,68 @@ var svg = d3.select("#d3-example")
         .attr("transform", 
               "translate(" + margin.left + "," + margin.top + ")");
 
-// Get the data
-d3.csv("../../../data/animation_data_theta.csv", function(error, data) {
-    data.forEach(function(d) {
-        d.x = Math.cos(d.osc0);
-        d.y = Math.sin(d.osc0);
-    });
 
-    // Scale the range of the data
-    x.domain([-1, 1]);
-    y.domain([-1, 1]);
 
-    // Add the scatterplot
-    svg.selectAll("dot")
-        .data(data)
-        .enter()
+function drawCircle(d) {
+
+    var t = d3.transition()
+      .duration(550)
+      .ease("sin");
+
+    var circles = svg.selectAll("circle")
+        .data(d)
+
+    circles
+        .exit()
+        .attr("class", "exit")
+        .remove();
+
+    circles
+        .attr("class", "update")
+        .transition(t)
+            .attr("cx", function(d) { return x(d.x); })
+            .attr("cy", function(d) { return y(d.y); })
+
+    circles.enter()
         .append("circle")
+        .attr("class", "enter")
         .attr("r", 3.5)
         .attr("cx", function(d) { return x(d.x); })
         .attr("cy", function(d) { return y(d.y); })
+        .attr("fill", "green")
         .style("opacity", 0.15)
-        
-    // Adding mouseover effects 
-    .on('mouseover', function(){
-        d3.select(this)
-            .attr({ fill: 'red' })
-            .style('opacity', 1)
-    })
-    .on('mouseout', function(){
-        d3.select(this)
-            .attr({fill: 'black'})
-            .style('opacity', 0.15)
-    })
-});
+        .on('mouseover', function(d){
+            d3.select(this)
+                .attr("fill", "red")
+                .attr("opacity", 1)
+        })
+        .on('mouseout', function(d){
+            d3.select(this)
+                .attr('fill', 'green')
+                .attr('opacity', 0.15)
+        })
+}
 
-svg.transition()
-    .attr('d', svg)
-    .attr('fill', 'green')
-    .duration(2000)
+function point(angle) {
+    return {
+        x: Math.cos(angle),
+        y: Math.sin(angle)
+    }
+}
+
+// Get the data
+d3.csv("../../../../data/animation_data_theta.csv", function(error, data) {
+    const keys = Object.keys(data[0]);
+    const processed = data.map(row => keys.map(key => point(row[key])))
+    var row_cnt = 0;
+    var tick = function () {
+        drawCircle(processed[row_cnt])
+        // debugger;
+        console.log(row_cnt)
+        row_cnt++
+        if (row_cnt < 100) {
+            setTimeout(tick, 500)
+        }
+    }
+    setTimeout(tick, 500)
+});

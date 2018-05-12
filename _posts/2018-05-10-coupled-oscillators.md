@@ -1,10 +1,14 @@
 ---
 layout: post
-title:  "Coupled oscillators"
-date:   2018-05-06 12:34:36 +0200
+title:  "Draft: Coupled oscillators"
+date:   2018-05-10 12:34:36 +0200
 categories: reproducing-papers
 text-snipper: I decided that I wanted to start reproducing the results of some of the papers I am reading. This first one is about coupled oscillators, and it was mentioned in Steven H. Strogatz book Sync The Emerging Science of Spontaneous Order.
 ---
+<head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+
 I decided that I wanted to start reproducing the results of some of the papers I'm reading. This first one was mentioned in Steven H. Strogatz' book _Sync: The Emerging Science of Spontaneous Order_ and is about a collection coupled oscillators.
 
 * This will become a table of contents (this text will be scraped).
@@ -33,8 +37,10 @@ This quote says that they simulated the dynamical system described above with 48
 # Visualizing and characterizing the evolution of the system
 Before we jump directly to the question of synchronization, lets think about how we can visualize the evolution of the system. In the book Stogatz asks the reader to think of each oscillator as a runner on a track. If synchronization arises, this would mean that the runners end up running around the track bundled up in a group. Let's create this visualization: The phase of each oscillator will be converted to (x,y) points on a circle and we will look at how the 480 points move as time unfolds.
 
-<span style="display:block;text-align:center">![My helpful screenshot]({{ "../assets/img/coupled-oscillators/animation.gif"| absolute_url }})
-</span>
+<!-- <span style="display:block;text-align:center">![My helpful screenshot]({{ "../assets/img/coupled-oscillators/animation.gif"| absolute_url }})
+</span> -->
+<center><svg id='d3-example' width="300" height="300"/></center>
+<script type='text/javascript' src='../../../../js/d3/d3-example.js'></script>
 
 This is a nice way to watch the system evolve, and we can see quite clearly that synchronization arises, neat! But it would be nice to quantize the evolution of the system a bit more. We can look at how the phase changes for each oscillator, we can see that initially the oscillators occupy phases between 0 and $$2\pi$$ -- they are spread across the circle. As time unfolds all the oscillators emd up close to 0 and slowly increase their phase in unison.
 
