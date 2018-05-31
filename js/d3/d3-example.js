@@ -4,19 +4,16 @@ var margin = {top: 20, right: 20, bottom: 20, left: 20},
     height = 300 - margin.top - margin.bottom;
 
 // Set the ranges
-var x = d3.scale.linear().range([0, width]);
-var y = d3.scale.linear().range([height, 0]);
+var x = d3.scaleLinear().range([0, width]);
+var y = d3.scaleLinear().range([height, 0]);
 
 // Scale the range of the data
 x.domain([-1, 1]);
 y.domain([-1, 1]);
 
 // Define the axes
-var xAxis = d3.svg.axis().scale(x)
-    .orient("bottom").ticks(5);
-
-var yAxis = d3.svg.axis().scale(y)
-    .orient("left").ticks(5);
+var xAxis = d3.axisBottom().scale(x).ticks(5);
+var yAxis = d3.axisLeft().scale(y).ticks(5);
     
 // Adds the svg canvas
 var svg = d3.select("#d3-example")
@@ -29,11 +26,27 @@ var svg = d3.select("#d3-example")
 
 
 
+
 function drawCircle(d) {
 
-    var t = d3.transition()
+    var t = d3.transition(d)
       .duration(550)
-      .ease("sin");
+      // see http://andyshora.com/tweening-shapes-paths-d3-js.html on tweening
+      // and https://stackoverflow.com/questions/38841523/ for example
+      // The idea is to use tween and a custom extrapolator to get the 
+      // intermediate x and y values
+      
+      // I should probably use http://bl.ocks.org/mbostock/5100636
+      .attrTween("cx", function(x, y) {
+        var startAngle = Math.atan2(y, x);
+        var endAngle;
+        var interpolate = d3.interpolate(d.endAngle, newAngle);
+        return function(t) {
+            d.endAngle = interpolate(t);
+            return arc(d);
+        };
+    });
+    //   .ease("sin");
 
     var circles = svg.selectAll("circle")
         .data(d)
@@ -83,12 +96,11 @@ d3.csv("../../../../data/animation_data_theta.csv", function(error, data) {
     var row_cnt = 0;
     var tick = function () {
         drawCircle(processed[row_cnt])
-        // debugger;
         console.log(row_cnt)
         row_cnt++
         if (row_cnt < 100) {
-            setTimeout(tick, 500)
+            setTimeout(tick, 1500)
         }
     }
-    setTimeout(tick, 500)
+    setTimeout(tick, 1500)
 });
