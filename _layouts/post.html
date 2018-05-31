@@ -1,27 +1,20 @@
 ---
-layout: full-page
+layout: default
 ---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="artilce_header">
+    <div class="appetizer">
+      {{ page.excerpt }}
+    </div>
     <h1 
       class="artilce_title" itemprop="name headline">{{ page.title }}
-      <span class="post-meta">
-        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">({{ page.date | date: "%b %-d, %Y" }})</time>
-      </span>
     </h1>
   </header>
-
-  <div class="article-content" itemprop="articleBody">
-    {{ page.content }}
+  <div class="scroll-indicator-container">
+    <div class="scroll-indicator-progress"></div>
   </div>
-
-  <footer class="article-footer">
-
-  {% include author.html %}
-
-  </footer>
-
-  {% include dq.html %}
-
+  <div class="article-content" itemprop="articleBody">
+    {{ page.content | remove: page.excerpt }}
+  </div>
 </article>

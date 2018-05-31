@@ -11,7 +11,7 @@
 .container {
   position:relative;
   width: 90%;
-  max-width: 960px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 10px 10px;
   box-sizing: border-box;
@@ -19,7 +19,7 @@
 .page.container {
   position:relative;
   width: 90%;
-  max-width: 960px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 10px 10px;
   box-sizing: border-box;
@@ -120,7 +120,7 @@ body {
   font-size: 1.8em;
   line-height: 1.5;
   font-weight: 400;
-  font-family: -apple-system-font,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-family: Muli;
   color: #222; 
   text-align: justify;}
 
@@ -149,22 +149,18 @@ h6 { font-size: 1.1rem; line-height: 1.6;  letter-spacing: 0; text-align: left;}
   h6 { font-size: 1.1rem; }
 }
 
-p {
-  margin-top: 0; 
-  font-size: 1.7rem}
-
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: red;
+  color: green;
   text-decoration: none;
   //background-color: transparent;
   -webkit-transition: color .4s;
   transition: color .4s;
 }
 a:hover {
-  color: red;
+  color: green;
   text-decoration: underline;
 }
 
