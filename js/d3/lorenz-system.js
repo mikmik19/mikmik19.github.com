@@ -1,6 +1,6 @@
-var origin = [480, 300]
-var j = 50
-var scale = 50
+var origin = [50, 50]
+var j = 1
+var scale = 10
 var scatter = []
 var yLine = []
 var xGrid = []
@@ -102,9 +102,9 @@ function init(){
     d3.csv("../../../../data/lorenz-trajectory.csv", function(error, data) {
         data.forEach(function(d, i) {
             const x = parseFloat(d.x);
-            const y = parseFloat(d.z);
-            const z = parseFloat(d.z)
-            xGrid.push([x, 1, z]);
+            const y = parseFloat(d.y);
+            const z = parseFloat(d.z);
+            // xGrid.push([x, y, z]);
             scatter.push({x: x, y: y, z: z, id: 'point_'+i });    
         })
         d3.range(1, 11, 1).forEach(function(d){ yLine.push([-j, -d, -j]); });
