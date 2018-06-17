@@ -1,6 +1,6 @@
-var origin = [50, 50]
+var origin = [250, 200]
 var j = 1
-var scale = 10
+var scale = 4
 var scatter = []
 var yLine = []
 var xGrid = []
@@ -59,7 +59,6 @@ function processData(data){
         .enter()
         .append('circle')
         .attr('class', '_3d')
-        .attr('opacity', 0)
         .attr('cx', posPointX)
         .attr('cy', posPointY)
         .merge(points)
@@ -98,13 +97,15 @@ function posPointY(d){
 }
 
 function init(){
-    xGrid = [], scatter = [], yLine = [];
+    xGrid = [];
+    scatter = [];
+    yLine = [];
     d3.csv("../../../../data/lorenz-trajectory.csv", function(error, data) {
         data.forEach(function(d, i) {
             const x = parseFloat(d.x);
             const y = parseFloat(d.y);
             const z = parseFloat(d.z);
-            // xGrid.push([x, y, z]);
+            xGrid.push([x, y, 0]);
             scatter.push({x: x, y: y, z: z, id: 'point_'+i });    
         })
         d3.range(1, 11, 1).forEach(function(d){ yLine.push([-j, -d, -j]); });
