@@ -67,29 +67,29 @@ $on-laptop:        780px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 20px;
-  
+
     a  {
       text-decoration: none;
     }
-  
+
     > a {
       display: flex;
       align-items: center;
       color: inherit;
     }
-  
+
     > a img {
       padding: 0;
       margin-right: 10px;
       border-radius: 45px;
     }
-  
+
     ul {
       display: flex;
       list-style: none;
       align-items: center;
     }
-  
+
     ul li {
       &:first-child {
         padding-left: 0;
@@ -150,7 +150,7 @@ $scroll-indicator-height: 10px;
     top: 0px;
     left: 0px;
     z-index: 1;
-  
+
     .scroll-indicator-progress {
       height: 100%;
       background-color: green;
