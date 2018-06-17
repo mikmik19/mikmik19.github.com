@@ -1,6 +1,6 @@
 var origin = [480, 300]
-var j = 10
-var scale = 20
+var j = 50
+var scale = 50
 var scatter = []
 var yLine = []
 var xGrid = []
@@ -9,8 +9,7 @@ var alpha = 0
 var key = function(d){ return d.id; }
 var startAngle = Math.PI/4;
 
-var svg    = d3.select("#lorenz-system").call(d3.drag().on('drag', dragged).on('start', dragStart).on('end', dragEnd)).append('g');
-var color  = d3.scaleOrdinal(d3.schemeCategory20);
+var svg = d3.select("#lorenz-system").call(d3.drag().on('drag', dragged).on('start', dragStart).on('end', dragEnd)).append('g');
 var mx, my, mouseX, mouseY;
 
 var grid3d = d3._3d()
@@ -36,10 +35,8 @@ var yScale3d = d3._3d()
     .rotateX(-startAngle)
     .scale(scale);
 
-function processData(data, tt){
-
+function processData(data){
     /* ----------- GRID ----------- */
-
     var xGrid = svg.selectAll('path.grid').data(data[0], key);
 
     xGrid
@@ -47,16 +44,15 @@ function processData(data, tt){
         .append('path')
         .attr('class', '_3d grid')
         .merge(xGrid)
-        .attr('stroke', 'black')
+        .attr('stroke', 'grey')
         .attr('stroke-width', 0.3)
-        .attr('fill', function(d){ return d.ccw ? 'lightgrey' : '#717171'; })
+        .attr('fill', function(d){ return d.ccw ? 'white' : '#717171'; })
         .attr('fill-opacity', 0.9)
         .attr('d', grid3d.draw);
 
     xGrid.exit().remove();
 
     /* ----------- POINTS ----------- */
-
     var points = svg.selectAll('circle').data(data[1], key);
 
     points
@@ -67,10 +63,9 @@ function processData(data, tt){
         .attr('cx', posPointX)
         .attr('cy', posPointY)
         .merge(points)
-        .transition().duration(tt)
-        .attr('r', 3)
-        .attr('stroke', function(d){ return d3.color(color(d.id)).darker(3); })
-        .attr('fill', function(d){ return color(d.id); })
+        .attr('r', 2)
+        .attr('stroke', 'black')
+        .attr('fill', 'green')
         .attr('opacity', 1)
         .attr('cx', posPointX)
         .attr('cy', posPointY);
@@ -78,7 +73,6 @@ function processData(data, tt){
     points.exit().remove();
 
     /* ----------- y-Scale ----------- */
-
     var yScale = svg.selectAll('path.yScale').data(data[2]);
 
     yScale
@@ -92,25 +86,6 @@ function processData(data, tt){
 
     yScale.exit().remove();
 
-        /* ----------- y-Scale Text ----------- */
-
-    var yText = svg.selectAll('text.yText').data(data[2][0]);
-
-    yText
-        .enter()
-        .append('text')
-        .attr('class', '_3d yText')
-        .attr('dx', '.3em')
-        .merge(yText)
-        .each(function(d){
-            d.centroid = {x: d.rotated.x, y: d.rotated.y, z: d.rotated.z};
-        })
-        .attr('x', function(d){ return d.projected.x; })
-        .attr('y', function(d){ return d.projected.y; })
-        .text(function(d){ return d[1] <= 0 ? d[1] : ''; });
-
-    yText.exit().remove();
-
     d3.selectAll('._3d').sort(d3._3d().sort);
 }
 
@@ -123,23 +98,25 @@ function posPointY(d){
 }
 
 function init(){
-    var cnt = 0;
     xGrid = [], scatter = [], yLine = [];
-    for(var z = -j; z < j; z++){
-        for(var x = -j; x < j; x++){
+    d3.csv("../../../../data/lorenz-trajectory.csv", function(error, data) {
+        data.forEach(function(d, i) {
+            const x = parseFloat(d.x);
+            const y = parseFloat(d.z);
+            const z = parseFloat(d.z)
             xGrid.push([x, 1, z]);
-            scatter.push({x: x, y: d3.randomUniform(0, -10)(), z: z, id: 'point_' + cnt++});
-        }
-    }
+            scatter.push({x: x, y: y, z: z, id: 'point_'+i });    
+        })
+        d3.range(1, 11, 1).forEach(function(d){ yLine.push([-j, -d, -j]); });
 
-    d3.range(-1, 11, 1).forEach(function(d){ yLine.push([-j, -d, -j]); });
+        var data = [
+            grid3d(xGrid),
+            point3d(scatter),
+            yScale3d([yLine])
+        ];
 
-    var data = [
-        grid3d(xGrid),
-        point3d(scatter),
-        yScale3d([yLine])
-    ];
-    processData(data, 1000);
+        processData(data);
+    });
 }
 
 function dragStart(){
@@ -164,7 +141,5 @@ function dragEnd(){
     mouseX = d3.event.x - mx + mouseX;
     mouseY = d3.event.y - my + mouseY;
 }
-
-d3.selectAll('button').on('click', init);
 
 init();
