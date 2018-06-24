@@ -25,9 +25,9 @@ $$
 
 In this example I am using the values $$\sigma=10$$, $$\rho=28$$ and $$\beta = 8/3$$. Solving this system of differential equations for some initial value will give us a trajectory in $$(x, y, z)$$ space.
 
-<span style="display:block;text-align:center">![]({{ "../assets/img/toole-of-chaos-theory/lorenz-trajectory.png"| absolute_url }})</span>
+<!-- <span style="display:block;text-align:center">![]({{ "../assets/img/toole-of-chaos-theory/lorenz-trajectory.png"| absolute_url }})</span> -->
 
-<center><svg id='lorenz-system' width="900" height="500"/></center>
+<center><svg id='lorenz-system' width="500" height="500"/></center>
 <script type='text/javascript' src='../../../../js/d3/lorenz-system.js'></script>
 
 # Calculating the correlation dimension
