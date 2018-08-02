@@ -57,7 +57,7 @@ Instead of including a bunch of code in the beginning of every notebook one can 
 
 # Summary
 
-I have shown how you customize you jupyter notebook by using three different config files and a CSS file. I hope you found it useful. For more details see the [GitHub repository](www.mikkelhartmann/notebooks/configuring-jupyter-notebook.html).
+I have shown how you customize you jupyter notebook by using three different config files and a CSS file. I hope you found it useful. For more details see the [GitHub repository](www.mikkelhartmann.dk/notebooks/configuring-jupyter-notebook.html).
 
 # References
 
