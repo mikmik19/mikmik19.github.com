@@ -71,6 +71,12 @@ d3.csv("../../../../data/been.csv", function(data) {
                        //If value is undefined…
                        return "#ccc";
                    }
-               });
+               })
+            .on("mouseover", function() {
+                d3.select(this).attr("stroke", 'black')
+            })
+            .on("mouseout", function() {
+                d3.select(this).attr("stroke", 'None')
+            });
     });
 });
