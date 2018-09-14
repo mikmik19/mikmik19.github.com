@@ -23,7 +23,7 @@ function drawCircle(data) {
             
     // First I bind the data to circle elements
     svg.selectAll("circle")
-        .data(data.step[0].theta)
+        .data(data.steps[0].theta)
         .enter()
         .append("circle")
         .attr("class", "enter")
@@ -33,21 +33,30 @@ function drawCircle(data) {
         .attr("fill", "green");
     
     // Then I loop over the data and update the position
-    data.step.forEach(element => {
+    var i = 1
+    var numSteps = data.steps.length -1;
+    function updatePlot() {
+        console.log(i)
+        i++;
         svg.selectAll("circle")
-            .data(element.theta)
-            .transition()
-            .duration(5000)
-            .attr("class", "enter")
-            .attr("r", 3.5)
-            .attr("cx", d => xScale(Math.cos(d)) )
-            .attr("cy", d => yScale(Math.sin(d)) )
-            .attr("fill", "green");  
-    });
+                .data(data.steps[i].theta)
+                .transition()
+                // It still extrapolates between start and end _point_ not angle.
+                // will need to write custom tween ...
+                .ease(d3.easeLinear)
+                .duration(3000)
+                .attr("class", "enter")
+                .attr("r", 3.5)
+                .attr("cx", d => xScale(Math.cos(d)) )
+                .attr("cy", d => yScale(Math.sin(d)) )
+                .attr("fill", "green");
+        if ( i < numSteps) {
+            setTimeout(updatePlot, 3000);
+        }
+    };
+    updatePlot()
 }
 
-d3.json("../../../../data/animation_data_theta_double.json", function(error, data) {
+d3.json("../../../../data/animation_data_theta.json", function(error, data) {
     drawCircle(data)
-    console.log(data.step[0])
-    console.log(data.step[0].theta)
 });
