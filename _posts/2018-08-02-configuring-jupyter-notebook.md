@@ -33,7 +33,7 @@ These are all enabled in `~/.jupyter/nbconfig/notebook.json`.
 
 I love Jupyter Notebook, but there are some things about the default styling of the cells that don't sit right with me, e.g. the figures are left-centered and the text fields are too wide. So I was quite happy to learn that Jupyter will use the following file if it exists: `~/.jupyter/custom/custom.css`.
 
-To see the effect of the styling, you can look at the difference between the notebook [his page](www.mikkelhartmann.dk/notebooks/configuring-jupyter-notebook.html), and compare it to the one hosted on [GitHub](https://github.com/mikkelhartmann/configuring-jupyter-notebook/blob/master/notebooks/configuring-jupyter-notebook.ipynb). I think it helps quite a bit.
+To see the effect of the styling, you can look at the difference between the notebook [this page](http://mikkelhartmann.dk/notebooks/configuring-jupyter-notebook.html), and compare it to the one hosted on [GitHub](https://github.com/mikkelhartmann/configuring-jupyter-notebook/blob/master/notebooks/configuring-jupyter-notebook.ipynb). I think it helps quite a bit.
 
 # Creating high quality inline figures
 
