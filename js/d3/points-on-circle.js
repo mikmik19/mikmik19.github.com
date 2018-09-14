@@ -23,30 +23,31 @@ function drawCircle(data) {
             
     // First I bind the data to circle elements
     svg.selectAll("circle")
-        .data([data[0]])
+        .data(data.step[0].theta)
         .enter()
         .append("circle")
         .attr("class", "enter")
         .attr("r", 3.5)
-        .attr("cx", d => xScale(Math.cos(d.theta)) )
-        .attr("cy", d => yScale(Math.sin(d.theta)) )
+        .attr("cx", d => xScale(Math.cos(d)) )
+        .attr("cy", d => yScale(Math.sin(d)) )
         .attr("fill", "green");
     
     // Then I loop over the data and update the position
-    data.forEach(element => {
+    data.step.forEach(element => {
         svg.selectAll("circle")
-            .data([element])
+            .data(element.theta)
             .transition()
             .duration(5000)
             .attr("class", "enter")
             .attr("r", 3.5)
-            .attr("cx", d => xScale(Math.cos(d.theta)) )
-            .attr("cy", d => yScale(Math.sin(d.theta)) )
+            .attr("cx", d => xScale(Math.cos(d)) )
+            .attr("cy", d => yScale(Math.sin(d)) )
             .attr("fill", "green");  
     });
-       
 }
 
-d3.csv("../../../../data/animation_data_theta_single.csv", function(error, data) {
-    drawCircle(data) 
+d3.json("../../../../data/animation_data_theta_double.json", function(error, data) {
+    drawCircle(data)
+    console.log(data.step[0])
+    console.log(data.step[0].theta)
 });
