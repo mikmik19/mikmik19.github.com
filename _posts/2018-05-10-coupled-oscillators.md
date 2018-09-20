@@ -37,16 +37,18 @@ This quote says that they simulated the dynamical system described above with 48
 # Visualizing and characterizing the evolution of the system
 Before we jump directly to the question of synchronization, lets think about how we can visualize the evolution of the system. In the book Stogatz asks the reader to think of each oscillator as a runner on a track. If synchronization arises, this would mean that the runners end up running around the track bundled up in a group. Let's create this visualization: The phase of each oscillator will be converted to (x,y) points on a circle and we will look at how the 480 points move as time unfolds.
 
-<center><svg id="pointsOnCircle" width="300" height="300"/></center>
+<center>
+    <button id="startSimulation">Start</button>
+    <button id="stopSimulation">Stop</button>
+    <div/>
+    <svg id="pointsOnCircle" width="300" height="300"/>
+</center>
 <script type='text/javascript' src='../../../../js/d3/points-on-circle.js'></script>
 
 This is a nice way to watch the system evolve, and we can see quite clearly that synchronization arises, neat! But it would be nice to quantize the evolution of the system a bit more. We can look at how the phase changes for each oscillator, we can see that initially the oscillators occupy phases between 0 and $$2\pi$$ -- they are spread across the circle. As time unfolds all the oscillators emd up close to 0 and slowly increase their phase in unison.
 
-<span style="display:block;text-align:center">![]({{ "../assets/img/coupled-oscillators/theta.png"| absolute_url }})</span>
-
 <center><svg id="angleVsTime" width="400" height="200"/></center>
-<!-- <script type='text/javascript' src='../../../../js/d3/angle-vs-time.js'></script> -->
-
+<script type='text/javascript' src='../../../../js/d3/angle-vs-time.js'></script>
 
 This collapses the entire evolution of the system into a single plot of $$\theta$$ vs. time, but we are still looking at an overwhelming 480 curves. Since we are interested in the system as a whole, can look at how the variance all the phases change with time -- when the variance of the phases is low, it means that they are all close together. We now have a number that represents the _synchronization_ level reached by the system. This also allow us to set a condition for synchronization: The system must reach a phase variance below $$0.1$$.
 

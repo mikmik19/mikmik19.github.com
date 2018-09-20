@@ -33,6 +33,7 @@ function drawCircle(data) {
             .append("circle")
             .attr("class", "enter")
             .attr("r", 3.5)
+            .attr("opacity", 0.3)
             .attr("cx", d => xScale(Math.cos(d.theta)) )
             .attr("cy", d => yScale(Math.sin(d.theta)) )
             .attr("fill", "green");
@@ -40,7 +41,7 @@ function drawCircle(data) {
 
     // Then I loop over the data and update the position
     function runSimulation() {
-        var i = 0
+        let i = 0
         var numSteps = data.steps.length -1;
         function updatePlot() {
             console.log(i)
@@ -50,30 +51,34 @@ function drawCircle(data) {
                     .data(stepData)
                     .transition()
                     .ease(d3.easeLinear)
-                    .duration(2000)
+                    .duration(1000)
                     .attr("class", "enter")
                     .attr("r", 3.5)
+                    .attr("opacity", 0.3)
                     .attr("cx", d => xScale(Math.cos(d.theta)) ) // These work, but interpolate (x,y) not angle
                     .attr("cy", d => yScale(Math.sin(d.theta)) )
                     // .attrTween("cx", xTween) // These should interpolate angle, but don't wotk
                     // .attrTween("cy", yTween) // 
                     .attr("fill", "green")
             if ( i < numSteps && stopSimulation == false) {
-                setTimeout(updatePlot, 2000);
+                setTimeout(updatePlot, 1000);
             }
         };
         updatePlot()
     };
     initializeSimulation();
+    stopSimulation = true;
 
     // ------------------------------------------------
     // Create the buttons
     // ------------------------------------------------
     d3.select("#startSimulation").on("click", function() {
-        svg.selectAll("circle").remove()
-        stopSimulation = false;
-        initializeSimulation()
-        runSimulation()
+        if (stopSimulation == true) {
+            stopSimulation = false;
+            svg.selectAll("circle").remove()
+            initializeSimulation()
+            runSimulation()
+        }        
     })
 
     d3.select("#stopSimulation").on("click", function() {
