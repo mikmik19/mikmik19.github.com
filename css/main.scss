@@ -156,3 +156,19 @@ $scroll-indicator-height: 10px;
       background-color: green;
     }
   }
+
+/*****************************/
+/* D3 relates stuff          */
+/*****************************/
+
+.oscillator.selected {
+    stroke: orange;
+    opacity: 1;
+    stroke-width: 2px;
+}
+
+.pointOnCircle.selected {
+    stroke: orange;
+    opacity: 1;
+    stroke-width: 2px;
+}
