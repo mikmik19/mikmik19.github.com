@@ -39,7 +39,7 @@ Before we jump directly to the question of synchronization, lets think about how
 
 <center>
     <button id="startSimulation">Start</button>
-    <button id="stopSimulation">Stop</button>
+    <button id="stopSimulation">Pause</button>
     <div/>
     <svg id="pointsOnCircle" width="300" height="300"/>
 </center>
@@ -47,7 +47,15 @@ Before we jump directly to the question of synchronization, lets think about how
 
 This is a nice way to watch the system evolve, and we can see quite clearly that synchronization arises, neat! But it would be nice to quantize the evolution of the system a bit more. We can look at how the phase changes for each oscillator, we can see that initially the oscillators occupy phases between 0 and $$2\pi$$ -- they are spread across the circle. As time unfolds all the oscillators emd up close to 0 and slowly increase their phase in unison.
 
-<center><svg id="angleVsTime" width="400" height="200"/></center>
+
+<center>
+    <div class="slidecontainer">
+    Looking at oscillator 
+    <input type="range" min="1" max="100" value="50" class="slider" id="oscSlider">
+    number <span id="oscSliderCounter">50</span>
+    </div>
+    <svg id="angleVsTime" width="400" height="200"/>
+</center>
 <script type='text/javascript' src='../../../../js/d3/angle-vs-time.js'></script>
 
 This collapses the entire evolution of the system into a single plot of $$\theta$$ vs. time, but we are still looking at an overwhelming 480 curves. Since we are interested in the system as a whole, can look at how the variance all the phases change with time -- when the variance of the phases is low, it means that they are all close together. We now have a number that represents the _synchronization_ level reached by the system. This also allow us to set a condition for synchronization: The system must reach a phase variance below $$0.1$$.

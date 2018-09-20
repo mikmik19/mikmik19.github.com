@@ -29,20 +29,23 @@ function drawAngleVsTime(data) {
                 .attr("height", height);
 
     // Loop through the data to draw a bunch of lines
+    var i = 0;
     data.oscillators.forEach(e => {
         line = d3.line()
         .x(d => xScale(d.step))
         .y(d => yScale(d.theta))
 
-        svg.append("path")
+        svg.append("svg:path")
             .datum(e.osc)
             .attr("fill", "none")
-            .attr("stroke", "black")
+            .attr("stroke", "green")
             .attr("stroke-width", 1)
             .attr("opacity", 0.03)
-            .attr("d", line);
+            .attr("d", line)
+            .attr("class", "oscillator")
+            .attr("id", `oscillator_${i}`);
+        i++
     });
-    
     
     // Draw the x axis
     svg.append("g")
@@ -55,5 +58,16 @@ function drawAngleVsTime(data) {
             .attr("class", "axis")
             .attr("transform", "translate(" + margin.left + ",0)")
             .call(yAxis);
-    console.log("Do i get here?")
+    
+    // It would be cool to add a widget that lets me scale the
+    // zoom on the x-axis
+
+    d3.select("#oscSlider").on("input", function() {
+        d3.selectAll("#oscSliderCounter").html(this.value)
+        d3.selectAll(".oscillator").classed("selected", false);
+
+        d3.select(`#oscillator_${this.value}`)
+            .classed("selected", true)
+
+     });
 }
