@@ -8,6 +8,11 @@ categories: Blog-posts
 <head>
     <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="https://unpkg.com/d3-3d/build/d3-3d.min.js"></script>
+    <style type="text/css">
+        path {
+            fill: none;
+        }
+    </style>
 </head>
 
 In this post I summaries what I consider to be the main tools to come out of the field of Chaos theory. 
@@ -25,9 +30,14 @@ $$
 
 In this example I am using the values $$\sigma=10$$, $$\rho=28$$ and $$\beta = 8/3$$. Solving this system of differential equations for some initial value will give us a trajectory in $$(x, y, z)$$ space.
 
-<!-- <span style="display:block;text-align:center">![]({{ "../assets/img/toole-of-chaos-theory/lorenz-trajectory.png"| absolute_url }})</span> -->
 
-<center><svg id='lorenz-system' width="500" height="500"/></center>
+
+<center>
+    <div>
+        <button id='reset_angle'>Reset angle</button>
+    </div>
+    <svg id='lorenz-system' width="500" height="500"/>
+</center>
 <script type='text/javascript' src='../../../../js/d3/lorenz-system.js'></script>
 
 # Calculating the correlation dimension
