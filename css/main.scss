@@ -1,174 +1,136 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
 
-// Our variables
-// $base-font-family:  Helvetica, "Helvetica Neue", Arial, sans-serif;
-$base-font-size:   16px;
+@charset "utf-8"; // Our variables // $base-font-family:  Helvetica, "Helvetica Neue", Arial, sans-serif;
+$base-font-size: 16px;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.5;
 $font-weight-light: 100;
 $font-weight-normal: 400;
 $font-weight-bold: 600;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
+$spacing-unit: 30px;
+$text-color: #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
+$brand-color: #2a7ae2;
+$grey-color: #828282;
 $grey-color-light: #b1b1b1;
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    650px;
-
-$on-palm:          550px;
-$on-laptop:        780px;
-
-
+$grey-color-dark: darken($grey-color, 25%); // Width of the content area
+$content-width: 650px;
+$on-palm: 550px;
+$on-laptop: 780px;
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
-
 .dont-break-out {
-
   /* Careful, this breaks the word wherever it is without a hyphen */
   overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  /* Adds a hyphen where the word breaks */
+  word-wrap: break-word; /* Adds a hyphen where the word breaks */
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-
 }
-
-@import
-        "normalize",
-        "base",
-        "layout",
-        "color",
-        "syntax-highlighting"
-;
-/*****************************/
-/* Headder */
-/*****************************/
-
+@import "normalize", "base", "layout", "color", "syntax-highlighting"; /* *************************** */ /* Headder */ /* *************************** */
 .menu {
-    font-weight: 700;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+  }
+  > a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-
-    a  {
-      text-decoration: none;
+    color: inherit;
+  }
+  > a img {
+    padding: 0;
+    margin-right: 10px;
+    border-radius: 45px;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  ul li {
+    &:first-child {
+      padding-left: 0;
     }
-
-    > a {
-      display: flex;
-      align-items: center;
-      color: inherit;
-    }
-
-    > a img {
-      padding: 0;
-      margin-right: 10px;
-      border-radius: 45px;
-    }
-
-    ul {
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-
-    ul li {
-      &:first-child {
-        padding-left: 0;
-      }
-      padding-left: 1em;
-    }
+    padding-left: 1em;
+  }
 }
-
-
-/*****************************/
-/* Posts */
-/*****************************/
-
-/* Posts headder */
+/* *************************** */ /* Posts */ /* *************************** */ /* Posts headder */
 .appetizer {
-    color: #99999a;
-}
-
-/* Posts sestions */
+  color: #99999a;
+} /* Posts sestions */
 .artilce_title {
-    text-align: center;
-    margin: 30px;
-    font-size: 5rem;
-    padding-bottom: 0.2em;
-    line-height: 5.5rem;
+  text-align: center;
+  margin: 30px;
+  font-size: 5rem;
+  padding-bottom: 0.2em;
+  line-height: 5.5rem;
 }
-
 .posts h1 {
-    margin-top: 30px;
-    margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
-
 .posts h2 {
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .posts ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
-
 .posts li {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0px;
 }
-
-$scroll-indicator-height: 10px;
-/*****************************/
-/* Scroll progress indicator */
-/*****************************/
-
+$scroll-indicator-height: 10px; /* *************************** */ /* Scroll progress indicator */ /* *************************** */
 .scroll-indicator-container {
-    height: $scroll-indicator-height;
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-
-    .scroll-indicator-progress {
-      height: 100%;
-      background-color: green;
-    }
+  height: $scroll-indicator-height;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  .scroll-indicator-progress {
+    height: 100%;
+    background-color: green;
   }
-
-/*****************************/
-/* D3 relates stuff          */
-/*****************************/
-
+} /* *************************** */ /* D3 relates stuff */ /* *************************** */
 .oscillator.selected {
-    stroke: orange;
-    opacity: 1;
-    stroke-width: 2px;
+  stroke: orange;
+  opacity: 1;
+  stroke-width: 2px;
 }
-
 .pointOnCircle.selected {
-    stroke: orange;
-    opacity: 1;
-    stroke-width: 2px;
+  stroke: orange;
+  opacity: 1;
+  stroke-width: 2px;
+}
+.axisLabel {
+  font-weight: 20;
+}
+.axis .domain {
+  opacity: 0;
+}
+.svgContainer {
+  display: flex;
+}
+.svgContainer p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.svgContainer.left {
+  margin: auto;
 }
