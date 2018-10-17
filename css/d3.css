@@ -1,0 +1,51 @@
+.oscillator.selected {
+    stroke:  var(--dynamnic-color-light);
+    opacity: 1;
+    stroke-width: 2px;
+  }
+
+.pointOnCircle.selected {
+    fill: var(--dynamnic-color-dark);
+    stroke: var(--dynamnic-color-light);
+    opacity: 1;
+    stroke-width: 2px;
+}
+
+.axisLabel {
+    font-weight: 20;
+}
+
+
+.axis .domain {
+    opacity: 0;
+}
+
+.svgContainer {
+    display: flex;
+}
+
+.svgContainer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.svgContainer.left {
+    margin: auto;
+}
+
+.svg-container {
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding: 0;
+    /* padding-bottom will be overwritten by JavaScript later */
+    padding-bottom: 100%;
+}
+
+.svg-content-responsive {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}

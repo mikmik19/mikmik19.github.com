@@ -59,7 +59,7 @@
               .append("path")
               .attr("class", "_3d trajectory")
               .merge(trajectoryLine)
-              .attr("stroke", "green")
+              .attr("stroke", lightColorUsed)
               .attr("stroke-width", 0.1)
               .attr("d", trajectory3d.draw)
               .exit()

@@ -65,9 +65,8 @@ d3.csv("../../../../data/been.csv", function(data) {
       .attr("d", path)
       .style("fill", function(d) {
         var value = d.properties.value;
-
         if (value) {
-          return color(value);
+          return lightColorUsed;
         } else {
           return "#ccc";
         }

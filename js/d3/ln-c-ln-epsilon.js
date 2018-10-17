@@ -1,8 +1,8 @@
 (function() {
   d3.csv("../../../../data/ln_c_ln_epsilon.csv", function(data) {
     var margin = { top: 20, right: 20, bottom: 40, left: 45 };
-    var height = 250;
-    var width = 450;
+    var height = 300;
+    var width = 600;
 
     var xScale = d3
       .scaleLinear()
@@ -25,13 +25,17 @@
 
     var svg = d3
       .select("#ln_c_ln_epsilon")
+      .attr(
+        "style",
+        `padding-bottom: ${Math.ceil(height * 100 / width)}%`
+      )
       .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("outline", "solid black")
-      .append("g");
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("ViewBox", `0 0 ${width} ${height}`)
+      .classed("svg-content-responsive", true)
 
     svg
+      .append('g')      
       .selectAll("circle")
       .data(data)
       .enter()
@@ -39,7 +43,7 @@
       .attr("cx", d => xScale(Math.log(d.epsilon)))
       .attr("cy", d => yScale(Math.log(d.C)))
       .attr("r", 2)
-      .attr("fill", "green");
+      .attr("fill", darkColorUsed);
 
     svg
       .append("g")

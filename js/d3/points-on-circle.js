@@ -25,6 +25,12 @@ function drawCircle(data) {
         .append("g")
             .attr("transform", `translate(${margin.left}, ${margin.top})`);
     
+    d3.selection.prototype.moveToFront = function() {  
+        return this.each(function(){
+            this.parentNode.appendChild(this);
+        });
+        };
+
     // First I bind the data to circle elements
     function initializeSimulation() {
         svg.selectAll("circle")
@@ -33,10 +39,13 @@ function drawCircle(data) {
             .append("circle")
             .attr("class", "enter")
             .attr("r", 3.5)
+            .attr("fill", lightColorUsed)
             .attr("opacity", 0.3)
             .attr("cx", d => xScale(Math.cos(d.theta)) )
             .attr("cy", d => yScale(Math.sin(d.theta)) )
-            .attr("fill", "green");
+            .on("click", function(){
+                d3.select(this).attr('fill', darkColorUsed).attr("opacity", 1).moveToFront()
+            });
     }
 
     // Then I loop over the data and update the position
@@ -53,13 +62,10 @@ function drawCircle(data) {
                     .ease(d3.easeLinear)
                     .duration(1000)
                     .attr("class", "enter")
-                    .attr("r", 3.5)
-                    .attr("opacity", 0.3)
                     .attr("cx", d => xScale(Math.cos(d.theta)) ) // These work, but interpolate (x,y) not angle
                     .attr("cy", d => yScale(Math.sin(d.theta)) )
                     // .attrTween("cx", xTween) // These should interpolate angle, but don't wotk
                     // .attrTween("cy", yTween) // 
-                    .attr("fill", "green")
             if ( i < numSteps && stopSimulation == false) {
                 setTimeout(updatePlot, 1000);
             }
@@ -73,6 +79,8 @@ function drawCircle(data) {
     // Create the buttons
     // ------------------------------------------------
     d3.select("#startSimulation").on("click", function() {
+        d3.select(this).html("restart")
+
         if (stopSimulation == true) {
             stopSimulation = false;
             svg.selectAll("circle").remove()

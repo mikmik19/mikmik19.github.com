@@ -38,7 +38,7 @@ function drawAngleVsTime(data) {
         svg.append("svg:path")
             .datum(e.osc)
             .attr("fill", "none")
-            .attr("stroke", "green")
+            .attr("stroke", lightColorUsed)
             .attr("stroke-width", 1)
             .attr("opacity", 0.03)
             .attr("d", line)
@@ -64,10 +64,13 @@ function drawAngleVsTime(data) {
 
     d3.select("#oscSlider").on("input", function() {
         d3.selectAll("#oscSliderCounter").html(this.value)
-        d3.selectAll(".oscillator").classed("selected", false);
-
+        d3.selectAll(".oscillator")
+            .attr('stroke', lightColorUsed)
+            .attr("opacity", 0.03)
+        
         d3.select(`#oscillator_${this.value}`)
-            .classed("selected", true)
+            .attr('stroke', darkColorUsed)
+            .attr('opacity', 1)
 
      });
 }

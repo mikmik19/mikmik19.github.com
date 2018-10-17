@@ -1,3 +1,5 @@
+var width = 500;
+var height = 500;
 var origin = [250, 200]
 var scale = 4
 var pointData = []
@@ -8,6 +10,10 @@ const loopIndex = 0
 var startAngle = Math.PI/4;
 
 var svg = d3.select("#lorenz-system")
+                .append('svg')
+                .attr("preserveAspectRatio", "xMinYMin meet")
+                .attr("viewBox", `0 0 ${width} ${height}`)
+                .classed("svg-content-responsive", true)
                 .call(
                     d3.drag()
                         .on('drag', dragged)
@@ -41,7 +47,7 @@ function processData(data){
         .append('path')
         .attr('class', '_3d trajectory')
         .merge(trajectoryLine)
-        .attr('stroke', 'green')
+        .attr('stroke', lightColorUsed)
         .attr('stroke-width', 0.5)
         .attr('d', trajectory3d.draw)
         .exit().remove();
@@ -75,7 +81,7 @@ function init(){
             .merge(points)
             .attr('r', 2)
             .attr('stroke', 'black')
-            .attr('fill', 'orange')
+            .attr('fill', darkColorUsed)
             .attr('cx', d => d.projected.x)
             .attr('cy', d => d.projected.y);
         points.exit().remove();

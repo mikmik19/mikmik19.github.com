@@ -29,11 +29,13 @@ $$
 \end{aligned}
 $$
 
-In this example I am using the values $$\sigma=10$$, $$\rho=28$$ and $$\beta = 8/3$$. Solving this system of differential equations for some initial value will give us a trajectory in $$(x, y, z)$$ space.
+In this example I am using the values $$\sigma=10$$, $$\rho=28$$ and $$\beta = 8/3$$. Solving this system of differential equations for some initial value will give us a trajectory in $$(x, y, z)$$ space. Below I show what the trajectory looks like. You can drag it around to see it from different angles.
 
 <center>
-    <svg id='lorenz-system' width="500" height="500"/>
+    <div class="svg-container" id='lorenz-system'></div>
 </center>
+
+It looks pretty neat. Now we will use this trajectory do demonstrate some of the chaos theory concepts that I find useful.
 
 # Calculating the correlation dimension
 
@@ -42,7 +44,7 @@ When we have a trajectory like the one shown above, we would like to be able to 
 The concept of correlation dimension is useful for this purpose. Here I use the definition of correlation dimension from p. 412 Nonlinear Dynamics and Chaos by Steven H. Strogatz.
 
 <center>
-    <div id='ln_c_ln_epsilon'></div>
+    <div class="svg-container" id='ln_c_ln_epsilon'></div>
 </center>
 
 By taking the slope of this plot we should get the correlation dimension, and indeed, if we fit a straight line to the curve, we get a value of 2.087, which is close the the 2.05 one expects for the Lorenz Attractor.

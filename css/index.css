@@ -1,0 +1,21 @@
+
+a {
+    color: var(--dynamic-color-dark);
+}
+
+a:hover {
+    color: var(--dynamic-color-light);
+}
+
+.site-footer {
+    color: var(--dynamic-color-light);
+    background-color: var(--dynamic-color-dark);
+}
+
+.site-footer a {
+    color: var(--dynamic-color-light);
+}
+
+.site-footer a:hover {
+    color: var(--dynamic-color-light);
+}
