@@ -46,6 +46,7 @@
         .data(data)
         .enter()
         .append("circle")
+        .attr("class", "ln-c-ln-epsilon")
         .attr("cx", d => xScale(Math.log(d.epsilon)))
         .attr("cy", d => yScale(Math.log(d.C)))
         .attr("r", 2)
@@ -118,7 +119,7 @@
         
         // Here I an removing the circles and redrawing them. It really 
         // Shoud be possible to simply change the data.
-        d3.selectAll("circle").remove();
+        d3.selectAll("circle.ln-c-ln-epsilon").remove();
         
         svg
           .append('g')      
@@ -126,6 +127,7 @@
           .data(data)
           .enter()
           .append("circle")
+          .attr("class", "ln-c-ln-epsilon")
           .attr("cx", d => xScale(Math.log(d.epsilon)))
           .attr("cy", d => yScale(Math.log(d.C)))
           .attr("r", 2)
