@@ -1,6 +1,6 @@
 var width = 500;
-var height = 500;
-var origin = [250, 200]
+var height = 400;
+var origin = [250, 250]
 var scale = 4
 var pointData = []
 var trajectory = [];

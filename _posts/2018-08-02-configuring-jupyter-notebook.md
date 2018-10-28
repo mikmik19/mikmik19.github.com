@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Configuring jupyter notebook"
+title:  "Configuring Jupyter Notebook"
 date:   2018-08-02 16:45:00 +0200
 categories:
 text-snippet:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Draft: Coupled oscillators"
+title:  "Coupled Oscillators"
 date:   2018-05-10 12:34:36 +0200
 categories: reproducing-papers
 text-snipper: I decided that I wanted to start reproducing the results of some of the papers I am reading. This first one is about coupled oscillators, and it was mentioned in Steven H. Strogatz book Sync The Emerging Science of Spontaneous Order.
