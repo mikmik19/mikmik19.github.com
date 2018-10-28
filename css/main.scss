@@ -97,16 +97,3 @@ $on-laptop: 780px;
   justify-content: space-between;
   margin: 5px 0px;
 }
-$scroll-indicator-height: 10px; /* *************************** */ /* Scroll progress indicator */ /* *************************** */
-.scroll-indicator-container {
-  height: $scroll-indicator-height;
-  position: fixed;
-  width: 100%;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  .scroll-indicator-progress {
-    height: 100%;
-    background-color: $main-color;
-  }
-}

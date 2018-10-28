@@ -19,3 +19,17 @@ a:hover {
 .site-footer a:hover {
     color: var(--dynamic-color-light);
 }
+
+/* *************************** */ /* Scroll progress indicator */ /* *************************** */
+.scroll-indicator-container {
+  height: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.scroll-indicator-progress {
+    height: 100%;
+    background-color: var(--dynamic-color-dark);
+  }
