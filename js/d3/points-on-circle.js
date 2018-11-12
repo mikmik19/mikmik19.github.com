@@ -1,77 +1,86 @@
-d3.json("../../../../data/animation_data_theta.json", function(error, data) {
-    drawCircle(data)
-});
+(function() {
+  d3.json("../../../../data/animation_data_theta.json", function(error, data) {
+    drawCircle(data);
+  });
 
-function drawCircle(data) {
+  function drawCircle(data) {
     // Set the dimensions of the canvas / graph
-    var margin = {top: 20, right: 20, bottom: 20, left: 20};
+    var margin = { top: 20, right: 20, bottom: 20, left: 20 };
     var width = 300 - margin.left - margin.right;
     var height = 300 - margin.top - margin.bottom;
 
     // Defining the scales
-    var xScale = d3.scaleLinear()
-            .range([0, width])
-            .domain([-1, 1]);
+    var xScale = d3
+      .scaleLinear()
+      .range([0, width])
+      .domain([-1, 1]);
 
-    var yScale = d3.scaleLinear()
-            .range([height, 0])
-            .domain([-1, 1]);
-       
+    var yScale = d3
+      .scaleLinear()
+      .range([height, 0])
+      .domain([-1, 1]);
+
     // Adds the svg canvas
-    var svg = d3.select("#pointsOnCircle")
-        .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-            .attr("transform", `translate(${margin.left}, ${margin.top})`);
-    
-    d3.selection.prototype.moveToFront = function() {  
-        return this.each(function(){
-            this.parentNode.appendChild(this);
-        });
-        };
+    var svg = d3
+      .select("#pointsOnCircle")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    d3.selection.prototype.moveToFront = function() {
+      return this.each(function() {
+        this.parentNode.appendChild(this);
+      });
+    };
 
     // First I bind the data to circle elements
     function initializeSimulation() {
-        svg.selectAll("circle")
-            .data(data.steps[0].thetas)
-            .enter()
-            .append("circle")
-            .attr("class", "enter")
-            .attr("r", 3.5)
-            .attr("fill", lightColorUsed)
-            .attr("opacity", 0.3)
-            .attr("cx", d => xScale(Math.cos(d.theta)) )
-            .attr("cy", d => yScale(Math.sin(d.theta)) )
-            .on("click", function(){
-                d3.select(this).attr('fill', darkColorUsed).attr("opacity", 1).moveToFront()
-            });
+      svg
+        .selectAll("circle")
+        .data(data.steps[0].thetas)
+        .enter()
+        .append("circle")
+        .attr("class", "enter")
+        .attr("r", 3.5)
+        .attr("fill", lightColorUsed)
+        .attr("opacity", 0.3)
+        .attr("cx", d => xScale(Math.cos(d.theta)))
+        .attr("cy", d => yScale(Math.sin(d.theta)))
+        .on("click", function() {
+          d3.select(this)
+            .attr("fill", darkColorUsed)
+            .attr("opacity", 1)
+            .moveToFront();
+        });
     }
 
     // Then I loop over the data and update the position
     function runSimulation() {
-        let i = 0
-        var numSteps = data.steps.length -1;
-        function updatePlot() {
-            console.log(i)
-            i++;
-            stepData = data.steps[i].thetas
-            svg.selectAll("circle")
-                    .data(stepData)
-                    .transition()
-                    .ease(d3.easeLinear)
-                    .duration(1000)
-                    .attr("class", "enter")
-                    .attr("cx", d => xScale(Math.cos(d.theta)) ) // These work, but interpolate (x,y) not angle
-                    .attr("cy", d => yScale(Math.sin(d.theta)) )
-                    // .attrTween("cx", xTween) // These should interpolate angle, but don't wotk
-                    // .attrTween("cy", yTween) // 
-            if ( i < numSteps && stopSimulation == false) {
-                setTimeout(updatePlot, 1000);
-            }
-        };
-        updatePlot()
-    };
+      let i = 0;
+      var numSteps = data.steps.length - 1;
+      function updatePlot() {
+        console.log(i);
+        i++;
+        stepData = data.steps[i].thetas;
+        svg
+          .selectAll("circle")
+          .data(stepData)
+          .transition()
+          .ease(d3.easeLinear)
+          .duration(1000)
+          .attr("class", "enter")
+          .attr("cx", d => xScale(Math.cos(d.theta))) // These work, but interpolate (x,y) not angle
+          .attr("cy", d => yScale(Math.sin(d.theta)));
+        // .attrTween("cx", xTween) // These should interpolate angle, but don't wotk
+        // .attrTween("cy", yTween) //
+        if (i < numSteps && stopSimulation == false) {
+          setTimeout(updatePlot, 1000);
+        }
+      }
+      updatePlot();
+    }
     initializeSimulation();
     stopSimulation = true;
 
@@ -79,44 +88,46 @@ function drawCircle(data) {
     // Create the buttons
     // ------------------------------------------------
     d3.select("#startSimulation").on("click", function() {
-        d3.select(this).html("restart")
+      d3.select(this).html("restart");
 
-        if (stopSimulation == true) {
-            stopSimulation = false;
-            svg.selectAll("circle").remove()
-            initializeSimulation()
-            runSimulation()
-        }        
-    })
+      if (stopSimulation == true) {
+        stopSimulation = false;
+        svg.selectAll("circle").remove();
+        initializeSimulation();
+        runSimulation();
+      }
+    });
 
     d3.select("#stopSimulation").on("click", function() {
-        // I need to find a way to kill the running simulation
-        // I think I need to use clearInterval(func), but it doesn't seem to work.
-        stopSimulation = true;
-    })
+      // I need to find a way to kill the running simulation
+      // I think I need to use clearInterval(func), but it doesn't seem to work.
+      stopSimulation = true;
+    });
 
     // ------------------------------------------------
     // Defining helper functions
     // ------------------------------------------------
     function xTween(d) {
-        var oldAngle = d.theta;
-        var newAngle = d.newAngle;
-        return function(oldAngle, newAngle) {
-            var interpolate = d3.interpolate(oldAngle, newAngle);
-            return function(t) { // This t is the ease-time, generated by D3
-                d.theta = interpolate(t);
-                return xScale(Math.cos(d.theta));
+      var oldAngle = d.theta;
+      var newAngle = d.newAngle;
+      return function(oldAngle, newAngle) {
+        var interpolate = d3.interpolate(oldAngle, newAngle);
+        return function(t) {
+          // This t is the ease-time, generated by D3
+          d.theta = interpolate(t);
+          return xScale(Math.cos(d.theta));
         };
       };
     }
 
     function yTween(d) {
-        return function(d) {
-          var interpolate = d3.interpolate(d.theta, d.newAngle);
-          return function(t) {
-            d.theta = interpolate(t);
-            return yScale(Math.sin(d.theta));
-          };
+      return function(d) {
+        var interpolate = d3.interpolate(d.theta, d.newAngle);
+        return function(t) {
+          d.theta = interpolate(t);
+          return yScale(Math.sin(d.theta));
         };
-      }
-}
+      };
+    }
+  }
+})();

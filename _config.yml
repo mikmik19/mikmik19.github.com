@@ -33,6 +33,7 @@ plugins:
 # to override the default setting.
 exclude:
   - notebooks/env
+  - notebooks/strogatz_1991/env
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
