@@ -1,15 +1,34 @@
 (function() {
   d3.json("../../../../data/k_comparison.json", function(error, data) {
-    console.log(data[2].K);
-    drawCircle(data[2].circleSimulation);
-    drawAngleVsTime(data[2].thetaVsTime);
-    drawNormAngleVsTime(data[2].normThetaVsTime);
+    // Initialize the figures
+    drawCircle(data[0].circleSimulation);
+    drawAngleVsTime(data[0].thetaVsTime);
+    drawNormAngleVsTime(data[0].normThetaVsTime);
+
+    d3.select("#kSlider").on("input", function() {
+      var i = this.value;
+      // Update the counter number
+      d3.selectAll("#kSliderCounter").html(data[i].K);
+      // Remove all figures
+      removeFiguresAndUpdateAnimationButtons();
+      // Redraw figures
+      drawCircle(data[i].circleSimulation);
+      drawAngleVsTime(data[i].thetaVsTime);
+      drawNormAngleVsTime(data[i].normThetaVsTime);
+    });
   });
+
+  function removeFiguresAndUpdateAnimationButtons() {
+    d3.select("#kComparisonStartSimulation").html("start");
+    d3.select("#kComparisonAnimation").remove();
+    d3.select("#kComparisonAngleVsTime").remove();
+    d3.select("#kComparisonNormAngleVsTime").remove();
+  }
 
   function drawAngleVsTime(data) {
     var margin = { top: 20, right: 20, bottom: 50, left: 50 };
-    var height = 350;
-    var width = 600;
+    var height = 250;
+    var width = 450;
 
     // Defining the scales
     xScale = d3
@@ -30,6 +49,7 @@
     svg = d3
       .select("#kComparison")
       .append("svg")
+      .attr("id", "kComparisonAngleVsTime")
       .attr("width", width)
       .attr("height", height);
 
@@ -89,8 +109,8 @@
   function drawCircle(data) {
     // Set the dimensions of the canvas / graph
     var margin = { top: 20, right: 20, bottom: 20, left: 20 };
-    var width = 300 - margin.left - margin.right;
-    var height = 300 - margin.top - margin.bottom;
+    var width = 200 - margin.left - margin.right;
+    var height = 200 - margin.top - margin.bottom;
 
     // Defining the scales
     var xScale = d3
@@ -106,7 +126,9 @@
     // Adds the svg canvas
     var svg = d3
       .select("#kComparison")
+      .append("div")
       .append("svg")
+      .attr("id", "kComparisonAnimation")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
@@ -126,7 +148,7 @@
         .enter()
         .append("circle")
         .attr("class", "enter")
-        .attr("r", 3.5)
+        .attr("r", 2)
         .attr("fill", lightColorUsed)
         .attr("opacity", 0.3)
         .attr("cx", d => xScale(Math.cos(d.theta)))
@@ -181,21 +203,19 @@
     });
 
     d3.select("#kComparisonStopSimulation").on("click", function() {
-      // I need to find a way to kill the running simulation
-      // I think I need to use clearInterval(func), but it doesn't seem to work.
       stopSimulation = true;
     });
   }
 
   function drawNormAngleVsTime(data) {
     var margin = { top: 20, right: 20, bottom: 50, left: 50 };
-    var height = 350;
-    var width = 600;
+    var height = 250;
+    var width = 450;
 
     // Defining the scales
     xScale = d3
       .scaleLinear()
-      .domain(d3.extent(data.curve, d => d.step))
+      .domain([0, 20])
       .range([margin.left, width - margin.right]);
 
     yScale = d3
@@ -211,6 +231,7 @@
     svg = d3
       .select("#kComparison")
       .append("svg")
+      .attr("id", "kComparisonNormAngleVsTime")
       .attr("width", width)
       .attr("height", height);
 

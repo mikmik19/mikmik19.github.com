@@ -12,8 +12,7 @@ text-snipper: I decided that I wanted to start reproducing the results of some o
 
 I decided that I wanted to start reproducing the results of some of the papers I'm reading. This first one was mentioned in Steven H. Strogatz' book _Sync: The Emerging Science of Spontaneous Order_ and is about a collection coupled oscillators.
 
-- This will become a table of contents (this text will be scraped).
-  {:toc}
+{:toc}
 
 # Background
 
@@ -50,9 +49,9 @@ This is a nice way to watch the system evolve, and we can see quite clearly that
 
 <center>
     <div class="slidecontainer">
-    Looking at oscillator 
     <input type="range" min="1" max="100" value="50" class="slider" id="oscSlider">
-    number <span id="oscSliderCounter">50</span>
+    <br>
+    Looking at oscillator number <span id="oscSliderCounter">50</span>
     </div>
     <div id="angleVsTime"/>
 </center>
@@ -79,6 +78,11 @@ Now we have the tools to analyse the system. Let's see what happens to the syste
 Above I showed how we can characterize the level of synchronization that is reached as well as the speed at which it is reached. So lets run the simulation for different values of $$K$$ and look at how this influence the synchronization level and synchronization time.
 
 <center>
+    <div>
+        The value of K is <span id="kSliderCounter">0.1</span>
+        <br/>
+        <input type="range" min="0" max="5" value="0" class="slider" id="kSlider">
+    </div>
     <button id="kComparisonStartSimulation">Start</button>
     <button id="kComparisonStopSimulation">Pause</button>
     <div id="kComparison"/>
