@@ -27,26 +27,32 @@
 
   function drawAngleVsTime(data) {
     var margin = { top: 20, right: 20, bottom: 50, left: 50 };
-    var height = 250;
-    var width = 450;
+    var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+    if (windowWidth > 400) {
+      width = 400;
+      height = 250;
+    } else {
+      width = windowWidth;
+      height = 0.5 * windowWidth;
+    }
 
     // Defining the scales
-    xScale = d3
+    var xScale = d3
       .scaleLinear()
       .domain([0, 20])
       .range([margin.left, width - margin.right]);
 
-    yScale = d3
+    var yScale = d3
       .scaleLinear()
       .domain([0, 2 * Math.PI])
       .range([height - margin.bottom, margin.top]);
 
     // Defining the axes
-    xAxis = d3.axisBottom().scale(xScale);
-    yAxis = d3.axisLeft().scale(yScale);
+    var xAxis = d3.axisBottom().scale(xScale).ticks(5);
+    var yAxis = d3.axisLeft().scale(yScale).ticks(5);
 
     // Drawing the canvas
-    svg = d3
+    var svg = d3
       .select("#kComparison")
       .append("svg")
       .attr("id", "kComparisonAngleVsTime")
@@ -69,26 +75,24 @@
         .attr("stroke-width", 1)
         .attr("opacity", 0.06)
         .attr("d", line)
-        .attr("class", "oscillator")
-        .attr("id", `oscillator_${i}`);
+        .attr("class", "oscillatorK")
+        .attr("id", `oscillatorK_${i}`);
       i++;
     });
 
-    // Draw the x axis
-    svg
+    var xAxisEl = svg
       .append("g")
       .attr("class", "axis")
       .attr("transform", `translate(0, ${height - margin.bottom})`)
       .call(xAxis);
 
-    // Draw the y axis
-    svg
+    var yAxisEl = svg
       .append("g")
       .attr("class", "axis")
       .attr("transform", `translate(${margin.left},0)`)
       .call(yAxis);
 
-    svg
+    var xAxisLabel = svg
       .append("text")
       .attr("class", "axisLabel")
       .text("Time step")
@@ -96,7 +100,7 @@
       .attr("y", height - 10)
       .style("text-anchor", "middle");
 
-    svg
+    var yAxisLabel = svg
       .append("text")
       .attr("class", "axisLabel")
       .text("Theta")
@@ -104,6 +108,70 @@
       .attr("y", 15)
       .attr("x", -height / 2)
       .style("text-anchor", "middle");
+      
+    function resizeChart() {
+      var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+      if (windowWidth > 400) {
+        width = 400;
+        height = 250;
+      } else {
+        width = windowWidth;
+        height = 0.5 * windowWidth;
+      }
+  
+      svg
+        .attr("height", height)
+        .attr("width", width)
+      
+      xScale.range([margin.left, width - margin.right]);
+      xAxis.scale(xScale).ticks(5);
+      
+      xAxisEl
+        .attr("transform", `translate(0, ${height - margin.bottom})`)
+        .call(xAxis);
+  
+      yScale.range([height - margin.bottom, margin.top]);
+      yAxis.scale(yScale).ticks(5);
+      
+      yAxisEl
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(yAxis);
+  
+      xAxisLabel
+        .attr("x", width / 2)
+        .attr("y", height - 5)
+  
+      yAxisLabel
+        .attr("y", 15)
+        .attr("x", -height / 2)
+  
+      // Remove the existing line
+      d3.selectAll(".oscillatorK").remove();
+  
+      // Loop through the data to draw a bunch of lines
+      var i = 0;
+      data.oscillators.forEach(e => {
+        line = d3
+          .line()
+          .x(d => xScale(d.step))
+          .y(d => yScale(d.theta));
+  
+        svg
+          .append("svg:path")
+          .datum(e.osc)
+          .attr("fill", "none")
+          .attr("stroke", lightColorUsed)
+          .attr("stroke-width", 1)
+          .attr("opacity", 0.06)
+          .attr("d", line)
+          .attr("class", "oscillatorK")
+          .attr("id", `oscillatorK_${i}`);
+        i++;
+      });
+    };
+    
+    // redraw chart on resize
+    window.addEventListener('resize', resizeChart);
   }
 
   function drawCircle(data) {
@@ -207,28 +275,45 @@
     });
   }
 
+  function yTitleBasedOnHeight(height) {
+    var yLabel;
+    if (height >= 350) {
+      yLabel = "Normalized Var(Theta)"
+    }
+    else {
+      yLabel = "Norm. Var(Theta)"
+    }
+    return yLabel
+  }
+
   function drawNormAngleVsTime(data) {
     var margin = { top: 20, right: 20, bottom: 50, left: 50 };
-    var height = 250;
-    var width = 450;
-
+    var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+    if (windowWidth > 400) {
+      width = 400;
+      height = 250;
+    } else {
+      width = windowWidth;
+      height = 0.5 * windowWidth;
+    }
+    var yTitle = yTitleBasedOnHeight(height)
     // Defining the scales
-    xScale = d3
+    var xScale = d3
       .scaleLinear()
       .domain([0, 20])
       .range([margin.left, width - margin.right]);
 
-    yScale = d3
+    var yScale = d3
       .scaleLinear()
       .domain(d3.extent(data.curve, d => d.var_theta))
       .range([height - margin.bottom, margin.top]);
 
     // Defining the axes
-    xAxis = d3.axisBottom().scale(xScale);
-    yAxis = d3.axisLeft().scale(yScale);
+    var xAxis = d3.axisBottom().scale(xScale).ticks(5);
+    var yAxis = d3.axisLeft().scale(yScale).ticks(5);
 
     // Drawing the canvas
-    svg = d3
+    var svg = d3
       .select("#kComparison")
       .append("svg")
       .attr("id", "kComparisonNormAngleVsTime")
@@ -248,7 +333,8 @@
       .attr("stroke", lightColorUsed)
       .attr("stroke-width", 1)
       .attr("opacity", 1)
-      .attr("d", line);
+      .attr("d", line)
+      .attr("id", "varNormThetaVsTimeLineK");
 
     // Drawing the midway point
     svg
@@ -260,23 +346,24 @@
       .attr("cx", d => xScale(d.step))
       .attr("cy", d => yScale(d.var_theta))
       .attr("fill", darkColorUsed)
-      .attr("opacity", 0.3);
+      .attr("opacity", 0.3)
+      .attr("id", "varNormThetaVsTimeCircleK");
 
     // Draw the x axis
-    svg
+    var xAxisEl = svg
       .append("g")
       .attr("class", "axis")
       .attr("transform", `translate(0, ${height - margin.bottom})`)
       .call(xAxis);
 
     // Draw the y axis
-    svg
+    var yAxisEl = svg
       .append("g")
       .attr("class", "axis")
       .attr("transform", `translate(${margin.left},0)`)
       .call(yAxis);
 
-    svg
+    var xAxisLabel = svg
       .append("text")
       .attr("class", "axisLabel")
       .text("Time step")
@@ -284,13 +371,87 @@
       .attr("y", height - 10)
       .style("text-anchor", "middle");
 
-    svg
+    var yAxisLabel = svg
       .append("text")
       .attr("class", "axisLabel")
-      .text("Normalized Var Theta")
+      .text(yTitle)
       .attr("transform", "rotate(-90)")
       .attr("y", 15)
       .attr("x", -height / 2)
       .style("text-anchor", "middle");
+    
+    function resizeChart() {
+      var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+      if (windowWidth > 400) {
+        width = 400;
+        height = 250;
+      } else {
+        width = windowWidth;
+        height = 0.5 * windowWidth;
+      }
+      var yTitle = yTitleBasedOnHeight(height)
+
+      svg
+        .attr("height", height)
+        .attr("width", width)
+      
+      xScale.range([margin.left, width - margin.right]);
+      xAxis.scale(xScale).ticks(5);
+      
+      xAxisEl
+        .attr("transform", `translate(0, ${height - margin.bottom})`)
+        .call(xAxis);
+
+      yScale.range([height - margin.bottom, margin.top]);
+      yAxis.scale(yScale).ticks(5);
+      
+      yAxisEl
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(yAxis);
+
+      xAxisLabel
+        .attr("x", width / 2)
+        .attr("y", height - 5)
+
+      yAxisLabel
+        .attr("y", 15)
+        .attr("x", -height / 2)
+        .text(yTitle)
+
+      // Remove the existing line
+      d3.select("#varNormThetaVsTimeLineK").remove();
+      d3.select("#varNormThetaVsTimeCircleK").remove();
+
+      line = d3
+        .line()
+        .x(d => xScale(d.step))
+        .y(d => yScale(d.var_theta));
+
+      svg
+        .append("svg:path")
+        .datum(data.curve)
+        .attr("fill", "none")
+        .attr("stroke", lightColorUsed)
+        .attr("stroke-width", 1)
+        .attr("opacity", 1)
+        .attr("d", line)
+        .attr("id", "varNormThetaVsTimeLineK");
+
+      // Drawing the midway point
+      svg
+        .selectAll("circle")
+        .data([data.midpoint])
+        .enter()
+        .append("circle")
+        .attr("r", 5)
+        .attr("cx", d => xScale(d.step))
+        .attr("cy", d => yScale(d.var_theta))
+        .attr("fill", darkColorUsed)
+        .attr("opacity", 0.3)
+        .attr("id", "varNormThetaVsTimeCircleK");
+    };
+    
+    // redraw chart on resize
+    window.addEventListener('resize', resizeChart);
   }
 })();

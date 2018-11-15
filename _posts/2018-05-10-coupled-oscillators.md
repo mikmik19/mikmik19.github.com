@@ -43,7 +43,7 @@ Before we jump directly to the question of synchronization, lets think about how
     <div/>
     <svg id="pointsOnCircle" width="300" height="300"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/points-on-circle.js'></script>
+
 
 This is a nice way to watch the system evolve, and we can see quite clearly that synchronization arises, neat! But it would be nice to quantize the evolution of the system a bit more. We can look at how the phase changes for each oscillator, we can see that initially the oscillators occupy phases between 0 and $$2\pi$$ -- they are spread across the circle. As time unfolds all the oscillators emd up close to 0 and slowly increase their phase in unison.
 
@@ -55,21 +55,20 @@ This is a nice way to watch the system evolve, and we can see quite clearly that
     </div>
     <div id="angleVsTime"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/angle-vs-time.js'></script>
 
 This collapses the entire evolution of the system into a single plot of $$\theta$$ vs. time, but we are still looking at an overwhelming 480 curves. Since we are interested in the system as a whole, can look at how the variance all the phases change with time -- when the variance of the phases is low, it means that they are all close together. We now have a number that represents the _synchronization_ level reached by the system. This also allow us to set a condition for synchronization: The system must reach a phase variance below $$0.1$$.
 
 <center>
     <div id="varThetaVsTime"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/var-theta-vs-time.js'></script>
+
 
 We are also interested in how _fast_ the system gets synchronized. So ill define the _synchronization time_ as the timestep when the normalized variance have reach half of it's initial value.
 
 <center>
     <div id="normVarThetaVsTime"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/norm-var-theta-vs-time.js'></script>
+
 
 Now we have the tools to analyse the system. Let's see what happens to the system as we change the coupling strength.
 
@@ -87,7 +86,6 @@ Above I showed how we can characterize the level of synchronization that is reac
     <button id="kComparisonStopSimulation">Pause</button>
     <div id="kComparison"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/k-comparison.js'></script>
 
 Because the preferred frequency of each oscillator uniformly distributed between -0.2 and 0.2 the oscillators often end up in a fairly stable stable situation where the phase does not change much over time.
 
@@ -102,15 +100,23 @@ Above we saw that coupling strength influence how synchronized the oscillators e
 <center>
     <div id="finalPhase"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/final-phase.js'></script>
+
 
 <center>
     <div id="synchronizationTime"/>
 </center>
-<script type='text/javascript' src='../../../../js/d3/synchronization-time.js'></script>
+
 
 Indeed it would appear that a coupling close to $$K\approx1.95$$ leads to the lowest variance in the final phase reached by the oscillators in the simulation. The synchronization time continues to drop even after the final phase has reached its minimum, but after $$K \approx 2.3$$ the system no longer synchronizes.
 
 # Summary
 
 We have seen that a collection of coupled oscillators set up with a uniform distribution of preferred oscillation frequencies can end up all oscillating with a frequency close to each other. I also showed that the evolution of the system can be characterized by two numbers -- the synchronization level and time -- and look at how these numbers are influence by the coupling strength.
+
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/points-on-circle.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/angle-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/var-theta-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/norm-var-theta-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/k-comparison.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/final-phase.js'></script>
+<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/synchronization-time.js'></script>
