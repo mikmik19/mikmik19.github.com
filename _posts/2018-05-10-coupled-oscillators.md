@@ -49,7 +49,7 @@ This is a nice way to watch the system evolve, and we can see quite clearly that
 
 <center>
     <div class="slidecontainer">
-    <input type="range" min="1" max="100" value="50" class="slider" id="oscSlider">
+    <input type="range" min="1" max="400" value="50" class="slider" id="oscSlider">
     <br>
     Looking at oscillator number <span id="oscSliderCounter">50</span>
     </div>
