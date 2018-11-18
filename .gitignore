@@ -4,4 +4,7 @@ _shelved/
 .sass-cache/
 notebooks/env/
 notebooks/.ipynb_checkpoints/
+notebooks/strogatz_1991/env/
+notebooks/strogatz_1991/.ipynb_checkpoints/
+
 *.ipynb_checkpoints
