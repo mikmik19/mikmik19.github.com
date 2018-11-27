@@ -2,40 +2,43 @@
 <html>
   {% include head.html %}
   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>{{ page.title }}</title>
-      <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width" />
 
-      <link rel="stylesheet" href="/css/index.css">
-      <link rel="stylesheet" href="/css/d3.css">
-      <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/d3.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,700,700i"
+      rel="stylesheet"
+    />
   </head>
-  <body>    
+  <body>
     <div class="page-content">
       <div class="container">
         <div class="menu">
-            <a href="/">
-              <div class="authorimage box" style="background: url({{site.baseurl}}/assets/img/MikkelHartmannJensenSmall.jpg)"></div>
-              Mikkel Hartmann Jensen
-            </a>
-            <ul>
-              <li><a href="/">Posts</a></li>
-              <li><a href="https://speakerdex.co/hartmann">Talks</a></li>
-              <li><a href="/about">About</a></li>
-            </ul>
-          </div>
-        <div class="two columns">
+          <a href="/">
+            <div
+              class="authorimage box"
+              style="background: url({{site.baseurl}}/assets/img/MikkelHartmannJensenSmall.jpg)"
+            ></div>
+            Mikkel Klitzing Hartmann Hansen
+          </a>
+          <ul>
+            <li><a href="/">Posts</a></li>
+            <li><a href="https://speakerdex.co/hartmann">Talks</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/CV">CV</a></li>
+          </ul>
         </div>
-          <div class="wrapper">
-            {{ content }}
-          </div>
+        <div class="two columns"></div>
+        <div class="wrapper">{{ content }}</div>
       </div>
     </div>
 
-    {% include footer.html %} 
+    {% include footer.html %}
     <script type="text/javascript" src="/js/dynamic-color-selector.js"></script>
     <script type="text/javascript" src="/js/scroll-indicator.js"></script>
-    
   </body>
 </html>
