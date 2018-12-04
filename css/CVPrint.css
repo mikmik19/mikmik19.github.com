@@ -1,0 +1,29 @@
+/* Removing page title and date */
+@page {
+  size: auto;
+}
+
+body {
+  font-size: 1.3em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+div.menu {
+  display: none;
+}
+
+div.wrapper {
+  margin: 15mm 5mm 15mm 5mm;
+}
+
+footer.site-footer {
+  display: none;
+}
+
+/* This is here so I can see what is causing the 2nd page to print */
+/* div {
+  border: 1px solid black;
+} */
