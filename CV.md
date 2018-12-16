@@ -45,11 +45,9 @@ permalink: /CV/
         </table>
     </div>
     <div class="fixed">
-        <img src="/assets/img/MikkelHartmannJensenSmall.jpg" width="100%">
+        <img src="/assets/img/MikkelHartmannJensenNarrow.jpg" width="90%">
     </div>
 </div>
-
-<hr>
 
 I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work on a clinical decision support system. I have a strong background in mathematics and physics.
 
@@ -106,11 +104,9 @@ I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work 
   </tr>
 </table>
 
-# 🛠 Skills and tools
-
 <hr>
 
-## Skills
+# 📄 Skills
 
 <div class="pill">
     <ul>
@@ -126,7 +122,7 @@ I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work 
     </ul>
 </div>
 
-## Tools
+# 🛠 Tools
 
 <div class="pill">
     <ul>
