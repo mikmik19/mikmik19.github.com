@@ -2,10 +2,13 @@
   d3.json("../../../../data/theta-vs-time.json", function(error, data) {
     drawAngleVsTime(data);
   });
-  
+
   function drawAngleVsTime(data) {
     var margin = { top: 20, right: 20, bottom: 50, left: 50 };
-    var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+    var windowWidth =
+      parseInt(d3.select("body").style("width"), 10) -
+      margin.left -
+      margin.right;
     if (windowWidth > 600) {
       width = 600;
       height = 350;
@@ -26,8 +29,14 @@
       .range([height - margin.bottom, margin.top]);
 
     // Defining the axes
-    var xAxis = d3.axisBottom().scale(xScale).ticks(5);
-    var yAxis = d3.axisLeft().scale(yScale).ticks(5);
+    var xAxis = d3
+      .axisBottom()
+      .scale(xScale)
+      .ticks(5);
+    var yAxis = d3
+      .axisLeft()
+      .scale(yScale)
+      .ticks(5);
 
     // Drawing the canvas
     var svg = d3
@@ -83,7 +92,10 @@
       .style("text-anchor", "middle");
 
     function resizeChart() {
-      var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+      var windowWidth =
+        parseInt(d3.select("body").style("width"), 10) -
+        margin.left -
+        margin.right;
       if (windowWidth > 600) {
         width = 600;
         height = 350;
@@ -92,31 +104,23 @@
         height = 0.5 * windowWidth;
       }
 
-      svg
-        .attr("height", height)
-        .attr("width", width)
-      
+      svg.attr("height", height).attr("width", width);
+
       xScale.range([margin.left, width - margin.right]);
       xAxis.scale(xScale).ticks(5);
-      
+
       xAxisEl
         .attr("transform", `translate(0, ${height - margin.bottom})`)
         .call(xAxis);
 
       yScale.range([height - margin.bottom, margin.top]);
       yAxis.scale(yScale).ticks(5);
-      
-      yAxisEl
-        .attr("transform", `translate(${margin.left},0)`)
-        .call(yAxis);
 
-      xAxisLabel
-        .attr("x", width / 2)
-        .attr("y", height - 5)
+      yAxisEl.attr("transform", `translate(${margin.left},0)`).call(yAxis);
 
-      yAxisLabel
-        .attr("y", 15)
-        .attr("x", -height / 2)
+      xAxisLabel.attr("x", width / 2).attr("y", height - 5);
+
+      yAxisLabel.attr("y", 15).attr("x", -height / 2);
 
       // Remove the existing line
       d3.select("#varThetaVsTimeLine").remove();
@@ -135,9 +139,9 @@
         .attr("opacity", 1)
         .attr("d", line)
         .attr("id", "varThetaVsTimeLine");
-    };
-    
+    }
+
     // redraw chart on resize
-    window.addEventListener('resize', resizeChart);
+    window.addEventListener("resize", resizeChart);
   }
 })();

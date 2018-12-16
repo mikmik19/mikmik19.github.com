@@ -80,7 +80,7 @@ Above I showed how we can characterize the level of synchronization that is reac
         <input type="range" min="0" max="5" value="0" class="slider" id="kSlider">
     </div>
     <button id="kComparisonStartSimulation">Start</button>
-    <button id="kComparisonStopSimulation">Pause</button>
+    <button id="kComparisonStopSimulation">Stop</button>
     <div id="kComparison"/>
 </center>
 
