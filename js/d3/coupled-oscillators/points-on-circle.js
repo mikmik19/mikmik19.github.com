@@ -80,7 +80,7 @@
 
         d3.selectAll("#stepCounter").text(`step ${i}`);
 
-        if (i < numSteps) {
+        if (i < numSteps && stopSimulation == false) {
           setTimeout(updatePlot, 1000);
         }
       }
@@ -94,9 +94,18 @@
     d3.select("#startSimulation").on("click", function() {
       d3.select(this).html("restart");
 
-      svg.selectAll("circle").remove();
-      initializeSimulation();
-      runSimulation();
+      if (stopSimulation == true) {
+        stopSimulation = false;
+        svg.selectAll("circle").remove();
+        initializeSimulation();
+        runSimulation();
+        d3.select("#stopSimulation").html("stop");
+      } else {
+      }
+    });
+
+    d3.select("#stopSimulation").on("click", function() {
+      stopSimulation = true;
     });
 
     // ------------------------------------------------
