@@ -1,56 +1,27 @@
 ---
-layout: none
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>
-			{{ site.name | xml_escape }}
-		</title>
-		<description>
-			{{ site.description | xml_escape }}
-		</description>
-		<link>
-			{{ site.url }}
-		</link>
+		<title>{{site.name | xml_escape}}</title>
+		<description>{{site.description | xml_escape}}</description>
+		<link>{{site.url}}</link>
 		<image>
-			<url>
-				http://mikkelhartmann.dk/assets/favicon.ico
-			</url>
-			<title>
-				Mikkel Hartmann
-			</title>
-			<link>
-				http://mikkelhartmann.dk/
-			</link>
-			<width>
-				32
-			</width>
-			<height>
-				32
-			</height>
-			<description>
-				A blog.
-			</description>
+			<url>http://mikkelhartmann.dk/assets/favicon.ico</url>
+			<title>{{site.name | xml_escape}}</title>
+			<link>{{site.url}}</link>
+			<width>32</width>
+			<height>32</height>
+			<description>{{ site.description | xml_escape }}</description>
 		</image>
-		<link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+		<atom: link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 		<item>
-			<title>
-				{{ post.title | xml_escape }}
-			</title>
-			<description>
-				{{ post.content | xml_escape }}
-			</description>
-			<pubDate>
-				{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}
-			</pubDate>
-			<link>
-				{{ site.url }}/{{ post.url }}
-			</link>
-			<guid isPermaLink="true">
-				{{ site.url }}/{{ post.url }}
-			</guid>
+			<title>{{post.title | xml_escape}}</title>
+			<description>{{ post.content | xml_escape }}</description>
+			<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+			<link>{{ site.url }}/{{ post.url }}</link>
+			<guid isPermaLink="true">{{ site.url }}/{{ post.url }}</guid>
 		</item>
 		{% endfor %}
 	</channel>
