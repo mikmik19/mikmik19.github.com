@@ -13,6 +13,26 @@ layout: none
 		<link>
 			{{ site.url }}
 		</link>
+		<image>
+			<url>
+				http://mikkelhartmann.dk/assets/favicon.ico
+			</url>
+			<title>
+				Mikkel Hartmann
+			</title>
+			<link>
+				http://mikkelhartmann.dk/
+			</link>
+			<width>
+				32
+			</width>
+			<height>
+				32
+			</height>
+			<description>
+				A blog.
+			</description>
+		</image>
 		<link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
 		<item>
