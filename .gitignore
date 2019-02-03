@@ -2,7 +2,7 @@
 _site/
 _shelved/
 .sass-cache/
-node-modules/
+node_modules/
 notebooks/env/
 notebooks/.ipynb_checkpoints/
 notebooks/strogatz_1991/env/
