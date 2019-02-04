@@ -4,6 +4,7 @@ title:  "Configuring Jupyter Notebook"
 date:   2018-08-02 16:45:00 +0200
 categories:
 text-snippet:
+logo: 📚
 ---
 
 I recently learned that Jupyter Notebook is very customizable. In this post give an outline of how I have set up the styling and extensions for my Jupyter Notebooks at work.

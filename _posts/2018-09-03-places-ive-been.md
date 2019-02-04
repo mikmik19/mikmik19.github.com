@@ -3,7 +3,7 @@ layout: post
 title: "Places I've Been"
 date: 2018-09-02 17:00:36 +0200
 categories: D3
-? text-snipper
+logo: 🌍
 ---
 
 <head>
