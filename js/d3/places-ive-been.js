@@ -46,7 +46,6 @@ d3.csv("../../../../data/been.csv", function(data) {
         var jsonCountry = json.features[j].properties.name;
 
         if (dataCountry == jsonCountry) {
-          console.log(dataValue);
           //Copy the data value into the JSON
           json.features[j].properties.value = dataValue;
 
@@ -64,8 +63,7 @@ d3.csv("../../../../data/been.csv", function(data) {
       .append("path")
       .attr("d", path)
       .style("fill", function(d) {
-        var value = d.properties.value;
-        if (value) {
+        if (d.properties.value) {
           return lightColorUsed;
         } else {
           return "#ccc";
