@@ -3,7 +3,6 @@ layout: post
 title:  "Getting Into: Chaos Theory"
 date:   2018-05-06 10:15:00 +0200
 categories: getting-into
-logo: 🎓 
 ---
 Recently I got the chance to study Chaos Theory at work. What follows is a list of links that I found particularly useful during the learning process.
 
