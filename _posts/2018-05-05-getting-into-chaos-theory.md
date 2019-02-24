@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Getting Into Chaos Theory"
+title:  "Getting Into: Chaos Theory"
 date:   2018-05-06 10:15:00 +0200
 categories: getting-into
 ---

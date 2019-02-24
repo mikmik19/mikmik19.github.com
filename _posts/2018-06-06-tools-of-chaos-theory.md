@@ -3,6 +3,7 @@ layout: post
 title: "Tools of Chaos Theory"
 date: 2018-06-6 10:00:00 +0200
 categories: Blog-posts
+logo: 🦋
 ---
 
 In this post I summaries what I consider to be the main tools to come out of the field of Chaos theory.
