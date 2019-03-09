@@ -7,30 +7,18 @@ Ever since I saw [this tweet](https://twitter.com/franssoa/status/10373763534217
 
 Aparrently, Datashader.org have a guide showing how to do exactly what I want. [This](http://datashader.org/topics/strange_attractors.html) notebook walks through how to create and visualize the different attractors. Here I've simply made it easier to browse them.
 
-# Clifford attractors
 <center>
-    <div>
-        <img id="main_image" src="../../../../assets//img/symmetric-chaos/clifford-0.png" width="70%">
+    <div id="attractor-buttons">
+        <button alt="clifford">clifford</button>
+        <button alt="hopalong">hopalong</button>
+        <button alt="symmetric-icon">symmetric icon</button>
     </div>
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-0.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-1.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-2.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-3.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-4.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-5.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-6.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-7.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-8.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-9.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-10.png" width="15%">
-    <img class="small_image" src="../../../../assets//img/symmetric-chaos/clifford-11.png" width="15%">
+    <div>
+        <img id="main_image" src="../../../../assets/img/symmetric-chaos/clifford-0.png" width="70%">
+    </div>
+    <div id="placeholder"></div>
 </center>
 
-
+<link rel="stylesheet" href="../../../../css/symmetric-chaos.css">
 <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-<script>
-d3.selectAll(".small_image").on("mouseover", function(d){ 
-	console.log(d3.select(this).attr("src"))
-	d3.select("#main_image").attr("src", d3.select(this).attr("src"))
-})
-</script>
+<script src="../../../../js/symmetric-chaos/symmetric-chaos.js"></script>
