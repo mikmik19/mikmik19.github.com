@@ -3,3 +3,9 @@
   font-size: 0.8em;
   padding: 0;
 }
+img#main_image {
+  padding: 1.5em;
+}
+img.small_image {
+  padding: .2em;
+}
