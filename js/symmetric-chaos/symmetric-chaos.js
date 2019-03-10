@@ -27,11 +27,16 @@ function createAttractors(base_name) {
     })
 }
 
+function updateSmallImages() {
+    d3.selectAll("button")
+        .on("click", function(d) {
+            d3.selectAll("button").classed("selectedButton", false)
+            d3.select(this).classed("selectedButton", true)
+            d3.selectAll(".small_image").remove()
+            base_name = d3.select(this).attr("alt")
+            createAttractors(base_name)
+        })    
+}
+
 createAttractors("clifford")
-
-
-d3.selectAll("button").on("click", function(d) {
-    d3.selectAll(".small_image").remove()
-    base_name = d3.select(this).attr("alt")
-    createAttractors(base_name)
-})
+updateSmallImages() 
