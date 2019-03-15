@@ -19,15 +19,15 @@ The book didn't dissapoint, but I'm not overly excited about it either. I like t
 Each chapter contains a couple of examples oh how algorithms are applied in the area. Unfortionately, the discussions were not as deep as I had hopen. Often they would cover 1-2 pages of a 30+ page chapter. The examples set the scene, but I didnt get this book for the examples, I got it for the discussion that the example should facilitate. 
 
 # What I liked the most
-There is one discussion point that I think was quite interesting and its the one about diversity and fairness in the prediction.
-
 The concept of _algorithm aversion_ was new to me. Hannah fry explains the concept like this:
 
 > But there’s a paradox in our relationship with machines. While we have a tendency to over-trust anything we don’t understand, as soon as we know an algorithm can make mistakes, we also have a rather annoying habit of over-reacting and dismissing it completely, reverting instead to our own flawed judgement. It’s known to researchers as algorithm aversion. People are less tolerant of an algorithm’s mistakes than of their own – even if their own mistakes are bigger. (...) This tendency of ours to view things in black and white – seeing algorithms as either omnipotent masters or a useless pile of junk – presents quite a problem in our high-tech age.
 
 I'm sure it will be useful when we start putting algorithms to work. The doctors tell us that that they can tolorate quite high error margins -- perhaps they have less aversion to algortihms than the rest of us.
 
-The book did suggest how we should proceed, and I really liked the concluding chapter because it tackles the main questions directly. For example, the final paragraph of the book does a good job of describing her view:
+There is one discussion point that I think was quite interesting and its the one about diversity and fairness in the prediction.
+
+I liked the conclusion because it tackles the questions asked in the introduction. For example, the final paragraph of the book does a good job of describing her view on what future she would like to live in:
 
 >This is the future I’m hoping for. One where the arrogant, dictatorial algorithms that fill many of these pages are a thing of the past. One where we stop seeing machines as objective masters and start treating them as we would any other source of power. By questioning their decisions; scrutinizing their motives; acknowledging our emotions; demanding to know who stands to benefit; holding them accountable for their mistakes; and refusing to become complacent. I think this is the key to a future where the net overall effect of algorithms is a positive force for society.
 
