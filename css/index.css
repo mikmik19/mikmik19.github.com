@@ -6,6 +6,15 @@ a:hover {
   color: var(--dynamic-color-light);
 }
 
+li#search {
+  font-weight: 400;
+  color: var(--dynamic-color-dark);
+}
+
+li#search:hover {
+  color: var(--dynamic-color-light);
+}
+
 .site-footer {
   font-size: 1.2em;
   color: white;

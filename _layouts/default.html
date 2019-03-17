@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/d3.css" />
+    <link rel="stylesheet" href="/css/search.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,700,700i"
       rel="stylesheet"
@@ -20,26 +21,19 @@
   <body>
     <div class="page-content">
       <div class="container">
-        <div class="menu">
-          <a href="/">
-            <div
-              class="authorimage box"
-              style="background: url({{site.baseurl}}/assets/img/MikkelHartmannJensenSmall.jpg)"
-            ></div>
-            Mikkel Hansen
-          </a>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/search">Search 🔎</a></li>
-          </ul>
-        </div>
+        {% include menu.html %}
         <div class="two columns"></div>
         <div class="wrapper">{{ content }}</div>
+        {% include search-modal.html %}
       </div>
     </div>
 
     {% include footer.html %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="/js/dynamic-color-selector.js"></script>
     <script type="text/javascript" src="/js/scroll-indicator.js"></script>
+    <script type="text/javascript" src="/js/search-modal.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
   </body>
 </html>

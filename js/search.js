@@ -8,7 +8,7 @@ jQuery(function() {
     });
   
     // Get the generated search_data.json file so lunr.js can search it locally.
-    window.data = $.getJSON('/search_data.json');
+    window.data = $.getJSON('/search-data.json');
   
     // Wait for the data to load and add it to lunr
     window.data.then(function(loaded_data){
@@ -19,20 +19,20 @@ jQuery(function() {
       });
     });
   
-    var form = document.getElementById('site_search');
+    var form = document.getElementById('site-search');
     form.onkeyup = function() {
       if(canSubmit()){
         display_search_results();
       }
     }
    
-    $("#site_search").submit(function(event){
+    $("#site-search").submit(function(event){
       event.preventDefault();
       display_search_results();
     });
     
     function canSubmit() {
-      var query = $("#search_box").val()
+      var query = $("#search-box").val()
       if(query!=null && query!='') {
         return true
       }
@@ -40,9 +40,9 @@ jQuery(function() {
     }
 
     function display_search_results() {
-      var query = $("#search_box").val(); // Get the value for the text field
+      var query = $("#search-box").val(); // Get the value for the text field
       var results = window.idx.search(query); // Get lunr to perform a search
-      var $search_results = $("#search_results");
+      var $search_results = $("#search-results");
   
       // Wait for data to load
       window.data.then(function(loaded_data) {
@@ -70,9 +70,9 @@ jQuery(function() {
 
     function format_result_string(item) {
 
-      var appendString = '<div class="search_results">\
+      var appendString = '<div class="search-results">\
                           <h3><a href="' + item.url + '">' + item.title + '</a></h3>\
-                          <p>'+item.content.split('.').slice(0,2)+'.</p>\
+                          <p>'+item.content.split('.').slice(0,2).join('. ')+'.</p>\
                           </div>';
       
       return appendString

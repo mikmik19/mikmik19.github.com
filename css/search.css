@@ -1,9 +1,46 @@
-div.search_results h3 {
+#site-search {
+    margin: auto;
+    text-align: center;
+    padding: 1em;
+}
+
+div.search-results h3 {
     margin: 0;
     padding-bottom: 0.2em;
 }
 
-div.search_results p {
+div.search-results p {
     margin: 0;
     padding-bottom: 1.2em;
 }
+
+#search-results {
+    padding: 1em;
+    margin: auto;
+    background-color: white;
+}
+
+#search-modal {
+    background: white;
+    width: 70%;
+    max-width: 650px;
+    margin: auto;
+    padding: 2em;
+    border-radius: 0.5em;
+}
+
+ 
+.modal-background {
+    display: none; /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(200, 200, 200); /* Fallback color */
+    background-color: rgba(200, 200, 200, 0.9);
+}
+
