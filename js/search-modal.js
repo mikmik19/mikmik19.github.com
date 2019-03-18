@@ -2,6 +2,8 @@ document.getElementById('search').onclick = function(){
     modal = document.getElementById("search-modal-background")
     modal.style.display = "block"
 
+    const modalContent = document.getElementById("search-modal");
+
     // Select the search box and put it in focus
     searchBox = document.getElementById("search-box")
     searchBox.focus();
@@ -19,4 +21,10 @@ document.getElementById('search').onclick = function(){
     modal.onclick = function() {
         modal.style.display = "none"
     }
+
+    modalContent.onclick = function(event) {
+      event.stopPropagation();
+    }
+
+    
 }
