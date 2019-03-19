@@ -19,7 +19,7 @@ email: mikkelheart@gmail.com
 description: >
   A blog about learning about programming and machine learning.
 baseurl: ""
-url: "http://mikkelhartmann.dk"
+url: "https://mikkelhartmann.dk"
 twitter_username: mikkel_hartmann
 github_username: mikkelhartmann
 
@@ -34,10 +34,13 @@ plugins:
 # to override the default setting.
 exclude:
   - notebooks/env
-  - notebooks/strogatz_1991/env
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
+  - notebooks/*/env
+  - ./**/*.ipynb
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock-json
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/

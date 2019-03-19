@@ -1,11 +1,11 @@
 ---
 layout: page
 title:
-permalink: /CV/
+permalink: /cv/
 ---
 
-<link rel="stylesheet" href="/css/CV.css" />
-<link rel="stylesheet" type="text/css" media="print" href="/css/CVPrint.css" />
+<link rel="stylesheet" href="/css/cv.css" />
+<link rel="stylesheet" type="text/css" media="print" href="/css/cv-print.css" />
 
 # Mikkel Hansen
 

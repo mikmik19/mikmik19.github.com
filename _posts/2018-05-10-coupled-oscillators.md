@@ -2,9 +2,6 @@
 layout: post
 title: "Coupled Oscillators"
 date: 2018-05-10 12:34:36 +0200
-categories: reproducing-papers
-text-snipper: I decided that I wanted to start reproducing the results of some of the papers I am reading. This first one is about coupled oscillators, and it was mentioned in Steven H. Strogatz book Sync The Emerging Science of Spontaneous Order.
-logo: ⛓
 ---
 
 <head>
@@ -109,10 +106,10 @@ Indeed it would appear that a coupling close to $$K\approx1.95$$ leads to the lo
 
 We have seen that a collection of coupled oscillators set up with a uniform distribution of preferred oscillation frequencies can end up all oscillating with a frequency close to each other. I also showed that the evolution of the system can be characterized by two numbers -- the synchronization level and time -- and look at how these numbers are influence by the coupling strength.
 
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/points-on-circle.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/angle-vs-time.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/var-theta-vs-time.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/norm-var-theta-vs-time.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/k-comparison.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/final-phase.js'></script>
-<script type='text/javascript' src='../../../../js/d3/coupled-oscillators/synchronization-time.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/points-on-circle.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/angle-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/var-theta-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/norm-var-theta-vs-time.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/k-comparison.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/final-phase.js'></script>
+<script type='text/javascript' src='../../../../js/coupled-oscillators/synchronization-time.js'></script>

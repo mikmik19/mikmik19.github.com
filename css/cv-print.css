@@ -1,0 +1,37 @@
+/* This is here so I can see what is causing the 2nd page to print */
+/* div {
+  border: 1px solid black;
+} */
+
+body {
+  font-size: 1.5em;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0em;
+}
+
+hr {
+  margin: 0.5em;
+}
+
+div.wrapper {
+  margin: 5mm 15mm 15mm 5mm;
+}
+
+div.menu {
+  display: none;
+}
+
+div.page-content {
+  height: 100vh;
+}
+
+footer.site-footer {
+  display: none;
+}
+
+li {
+  -webkit-print-color-adjust: exact;
+}

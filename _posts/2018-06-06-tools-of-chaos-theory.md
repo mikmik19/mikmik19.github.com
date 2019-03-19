@@ -2,8 +2,6 @@
 layout: post
 title: "Tools of Chaos Theory"
 date: 2018-06-6 10:00:00 +0200
-categories: Blog-posts
-logo: 🦋
 ---
 
 In this post I summaries what I consider to be the main tools to come out of the field of Chaos theory.
@@ -70,6 +68,6 @@ This was a brief introduction to some of the tools of Chaos Theory. We can use t
 
 If this post has mad you want more, then you can have a look at the list I created of the reference which I found particularly help when getting into this field.
 
-<script type='text/javascript' src='../../../../js/d3/lorenz-system.js'></script>
-<script type='text/javascript' src='../../../../js/d3/ln-c-ln-epsilon.js'></script>
-<script type='text/javascript' src='../../../../js/d3/lagtimes.js'></script>
+<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lorenz-system.js'></script>
+<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/ln-c-ln-epsilon.js'></script>
+<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lagtimes.js'></script>

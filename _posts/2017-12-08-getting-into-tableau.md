@@ -2,9 +2,6 @@
 layout: post
 title:  "Getting Into: Tableau"
 date:   2017-12-09 10:15:00 +0200
-categories: getting-into
-text-snippet: Links that I have found useful or informative for getting started with Tableau.
-logo: 🎓
 ---
 Recently I had to learn Tableau at work. This is a list of links that I found particularly interesting during the learning process.
 

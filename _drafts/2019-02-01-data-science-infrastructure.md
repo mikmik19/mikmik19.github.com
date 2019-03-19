@@ -7,6 +7,8 @@ text-snippet:
 
 At work we are thinking about what infrastructure our data science team will need as it grows over the coming months and years. I have very little experience collaboration on data science projects so naturally I turned to the internet for advice. Below I've included a list on the most noteworthy sources that I have come across in my research.
 
+# Talks
+
 [Going Full Stack with Data Science: Using Technical Readiness Level Scale](https://www.youtube.com/watch?v=huqpXMNFD54)
 
 The talk is actually about building full-stack teams. The presenter agues that there is no such thing as a full stack engineer or data scientist, so we have to have the right team.
@@ -58,6 +60,12 @@ These obstacles are solved by Pachyderm in the following way:
 1. **Containerized data pipelines.** The data pipelines are self-contained. 
 
 We are not interested in using this, but we can be inspired by what they do.
+
+# Articles
+[A Practical Taxonomy of Reproducibility for Machine Learning Research](https://openreview.net/pdf?id=B1eYYK5QgX)
+
+[The Getting Started with Automated Data Pipelines]()
+It has some nice comments on data versioning.
 
 # Conclusion
 My main take-away from this research is that there are a lot of good ideas floating around, but that best practices hasn't stabilized yet. We are probaly best off mixing pragmatism and common sense. Forcing myself to be explicit about our needs I would say:
