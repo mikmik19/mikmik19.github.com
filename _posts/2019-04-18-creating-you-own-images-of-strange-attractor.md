@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating your own images strange attractors"
+title: "Creating your own images of strange attractors"
 date: 2019-03-18 08:00:36 +0200
 ---
 My fascination with mathematics and generative art continues. Here I want to describe my current workflow for making images of strange attractors.
