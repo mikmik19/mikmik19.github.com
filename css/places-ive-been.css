@@ -1,0 +1,27 @@
+#vizTitle {
+    text-align: center;
+}
+
+.countryListItem {
+    display: block;
+    width: 16.5%;
+    float: left;
+    font-size: 0.6em;  
+}
+
+.notBeen {
+    fill: #CCCCCC;
+    color: #CCCCCC;
+}
+
+.been {
+    color: var(--dynamic-color-dark);
+    font-weight: 800;
+    fill: var(--dynamic-color-dark);
+}
+
+.selected {
+    background: var(--dynamic-color-light);
+    stroke: var(--dynamic-color-light);
+    stroke-width: 0.15em;
+}

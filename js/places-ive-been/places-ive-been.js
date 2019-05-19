@@ -25,6 +25,10 @@ var color = d3
 //Create SVG element
 var svg = d3
   .select("#places-ive-been")
+  .attr(
+    "style",
+    `padding-bottom: ${Math.ceil(h * 100 / w)}%`
+  )
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 " + w + " " + h)
@@ -61,19 +65,41 @@ d3.csv("../../../../data/places-ive-been/been.csv", function(data) {
       .data(json.features)
       .enter()
       .append("path")
+      .attr("id", function(d) { return d.properties.su_a3})
       .attr("d", path)
-      .style("fill", function(d) {
-        if (d.properties.value) {
-          return lightColorUsed;
-        } else {
-          return "#ccc";
-        }
+      .attr("class", d => {if (d.properties.value) {return "been"} else {return "notBeen"}})
+      .on("mouseover", function(d) {
+        d3.select(this).classed("selected", true);
+        d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", true)
       })
-      .on("mouseover", function() {
-        d3.select(this).attr("stroke", "black");
-      })
-      .on("mouseout", function() {
-        d3.select(this).attr("stroke", "None");
+      .on("mouseout", function(d) {
+        d3.select(this).classed("selected", false)
+        d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", false)
       });
+
+      //Create a list of all the countried
+      var countryList = d3
+          .select("#countryListContainer")
+          .append("ul")
+          .attr("id",  "countryList")
+
+      var countryListLi = countryList.selectAll("li")
+          .data(json.features)
+          .enter()
+          .append("li")
+          .attr("class", "countryListItem")
+          .attr("id", function(d) { return d.properties.su_a3})
+          .text(function(d) { return d.properties.name})
+          .classed("been", d => {if (d.properties.value) {return true} else {false}})
+
+        countryListLi
+          .on("mouseover", function(d) {
+            d3.select(`path#${d.properties.su_a3}`).classed("selected", true)
+            d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", true)
+          })
+          .on("mouseout", function(d) {
+            d3.select(`path#${d.properties.su_a3}`).classed("selected", false)
+            d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", false)
+          });
   });
 });
