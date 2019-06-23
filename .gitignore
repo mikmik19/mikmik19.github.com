@@ -3,6 +3,8 @@ _site/
 _shelved/
 .sass-cache/
 node_modules/
+notebooks/**/*.png
+notebooks/**/*.svg
 notebooks/env/
 notebooks/.ipynb_checkpoints/
 notebooks/strogatz_1991/env/
