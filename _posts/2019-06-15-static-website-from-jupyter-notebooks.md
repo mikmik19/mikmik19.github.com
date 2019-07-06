@@ -4,31 +4,33 @@ title: "Static website from Jupyter Notebooks"
 date: 2019-05-14 10:00:36 +0200
 ---
 
-At work we have several data science projects running in parallel. We use Jupyter Notebooks because they give us a good environment for developing ideas and they make it easy to create reproducible reports. I've been looking for a workflow that lets us easily generate a static website from a collection of notebooks, so they can be easily shared within the company. Here I describe the workflow we currently use.
+At work we have several data science projects running in parallel. We use Jupyter Notebooks because they give us a good environment for developing ideas in a reproducible manner. I've been looking for a workflow that lets us easily generate a static website from a collection of notebooks, so they can be easily shared within the company. Here I describe the workflow we currently use.
 
 # The Problem
 
-Over time we accumulate quite a few notebooks. We keep notebooks short and to the point to make collabroation easier, but it means that we create a lot of them. In one of our projects we have more than 25 notebooks. Even with reasonable folder structure and good naming, it feels scattered. 
+We have accumulated quite a few notebooks. We keep notebooks short and to the point to make collabroation easier, but it means that we create a lot of them. In one of our projects we have more than 25 notebooks. Even with good folder structure and naming, it feels scattered. The situation is bad for practial and motivational reasons.
 
-The whole situation makes me long for the days of thesis writing where three years of work was contained between two covers. The sense of progression I git from writing on a chapter for the thesis kept me going through the rough times. Even if an experiment or analysis failed I would just go "Eh, I guess it'll be chapter in the thesis", and finishing that chapter still gave me a feeling of completion. I want to create the same feeling of progression for our data scientist, and I don't think that writing up a notebook gets the job done. Once you have finshed an analysis it should go in "the thesis". One solution is to compile all the notebook into a report.
+On the practical side it can be hard to find what you are looking for. There are no good way of searching across all the notebooks in the project. We need to get excellent search capabilities on top of the notebooks.
 
-I am also often in a situation where one of my coworkers want a figure that I  presented during one of our weekly demos. They may not be on GitHub, so I can't simply send them a link to the notebook. And if the notebook contain sensitive information it will have been cleared before being pushed to GitHub anyway. I need a compiled report that is easily shared.
+I am also often in a situation where one of my coworkers want a figure that was presented during one of the weekly demos. They may not be on GitHub, so I can't simply send them a link to the notebook. In certain cases the notebook will have been cleared before being pushed to GitHub anyway. We to be able to easily share the results presented in the notebooks.
 
-As the size of the data science project grows it can be hard to remember exactly what all the notebooks do. Therefore I want to have excellent search capabilities.  
+The sense of cohesion is lost. 
 
-Finally, I want a workflow that lets me convert a collection of notebook into a selfcontained report with as little overhead as possible. 
+On the motivational side there is the feeling of progression and completion. The whole situation makes me long for the days of thesis writing where three years of work was contained between two covers. The sense of progression I got from writing on a chapter for the thesis kept me going through the rough times. Even if an experiment or analysis failed I would just go "Eh, I guess it'll be chapter in the thesis", and finishing that chapter still gave me a feeling of completion. I want to create the same feeling of progression for our data scientist, and I don't think that writing up a notebook gets the job done. Once you have finshed an analysis it should go in "the report". One solution is to compile all the notebook into a report.
 
-In summary, the report should have the following properties:
+In summary, I want a workflow that makes it easy to:
 
-1. It should be able to combine a collection of notebooks into a single report to increase a sense of coherency.
-1. It should be easy to share the report.
-1. It should be easy to search across all notebook within a project. 
-1. It should be possible to turn in build process into a git hook, so we can build it every time something is pushed to master. 
+1. combine a collection of notebooks into a single report.
+1. share the report.
+1. search across all notebook within a project.  
+
+I want a workflow that lets me convert a collection of notebook into a selfcontained report with as little overhead as possible.
 
 # The Solution
 
 The solution we're currenly using revolves around three tools: `make`, `nb_convert`, and `mkdocs`.
 
+1. Use Jupyter Notebooks to present the work.
 1. Convert notebooks to Markdown using `nb_convert`.
 1. Build a static website from the Markdown files using `mkdocs`
 1. Use Make to orchestre everything
@@ -87,7 +89,7 @@ The makefile has a couple of reponsebilities. I needs to locate all the notebook
 The most important part of the `Makefile` is this:
 
 ```bash
-notebooks := $(wildcard notebooks/*.ipynb) $(wildcard notebooks/**/*.ipynb)
+notebooks := $(wildcard ./**/*.ipynb)
 md_pages := $(patsubst notebooks/%.ipynb,docs/%.md,$(notebooks))
 
 build.env: ; conda env create -f environment.yml
@@ -118,4 +120,4 @@ If I'm editing a notebook I will have `mkdocs serve` running in one terminal win
 
 # In Conclusion
 
-I quite like this solution, but I've only just started using it. Problems or chalanges are sure to crop up over time. I still haven't set it up so it works with Git. This should just require a file in the `.githooks` folder, but it may cause some trouble -- you never know.
+I quite like this solution, but I've only just started using it. Problems or chalanges are sure to crop up over time. I still haven't set it up to work with Git. This should just require a file in the `.githooks` folder, but it may cause some trouble -- you never know.
