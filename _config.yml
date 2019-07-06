@@ -22,6 +22,9 @@ baseurl: ""
 url: "https://mikkelhartmann.dk"
 twitter_username: mikkel_hartmann
 github_username: mikkelhartmann
+company: Vital Beats
+company_url: "https://vitalbeats.com"
+position: Head of Data Science
 
 # Build settings
 markdown: kramdown
