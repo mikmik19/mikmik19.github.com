@@ -70,14 +70,27 @@ jQuery(function() {
 
       var appendString = `<div class="book-search-results">\
                             <div class="wrapper">
-                              <div class="left"><h3>${item.title}</a></h3></div>\
-                              <div class="right">${'★'.repeat(item.stars)}</div>\
-                            </div>\
+                              <div class="left">
+                                <h3>${return_link(item)}</h3>
+                                </div>\
+                                <div class="right">${'★'.repeat(item.stars)}</div>\
+                              </div>\
                             <div class="author">${item.author}</div>\
                           </div>`;
       
       return appendString
     }
+
+    function return_link(item) {
+      if (item.link == 1) {
+        return `<a href="${item.title}">${item.title}</a>`
+      } 
+      else {
+        return `${item.title}`
+      }
+      
+    }
+
 
     function display_all_books() {
       var $search_results = $("#book-search-results");

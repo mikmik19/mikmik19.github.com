@@ -1,10 +1,8 @@
 ---
-layout: post
+layout: page
 title: "Thoughts on Hello World by Hannah Fry"
-date: 2019-01-02 17:00:36 +0200
-categories: D3
+date: 2018-09-02 17:00:36 +0200
 ---
-
 I have started going to a local [book club](https://www.meetup.com/CPH-Tech-Books-Film/) on science and tech books. This post was written to collect my thoughts in preparation for the meeting.
 
 The book is about how humans should live with algorithms. In the authors own words:
