@@ -59,5 +59,5 @@ To force myself to make the final design decision when creating these images, I'
 
 
 <link rel="stylesheet" href="../../../../css/strange-attractors.css">
-<script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="../../../../js/creating-you-own-strange-attractor/creating-you-own-strange-attractor.js"></script>

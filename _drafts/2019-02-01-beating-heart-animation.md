@@ -8,7 +8,7 @@ categories: D3
 <script src="../../../../js/three.js"></script>
 
 <head>
-    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 </head>
 
 I wanted to try to animate a 3D object. I've also wanted to play around with 

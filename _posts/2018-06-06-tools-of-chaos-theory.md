@@ -7,7 +7,7 @@ date: 2018-06-6 10:00:00 +0200
 In this post I summaries what I consider to be the main tools to come out of the field of Chaos theory.
 
 <head>
-    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="https://unpkg.com/d3-3d/build/d3-3d.min.js"></script>
     <style type="text/css">
         path {
