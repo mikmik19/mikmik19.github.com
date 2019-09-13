@@ -4,7 +4,7 @@ title:
 permalink: /about/
 ---
 
-I am Lead Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work on a clinical decision support system. Before that I studied physics and mathematics at the University of Roskilde in Denmark.
+I'm {{site.position}} at <a href="{{site.company_url}}"> {{site.company}}</a> where I work on a clinical decision support system. Before that I studied physics and mathematics at the University of Roskilde in Denmark.
 
 My studies culminated in a Ph.D. in experimental physics from Roskilde University and Laboratoire Léon Brillouin, a lab just outside of Paris, France. My thesis was on the structure and dynamics of hydrogen-bonded liquids. While these system are interesting from both an experimental and theoretical points of view, by the end of the day I didn't care much about what the molecules were actually doing. So I needed to work on something else. It also occurred to me that while I liked the heavy analysis of data, I didn't particularly like carrying out the experiments. You can imagine that this is a deal-breaker for an experimental physicist.
 
