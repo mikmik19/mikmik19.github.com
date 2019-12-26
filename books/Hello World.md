@@ -9,12 +9,12 @@ The book is about how humans should live with algorithms. In the authors own wor
 
 > It’s about asking if an algorithm is having a net benefit on society. About when you should trust a machine over your own judgement, and when you should resist the temptation to leave machines in control. It’s about breaking open the algorithms and finding their limits; and about looking hard at ourselves and finding our own. About separating the harm from the good and deciding what kind of world we want to live in. Because the future doesn’t just happen. We create it.
 
-My main concern going into this book was that it would simly be a list of examples of algorithms doing wrong, like e.g. [Weapons of Math Destruction](https://www.goodreads.com/book/show/28186015-weapons-of-math-destruction). While reading one of this kind of books can be nice, reading a second would be a bit much. I wanted this book to suggested ways of solving the problems rather than add items to the list of problems.
+My main concern going into this book was that it would simply be a list of examples of algorithms doing wrong, like e.g. [Weapons of Math Destruction](https://www.goodreads.com/book/show/28186015-weapons-of-math-destruction). While reading one of this kind of books can be nice, reading a second would be a bit much. I wanted this book to suggested ways of solving the problems rather than add items to the list of problems.
 
-The book didn't dissapoint, but I'm not overly excited about it either. I like the structure of the book -- each chapter covers an area where algorithms influence our lives: law enforcement, healthcare, driving. 
+The book didn't disappoint, but I'm not overly excited about it either. I like the structure of the book -- each chapter covers an area where algorithms influence our lives: law enforcement, healthcare, driving. 
 
 # Things that I didn't like
-Each chapter contains a couple of examples oh how algorithms are applied in the area. Unfortionately, the discussions were not as deep as I had hopen. Often they would cover 1-2 pages of a 30+ page chapter. The examples set the scene, but I didnt get this book for the examples, I got it for the discussion that the example should facilitate. 
+Each chapter contains a couple of examples oh how algorithms are applied in the area. unfortunately, the discussions were not as deep as I had hoped. Often they would cover 1-2 pages of a 30+ page chapter. The examples set the scene, but I didn't get this book for the examples, I got it for the discussion that the example should facilitate. 
 
 # What I liked the most
 The concept of _algorithm aversion_ was new to me. Hannah fry explains the concept like this:
