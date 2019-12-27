@@ -83,7 +83,8 @@ jQuery(function() {
 
     function return_link(item) {
       if (item.link == 1) {
-        return `<a href="${item.title}">${item.title}</a>`
+        var shortTitle = item.title.split(":")
+        return `<a href="${shortTitle[0]}">${shortTitle[0]}</a>`
       } 
       else {
         return `${item.title}`
