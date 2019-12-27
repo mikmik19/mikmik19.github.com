@@ -1,0 +1,25 @@
+name: website
+channels:
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.7.2
+  - line_profiler
+  - jupyter
+  - numpy
+  - pandas
+  - pip
+  - pytest
+  - matplotlib
+  - nbconvert
+  - pylint
+  - scikit-learn
+  - scipy
+  - pytest-cov
+  - rope
+  - autopep8
+  - pip:
+      - coverage
+      - flake8
+      - flake8-docstrings
+      - joblib
