@@ -49,16 +49,20 @@ permalink: /cv/
     </div>
 </div>
 
-I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work on a clinical decision support system. I have a strong background in mathematics and physics.
+I am Head of Data Science at <a href="{{site.company_url}}"> {{site.company}}</a> where I work on a clinical decision support system. I have a strong background in mathematics and physics.
 
-# 🏗 Work Experience
+# Work Experience
 
 <hr>
 
 <table style="width:100%">
   <tr>
-    <td style="width:20%">2017 - now</td>
-    <td><b>Data Scientist</b> at MakeWise</td> 
+    <td style="width:20%">2019 - now</td>
+    <td><b>Head of Data Science</b> at Vital Beats</td> 
+  </tr>
+  <tr>
+    <td style="width:20%">2017 - 2019</td>
+    <td><b>Data Scientist</b> at Vital Beats</td> 
   </tr>
   <tr>
     <td></td>
@@ -89,7 +93,7 @@ I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work 
   </tr>
 </table>
 
-# 🎓 Education
+# Education
 
 <hr>
 
@@ -106,7 +110,7 @@ I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work 
 
 <hr>
 
-# 📄 Skills
+# Skills
 
 <div class="pill">
     <ul>
@@ -119,17 +123,25 @@ I'm a Data Scientist at <a href="https://makewise.io">MakeWise</a> where I work 
         <li>Time-series analysis</li>
         <li>Research</li>
         <li>Presenting</li>
+        <li>Management</li>
     </ul>
 </div>
 
-# 🛠 Tools
+# Tools
 
 <div class="pill">
     <ul>
         <li>Python</li>
+        <li>Numpy</li>
+        <li>Pandas</li>
+        <li>Scikit-learn</li>
+    </ul>
+    <ul>
+        <li>Matplotlib</li>
         <li>JavaScript</li>
         <li>D3.js</li>
         <li>Tableau</li>
         <li>C#</li>
+        <li>Make</li>
     </ul>
 </div>

@@ -1,0 +1,23 @@
+.journal-entry {
+    padding: 30px 30px 60px 30px;
+    margin-bottom: 30px;
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      30deg,
+      /* GhostWhite 0%,
+      WhiteSmoke 100% */
+      ivory 0%,
+      linen 100%
+    );
+    font-family: 'Calligraffitti', cursive;
+    font-size: 2rem;
+}
+
+div.journal-entry h1  {
+    font-weight: 800;
+}
+
+div.journal-entry p  {
+ font-size: 2rem;
+ font-family: Muli;
+}
