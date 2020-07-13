@@ -10,10 +10,17 @@ layout: default
     <h1 class="artilce_title" itemprop="name headline">
       {{ page.title }}
     </h1>
-    {% for entry in site.devlogs reversed %}
+    {% for entry in site.devlog reversed %}
     <div class="journal-entry">
       <h1>{{ entry.date | date_to_string}}</h1>
       {{ entry.content}}
+      {% if entry.image_path %}
+      <div class="polaroid">
+        <a href="#" title="{{ entry.image_caption }}">
+          <img src="{{ entry.image_path}}"">
+        </a>
+      </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
