@@ -16,8 +16,8 @@ layout: default
       {{ entry.content}}
       {% if entry.image_path %}
       <div class="polaroid">
-        <a href="#" title="{{ entry.image_caption }}">
-          <img src="{{ entry.image_path}}"">
+        <a href="{{ entry.image_path}}" title="{{ entry.image_caption }}">
+          <img src="{{ entry.image_path}}">
         </a>
       </div>
       {% endif %}
