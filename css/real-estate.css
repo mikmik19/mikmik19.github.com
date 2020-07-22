@@ -1,0 +1,18 @@
+.addressListItem {
+    display: block;
+    width: 16.5%;
+    float: left;
+    font-size: 0.6em;  
+}
+
+.selected {
+    background: var(--dynamic-color-light);
+    stroke: var(--dynamic-color-light);
+    stroke-width: 0.15em;
+}
+
+.faded {
+    background: lightgray;
+    color: lightgray;
+    fill: lightgray;
+}

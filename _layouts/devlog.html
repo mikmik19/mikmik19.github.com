@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="scroll-indicator-container">
+    <div class="scroll-indicator-progress"></div>
+  </div>
+  <div class="article-content" itemprop="articleBody">
+    <h1 class="artilce_title" itemprop="name headline">
+      {{ page.title }}
+    </h1>
+    {% for entry in site.devlog reversed %}
+    <div class="journal-entry">
+      <h1>{{ entry.date | date_to_string}}</h1>
+      {{ entry.content}}
+      {% if entry.image_path %}
+      <div class="polaroid">
+        <a href="{{ entry.image_path}}" title="{{ entry.image_caption }}">
+          <img src="{{ entry.image_path}}">
+        </a>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</article>
+<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Miniver&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/devlog.css" />
