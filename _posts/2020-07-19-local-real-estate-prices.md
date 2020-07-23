@@ -16,6 +16,9 @@ Generally the house are 120 m2 or 150m2. The apparment I live in is 62 m2, anre 
 
 Let's look at how the price per square meter has changed since 2000. The radius of the circles indicate the square meeter of the unit.
 <center>
+    <div class="svg-container" id='square-meter-legend'></div>
+</center>
+<center>
     <div class="svg-container" id='sales-prices'></div>
 </center>
 <center>

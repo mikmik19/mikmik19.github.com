@@ -16,3 +16,7 @@
     color: lightgray;
     fill: lightgray;
 }
+
+.circle {
+    opacity: 0.3;
+}
