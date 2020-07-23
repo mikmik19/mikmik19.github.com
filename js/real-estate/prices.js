@@ -110,7 +110,7 @@
         const classLabeler = d => d.address.replace(/ /g, '');
         const m2ClassLabeler = d => 'm2' + d.m2;
     
-        var parseDate = d3.timeParse('%b %e %Y');
+        var parseDate = d3.timeParse('%d-%m-%Y');
         const salesDateAccessor = d => parseDate(d.salesDate);
 
         var margin = { top: 20, right: 20, bottom: 40, left: 70 };
@@ -129,12 +129,14 @@
         var xScale = d3
             .scaleTime()
             .domain(d3.extent(data, salesDateAccessor))
-            .range([margin.left, width - margin.right]);
+            .range([margin.left, width - margin.right])
+            .nice();
 
         var yScale = d3
             .scaleLinear()
             .domain(d3.extent(data, m2PriceAccessor))
-            .range([height - margin.bottom, margin.top]);
+            .range([height - margin.bottom, margin.top])
+            .nice();
 
         var radiusScale = d3
             .scaleSqrt()
