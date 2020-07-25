@@ -1,5 +1,5 @@
 .addressListItem {
-    display: block;
+    display: flex;
     width: 16.5%;
     float: left;
     font-size: 0.6em;  
@@ -19,4 +19,36 @@
 
 .circle {
     opacity: 0.3;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 5px;
+  list-style: none;
+  border-radius: 12px;
+}
+
+.flex-item {
+  flex: 1;
+  text-align: left;
+  font-size: clamp(0.1rem, 0.9rem, 2rem);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.88px;
+  color: #333333;
+  justify-content: space-evenly;
+}
+
+.axisLabel {
+  font-size: clamp(0.1rem, 0.9rem, 2rem);
+}
+
+svg text {
+  font-size: clamp(0.1rem, 0.9rem, 2rem);
 }

@@ -4,14 +4,15 @@ title: "Places I've Read"
 date: 2020-07-22 17:00:36 +0200
 ---
 
+Some time ago a came across the site [a year of reading the world](https://ayearofreadingtheworld.com/thelist/). The author read a book from each (or most) counties during a year. I couldn’t do that in a year but I think it is a worth while goal to strive after as i continue reading. To help me track this I’ve set up this site. This will give me an overview of which countries I am missing. Eventually I would like to have read a book from every country in the world.
+
 <head>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 </head>
 
-I've wanted to get a Scratch-It Map for a while. However, I couldn't quite decide on which kind I wanted, or where to place it in the event that I got one. Since I've been getting into D3.js I thought that making my own map would be a good exercise. While this map is not scratchable (yet?), it does serve the purpose of highlight all the places I've visited over the years. I plan to add interactivity and make the map more granular later.
 
 <center>
-    <h1 id="vizTitle">Visited <span class="been">x</span> out of <span class="notBeen">~y</span> countries</h1>
+    <h1 id="vizTitle">Read <span class="been">x</span> out of <span class="notBeen">~y</span> countries</h1>
 </center>
 
 <center><div class="svg-container" id='places-ive-read'></div></center>
