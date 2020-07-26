@@ -4,7 +4,7 @@ title: "Places I've Read"
 date: 2020-07-22 17:00:36 +0200
 ---
 
-Some time ago a came across the site [a year of reading the world](https://ayearofreadingtheworld.com/thelist/). The author read a book from each (or most) counties during a year. I couldn’t do that in a year but I think it is a worth while goal to strive after as i continue reading. To help me track this I’ve set up this site. This will give me an overview of which countries I am missing. Eventually I would like to have read a book from every country in the world.
+Some time ago I came across the site [a year of reading the world](https://ayearofreadingtheworld.com/thelist/). The author read a book from each (or most) counties during a year. I couldn’t do that in a year but I think it is a worth while goal. To help me track this I’ve set up this site, which gives me an overview of which countries I am missing. Eventually I would like to have read a book from every country in the world.
 
 <head>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
