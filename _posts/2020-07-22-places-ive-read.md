@@ -12,7 +12,7 @@ Some time ago a came across the site [a year of reading the world](https://ayear
 
 
 <center>
-    <h1 id="vizTitle">I've read book from authors from <span class="been">x</span> out of <span class="notBeen">y</span> countries</h1>
+    <h1 id="vizTitle">I've read book by authors from <span class="been">x</span> out of <span class="notBeen">y</span> countries</h1>
 </center>
 
 <center>

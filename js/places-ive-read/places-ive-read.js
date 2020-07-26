@@ -23,6 +23,23 @@ var svg = d3
   .attr("viewBox", "0 0 " + w + " " + h)
   .classed("svg-content-responsive", true);
 
+function setBookTitleSize() {
+  var windowWidth = parseInt(d3.select('body').style('width'), 10)
+  if (windowWidth > 550) {
+    divHeight = 80
+  } else if (((windowWidth > 400) & (windowWidth < 550))) {
+    divHeight = 150
+  } else {
+    divHeight = 190
+  }
+  
+  d3.select("#bookTitleContainer")
+    .style("height", divHeight + "px");
+}
+
+setBookTitleSize()
+window.addEventListener('resize', setBookTitleSize);
+
 // Load the places I've been
 d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
 
