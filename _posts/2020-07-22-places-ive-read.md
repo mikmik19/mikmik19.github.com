@@ -12,12 +12,16 @@ Some time ago a came across the site [a year of reading the world](https://ayear
 
 
 <center>
-    <h1 id="vizTitle">Read <span class="been">x</span> out of <span class="notBeen">~y</span> countries</h1>
+    <h1 id="vizTitle">I've read book from authors from <span class="been">x</span> out of <span class="notBeen">y</span> countries</h1>
 </center>
 
-<center><div class="svg-container" id='places-ive-read'></div></center>
-<script type='text/javascript'  src='../../../../js/places-ive-read/places-ive-read.js'></script>
+<center>
+    <div class="svg-container" id='places-ive-read'></div>
+</center>
 
+
+<div id="bookTitleContainer"><h1>Click a <span class="fancy-text">country</span> to see the book</h1></div>
 <div id="countryListContainer"></div>
 
-<link rel="stylesheet" href="../../../../css/places-ive-been.css">
+<link rel="stylesheet" href="../../../../css/places-ive-read.css">
+<script type='text/javascript'  src='../../../../js/places-ive-read/places-ive-read.js'></script>

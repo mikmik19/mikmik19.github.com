@@ -11,17 +11,6 @@ var projection = d3
 //Define path generator
 var path = d3.geoPath().projection(projection);
 
-//Define quantize scale to sort data values into buckets of color
-var color = d3
-  .scaleQuantize()
-  .range([
-    "rgb(237,248,233)",
-    "rgb(186,228,179)",
-    "rgb(116,196,118)",
-    "rgb(49,163,84)",
-    "rgb(0,109,44)"
-  ]);
-
 //Create SVG element
 var svg = d3
   .select("#places-ive-been")
@@ -36,11 +25,11 @@ var svg = d3
 
 // Load the places I've been
 d3.csv("../../../../data/places-ive-been/been.csv", function(data) {
-  //Set input domain for color scale
-  color.domain([0, 1]);
-
+  var numCountriesBeen = 0;
+  var numCountries;
   //Load in GeoJSON data
   d3.json("../../../../data/places-ive-been/custom.geo.json", function(json) {
+    numCountries = json.features.length
     for (var i = 0; i < data.length; i++) {
       var dataCountry = data[i].country;
       var dataValue = parseFloat(data[i].value);
@@ -53,11 +42,17 @@ d3.csv("../../../../data/places-ive-been/been.csv", function(data) {
           //Copy the data value into the JSON
           json.features[j].properties.value = dataValue;
 
+          if (dataValue == 1) {
+            numCountriesBeen++
+          }
           //Stop looking through the JSON
           break;
         }
       }
     }
+
+    d3.select("span.been").text(numCountriesBeen)
+    d3.select("span.notBeen").text(numCountries)
 
     //Bind data and create one path per GeoJSON feature
     svg

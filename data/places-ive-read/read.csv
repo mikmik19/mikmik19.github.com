@@ -1,25 +1,28 @@
-country,value, book
-Denmark, Kaptajn Dinesen: Til døden os skiller by Tom Buk-Swient
-France,1, Capital and Ideology by Thomas Piketty
-Germany,0, Memoirs of a Polar Bear by Yoko Tawada
-Thailand,1, Dragon's Fin Soup by S.P. Somtow
-Myanmar,0, Smile as they Bow by Nu Nu Yi
-Austria,0, Extinction by Thomas Bernhard 
-Hungary,0, On the Balcony by Iván Mándy
-Romania,0, The Passport by Herta Müller 
-Serbia,0, Lake Como  by Srdjan Valjarevic 
-Mexico,0, Faces in the Crowd by Valeria Luiselli
-Sweden,0, Chronicler of the Winds by Henning Mankell
-Norway,0, Hunger by Knut Hamsun 
-Spain,0, Exiled from Almost Everywhere by Juan Goytisolo
-Ireland,0, The Secret Scripture by Sebastian Barry
-Netherlands,0, Craving by Esther Gerritsen
-Seychelles,0, Voices by Glynn Burridge
-Iceland,0, The Atom Station by Halldór Laxness
-Morocco,0 The Sand Child by Tahar Ben Jelloun
-United Kingdom,1, Monstrous Regiment by Terry Pratchett
-Czech Rep.,0, The Engineer of Human Souls by Danny Smiřický
-United States, 1, American Gods by Neil Gaiman 
-Japan, 1, The Cake Tree in the Ruins by Akiyuki Nosaka
-Australia, 1, The Book Thief by Markus Zusak,
-New Zealand, 0, Singularity by  Charlotte Grimshaw
+country,value,book
+Afghanistan,0,A Thousand Rooms of Dream and Fear by Atiq Rahimi
+Albania,0,The Palace of Dreams by Ismail Kadare
+Algeria,0,So Vast the Priso by Assia Djebar
+Denmark,1,Kaptajn Dinesen: Til døden os skiller by Tom Buk-Swient
+France,1,Capital and Ideology by Thomas Piketty
+Germany,0,Memoirs of a Polar Bear by Yoko Tawada
+Thailand,1,Dragon's Fin Soup by S.P. Somtow
+Myanmar,0,Smile as they Bow by Nu Nu Yi
+Austria,0,Extinction by Thomas Bernhard 
+Hungary,0,On the Balcony by Iván Mándy
+Romania,0,The Passport by Herta Müller 
+Serbia,0,Lake Como  by Srdjan Valjarevic 
+Mexico,0,Faces in the Crowd by Valeria Luiselli
+Sweden,1,Factfullness by Hans Rosling
+Norway,1,Doppler by Erlend Loe 
+Spain,0,Exiled from Almost Everywhere by Juan Goytisolo
+Ireland,0,The Secret Scripture by Sebastian Barry
+Netherlands,0,Craving by Esther Gerritsen
+Seychelles,0,Voices by Glynn Burridge
+Iceland,0,The Atom Station by Halldór Laxness
+Morocco,0,The Sand Child by Tahar Ben Jelloun
+United Kingdom,1,Monstrous Regiment by Terry Pratchett
+Czech Rep.,0,The Engineer of Human Souls by Danny Smiřický
+United States,1,American Gods by Neil Gaiman 
+Japan,1,The Cake Tree in the Ruins by Akiyuki Nosaka
+Australia,1,The Book Thief by Markus Zusak,
+New Zealand,0,Singularity by Charlotte Grimshaw

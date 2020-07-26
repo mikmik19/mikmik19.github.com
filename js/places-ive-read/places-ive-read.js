@@ -11,17 +11,6 @@ var projection = d3
 //Define path generator
 var path = d3.geoPath().projection(projection);
 
-//Define quantize scale to sort data values into buckets of color
-var color = d3
-  .scaleQuantize()
-  .range([
-    "rgb(237,248,233)",
-    "rgb(186,228,179)",
-    "rgb(116,196,118)",
-    "rgb(49,163,84)",
-    "rgb(0,109,44)"
-  ]);
-
 //Create SVG element
 var svg = d3
   .select("#places-ive-read")
@@ -36,14 +25,16 @@ var svg = d3
 
 // Load the places I've been
 d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
-  //Set input domain for color scale
-  color.domain([0, 1]);
 
+  var numCountriesRead = 0;
+  var numCountries;
   //Load in GeoJSON data
   d3.json("../../../../data/places-ive-read/custom.geo.json", function(json) {
+    numCountries = json.features.length
     for (var i = 0; i < data.length; i++) {
       var dataCountry = data[i].country;
       var dataValue = parseFloat(data[i].value);
+      var dataBook = data[i].book;
 
       //Find the corresponding state inside the GeoJSON
       for (var j = 0; j < json.features.length; j++) {
@@ -52,13 +43,50 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
         if (dataCountry == jsonCountry) {
           //Copy the data value into the JSON
           json.features[j].properties.value = dataValue;
+          json.features[j].properties.book = dataBook;
 
+          if (dataValue == 1) {
+            numCountriesRead++
+          }
           //Stop looking through the JSON
           break;
         }
       }
     }
 
+    d3.select("span.been").text(numCountriesRead)
+    d3.select("span.notBeen").text(numCountries)
+
+    //Define mouseover effects
+    function onMouseOver(d) {
+      var thisD = d;
+      d3.select(`path#${d.properties.su_a3}`).classed("selected", true)
+      d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", true)
+
+      d3.selectAll("#bookTitleContainer h1").remove()
+      d3.select("#bookTitleContainer")
+        .append("h1")
+        .html(function () {
+          var description;
+          if (thisD.properties.value == 1) {
+            description = `From <span class="fancy-text">${thisD.properties.name}</span> I read <span class="fancy-text">${thisD.properties.book}</span>`
+          } else if (thisD.properties.value == 0) {
+            description = `From <span class="fancy-text">${thisD.properties.name}</span> I want to read <span class="fancy-text">${thisD.properties.book}</span>`
+          } else {
+            description = `I haven't decided what to read from <span class="fancy-text">${thisD.properties.name}</span> yet`
+          }
+          return description
+        })
+    }
+
+    function onMouseOut(d) {
+      d3.select(`path#${d.properties.su_a3}`).classed("selected", false)
+      d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", false)
+      d3.selectAll("#bookTitleContainer h1").remove()
+      d3.selectAll("#bookTitleContainer")
+        .append("h1")
+        .html('Click a <span class="fancy-text">country</span> to see the book')
+    }
     //Bind data and create one path per GeoJSON feature
     svg
       .selectAll("path")
@@ -68,14 +96,9 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
       .attr("id", function(d) { return d.properties.su_a3})
       .attr("d", path)
       .attr("class", d => {if (d.properties.value) {return "been"} else {return "notBeen"}})
-      .on("mouseover", function(d) {
-        d3.select(this).classed("selected", true);
-        d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", true)
-      })
-      .on("mouseout", function(d) {
-        d3.select(this).classed("selected", false)
-        d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", false)
-      });
+      .classed("toRead", d => { if (d.properties.value == 0) { return true } else { false } })
+      .on("mouseover", onMouseOver)
+      .on("mouseout", onMouseOut);
 
       //Create a list of all the countried
       var countryList = d3
@@ -90,16 +113,11 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
           .attr("class", "countryListItem")
           .attr("id", function(d) { return d.properties.su_a3})
           .text(function(d) { return d.properties.name})
+          .classed("toRead", d => { if (d.properties.value == 0) { return true } else { false } })
           .classed("been", d => {if (d.properties.value) {return true} else {false}})
 
         countryListLi
-          .on("mouseover", function(d) {
-            d3.select(`path#${d.properties.su_a3}`).classed("selected", true)
-            d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", true)
-          })
-          .on("mouseout", function(d) {
-            d3.select(`path#${d.properties.su_a3}`).classed("selected", false)
-            d3.select(`.countryListItem#${d.properties.su_a3}`).classed("selected", false)
-          });
-  });
+          .on("mouseover", onMouseOver)
+          .on("mouseout", onMouseOut);
+  })
 });

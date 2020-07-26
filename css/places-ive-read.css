@@ -1,0 +1,47 @@
+#vizTitle {
+    text-align: center;
+}
+
+.countryListItem {
+    display: block;
+    width: 16.5%;
+    float: left;
+    font-size: 0.6em;  
+}
+
+.notBeen {
+    fill: #CCCCCC;
+    color: #CCCCCC;
+}
+
+.been {
+    color: var(--dynamic-color-dark);
+    font-weight: 800;
+    fill: var(--dynamic-color-dark);
+}
+
+.toRead {
+    color: var(--dynamic-color-light);
+    fill: var(--dynamic-color-light);
+}
+
+.selected {
+    background: var(--dynamic-color-light);
+    stroke: var(--dynamic-color-light);
+    stroke-width: 0.15em;
+}
+
+.fancy-text {
+    font-weight: bold;
+    color: var(--dynamic-color-dark);
+}
+
+#bookTitleContainer {
+    height: 80px;
+    text-align: center;
+}
+
+#bookTitleContainer h1{
+    text-align: center;
+}
+
