@@ -1,27 +1,31 @@
 import os
 import requests
 
+postnummer = 2000
 road_names = [
-    'lærke',
-    'ege',
-    'tjørne',
-    'ahorn',
-    'poppel',
-    'pile',
-    'aske',
-    'linde',
-    'bøge',
-    'birke',
-    'plantan'
+    'lærkeskellet',
+    'egeskellet',
+    'tjørneskellet',
+    'ahornskellet',
+    'poppelskellet',
+    'pileskellet',
+    'askeskellet',
+    'lindeskellet',
+    'bøgeskellet',
+    'birkeskellet',
+    'plantanskellet',
+    'johannes v. jensens alle'
+    
 ]
-base_url = 'https://www.boligsiden.dk/pdf/salgspris/solgt/alle/1?periode.from=1992-01-01&sortdescending=true&sort=salgsdato&postnummer=2000&vej='
+base_url = f'https://www.boligsiden.dk/pdf/salgspris/solgt/alle/1?periode.from=1992-01-01&sortdescending=true&sort=salgsdato&postnummer={postnummer}&vej='
 
 
 for road in road_names:
-    url = base_url + road + 'skellet'
+    url = base_url + road
     response = requests.get(url)
-    with open(f'./{road}.pdf', 'wb') as f:
+    pdf_name =road.replace(" ","")
+    with open(f'./{pdf_name}.pdf', 'wb') as f:
         f.write(response.content)
         
 for road in road_names:
-    os.system(f'pdftotext -layout -enc UTF-8 {road}.pdf')
+    os.system(f'pdftotext -layout -enc UTF-8 {pdf_name}.pdf')
