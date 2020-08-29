@@ -398,24 +398,8 @@ img {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid var(--dynamic-color-light);
+  border-left: 10px solid var(--dynamic-color-dark);
   margin: 1.5em 0px;
   padding: .5em 20px;
   quotes: "“" "”" "‘" "’";
-}
-
-blockquote p:before {
-  color: var(--dynamic-color-light);
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0em;
-  display: -webkit-inline-box;
-}
-
-blockquote p:after {
-  color: var(--dynamic-color-light);
-  content: close-quote;
-  font-size: 4em;
-  line-height: 0em;
-  display: -webkit-inline-box;
 }
