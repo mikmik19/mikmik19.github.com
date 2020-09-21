@@ -134,7 +134,7 @@
         function plotSalesScatter() {
             const m2Accessor = d => parseFloat(d.m2);
             const m2PriceAccessor = d => parseFloat(d.m2Price);
-            const classLabeler = d => d.streetName + ' num' + d.streetNumber.replace(/ /g, '');
+            const classLabeler = d => d.streetName.replace(' ', '').replace('.','') + ' num' + d.streetNumber.replace(/ /g, '');
             const m2ClassLabeler = d => 'm2' + d.m2;
 
             var parseDate = d3.timeParse('%d-%m-%Y');
@@ -257,7 +257,9 @@
 
         // Create a list for each street name
         data.streets.forEach(streetObject => {
-            var classLabeler = d => streetObject.street + ' ' + 'num' + d.replace(' ', '');
+            var classyStreetName = streetObject.street.replace(' ', '').replace('.','')
+            console.log(classyStreetName)
+            var classLabeler = d => classyStreetName + ' ' + 'num' + d.replace(' ', '');
 
             var streetName = addressContainer
                 .append("h3")
@@ -269,7 +271,8 @@
                 
             var addressListUl = street.append("li")
 
-            var addressListLi = addressListUl.selectAll("li." + streetObject.street)
+
+            var addressListLi = addressListUl.selectAll("li." + classyStreetName)
                     .data(streetObject.numbers)
                 .enter()
                     .append("li")
@@ -277,11 +280,11 @@
                     .classed("addressListItem", true)
                     .classed('flex-item', true)
                     .append("div")
-                    .text(function (d) { return streetObject.street +' '+ d });
+                    .text(function (d) { return classyStreetName +' '+ d });
 
             streetName
-                .on("mouseover", d => onMouseOver(d, true, d => streetObject.street))
-                .on("mouseout", d => onMouseOver(d, false, d => streetObject.street));
+                .on("mouseover", d => onMouseOver(d, true, d => classyStreetName))
+                .on("mouseout", d => onMouseOver(d, false, d => classyStreetName));
 
             addressListLi
                 .on("mouseover", d => onMouseOver(d, true, classLabeler))
