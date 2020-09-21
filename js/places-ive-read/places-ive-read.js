@@ -44,6 +44,7 @@ window.addEventListener('resize', setBookTitleSize);
 d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
 
   var numCountriesRead = 0;
+  var numCountriesToRead = 0;
   var numCountries;
   //Load in GeoJSON data
   d3.json("../../../../data/places-ive-read/custom.geo.json", function(json) {
@@ -65,14 +66,18 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
           if (dataValue == 1) {
             numCountriesRead++
           }
+          else {
+            numCountriesToRead++
+          }
           //Stop looking through the JSON
           break;
         }
       }
     }
 
-    d3.select("span.been").text(numCountriesRead)
-    d3.select("span.notBeen").text(numCountries)
+    d3.select("span.read").text(numCountriesRead)
+    d3.select("span.total").text('~'+numCountries)
+    d3.select("span.toRead").text(numCountriesToRead)
 
     //Define mouseover effects
     function onMouseOver(d) {
@@ -112,7 +117,7 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
       .append("path")
       .attr("id", function(d) { return d.properties.su_a3})
       .attr("d", path)
-      .attr("class", d => {if (d.properties.value) {return "been"} else {return "notBeen"}})
+      .attr("class", d => {if (d.properties.value) {return "read"} else {return "notRead"}})
       .classed("toRead", d => { if (d.properties.value == 0) { return true } else { false } })
       .on("mouseover", onMouseOver)
       .on("mouseout", onMouseOut);
@@ -131,7 +136,7 @@ d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
           .attr("id", function(d) { return d.properties.su_a3})
           .text(function(d) { return d.properties.name})
           .classed("toRead", d => { if (d.properties.value == 0) { return true } else { false } })
-          .classed("been", d => {if (d.properties.value) {return true} else {false}})
+          .classed("read", d => {if (d.properties.value) {return true} else {false}})
 
         countryListLi
           .on("mouseover", onMouseOver)

@@ -5,7 +5,14 @@ var darkColors = [
     '#B0151E',
     '#AE3B42',
     '#673453',
-    '#491133'
+    '#491133',
+    '#f7797d', // MegaTron
+    '#240b36', // Witching Hour
+    '#DD2476', // Bloody Mary
+    '#134E5E', // Moss,
+    '#5C258D', // Shroom Haze
+    '#3D7EAA', // Opa
+    '#516395', // Kashmir
 
 ]
 var lightColors = [
@@ -15,7 +22,14 @@ var lightColors = [
     '#E8777F',
     '#E4989C',
     '#FF954D',
-    '#fa9dd6'
+    '#fa9dd6',
+    '#C6FFDD', // MegaTron
+    '#c31432', // Witching Hour
+    '#FF512F', // Bloody Mary,
+    '#71B280', // Moss,
+    '#4389A2', // Shroom Haze
+    '#FFE47A', // Opa
+    '#614385', // Kashmir
 ]
 
 var index  = Math.floor(Math.random() * (darkColors.length));

@@ -4,7 +4,7 @@ title: "Places I've Read"
 date: 2020-07-22 17:00:36 +0200
 ---
 
-Some time ago I came across the site [a year of reading the world](https://ayearofreadingtheworld.com/thelist/). The author read a book from each (or most) counties during a year. I couldn’t do that in a year but I think it is a worth while goal. To help me track this I’ve set up this site, which gives me an overview of which countries I am missing. Eventually I would like to have read a book from every country in the world.
+Some time ago I came across the site [a year of reading the world](https://ayearofreadingtheworld.com/thelist/). The author read a book from each (or most) counties during a year. I couldn’t do that in a year but I think it is a worthwhile goal. I've set up this site to help me track my progress. It which gives me an overview of which countries I am missing. Eventually I would like to have read a book from every country in the world.
 
 <head>
     <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
@@ -12,7 +12,7 @@ Some time ago I came across the site [a year of reading the world](https://ayear
 
 
 <center>
-    <h1 id="vizTitle">I've read book by authors from <span class="been">x</span> out of <span class="notBeen">y</span> countries</h1>
+    <h1 id="vizTitle">I've read book by authors from <span class="read">x</span> out of <span class="total">y</span> countries. I've made seectiions ffor another <span class="toRead">x</span> countries</h1>
 </center>
 
 <center>
