@@ -1,0 +1,50 @@
+.svgContainer {
+    display: flex;
+}
+
+.svgContainer p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.svgContainer.left {
+    margin: auto;
+}
+
+.right {
+    margin-left: 30px;
+}
+
+.tooltip {
+    margin-left: 0px;
+}
+
+.tooltip p {
+    font-style: italic;
+    text-align: left;
+}
+
+.tooltip .date {
+    font-size: 11px;
+}
+
+.selected {
+    fill: var(--dynamic-color-dark) !important;
+}
+
+
+.blink {
+    fill:  var(--dynamic-color-light) !important;
+    animation: blink-animation 1.5s steps(15, start) infinite;
+    -webkit-animation: blink-animation 1.5s steps(15, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        fill: lightgray;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        fill: lightgray;
+    }
+}

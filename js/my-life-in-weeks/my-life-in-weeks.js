@@ -1,283 +1,357 @@
-const margin = { top: 50, right: 50, bottom: 50, left: 50 };
-const svg = d3.select("svg");
-const width = +svg.attr("width") - margin.left - margin.right;
-const height = +svg.attr("height") - margin.top - margin.bottom;
-const defaultBG = "lightgray";
-const birthday = new Date("07/02/1987");
+(function() {
+    function drawCalendar() {
 
-//Get Calender Week
-function getWeekNumber(d) {
-    d.setHours(0, 0, 0, 0);
-    d.setDate(d.getDate() + 4 - (d.getDay() || 7));
-    var yearStart = new Date(d.getFullYear(), 0, 1);
-    var weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
-    return weekNo;
-}
+        // Start by clearing the figure
+        d3.selectAll(".svg-wrapper").remove()
+        d3.select(".tooltip").remove()
 
-//Format Date for Tooltip
-function formatFromToDate(fromdate, todate) {
-    var monthNames = [
-        "Jan", "Feb", "Mar",
-        "Apr", "May", "Jun", "Jul",
-        "Aug", "Sep", "Oct",
-        "Nov", "Dec"
-    ];
+        const margin = { top: 20, right: 20, bottom: 40, left: 50 };
+    
 
-    var fromDay = fromdate.getDate();
-    var fromMonth = fromdate.getMonth();
-    var fromYear = fromdate.getFullYear();
-    var dateformat = fromDay + '. ' + monthNames[fromMonth] + ' ' + fromYear;
+        // TODO: All of the dimensions below 
+        // will need to be updated base don the window width. 
+        const windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+        console.log(windowWidth);
+        
+        const weekCellSize = windowWidth/230;
+        const weekCellPadding = 1;
 
-    if (fromdate.toDateString() != todate.toDateString()) {
-        var toDay = todate.getDate();
-        var toMonth = todate.getMonth();
-        var toYear = todate.getFullYear();
-        dateformat += " - " + toDay + '. ' + monthNames[toMonth] + ' ' + toYear;
-    }
-    return dateformat;
-}
+        const calendarWidth = 52 * (weekCellSize + weekCellPadding);
+        const calendarHeight = 90 * (weekCellSize + weekCellPadding);
 
-//Get difference to Birthyear
-function getYear(d) {
-    return d.getFullYear() - birthday.getFullYear();
-}
+        const wrapperWidth = calendarWidth + margin.left + margin.right;
+        const wrapperHeight = calendarHeight + margin.top + margin.bottom;
 
-//Modulo
-Number.prototype.mod = function (n) {
-    return ((this % n) + n) % n;
-};
+        
 
-//Get difference to Birthweek
-function getWeek(d) {
-    d = new Date(d);
-    kwBirthday = getWeekNumber(birthday);
-    kwDate = getWeekNumber(d);
-    week = (kwDate - kwBirthday).mod(52) + 1;
-    return week;
-}
+        const svg = d3.select(".svgContainer")
+            .append("div")
+            .classed("svg-wrapper", true)
+            .classed("left", true)
+            .append("svg")
+            .attr("height", wrapperHeight)
+            .attr("width", wrapperWidth);
 
-// Create Array with different Events
-const events = new Array();
-events.push({
-    id: 1,
-    title: "Kindergarden",
-    description: "Wyssachen",
-    color: "#c94d4d",
-    from: new Date("08/01/1992"),
-    to: new Date("07/31/1994"),
-})
-events.push({
-    id: 2,
-    title: "Primary School",
-    description: "Wyssachen",
-    color: "#d8832b",
-    from: new Date("08/01/1994"),
-    to: new Date("07/31/2000"),
-})
-events.push({
-    id: 3,
-    title: "High School",
-    description: "Huttwil",
-    color: "#dab71f",
-    from: new Date("08/01/2000"),
-    to: new Date("07/31/2003"),
-})
-events.push({
-    id: 4,
-    title: "Apprenticeship",
-    description: "Sursee",
-    color: "#406244",
-    from: new Date("08/01/2003"),
-    to: new Date("07/01/2007"),
-})
-events.push({
-    id: 5,
-    title: "Working",
-    description: "",
-    color: "#242551",
-    from: new Date("07/02/2007"),
-    to: new Date("08/01/2013"),
-})
-events.push({
-    id: 6,
-    title: "Travelling",
-    description: "",
-    color: "#4F86C6",
-    from: new Date("07/01/2013"),
-    to: new Date("09/01/2014"),
-})
-events.push({
-    id: 7,
-    title: "Bachelor Informatik",
-    description: "FHNW, Brugg",
-    color: "#6C49B8",
-    from: new Date("09/02/2014"),
-    to: new Date("09/01/2018"),
-})
-events.push({
-    id: 8,
-    title: "Life expectancy (Men)",
-    description: "81.3 Years",
-    color: "black",
-    from: new Date("11/02/2068"),
-    to: new Date("11/02/2068"),
-})
-events.push({
-    id: 9,
-    title: "Life expectancy (Women)",
-    description: "85.3 Years",
-    color: "black",
-    from: new Date("11/02/2072"),
-    to: new Date("11/02/2072"),
-})
-events.push({
-    id: 10,
-    title: "Retirement",
-    description: "...",
-    color: "#7aa979",
-    from: new Date("08/01/2052"),
-    to: new Date("07/01/2078"),
-})
+        // TODO: If the window is too narrow I might want to place
+        // the tooltip below the figure instead of to the left.
+        // This means that we can make the calendar figure wider 
+        // too.
 
-function findEventId(week, year) {
-    function checkEvents(e) {
-        if (getYear(e.to) == getYear(e.from)) {
-            if (getYear(e.to) == year && week >= getWeek(e.from) && week <= getWeek(e.to)) {
-                return true;
+        function addTooltipDiv(windowWidth) {
+            if (windowWidth > 500) {
+                console.log("Im here")
+                const tooltipDiv = d3.select(".svgContainer")
+                    .append("div")
+                    .classed("tooltip", true)
+                    .classed(".right", true)
+                    .style("opacity", 0);
+                return tooltipDiv
             }
-        }
-        else if (year >= getYear(e.from) && year <= getYear(e.to)) {
-            if (year == getYear(e.from) && week >= getWeek(e.from) || year == getYear(e.to) && week <= getWeek(e.to) || year != getYear(e.from) && year != getYear(e.to))
-                return true;
-        }
-        return false;
-    }
-    if (events.find(checkEvents)) {
-        return events.find(checkEvents);
-    }
-    return 0;
-}
-
-function setColor(color) {
-    if (color != undefined) {
-        return color;
-    }
-    return defaultBG;
-}
-
-// Generate Gird with rect for every 52 week x 90 years
-function generateGrid() {
-    const padding = 1;
-    var data = new Array();
-    var xpos = 10;
-    var ypos = 10;
-    var width = 7;
-    var height = 7;
-    var click = 0;
-    var week = 1;
-    var year = 0;
-    var date = birthday;
-    for (var row = 0; row < 91; row++) {
-        data.push(new Array());
-
-        for (var column = 0; column < 52; column++) {
-            data[row].push({
-                x: xpos,
-                y: ypos,
-                week: week,
-                year: year,
-                width: width,
-                height: height,
-                date: date,
-                click: click,
-                event: findEventId(week, year),
-            })
-            xpos += (width + padding);
-            week += 1;
-        }
-        xpos = 10;
-        week = 0;
-        ypos += (height + padding);
-        year += 1;
-    }
-    return data;
-}
-
-var gridData = generateGrid;
-
-// Create div for the tooltip
-var div = d3.select(".svg-wrapper").append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
-
-var grid = d3.select("svg").append("g")
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-// Create domain and ranges for axes
-var scaleY = d3.scaleLinear()
-    .domain([0, 90])
-    .range([10, height + 10]);
-var scaleX = d3.scaleLinear()
-    .domain([1, 52])
-    .range([10, width + 10]);
-
-//add x and y axes
-grid.append("g")
-    .attr("class", "y axis")
-    .call(d3.axisLeft(scaleY));
-
-grid.append("g")
-    .attr("class", "x axis")
-    .call(d3.axisTop(scaleX)
-        .tickValues([1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 52]));
-
-//add titles to the axes
-grid.append("text")
-    .attr("class", "axis-title")
-    .attr("text-anchor", "middle")
-    .attr("transform", "translate(-30," + (height / 2) + ")rotate(-90)")
-    .text("← Age");
-
-grid.append("text")
-    .attr("text-anchor", "middle")
-    .attr("transform", "translate(" + (width / 2) + ",-30)")
-    .text("Week of the Year →");
-
-var row = grid.selectAll(".row")
-    .data(gridData)
-    .enter().append("g")
-    .attr("class", "row");
-
-var column = row.selectAll(".square")
-    .data(function (d) {
-        return d;
-    })
-    .enter().append("rect")
-    .attr("class", "square")
-    .attr("x", function (d) { return d.x; })
-    .attr("y", function (d) { return d.y; })
-    .attr("width", function (d) { return d.width; })
-    .attr("height", function (d) { return d.height; })
-    .attr("week", function (d) { return d.week; })
-    .attr("year", function (d) { return d.year; })
-    .attr("date", function (d) { return d.date; })
-    .attr("event", function (d) { return d.event["id"]; })
-    .style("fill", function (d) { return setColor(d.event["color"]); })
-    .on("mouseover", function (d) {
-        if (d.event != 0) {
-            div.transition()
-                .duration(200)
-                .style("opacity", .9)
-                .style("background-color", d.event["color"]);
-            div.html("<h4>" + d.event["title"] + "</h4><p><b>" + d.event["description"] + "</b></p><p>" + formatFromToDate(d.event["from"], d.event["to"]) + "</p>")
-                .style("left", (d.x) + 50 + "px")
-                .style("top", (d.y) + 60 + "px");
-        }
-    })
-    .on("mouseout", function (d) {
-        if (d.event != 0) {
-            div.transition()
-                .duration(300)
+            const tooltipDiv = d3.select(".weekCalFigure")
+                .append("div")
+                .classed("tooltip", true)
                 .style("opacity", 0);
+            return tooltipDiv
         }
-    });
+
+        var tooltipDiv = addTooltipDiv(windowWidth);
+
+        // Everything below this point should assume that 
+        // the basic dimensions of the figure is all set up.
+
+        const defaultBG = "lightgray";
+        const birthday = new Date("09/19/1989");
+
+        //Get Calender Week
+        function getWeekNumber(d) {
+            d.setHours(0, 0, 0, 0);
+            d.setDate(d.getDate() + 4 - (d.getDay() || 7));
+            var yearStart = new Date(d.getFullYear(), 0, 1);
+            var weekNo = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+            return weekNo;
+        }
+
+        //Format Date for Tooltip
+        function formatFromToDate(fromdate, todate) {
+            var monthNames = [
+                "Jan", "Feb", "Mar",
+                "Apr", "May", "Jun", "Jul",
+                "Aug", "Sep", "Oct",
+                "Nov", "Dec"
+            ];
+
+            var fromDay = fromdate.getDate();
+            var fromMonth = fromdate.getMonth();
+            var fromYear = fromdate.getFullYear();
+            var dateformat = fromDay + '. ' + monthNames[fromMonth] + ' ' + fromYear;
+
+            if (fromdate.toDateString() != todate.toDateString()) {
+                var toDay = todate.getDate();
+                var toMonth = todate.getMonth();
+                var toYear = todate.getFullYear();
+                dateformat += " - " + toDay + '. ' + monthNames[toMonth] + ' ' + toYear;
+            }
+            return dateformat;
+        }
+
+        //Get difference to Birthyear
+        function getYear(d) {
+            return d.getFullYear() - birthday.getFullYear();
+        }
+
+        //Modulo
+        Number.prototype.mod = function (n) {
+            return ((this % n) + n) % n;
+        };
+
+        //Get difference to Birthweek
+        function getWeek(d) {
+            d = new Date(d);
+            kwBirthday = getWeekNumber(birthday);
+            kwDate = getWeekNumber(d);
+            week = (kwDate - kwBirthday).mod(52) + 1;
+            return week;
+        }
+
+        // Create Array with different Events
+        const events = new Array();
+
+        // Single dates go first
+
+        events.push({
+            id: 100,
+            title: "I Got Married",
+            description: "",
+            color: "red",
+            from: new Date("06/10/2017"),
+            to: new Date("06/10/2017"),
+        })
+
+        events.push({
+            id: 101,
+            title: "I Became a Father",
+            description: "",
+            color: "red",
+            from: new Date("07/28/2020"),
+            to: new Date("07/28/2020"),
+        })
+
+        // Intervals follow
+
+        events.push({
+            id: 1,
+            title: "Primary School",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("09/01/1996"),
+            to: new Date("07/01/2005"),
+            class: "primarySchool"
+        })
+        events.push({
+            id: 2,
+            title: "Highschool",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("09/01/2005"),
+            to: new Date("07/01/2008"),
+            class: "highScholls"
+        })
+        events.push({
+            id: 3,
+            title: "Cand. Scient. in Mathematics and Physics",
+            description: "I studied at Roskilde University.",
+            color: "DarkGrey",
+            from: new Date("09/02/2008"),
+            to: new Date("09/01/2013"),
+        })
+        events.push({
+            id: 4,
+            title: "Ph.D. in Experimental Physics",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("12/01/2013"),
+            to: new Date("03/01/2017"),
+        })
+
+        events.push({
+            id: 6,
+            title: "Vital Beats",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("04/01/2017"),
+            to: new Date("11/28/2020"),
+        })
+        events.push({
+            id: 7,
+            title: "Time of Writing",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("12/01/2020"),
+            to: new Date("12/01/2020"),
+            class: "blink"
+        })
+        events.push({
+            id: 9,
+            title: "Life Expectancy",
+            description: "79.3 Years for men living in Denmark.",
+            color: "black",
+            from: new Date("11/02/2072"),
+            to: new Date("11/02/2072"),
+        })
+        events.push({
+            id: 11,
+            title: "Retirement",
+            description: "",
+            color: "DarkGrey",
+            from: new Date("08/01/2052"),
+            to: new Date("09/19/2080"),
+        })
+
+        function findEventId(week, year) {
+            function checkEvents(e) {
+                if (getYear(e.to) == getYear(e.from)) {
+                    if (getYear(e.to) == year && week >= getWeek(e.from) && week <= getWeek(e.to)) {
+                        return true;
+                    }
+                }
+                else if (year >= getYear(e.from) && year <= getYear(e.to)) {
+                    if (year == getYear(e.from) && week >= getWeek(e.from) || year == getYear(e.to) && week <= getWeek(e.to) || year != getYear(e.from) && year != getYear(e.to))
+                        return true;
+                }
+                return false;
+            }
+            if (events.find(checkEvents)) {
+                return events.find(checkEvents);
+            }
+            return 0;
+        }
+
+        function setColor(color) {
+            if (color != undefined) {
+                return color;
+            }
+            return defaultBG;
+        }
+
+        // Generate Gird with rect for every 52 week x 90 years
+        function generateGrid() {
+            var data = new Array();
+            var xpos = 10;
+            var ypos = 0;
+            var width = weekCellSize;
+            var height = weekCellSize;
+            var click = 0;
+            var week = 1;
+            var year = 0;
+            var date = birthday;
+            for (var row = 0; row < 91; row++) {
+                data.push(new Array());
+
+                for (var column = 0; column < 52; column++) {
+                    data[row].push({
+                        x: xpos,
+                        y: ypos,
+                        week: week,
+                        year: year,
+                        width: width,
+                        height: height,
+                        date: date,
+                        click: click,
+                        event: findEventId(week, year),
+                    })
+                    xpos += (width + weekCellPadding);
+                    week += 1;
+                }
+                xpos = 10;
+                week = 0;
+                ypos += (height + weekCellPadding);
+                year += 1;
+            }
+            return data;
+        }
+
+        var gridData = generateGrid;
+
+        var grid = d3.select("svg").append("g")
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        // Create domain and ranges for axes
+        const lifeExpectancy = 90;
+
+        var scaleY = d3.scaleLinear()
+            .domain([1, lifeExpectancy])
+            .range([0, calendarHeight]);
+        var scaleX = d3.scaleLinear()
+            .domain([1, 52])
+            .range([0, calendarWidth]);
+
+        //add x and y axes
+        grid.append("g")
+            .attr("class", "y axis")
+            .call(d3.axisLeft(scaleY)
+                .ticks(20));
+
+        //add titles to the axes
+        grid.append("text")
+            .attr("class", "axis-title")
+            .attr("text-anchor", "middle")
+            .attr("transform", "translate(-30," + (calendarHeight / 2) + ")rotate(-90)")
+            .text("← Age");
+
+        grid.append("text")
+            .attr("text-anchor", "middle")
+            .attr("transform", "translate(" + (calendarWidth / 2) + ",-5)")
+            .text("Week of the Year →");
+
+        var row = grid.append("g").selectAll(".row")
+            .data(gridData)
+            .enter().append("g")
+            .attr("class", "row");
+
+        var column = row.selectAll(".square")
+            .data(function (d) {
+                return d;
+            })
+            .enter().append("rect")
+            .attr("class", "square")
+            .attr("x", function (d) { return d.x; })
+            .attr("y", function (d) { return d.y; })
+            .attr("width", function (d) { return d.width; })
+            .attr("height", function (d) { return d.height; })
+            .attr("week", function (d) { return d.week; })
+            .attr("year", function (d) { return d.year; })
+            .attr("date", function (d) { return d.date; })
+            .attr("event", function (d) { return d.event["id"]; })
+            .attr("class", d => 'event' + d.event['id'])
+            .style("fill", function (d) { return setColor(d.event["color"]); })
+            .on("mouseover", function (d) {
+                if (d.event != 0) {
+                    d3.selectAll('rect.event' + d.event['id']).classed("selected", true)
+
+                    tooltipDiv.style('margin-top', d.y + 20 + 'px');
+                    tooltipDiv.transition()
+                        .style("opacity", 1)
+                        .duration(50)
+                        .style("background-color", "white");
+                    tooltipDiv.html(
+                        "<h2>" + d.event["title"] + "</h2>\
+                    <p class='description'>" + d.event["description"] + "</p>\
+                    <p class='date'>" + formatFromToDate(d.event["from"], d.event["to"]) + "</p>"
+                    )
+                        .style("left", (d.x) + 50 + "px")
+                        .style("top", (d.y) + 60 + "px");
+                }
+            })
+            .on("mouseout", function (d) {
+                if (d.event != 0) {
+                    d3.selectAll('rect.event' + d.event['id']).classed("selected", false)
+                    tooltipDiv.transition()
+                        .duration(300)
+                        .style("opacity", 0);
+                }
+            });
+    }
+
+    drawCalendar()
+    window.addEventListener('resize', drawCalendar);
+})()
