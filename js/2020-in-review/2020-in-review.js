@@ -54,7 +54,7 @@
                 .classed("flip-card-back", true)
         
         back.append("p")
-            .text("This is the back!")
+            .text(d => '★'.repeat(d.stars))
 
         
         

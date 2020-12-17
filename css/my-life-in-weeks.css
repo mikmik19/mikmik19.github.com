@@ -16,7 +16,16 @@
 }
 
 .tooltip {
+    max-height: 200px !important;
     margin-left: 0px;
+    background-color: var(--dynamic-color-dark) !important;
+    border-radius: 12px;
+    padding: 8px;
+    color: white;
+}
+
+.tooltip h2 {
+    color: white;
 }
 
 .tooltip p {

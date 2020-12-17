@@ -24,4 +24,5 @@
     background: var(--dynamic-color-light);
     stroke: var(--dynamic-color-light);
     stroke-width: 0.15em;
+    color: white;
 }

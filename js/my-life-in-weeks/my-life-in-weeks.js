@@ -5,17 +5,21 @@
         d3.selectAll(".svg-wrapper").remove()
         d3.select(".tooltip").remove()
 
-        const margin = { top: 20, right: 20, bottom: 40, left: 50 };
+        const margin = { top: 20, right: 20, bottom: 20, left: 50 };
     
 
         // TODO: All of the dimensions below 
         // will need to be updated base don the window width. 
-        const windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
+        const windowWidth = Math.min(
+            parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right,
+            800
+        );
+        
         console.log(windowWidth);
         
-        const weekCellSize = windowWidth/230;
+        
         const weekCellPadding = 1;
-
+        const weekCellSize = (windowWidth > 500) ? windowWidth / 150 : windowWidth / 80;
         const calendarWidth = 52 * (weekCellSize + weekCellPadding);
         const calendarHeight = 90 * (weekCellSize + weekCellPadding);
 
@@ -27,15 +31,15 @@
         const svg = d3.select(".svgContainer")
             .append("div")
             .classed("svg-wrapper", true)
-            .classed("left", true)
             .append("svg")
             .attr("height", wrapperHeight)
             .attr("width", wrapperWidth);
 
-        // TODO: If the window is too narrow I might want to place
-        // the tooltip below the figure instead of to the left.
-        // This means that we can make the calendar figure wider 
-        // too.
+        let toolTipPlacedRight = false;
+        if (windowWidth > 500) {
+            svg.classed("left", true)
+            toolTipPlacedRight = true
+        }
 
         function addTooltipDiv(windowWidth) {
             if (windowWidth > 500) {
@@ -150,16 +154,15 @@
         events.push({
             id: 2,
             title: "Highschool",
-            description: "",
+            description: "I majord in mathematics and physics.",
             color: "DarkGrey",
             from: new Date("09/01/2005"),
-            to: new Date("07/01/2008"),
-            class: "highScholls"
+            to: new Date("07/01/2008")
         })
         events.push({
             id: 3,
-            title: "Cand. Scient. in Mathematics and Physics",
-            description: "I studied at Roskilde University.",
+            title: "Cand. Scient.",
+            description: "I studied Mathematics and Physics at Roskilde University.",
             color: "DarkGrey",
             from: new Date("09/02/2008"),
             to: new Date("09/01/2013"),
@@ -167,7 +170,7 @@
         events.push({
             id: 4,
             title: "Ph.D. in Experimental Physics",
-            description: "",
+            description: "I studied the structure and dynamics of mono-alcohols.",
             color: "DarkGrey",
             from: new Date("12/01/2013"),
             to: new Date("03/01/2017"),
@@ -176,7 +179,7 @@
         events.push({
             id: 6,
             title: "Vital Beats",
-            description: "",
+            description: "I worked as a Data Scientist building decision support tools for clinicians",
             color: "DarkGrey",
             from: new Date("04/01/2017"),
             to: new Date("11/28/2020"),
@@ -195,7 +198,7 @@
             title: "Life Expectancy",
             description: "79.3 Years for men living in Denmark.",
             color: "black",
-            from: new Date("11/02/2072"),
+            from: new Date("19/09/2072"),
             to: new Date("11/02/2072"),
         })
         events.push({
@@ -203,7 +206,7 @@
             title: "Retirement",
             description: "",
             color: "DarkGrey",
-            from: new Date("08/01/2052"),
+            from: new Date("08/01/2056"),
             to: new Date("09/19/2080"),
         })
 
@@ -240,7 +243,6 @@
             var ypos = 0;
             var width = weekCellSize;
             var height = weekCellSize;
-            var click = 0;
             var week = 1;
             var year = 0;
             var date = birthday;
@@ -256,7 +258,6 @@
                         width: width,
                         height: height,
                         date: date,
-                        click: click,
                         event: findEventId(week, year),
                     })
                     xpos += (width + weekCellPadding);
@@ -328,18 +329,32 @@
                 if (d.event != 0) {
                     d3.selectAll('rect.event' + d.event['id']).classed("selected", true)
 
-                    tooltipDiv.style('margin-top', d.y + 20 + 'px');
+                    if (toolTipPlacedRight) {
+                        let margin =0;
+                        // Find the first cell with the event
+                        for (const [row_index, row] of Object.entries(gridData())) {
+                            for (const [col_index, cell] of Object.entries(row)) {
+                                if (cell.event["from"] == d.event["from"]) {
+                                    margin = cell.y;
+                                    break
+                                }
+                            }
+                        }
+                        
+                        tooltipDiv.style('margin-top', margin + 'px');
+                    }
+                    
                     tooltipDiv.transition()
                         .style("opacity", 1)
                         .duration(50)
                         .style("background-color", "white");
+                    
                     tooltipDiv.html(
                         "<h2>" + d.event["title"] + "</h2>\
                     <p class='description'>" + d.event["description"] + "</p>\
                     <p class='date'>" + formatFromToDate(d.event["from"], d.event["to"]) + "</p>"
                     )
                         .style("left", (d.x) + 50 + "px")
-                        .style("top", (d.y) + 60 + "px");
                 }
             })
             .on("mouseout", function (d) {
