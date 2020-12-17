@@ -52,10 +52,10 @@
 57,Tjørneskellet,12 st 2000,20-05-1995,855520,127,6736,Fri handel
 58,Tjørneskellet,20 st 2000,03-06-2010,2695000,127,21220,Fri handel
 60,Tjørneskellet,20 st 2000,31-10-2007,3000000,127,23622,Fri handel
-61,Tjørneskellet,20 st 2000,13-01-2005,2295000,127,18071,Fri handel
-63,Tjørneskellet,20 st 2000,03-08-2000,1471174,127,11584,Fri handel
-64,Tjørneskellet,20 st 2000,15-05-1997,1269145,127,9993,Fri handel
-65,Tjørneskellet,20 st 2000,10-05-1995,1042569,127,8209,Fri handel
+61,Tjørneskellet,20 st 2000,21-09-2020,2295000,127,18071,Fri handel
+63,Tjørneskellet,20 st 2000,24-04-2001,1471174,127,11584,Fri handel
+64,Tjørneskellet,20 st 2000,03-08-2000,1269145,127,9993,Fri handel
+65,Tjørneskellet,20 st 2000,15-05-1997,1042569,127,8209,Fri handel
 66,Tjørneskellet,18 2000,10-07-2008,2750000,123,22358,Fri handel
 67,Tjørneskellet,18 2000,14-02-2001,1788000,123,14537,Fri handel
 68,Tjørneskellet,18 2000,16-06-1994,1062482,123,8638,Fri handel
@@ -118,7 +118,7 @@
 135,Ahornskellet,8 2000,31-03-2005,2595000,120,21625,Fri handel
 136,Ahornskellet,8 2000,28-09-1994,1182300,120,9852,Fri handel
 137,Ahornskellet,4 2000,11-07-2004,2200000,120,18333,Fri handel
-138,Ahornskellet,4 2000,29-07-1997,1000000,120,8333,Fri handel
+138,Ahornskellet,4 2000,21-09-2020,1000000,120,8333,Fri handel
 139,Ahornskellet,14 st 2000,12-03-2004,2325000,127,18307,Fri handel
 140,Ahornskellet,34 2000,27-01-2004,2225000,123,18089,Fri handel
 141,Ahornskellet,34 2000,12-12-2001,1875000,123,15244,Fri handel
@@ -210,7 +210,7 @@
 232,Askeskellet,8 2 2000,29-10-1993,815050,113,7213,Fri handel
 233,Askeskellet,2 st 2000,14-04-2000,1601846,127,12613,Fri handel
 234,Askeskellet,2 st 2000,02-12-1993,948000,127,7465,Fri handel
-235,Askeskellet,2 2 2000,09-03-1998,760750,62,12270,Fri handel
+235,Askeskellet,2 2 2000,21-09-2020,760750,62,12270,Fri handel
 237,Askeskellet,20 2000,26-08-1997,1448000,131,11053,Fri handel
 238,Askeskellet,20 2000,24-07-1995,872750,131,6662,Fri handel
 239,Askeskellet,26 2 2000,21-12-1996,1060000,111,9550,Fri handel
@@ -274,74 +274,73 @@
 301,Birkeskellet,14 2000,28-06-2000,2300128,178,12922,Fri handel
 302,Birkeskellet,6 2000,27-03-2008,3900000,159,24528,Fri handel
 303,Birkeskellet,6 2000,12-02-1994,952405,159,5990,Fri handel
-304,Johannes V. Jensens Alle,2 23 2000,26-06-2020,4250000,147,28912,Fri handel
-305,Johannes V. Jensens Alle,2 23 2000,23-05-1992,670000,147,4558,Fri handel
-307,Johannes V. Jensens Alle,2 22 2000,28-01-2006,3565000,147,24252,Fri handel
-308,Johannes V. Jensens Alle,2 22 2000,07-07-1994,993297,147,6757,Fri handel
-309,Johannes V. Jensens Alle,42 2tv 2000,24-02-2020,7475000,187,39973,Fri handel
-311,Johannes V. Jensens Alle,44 3th 2000,10-08-2003,3300000,175,18857,Fri handel
-312,Johannes V. Jensens Alle,12 24 2000,02-12-2019,4250000,146,29110,Fri handel
-313,Johannes V. Jensens Alle,50 2tv 2000,20-11-2019,7495000,187,40080,Fri handel
-314,Johannes V. Jensens Alle,50 2tv 2000,18-11-2013,4400000,187,23529,Fri handel
-315,Johannes V. Jensens Alle,50 2tv 2000,04-05-2004,2995000,187,16016,Fri handel
-316,Johannes V. Jensens Alle,56 1th 2000,19-09-2019,6500000,201,32338,Fri handel
-317,Johannes V. Jensens Alle,56 1th 2000,16-08-2011,3795000,201,18881,Fri handel
-318,Johannes V. Jensens Alle,56 1th 2000,26-11-2004,3500000,201,17413,Fri handel
-319,Johannes V. Jensens Alle,50 3tv 2000,28-06-2019,8495000,174,48822,Fri handel
-320,Johannes V. Jensens Alle,50 3tv 2000,12-02-2016,6200000,174,35632,Fri handel
-321,Johannes V. Jensens Alle,50 3tv 2000,22-12-2009,3200000,174,18391,Fri handel
-322,Johannes V. Jensens Alle,56 3th 2000,06-11-2018,6300000,175,36000,Fri handel
-323,Johannes V. Jensens Alle,56 3th 2000,14-02-1996,1700000,175,9714,Fri handel
-324,Johannes V. Jensens Alle,2 24 2000,05-11-2018,4150000,151,27483,Fri handel
-325,Johannes V. Jensens Alle,2 24 2000,21-11-2016,3425000,151,22682,Fri handel
-326,Johannes V. Jensens Alle,2 24 2000,30-03-2007,4200000,151,27815,Fri handel
-327,Johannes V. Jensens Alle,2 24 2000,28-11-2004,2950000,151,19536,Fri handel
-329,Johannes V. Jensens Alle,2 24 2000,12-07-1994,984567,151,6520,Fri handel
-330,Johannes V. Jensens Alle,54 1tv 2000,27-08-2018,6700000,200,33500,Fri handel
-332,Johannes V. Jensens Alle,54 1tv 2000,02-08-2004,3195000,200,15975,Fri handel
-333,Johannes V. Jensens Alle,54 1tv 2000,03-05-1996,1775000,200,8875,Fri handel
-334,Johannes V. Jensens Alle,54 1tv 2000,15-05-1995,1583000,200,7915,Fri handel
-335,Johannes V. Jensens Alle,54 2th 2000,15-08-2018,7400000,194,38144,Fri handel
-336,Johannes V. Jensens Alle,54 2th 2000,19-03-2013,4000000,194,20619,Fri handel
-337,Johannes V. Jensens Alle,54 2th 2000,19-06-1998,2008505,194,10353,Fri handel
-339,Johannes V. Jensens Alle,52 4tv 2000,11-09-2012,4400000,173,25434,Fri handel
-340,Johannes V. Jensens Alle,52 4tv 2000,11-03-2003,3495000,173,20202,Fri handel
-341,Johannes V. Jensens Alle,52 4tv 2000,27-01-1997,1678000,173,9699,Fri handel
-342,Johannes V. Jensens Alle,12 23 2000,02-07-2018,4395000,146,30103,Fri handel
-343,Johannes V. Jensens Alle,12 23 2000,02-10-1996,1284256,146,8796,Fri handel
-344,Johannes V. Jensens Alle,12 23 2000,29-10-1993,960000,146,6575,Fri handel
-346,Johannes V. Jensens Alle,42 3th 2000,07-06-2018,7995000,180,44417,Fri handel
-347,Johannes V. Jensens Alle,42 3th 2000,15-02-2017,5850000,180,32500,Fri handel
-348,Johannes V. Jensens Alle,58 1tv 2000,31-07-2017,5350000,207,25845,Fri handel
-349,Johannes V. Jensens Alle,58 1tv 2000,13-03-2001,3975000,207,19203,Fri handel
-350,Johannes V. Jensens Alle,58 1tv 2000,15-06-1993,1175000,207,5676,Fri handel
-351,Johannes V. Jensens Alle,42 4th 2000,12-03-2017,6425000,173,37139,Fri handel
-352,Johannes V. Jensens Alle,42 4th 2000,26-01-2008,6000000,173,34682,Fri handel
-353,Johannes V. Jensens Alle,42 4th 2000,30-06-2004,3250000,173,18786,Fri handel
-354,Johannes V. Jensens Alle,50 3th 2000,09-01-2017,6545000,175,37400,Fri handel
-355,Johannes V. Jensens Alle,16 2000,04-10-2016,3425000,130,26346,Fri handel
-356,Johannes V. Jensens Alle,16 2000,17-06-2009,2100000,130,16154,Fri handel
-357,Johannes V. Jensens Alle,16 2000,15-11-2002,2080000,130,16000,Fri handel
-360,Johannes V. Jensens Alle,58 3th 2000,26-07-2016,6175000,174,35489,Fri handel
-361,Johannes V. Jensens Alle,58 3th 2000,05-11-2013,4000000,174,22989,Fri handel
-362,Johannes V. Jensens Alle,26 21 2000,16-06-2016,4100000,151,27152,Fri handel
-363,Johannes V. Jensens Alle,26 21 2000,16-01-2013,3200000,151,21192,Fri handel
-364,Johannes V. Jensens Alle,26 21 2000,11-11-2008,2610000,151,17285,Fri handel
-365,Johannes V. Jensens Alle,26 21 2000,02-09-2003,2495000,151,16523,Fri handel
-366,Johannes V. Jensens Alle,26 21 2000,05-10-1993,1119888,151,7416,Fri handel
-367,Johannes V. Jensens Alle,46 4th 2000,31-05-2016,5915000,168,35208,Fri handel
-368,Johannes V. Jensens Alle,54 2tv 2000,08-03-2016,6295000,187,33663,Fri handel
-369,Johannes V. Jensens Alle,46 2th 2000,07-03-2016,7900000,187,42246,Fri handel
-370,Johannes V. Jensens Alle,46 2th 2000,15-01-2014,3850000,187,20588,Fri handel
-371,Johannes V. Jensens Alle,44 2th 2000,30-11-2015,6425000,188,34176,Fri handel
-372,Johannes V. Jensens Alle,54 3th 2000,08-11-2015,5400000,180,30000,Fri handel
-373,Johannes V. Jensens Alle,54 3th 2000,08-08-2003,2950000,180,16389,Fri handel
-374,Johannes V. Jensens Alle,42 1tv 2000,20-08-2015,5900000,200,29500,Fri handel
-375,Johannes V. Jensens Alle,42 1tv 2000,27-02-1998,2200000,200,11000,Fri handel
-377,Johannes V. Jensens Alle,12 21 2000,08-06-2015,4295000,149,28826,Fri handel
-378,Johannes V. Jensens Alle,12 21 2000,12-02-2010,1789000,149,12007,Fri handel
-379,Johannes V. Jensens Alle,12 21 2000,15-10-2005,3295000,149,22114,Fri handel
-380,Johannes V. Jensens Alle,12 21 2000,29-06-1999,1550000,149,10403,Fri handel
-381,Johannes V. Jensens Alle,12 21 2000,19-09-1996,1212900,149,8140,Fri handel
-382,Johannes V. Jensens Alle,30 2000,30-04-2015,3550000,120,29583,Fri handel
-383,Johannes V. Jensens Alle,30 2000,13-07-1995,905000,120,7542,Fri handel
+304,Johannes V. Jensens Alle,52 4th 2000,14-08-2020,7000000,168,41667,Fri handel
+305,Johannes V. Jensens Alle,2 23 2000,26-06-2020,4250000,147,28912,Fri handel
+306,Johannes V. Jensens Alle,2 23 2000,23-05-1992,670000,147,4558,Fri handel
+308,Johannes V. Jensens Alle,2 22 2000,28-01-2006,3565000,147,24252,Fri handel
+309,Johannes V. Jensens Alle,2 22 2000,07-07-1994,993297,147,6757,Fri handel
+310,Johannes V. Jensens Alle,42 2tv 2000,24-02-2020,7475000,187,39973,Fri handel
+312,Johannes V. Jensens Alle,44 3th 2000,10-08-2003,3300000,175,18857,Fri handel
+313,Johannes V. Jensens Alle,12 24 2000,02-12-2019,4250000,146,29110,Fri handel
+314,Johannes V. Jensens Alle,50 2tv 2000,20-11-2019,7495000,187,40080,Fri handel
+315,Johannes V. Jensens Alle,50 2tv 2000,18-11-2013,4400000,187,23529,Fri handel
+316,Johannes V. Jensens Alle,50 2tv 2000,04-05-2004,2995000,187,16016,Fri handel
+317,Johannes V. Jensens Alle,56 1th 2000,19-09-2019,6500000,201,32338,Fri handel
+318,Johannes V. Jensens Alle,56 1th 2000,16-08-2011,3795000,201,18881,Fri handel
+319,Johannes V. Jensens Alle,56 1th 2000,26-11-2004,3500000,201,17413,Fri handel
+320,Johannes V. Jensens Alle,50 3tv 2000,28-06-2019,8495000,174,48822,Fri handel
+321,Johannes V. Jensens Alle,50 3tv 2000,12-02-2016,6200000,174,35632,Fri handel
+322,Johannes V. Jensens Alle,50 3tv 2000,22-12-2009,3200000,174,18391,Fri handel
+323,Johannes V. Jensens Alle,56 3th 2000,06-11-2018,6300000,175,36000,Fri handel
+324,Johannes V. Jensens Alle,56 3th 2000,21-09-2020,1700000,175,9714,Fri handel
+325,Johannes V. Jensens Alle,2 24 2000,05-11-2018,4150000,151,27483,Fri handel
+326,Johannes V. Jensens Alle,2 24 2000,21-11-2016,3425000,151,22682,Fri handel
+327,Johannes V. Jensens Alle,2 24 2000,30-03-2007,4200000,151,27815,Fri handel
+328,Johannes V. Jensens Alle,2 24 2000,28-11-2004,2950000,151,19536,Fri handel
+330,Johannes V. Jensens Alle,2 24 2000,12-07-1994,984567,151,6520,Fri handel
+331,Johannes V. Jensens Alle,54 1tv 2000,27-08-2018,6700000,200,33500,Fri handel
+333,Johannes V. Jensens Alle,54 1tv 2000,02-08-2004,3195000,200,15975,Fri handel
+334,Johannes V. Jensens Alle,54 1tv 2000,03-05-1996,1775000,200,8875,Fri handel
+335,Johannes V. Jensens Alle,54 1tv 2000,15-05-1995,1583000,200,7915,Fri handel
+336,Johannes V. Jensens Alle,54 2th 2000,15-08-2018,7400000,194,38144,Fri handel
+337,Johannes V. Jensens Alle,54 2th 2000,19-03-2013,4000000,194,20619,Fri handel
+338,Johannes V. Jensens Alle,54 2th 2000,19-06-1998,2008505,194,10353,Fri handel
+340,Johannes V. Jensens Alle,52 4tv 2000,11-09-2012,4400000,173,25434,Fri handel
+341,Johannes V. Jensens Alle,52 4tv 2000,11-03-2003,3495000,173,20202,Fri handel
+342,Johannes V. Jensens Alle,52 4tv 2000,27-01-1997,1678000,173,9699,Fri handel
+343,Johannes V. Jensens Alle,12 23 2000,02-07-2018,4395000,146,30103,Fri handel
+344,Johannes V. Jensens Alle,12 23 2000,02-10-1996,1284256,146,8796,Fri handel
+345,Johannes V. Jensens Alle,12 23 2000,29-10-1993,960000,146,6575,Fri handel
+347,Johannes V. Jensens Alle,42 3th 2000,07-06-2018,7995000,180,44417,Fri handel
+348,Johannes V. Jensens Alle,42 3th 2000,15-02-2017,5850000,180,32500,Fri handel
+349,Johannes V. Jensens Alle,58 1tv 2000,31-07-2017,5350000,207,25845,Fri handel
+350,Johannes V. Jensens Alle,58 1tv 2000,13-03-2001,3975000,207,19203,Fri handel
+351,Johannes V. Jensens Alle,58 1tv 2000,15-06-1993,1175000,207,5676,Fri handel
+352,Johannes V. Jensens Alle,42 4th 2000,21-09-2020,6425000,173,37139,Fri handel
+353,Johannes V. Jensens Alle,42 4th 2000,12-03-2017,6000000,173,34682,Fri handel
+354,Johannes V. Jensens Alle,42 4th 2000,26-01-2008,3250000,173,18786,Fri handel
+355,Johannes V. Jensens Alle,50 3th 2000,09-01-2017,6545000,175,37400,Fri handel
+356,Johannes V. Jensens Alle,16 2000,04-10-2016,3425000,130,26346,Fri handel
+357,Johannes V. Jensens Alle,16 2000,17-06-2009,2100000,130,16154,Fri handel
+358,Johannes V. Jensens Alle,16 2000,15-11-2002,2080000,130,16000,Fri handel
+361,Johannes V. Jensens Alle,58 3th 2000,26-07-2016,6175000,174,35489,Fri handel
+362,Johannes V. Jensens Alle,58 3th 2000,05-11-2013,4000000,174,22989,Fri handel
+363,Johannes V. Jensens Alle,26 21 2000,16-06-2016,4100000,151,27152,Fri handel
+364,Johannes V. Jensens Alle,26 21 2000,16-01-2013,3200000,151,21192,Fri handel
+365,Johannes V. Jensens Alle,26 21 2000,11-11-2008,2610000,151,17285,Fri handel
+366,Johannes V. Jensens Alle,26 21 2000,02-09-2003,2495000,151,16523,Fri handel
+367,Johannes V. Jensens Alle,26 21 2000,05-10-1993,1119888,151,7416,Fri handel
+368,Johannes V. Jensens Alle,46 4th 2000,31-05-2016,5915000,168,35208,Fri handel
+369,Johannes V. Jensens Alle,54 2tv 2000,08-03-2016,6295000,187,33663,Fri handel
+370,Johannes V. Jensens Alle,46 2th 2000,07-03-2016,7900000,187,42246,Fri handel
+371,Johannes V. Jensens Alle,46 2th 2000,15-01-2014,3850000,187,20588,Fri handel
+372,Johannes V. Jensens Alle,44 2th 2000,30-11-2015,6425000,188,34176,Fri handel
+373,Johannes V. Jensens Alle,54 3th 2000,08-11-2015,5400000,180,30000,Fri handel
+374,Johannes V. Jensens Alle,54 3th 2000,08-08-2003,2950000,180,16389,Fri handel
+375,Johannes V. Jensens Alle,42 1tv 2000,20-08-2015,5900000,200,29500,Fri handel
+376,Johannes V. Jensens Alle,42 1tv 2000,21-09-2020,2200000,200,11000,Fri handel
+378,Johannes V. Jensens Alle,12 21 2000,08-06-2015,4295000,149,28826,Fri handel
+379,Johannes V. Jensens Alle,12 21 2000,12-02-2010,1789000,149,12007,Fri handel
+380,Johannes V. Jensens Alle,12 21 2000,15-10-2005,3295000,149,22114,Fri handel
+381,Johannes V. Jensens Alle,12 21 2000,29-06-1999,1550000,149,10403,Fri handel
+382,Johannes V. Jensens Alle,12 21 2000,19-09-1996,1212900,149,8140,Fri handel
