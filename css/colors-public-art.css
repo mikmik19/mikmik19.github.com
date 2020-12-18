@@ -1,0 +1,19 @@
+.link {
+  fill: none;
+  stroke: var(--dynamic-color-dark);
+  background: url(../../../../assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--dynamic-color-dark) 0%,
+      var(--dynamic-color-light) 100%
+    );
+}
+.link:hover {
+  stroke: var(--dynamic-color-light);
+}
+
+.colorLine {
+    fill: none;
+    stroke: var(--dynamic-color-dark);
+    stroke-width: 5px;
+}
