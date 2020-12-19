@@ -32,7 +32,7 @@ This defenitely looks more braided. The piece-wise nature of the plot is very ap
 <div id="publicArtSmoothBraid">
 </div>
 
-Now that is more like it. The gap between the years is not intentional, but it does quite nicely mark the transitions from year to year.
+Now that is more like it. There is a slight kink at the beginning and end of the curves, but that is accecptable for now.
 
 Now we need to make the lines look more like paint. I would like to add some texture and perhaps a gradient.
 

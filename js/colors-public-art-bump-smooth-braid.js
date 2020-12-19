@@ -1,12 +1,12 @@
 (function () {
     // set the dimensions and margins of the graph
     const windowWidth = Math.min(
-        parseInt(d3.select('body').style('width'), 10),
+        parseInt(d3.select('p').style('width'), 10),
         680
     );
-    var margin = { top: 30, right: 10, bottom: 10, left: 0 },
-        width = windowWidth - margin.left - margin.right,
-        height = 200 - margin.top - margin.bottom;
+    const margin = { top: 30, right: 10, bottom: 10, left: 0 }
+    const width = windowWidth - margin.left - margin.right
+    const height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select("#publicArtSmoothBraid")
@@ -20,7 +20,7 @@
     // Parse the Data
     d3.json("../../../../data/colors-public-art-bump-braid.json", function (data) {  
         let yScale = d3.scaleLinear()
-            .domain(d3.extent([0, 5]))
+            .domain(d3.extent([0, 4]))
             .range([height, 0])
 
         let xScale = d3.scaleLinear()
