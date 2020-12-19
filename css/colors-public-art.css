@@ -14,6 +14,7 @@
 
 .colorLine {
     fill: none;
-    stroke: var(--dynamic-color-dark);
-    stroke-width: 5px;
+    stroke-width: 20px;
+    stroke-linejoin: "round";
+    stroke-linecap: "round";
 }
