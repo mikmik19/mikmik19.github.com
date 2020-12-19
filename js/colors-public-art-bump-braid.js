@@ -6,7 +6,7 @@
     );
     var margin = { top: 30, right: 10, bottom: 10, left: 0 },
         width = windowWidth - margin.left - margin.right,
-        height = 300 - margin.top - margin.bottom;
+        height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select("#publicArtBraid")

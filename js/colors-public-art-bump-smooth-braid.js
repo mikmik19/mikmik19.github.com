@@ -6,7 +6,7 @@
     );
     var margin = { top: 30, right: 10, bottom: 10, left: 0 },
         width = windowWidth - margin.left - margin.right,
-        height = 300 - margin.top - margin.bottom;
+        height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select("#publicArtSmoothBraid")
@@ -40,14 +40,15 @@
 
                 let numPoints = 25;
                 let points = [];
-                let sigmoidX = -numPoints/2
-                for (i=0; i < numPoints; i++) {
+                let sigmoidXStart = 9
+                let sigmoidX = -sigmoidXStart
+                for (i=0; i < numPoints + 2; i++) {
                     points.push(
                         { 
                             'x': startYear + (i / numPoints), 
                             'y': startLevel + (stopLevel - startLevel) * sigmoid(sigmoidX)}
                     )
-                    sigmoidX++
+                    sigmoidX = sigmoidX + ((2 * sigmoidXStart) / numPoints)
                 }
                 return points
             }
