@@ -38,14 +38,16 @@
                 let stopLevel = data[1].y
                 let startYear = data[0].x
 
-                let numPoints = 11;
+                let numPoints = 25;
                 let points = [];
+                let sigmoidX = -numPoints/2
                 for (i=0; i < numPoints; i++) {
                     points.push(
                         { 
-                            'x': startYear+0.1*i, 
-                            'y': startLevel + (stopLevel - startLevel) * 0.1 * i}
+                            'x': startYear + (i / numPoints), 
+                            'y': startLevel + (stopLevel - startLevel) * sigmoid(sigmoidX)}
                     )
+                    sigmoidX++
                 }
                 return points
             }

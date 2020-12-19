@@ -32,6 +32,9 @@ This defenitely looks more braided. The piece-wise nature of the plot is very ap
 <div id="publicArtSmoothBraid">
 </div>
 
+Now that is more like it. The gap between the years is not intentional, but it does quite nicely mark the transitions from year to year.
+
+Now we need to make the lines look more like paint. I would like to add some texture and perhaps a gradient.
 
 <link rel="stylesheet" href="../../../../css/colors-public-art.css">
 <script type='text/javascript'  src='../../../../js/colors-public-art-bump.js'></script>
