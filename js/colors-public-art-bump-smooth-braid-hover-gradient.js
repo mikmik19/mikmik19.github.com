@@ -62,10 +62,10 @@
                 .datum(interpolate(e.line))
                 .attr("d", line)
                 .classed('colorLine', true)
-                .classed('color'+e.color.replace('#',''), true)
+                .classed('colorGrad'+e.color.replace('#',''), true)
                 .attr('stroke', e.color)
                 .on('mouseover', function(){
-                    let clones = d3.selectAll('.color' + e.color.replace('#', '')).clone();
+                    let clones = d3.selectAll('.colorGrad' + e.color.replace('#', '')).clone();
                     clones.classed('clone', true).raise()
                 })
                 .on('mouseout', function(){
