@@ -1,20 +1,16 @@
-.link {
-  fill: none;
-  stroke: var(--dynamic-color-dark);
-  background: url(../../../../assets/img/texture.png),
-    linear-gradient(
-      135deg,
-      var(--dynamic-color-dark) 0%,
-      var(--dynamic-color-light) 100%
-    );
-}
-.link:hover {
-  stroke: var(--dynamic-color-light);
-}
 
 .colorLine {
     fill: none;
+    /* stroke: url(#pattern); */
     stroke-width: 20px;
-    stroke-linejoin: "round";
-    stroke-linecap: "round";
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.colorLine:hover {
+    z-index: 10;
+}
+
+.clone {
+    pointer-events: none;
 }

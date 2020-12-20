@@ -9,7 +9,7 @@
     const height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#publicArtSmoothBraid")
+    var svg = d3.select("#publicArtSmoothBraidHover")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -53,8 +53,6 @@
                 return points
             }
 
-            interpolate(e.line)
-
             const line = d3
                 .line()
                 .x(d => xScale(d.x))
@@ -64,7 +62,15 @@
                 .datum(interpolate(e.line))
                 .attr("d", line)
                 .classed('colorLine', true)
+                .classed(e.color, true)
                 .attr('stroke', e.color)
+                .on('mouseover', function(){
+                    let clones = d3.selectAll('.'+e.color).clone();
+                    clones.classed('clone', true).raise()
+                })
+                .on('mouseout', function(){
+                    d3.selectAll('.clone').remove();
+                })
         });
     })
 })()

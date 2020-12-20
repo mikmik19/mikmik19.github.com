@@ -9,7 +9,7 @@
     const height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("#publicArtSmoothBraid")
+    var svg = d3.select("#publicArtSmoothBraidHoverGradient")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
@@ -53,18 +53,49 @@
                 return points
             }
 
-            interpolate(e.line)
-
             const line = d3
                 .line()
                 .x(d => xScale(d.x))
                 .y(d => yScale(d.y));
 
-            svg.append("path")
+            let lines = svg.append("path")
                 .datum(interpolate(e.line))
                 .attr("d", line)
                 .classed('colorLine', true)
+                .classed('color'+e.color.replace('#',''), true)
                 .attr('stroke', e.color)
+                .on('mouseover', function(){
+                    let clones = d3.selectAll('.color' + e.color.replace('#', '')).clone();
+                    clones.classed('clone', true).raise()
+                })
+                .on('mouseout', function(){
+                    d3.selectAll('.clone').remove();
+                })
+            
+            // We have to define the gradient inside the svg so we can use it 
+            // as a stroke
+            let gradient = svg.append("linearGradient")
+                .attr("id", 'gradient-'+e.color)
+                // The direction of the gradient can be controlled using two points
+                // .attr("x1", 0)
+                // .attr("y1", 0)
+                // .attr("x2", 0)
+                // .attr("y2", 1)
+                .attr("gradientUnits", "userSpaceOnUse")
+                .attr("spreadMethod", "pad");
+
+            gradient.append("svg:stop")
+                .attr("offset", "0%")
+                .attr("stop-color", e.color)
+                .attr("stop-opacity", 1);
+
+            gradient.append("svg:stop")
+                .attr("offset", "100%")
+                .attr("stop-color", e.endColor)
+                .attr("stop-opacity", 1);
+
+            // now that the gradient is defines, we can set it as a stroke
+            lines.style("stroke", 'url(#gradient-'+e.color)
         });
     })
 })()
