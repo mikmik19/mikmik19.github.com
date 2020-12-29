@@ -1,12 +1,12 @@
 (function () {
     // set the dimensions and margins of the graph
     const windowWidth = Math.min(
-        parseInt(d3.select('body').style('width'), 10),
+        parseInt(d3.select('p').style('width'), 10),
         680
     );
-    var margin = { top: 30, right: 10, bottom: 10, left: 0 },
-        width = windowWidth - margin.left - margin.right,
-        height = 200 - margin.top - margin.bottom;
+    const margin = { top: 30, right: 10, bottom: 10, left: 0 }
+    const width = windowWidth - margin.left - margin.right
+    const height = 200 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
     var svg = d3.select("#publicArt")
@@ -27,14 +27,14 @@
         for (i in dimensions) {
             let name = dimensions[i]
             y[name] = d3.scaleLinear()
-                .domain(d3.extent(data, function (d) { return +d[name]; }))
+                .domain(d3.extent([0, 4]))
                 .range([height, 0])
         }
 
         // Build the X scale -> it find the best position for each Y axis
-        x = d3.scalePoint()
+        x = d3.scaleLinear()
             .range([0, width])
-            .domain(dimensions);
+            .domain(d3.extent([1960, 1968]))
 
         // The path function take a row of the
         // return x and y coordinates of the line to draw for this raw.
