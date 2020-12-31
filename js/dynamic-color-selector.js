@@ -13,6 +13,7 @@ var darkColors = [
     '#5C258D', // Shroom Haze
     '#3D7EAA', // Opa
     '#516395', // Kashmir
+    '#0a192f', // Navy
 
 ]
 var lightColors = [
@@ -30,6 +31,7 @@ var lightColors = [
     '#4389A2', // Shroom Haze
     '#FFE47A', // Opa
     '#614385', // Kashmir
+    '#64ffda', // Neon green
 ]
 
 var index  = Math.floor(Math.random() * (darkColors.length));
