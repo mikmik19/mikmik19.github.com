@@ -1,5 +1,5 @@
 b {
-  color: var(--dynamic-color-dark);
+  color: var(--primary-color);
 }
 
 table,
@@ -18,7 +18,7 @@ td {
 #contact-container {
   display: flex;
   padding: 0.5em;
-  /* border: solid 2px var(--dynamic-color-light); */
+  /* border: solid 2px var(--secondary-color); */
   border-radius: 1em;
 }
 #contact-container img {
@@ -50,7 +50,7 @@ div.pill {
 }
 .pill li {
   padding: 0em 1em 0em 1em;
-  background: var(--dynamic-color-light);
+  background: var(--secondary-color);
   margin: 0.1em;
   border-radius: 1em;
   font-size: 0.8em;

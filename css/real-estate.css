@@ -6,8 +6,8 @@
 }
 
 .selected {
-    background: var(--dynamic-color-light);
-    stroke: var(--dynamic-color-light);
+    background: var(--secondary-color);
+    stroke: var(--secondary-color);
     stroke-width: 0.15em;
 }
 

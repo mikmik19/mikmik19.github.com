@@ -1,3 +1,17 @@
+:root {
+  --background-color-light: #fdfdfd;
+  --background-color-dark: #222;
+  --background-color: var(--background-color-light);
+  
+  --font-color-light: 'black';
+  --font-color-dark: #fdfdfd;
+  --font-color: var(--font-color-light);
+  
+  --button-color-light: #ececec;
+  --button-color-dark: #3a3a3a;
+  --button-color: var(--button-color-light);
+}
+
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
@@ -77,13 +91,14 @@ body {
   line-height: 1.5;
   font-weight: 200;
   font-family: Muli;
-  color: #222;
+  color: var(--font-color);
   text-align: justify;
   padding: 0 0 5em 0em;
+  background: var(--background-color);
 }
 
 ::selection {
-  background: var(--dynamic-color-light);
+  background: var(--secondary-color);
 }
 
 /* Typography
@@ -185,9 +200,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  height: 38px;
-  padding: 0 30px;
-  color: #555;
+  padding: 0 1rem;
+  color: var(--font-color);
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -195,10 +209,9 @@ input[type="button"] {
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
+  background: url(/assets/img/texture.png), var(--button-color);
   border-radius: 4px;
-  border: 1px solid #bbb;
+  border: 1px solid var(--font-color);
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -212,8 +225,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
+  color: var(--dark-color-used);
+  border-color: var(--dark-color-used);
   outline: 0;
 }
 .button.button-primary,
@@ -398,7 +411,7 @@ img {
 
 blockquote {
   background: #f9f9f9;
-  border-left: 10px solid var(--dynamic-color-dark);
+  border-left: 10px solid var(--primary-color);
   margin: 1.5em 0px;
   padding: .5em 20px;
   quotes: "“" "”" "‘" "’";

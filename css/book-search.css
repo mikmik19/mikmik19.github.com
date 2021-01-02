@@ -33,7 +33,7 @@ div.book-search-results p {
 }
 #book-search-results div.right {
     flex: 1;
-    color: var(--dynamic-color-light);
+    color: var(--secondary-color);
 }
 
 #book-search-results div.author {

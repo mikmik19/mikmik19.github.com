@@ -18,7 +18,7 @@
 .tooltip {
     max-height: 200px !important;
     margin-left: 0px;
-    background-color: var(--dynamic-color-dark) !important;
+    background-color: var(--primary-color) !important;
     border-radius: 12px;
     padding: 8px;
     color: white;
@@ -38,12 +38,12 @@
 }
 
 .selected {
-    fill: var(--dynamic-color-dark) !important;
+    fill: var(--primary-color) !important;
 }
 
 
 .blink {
-    fill:  var(--dynamic-color-light) !important;
+    fill:  var(--secondary-color) !important;
     animation: blink-animation 1.5s steps(15, start) infinite;
     -webkit-animation: blink-animation 1.5s steps(15, start) infinite;
 }

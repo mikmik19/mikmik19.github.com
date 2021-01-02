@@ -13,8 +13,8 @@
         .attr("height", height)
         .attr("width", width)
 
-    let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-dark');
-    let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-light');
+    let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+    let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
 
     let gradient = svg.append("linearGradient")
         .attr("id", 'gradient')

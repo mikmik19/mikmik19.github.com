@@ -9,8 +9,8 @@
             let width = (windowWidth > 450) ? 400 : windowWidth * 0.8;
             let height = width*0.5;
 
-            let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-dark');
-            let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-light');
+            let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+            let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
 
             let svg = d3
                 .selectAll('#'+selector+' svg')

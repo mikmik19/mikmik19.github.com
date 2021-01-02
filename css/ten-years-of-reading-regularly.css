@@ -31,8 +31,8 @@
   background: url(/assets/img/texture.png),
     linear-gradient(
       135deg,
-      var(--dynamic-color-dark) 0%,
-      var(--dynamic-color-light) 100%
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
     );
 }
 
@@ -48,20 +48,20 @@ div h1 {
 }
 
 .read {
-    color: var(--dynamic-color-dark);
+    color: var(--primary-color);
     font-weight: 800;
-    fill: var(--dynamic-color-dark);
+    fill: var(--primary-color);
 }
 
 .highlight {
     color: white;
     font-weight: 400;
-    fill: var(--dynamic-color-dark);
+    fill: var(--primary-color);
     background: url(/assets/img/texture.png),
       linear-gradient(
         135deg,
-        var(--dynamic-color-dark) 0%,
-        var(--dynamic-color-light) 100%
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
       );
     padding: 0 1rem 0 1rem;
     line-height: 1.4;
@@ -70,8 +70,8 @@ div h1 {
 
 
 .selected {
-    background: var(--dynamic-color-light);
-    stroke: var(--dynamic-color-light);
+    background: var(--secondary-color);
+    stroke: var(--secondary-color);
     stroke-width: 0.15em;
     color: white;
 }

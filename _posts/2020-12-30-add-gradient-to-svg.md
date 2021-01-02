@@ -67,8 +67,8 @@ I think gradients often make things look more interesting. I wanted to add a gra
     background: url(/assets/img/texture.png),
     linear-gradient(
       135deg,
-      var(--dynamic-color-dark) 0%,
-      var(--dynamic-color-light) 100%
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
     )
 }
 ```

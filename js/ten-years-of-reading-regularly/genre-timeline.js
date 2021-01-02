@@ -8,8 +8,8 @@
     const width = windowWidth - margin.left - margin.right
     const height = 50 - margin.top - margin.bottom;
 
-    let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-dark');
-    let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--dynamic-color-light');
+    let darkColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
+    let lightColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
 
     // append the svg object to the body of the page
     var svg = d3.select("#genreTimeline")

@@ -15,14 +15,14 @@
 }
 
 .been {
-    color: var(--dynamic-color-dark);
+    color: var(--primary-color);
     font-weight: 800;
-    fill: var(--dynamic-color-dark);
+    fill: var(--primary-color);
 }
 
 .selected {
-    background: var(--dynamic-color-light);
-    stroke: var(--dynamic-color-light);
+    background: var(--secondary-color);
+    stroke: var(--secondary-color);
     stroke-width: 0.15em;
     color: white;
 }
