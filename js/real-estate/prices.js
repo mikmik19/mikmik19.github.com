@@ -1,6 +1,6 @@
 (function () {
 
-    const dataPath = '../../../../data/real-estate'
+    const dataPath = '/data/real-estate'
 
     function onMouseOver(d, isMouseOver, classLabeler, m2ClassLabeler=null) {
         d3.selectAll('circle')

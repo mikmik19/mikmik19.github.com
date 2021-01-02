@@ -1,5 +1,5 @@
 (function() {
-  d3.json("../../../../data/coupled-oscillators/theta-vs-time.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/theta-vs-time.json", function(error, data) {
     drawAngleVsTime(data);
   });
 

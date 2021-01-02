@@ -65,7 +65,7 @@ function processData(data) {
 }
 
 function init() {
-  d3.csv("../../../../data/tools-of-chaos-theory/lorenz-trajectory.csv", function(error, data) {
+  d3.csv("/data/tools-of-chaos-theory/lorenz-trajectory.csv", function(error, data) {
     data.forEach(function(d, i) {
       const x = parseFloat(d.x);
       const y = parseFloat(d.y);

@@ -58,9 +58,9 @@ Now we need to make the lines look more like paint. I would like to add some tex
 
 The gradients certainly look more interesting. These gradients are actually a subset of the ones I used for the header and footer of this site. However, the gradient from left to right makes it hard to follow the lines whose gradient change color. I think I will stop here though since I have other projects that I would like to work on.
 
-<link rel="stylesheet" href="../../../../css/colors-public-art.css">
-<script type='text/javascript'  src='../../../../js/colors-of-public-art/colors-public-art-bump.js'></script>
-<script type='text/javascript'  src='../../../../js/colors-of-public-art/colors-public-art-bump-braid.js'></script>
-<script type='text/javascript'  src='../../../../js/colors-of-public-art/colors-public-art-bump-smooth-braid.js'></script>
-<script type='text/javascript'  src='../../../../js/colors-of-public-art/colors-public-art-bump-smooth-braid-hover.js'></script>
-<script type='text/javascript'  src='../../../../js/colors-of-public-art/colors-public-art-bump-smooth-braid-hover-gradient.js'></script>
+<link rel="stylesheet" href="/css/colors-public-art.css">
+<script type='text/javascript'  src='/js/colors-of-public-art/colors-public-art-bump.js'></script>
+<script type='text/javascript'  src='/js/colors-of-public-art/colors-public-art-bump-braid.js'></script>
+<script type='text/javascript'  src='/js/colors-of-public-art/colors-public-art-bump-smooth-braid.js'></script>
+<script type='text/javascript'  src='/js/colors-of-public-art/colors-public-art-bump-smooth-braid-hover.js'></script>
+<script type='text/javascript'  src='/js/colors-of-public-art/colors-public-art-bump-smooth-braid-hover-gradient.js'></script>

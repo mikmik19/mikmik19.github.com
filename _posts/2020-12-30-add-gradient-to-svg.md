@@ -105,6 +105,6 @@ First, we grab the `svg` element. We then add a `linearGradient` section and sta
 
 And with that we are done! It takes more code than I would have expected, but it works. I think I will be using this quite ofen going forward.
 
-<link rel="stylesheet" href="../../../../css/add-gradient-to-svg.css">
-<script type='text/javascript'  src='../../../../js/add-gradient-to-svg/svg-gradient.js'></script>
-<script type='text/javascript'  src='../../../../js/add-gradient-to-svg/add-svg.js'></script>
+<link rel="stylesheet" href="/css/add-gradient-to-svg.css">
+<script type='text/javascript'  src='/js/add-gradient-to-svg/svg-gradient.js'></script>
+<script type='text/javascript'  src='/js/add-gradient-to-svg/add-svg.js'></script>

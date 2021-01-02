@@ -50,6 +50,6 @@ Ok, so we have control over all the colors and a lamp we can turn on and off. Le
 
 Now I will be off to see how my many `D3.js` charts and figures look in dark mode. I suspect I will have to change the color of many axes.
 
-<link rel="stylesheet" href="../../../../css/dark-mode.css">
-<script type='text/javascript'  src='../../../../js/dark-mode/dark-mode.js'></script>
-<!-- <script type='text/javascript'  src='../../../../js/dark-mode/draw-lightbulb.js'></script> -->
+<link rel="stylesheet" href="/css/dark-mode.css">
+<script type='text/javascript'  src='/js/dark-mode/dark-mode.js'></script>
+<!-- <script type='text/javascript'  src='/js/dark-mode/draw-lightbulb.js'></script> -->

@@ -26,7 +26,7 @@
         localStorage.setItem("bulb-status", bulbStatus)
     }
     
-    let filepath = '../../../../data/dark-mode/lightbulb.svg';
+    let filepath = '/data/dark-mode/lightbulb.svg';
     d3.xml(filepath).mimeType("image/svg+xml").get(function (error, xml) {
         if (error) throw error;
         document.getElementById('lightbulb').appendChild(xml.documentElement)

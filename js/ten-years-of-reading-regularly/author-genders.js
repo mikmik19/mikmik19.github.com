@@ -35,8 +35,8 @@
             svg.style("fill", 'url(#gradient')
         });
     }
-    let maleFle = '../../../../data/ten-years-of-reading-regularly/male.svg';
-    let femaleFle = '../../../../data/ten-years-of-reading-regularly/female.svg';
+    let maleFle = '/data/ten-years-of-reading-regularly/male.svg';
+    let femaleFle = '/data/ten-years-of-reading-regularly/female.svg';
     addSvg(maleFle, "male")
     addSvg(femaleFle, "female")
     

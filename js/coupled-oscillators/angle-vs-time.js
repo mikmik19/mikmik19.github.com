@@ -2,7 +2,7 @@
 // The next figure
 // ------------------------------------------------
 (function() {
-  d3.json("../../../../data/coupled-oscillators/angle-vs-time.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/angle-vs-time.json", function(error, data) {
     drawAngleVsTime(data);
   });
   function drawAngleVsTime(data) {

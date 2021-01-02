@@ -27,12 +27,12 @@ var svg = d3
   .classed("svg-content-responsive", true);
 
 // Load the places I've been
-d3.csv("../../../../data/vacation-planner/vacation-planner-2.csv", function(data) {
+d3.csv("/data/vacation-planner/vacation-planner-2.csv", function(data) {
   //Set input domain for color scale
   //color.domain([-50, 50]);
 
   //Load in GeoJSON data
-  d3.json("../../../../data/places-ive-been/custom.geo.json", function(json) {
+  d3.json("/data/places-ive-been/custom.geo.json", function(json) {
     for (var i = 0; i < data.length; i++) {
       var dataCountry = data[i].country;
       var dataValue = parseFloat(data[i].jan);

@@ -68,6 +68,6 @@ This was a brief introduction to some of the tools of Chaos Theory. We can use t
 
 If this post has mad you want more, then you can have a look at the list I created of the reference which I found particularly help when getting into this field.
 
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lorenz-system.js'></script>
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/ln-c-ln-epsilon.js'></script>
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lagtimes.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/lorenz-system.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/ln-c-ln-epsilon.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/lagtimes.js'></script>

@@ -18,7 +18,7 @@
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Parse the Data
-    d3.json("../../../../data/colors-public-art-bump-braid-gradient.json", function (data) {
+    d3.json("/data/colors-public-art-bump-braid-gradient.json", function (data) {
         let yScale = d3.scaleLinear()
             .domain(d3.extent([0, 4]))
             .range([height, 0])

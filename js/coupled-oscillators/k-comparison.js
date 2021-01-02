@@ -1,5 +1,5 @@
 (function() {
-  d3.json("../../../../data/coupled-oscillators/k_comparison.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/k_comparison.json", function(error, data) {
     // Initialize the figures
     var circleSvg = drawCircle(data[0].circleSimulation);
     initializeSimulation(data[0].circleSimulation, circleSvg);

@@ -41,13 +41,13 @@ setBookTitleSize()
 window.addEventListener('resize', setBookTitleSize);
 
 // Load the places I've been
-d3.csv("../../../../data/places-ive-read/read.csv", function(data) {
+d3.csv("/data/places-ive-read/read.csv", function(data) {
 
   var numCountriesRead = 0;
   var numCountriesToRead = 0;
   var numCountries;
   //Load in GeoJSON data
-  d3.json("../../../../data/places-ive-read/custom.geo.json", function(json) {
+  d3.json("/data/places-ive-read/custom.geo.json", function(json) {
     numCountries = json.features.length
     for (var i = 0; i < data.length; i++) {
       var dataCountry = data[i].country;

@@ -38,5 +38,5 @@ My forest garden should meet the following citeria:
 </center>
 
 
-<link rel="stylesheet" href="../../../../css/designing-a-forest-garden.css">
-<script type='text/javascript'  src='../../../../js/designing-a-forest-garden/designing-a-forest-garden.js'></script>
+<link rel="stylesheet" href="/css/designing-a-forest-garden.css">
+<script type='text/javascript'  src='/js/designing-a-forest-garden/designing-a-forest-garden.js'></script>

@@ -1,5 +1,5 @@
 (function () {
-    const dataPath = '../../../../data/designing-a-forest-garden/'
+    const dataPath = '/data/designing-a-forest-garden/'
     d3.csv(dataPath+'harvest-times.csv', function(data) {
 
         console.log(data)

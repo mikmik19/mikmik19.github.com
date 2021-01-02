@@ -21,7 +21,7 @@
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Parse the Data
-    d3.json("../../../../data/ten-years-of-reading-regularly/genre-timeline.json", function (data) {
+    d3.json("/data/ten-years-of-reading-regularly/genre-timeline.json", function (data) {
         let yScale = d3.scaleLinear()
             .domain(d3.extent([0, 1]))
             .range([height, 0])

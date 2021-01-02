@@ -18,7 +18,7 @@
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Parse the Data
-    d3.csv("../../../../data/colors-public-art-bump.csv", function (data) {
+    d3.csv("/data/colors-public-art-bump.csv", function (data) {
         // Extract the list of dimensions we want to keep in the plot. Here I keep all except the column called Species
         dimensions = d3.keys(data[0]).filter(function (d) { return d != "Species" })
 

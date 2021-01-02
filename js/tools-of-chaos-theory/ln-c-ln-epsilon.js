@@ -1,5 +1,5 @@
 (function() {
-    d3.csv("../../../../data/tools-of-chaos-theory/ln_c_ln_epsilon.csv", function(data) {
+    d3.csv("/data/tools-of-chaos-theory/ln_c_ln_epsilon.csv", function(data) {
       var margin = { top: 20, right: 20, bottom: 40, left: 45 };
       var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
       

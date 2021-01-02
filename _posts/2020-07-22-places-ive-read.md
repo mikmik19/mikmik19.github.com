@@ -22,5 +22,5 @@ Some time ago I came across the site [a year of reading the world](https://ayear
 <div id="bookTitleContainer"><h1>Click a <span class="fancy-text">country</span> to see the book</h1></div>
 <div id="countryListContainer"></div>
 
-<link rel="stylesheet" href="../../../../css/places-ive-read.css">
-<script type='text/javascript'  src='../../../../js/places-ive-read/places-ive-read.js'></script>
+<link rel="stylesheet" href="/css/places-ive-read.css">
+<script type='text/javascript'  src='/js/places-ive-read/places-ive-read.js'></script>

@@ -24,13 +24,13 @@ var svg = d3
   .classed("svg-content-responsive", true);
 
 // Load the places I've been
-d3.csv("../../../../data/ten-years-of-reading-regularly/read.csv", function(data) {
+d3.csv("/data/ten-years-of-reading-regularly/read.csv", function(data) {
 
   var numCountriesRead = 0;
   var numCountriesToRead = 0;
   var numCountries;
   //Load in GeoJSON data
-  d3.json("../../../../data/ten-years-of-reading-regularly/custom.geo.json", function(json) {
+  d3.json("/data/ten-years-of-reading-regularly/custom.geo.json", function(json) {
     numCountries = json.features.length
     for (var i = 0; i < data.length; i++) {
       var dataCountry = data[i].country;

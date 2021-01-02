@@ -48,8 +48,8 @@ I try to do something new with every blogpost. This motivates me to learn new th
 1. Loading external svg files. [This helped.](https://bl.ocks.org/mbostock/1014829) me figure it out. The trick is to use `d3.xml(filepath)` setting the mime type with `.mimeType("image/svg+xml")` followed by a getter `.get(function (error, xml) {})`. The rest is done inside the closure of that function. You can use plain JavaScript to get the `div` you want to add the `svg` to by using `document.getElementById(selector)` and we can then append it using `.appendChild(xml.documentElement)`. The rest is as usual.
 1. The fill attribute of SVG elements can use gradients in the same way as the the stroke.
 
-<link rel="stylesheet" href="../../../../css/ten-years-of-reading-regularly.css">
-<script type='text/javascript'  src='../../../../js/ten-years-of-reading-regularly/author-map.js'></script>
-<script type='text/javascript'  src='../../../../js/ten-years-of-reading-regularly/author-genders.js'></script>
-<script type='text/javascript'  src='../../../../js/ten-years-of-reading-regularly/genre-timeline.js'></script>
-<script type='text/javascript'  src='../../../../js/ten-years-of-reading-regularly/books-bar.js'></script>
+<link rel="stylesheet" href="/css/ten-years-of-reading-regularly.css">
+<script type='text/javascript'  src='/js/ten-years-of-reading-regularly/author-map.js'></script>
+<script type='text/javascript'  src='/js/ten-years-of-reading-regularly/author-genders.js'></script>
+<script type='text/javascript'  src='/js/ten-years-of-reading-regularly/genre-timeline.js'></script>
+<script type='text/javascript'  src='/js/ten-years-of-reading-regularly/books-bar.js'></script>

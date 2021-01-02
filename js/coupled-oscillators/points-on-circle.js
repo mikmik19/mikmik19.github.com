@@ -1,5 +1,5 @@
 (function() {
-  d3.json("../../../../data/coupled-oscillators/animation_data_theta.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/animation_data_theta.json", function(error, data) {
     drawCircle(data);
   });
 

@@ -15,6 +15,6 @@
         });
     }
 
-    let svgFile = '../../../../data/add-gradient-to-svg/mySvg.svg';
+    let svgFile = '/data/add-gradient-to-svg/mySvg.svg';
     addSvg(svgFile, "mySvgPlainD3")
 })()

@@ -28,5 +28,5 @@ Some observations.
 * All my time spent in school and at work is still less than the time I might spent in retirement if I retire at 67 and live to be 90. The retirement age will almost certainly be higher at the time of my retirement, but it doesn't change the observation much. Planning for retirement is probably a good idea.
 * I have practically my whole careere ahead of me. 
 
-<link rel="stylesheet" href="../../../../css/my-life-in-weeks.css">
-<script type='text/javascript'  src='../../../../js/my-life-in-weeks/my-life-in-weeks.js'></script>
+<link rel="stylesheet" href="/css/my-life-in-weeks.css">
+<script type='text/javascript'  src='/js/my-life-in-weeks/my-life-in-weeks.js'></script>

@@ -36,7 +36,7 @@
             svg.selectAll('path').style("stroke", 'url(#gradient)')
         });
     }
-    let mySvgPath = '../../../../data/add-gradient-to-svg/mySvg.svg';
+    let mySvgPath = '/data/add-gradient-to-svg/mySvg.svg';
     addSvg(mySvgPath, "mySvg")
     
 })();

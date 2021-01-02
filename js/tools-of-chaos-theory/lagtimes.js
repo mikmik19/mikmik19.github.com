@@ -1,5 +1,5 @@
 (function() {
-    d3.json("../../../../data/tools-of-chaos-theory/lagtimes.json", function(error, rawData) {
+    d3.json("/data/tools-of-chaos-theory/lagtimes.json", function(error, rawData) {
       for (var axesIdx = 0; axesIdx < rawData.lagtime.length; axesIdx++) {
         (function() {
           var windowWidth = parseInt(d3.select('body').style('width'), 10);

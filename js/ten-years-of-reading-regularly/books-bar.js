@@ -1,5 +1,5 @@
 (function () {
-    const dataPath = '../../../../data/ten-years-of-reading-regularly/'
+    const dataPath = '/data/ten-years-of-reading-regularly/'
 
     const windowWidth = Math.min(
         parseInt(d3.select('body').style('width'), 10),

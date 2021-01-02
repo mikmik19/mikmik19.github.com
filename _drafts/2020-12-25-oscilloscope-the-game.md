@@ -28,5 +28,5 @@ I wanted to animate a curve by having data enter and leave the d3 selection. I a
 
 I also wanted to have the curve react to input from this user. 
 
-<link rel="stylesheet" href="../../../../css/oscilloscope-the-game.css">
-<script type='text/javascript'  src='../../../../js/oscilloscope-the-game.js'></script>
+<link rel="stylesheet" href="/css/oscilloscope-the-game.css">
+<script type='text/javascript'  src='/js/oscilloscope-the-game.js'></script>

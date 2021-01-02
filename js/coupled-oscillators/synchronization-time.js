@@ -1,5 +1,5 @@
 (function() {
-  d3.json("../../../../data/coupled-oscillators/synchTimeVsK.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/synchTimeVsK.json", function(error, data) {
     drawFinalPase(data);
   });
 

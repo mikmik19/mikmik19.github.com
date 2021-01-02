@@ -2,7 +2,7 @@
 // The next figure
 // ------------------------------------------------
 (function() {
-  d3.json("../../../../data/coupled-oscillators/normalized-theta-vs-time.json", function(data) {
+  d3.json("/data/coupled-oscillators/normalized-theta-vs-time.json", function(data) {
     drawNormAngleVsTime(data);
   });
 

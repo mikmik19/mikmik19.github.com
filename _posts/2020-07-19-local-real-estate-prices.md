@@ -28,6 +28,6 @@ Let's look at how the price per square meter has changed since early 1990s. The 
 
 
 
-<link rel="stylesheet" href="../../../../css/real-estate.css">
-<script type='text/javascript' src='../../../../js/real-estate/prices.js'></script>
+<link rel="stylesheet" href="/css/real-estate.css">
+<script type='text/javascript' src='/js/real-estate/prices.js'></script>
 

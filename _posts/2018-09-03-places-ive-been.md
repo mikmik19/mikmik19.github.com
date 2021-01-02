@@ -14,8 +14,8 @@ I've wanted to get a Scratch-It Map for a while. However, I couldn't quite decid
 </center>
 
 <center><div class="svg-container" id='places-ive-been'></div></center>
-<script type='text/javascript'  src='../../../../js/places-ive-been/places-ive-been.js'></script>
+<script type='text/javascript'  src='/js/places-ive-been/places-ive-been.js'></script>
 
 <div id="countryListContainer"></div>
 
-<link rel="stylesheet" href="../../../../css/places-ive-been.css">
+<link rel="stylesheet" href="/css/places-ive-been.css">

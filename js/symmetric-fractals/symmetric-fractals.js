@@ -1,6 +1,6 @@
 
 function createAttractors(base_name) {
-    var img_path = "../../../../assets/img/symmetric-fractals/"
+    var img_path = "/assets/img/symmetric-fractals/"
     var imgs = [
         base_name+"-0.png",
         base_name+"-1.png",

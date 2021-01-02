@@ -2,7 +2,7 @@
 // The next figure
 // ------------------------------------------------
 (function() {
-  d3.json("../../../../data/coupled-oscillators/endVarianceVsK.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/endVarianceVsK.json", function(error, data) {
     drawFinalPase(data);
   });
   function drawFinalPase(data) {

@@ -1,6 +1,6 @@
 
 function createAttractors(base_name, main_image_DOM, image_selection_DOM) {
-    var img_path = "../../../../assets/img/creating-you-own-strange-attractor/"
+    var img_path = "/assets/img/creating-you-own-strange-attractor/"
     var imgs = [
         base_name+"_0.png",
         base_name+"_1.png",
