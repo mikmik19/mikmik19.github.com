@@ -229,8 +229,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: var(--dark-color-used);
-  border-color: var(--dark-color-used);
+  color: var(--button-color);
+  border-color: var(--primary-color);
   outline: 0;
 }
 .button.button-primary,
@@ -238,9 +238,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #fff;
-  background-color: #33c3f0;
-  border-color: #33c3f0;
+  color: var(--font-color);
+  background-color: var(--button-color);
+  border-color: var(--primary-color);
 }
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -252,9 +252,9 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #fff;
-  background-color: #1eaedb;
-  border-color: #1eaedb;
+  color: var(--font-color);
+  background-color: var(--button-color);
+  border-color: var(--primary-color);
 }
 
 /* Forms
@@ -270,8 +270,9 @@ textarea,
 select {
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
-  border: 1px solid #d1d1d1;
+  color: var(--font-color);
+  background-color: var(--button-color);
+  border-color: var(--button-color);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
@@ -303,7 +304,9 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #33c3f0;
+  border: 1px solid var(--primary-color);
+  color: var(--font-color);
+  background-color: var(--button-color);
   outline: 0;
 }
 label,
