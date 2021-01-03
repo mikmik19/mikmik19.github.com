@@ -1,72 +1,73 @@
-var width = 500;
-var height = 400;
-var origin = [250, 250];
-var scale = 4;
-var pointData = [];
-var trajectory = [];
-var beta = 0;
-var alpha = 0;
-const loopIndex = 0;
-var startAngle = Math.PI / 4;
+(async function () {
+  var width = 500;
+  var height = 400;
+  var origin = [250, 250];
+  var scale = 4;
+  var pointData = [];
+  var trajectory = [];
+  var beta = 0;
+  var alpha = 0;
+  const loopIndex = 0;
+  var startAngle = Math.PI / 4;
 
-var svg = d3
-  .select("#lorenz-system")
-  .append("svg")
-  .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", `0 0 ${width} ${height}`)
-  .classed("svg-content-responsive", true)
-  .call(
-    d3
-      .drag()
-      .on("drag", dragged)
-      .on("start", dragStart)
-      .on("end", dragEnd)
-  )
-  .append("g");
+  var svg = d3
+    .select("#lorenz-system")
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", `0 0 ${width} ${height}`)
+    .classed("svg-content-responsive", true)
+    .call(
+      d3
+        .drag()
+        .on("drag", dragged)
+        .on("start", dragStart)
+        .on("end", dragEnd)
+    )
+    .append("g");
 
-var mx, my, mouseX, mouseY;
+  var mx, my, mouseX, mouseY;
 
-var point3d = d3
-  ._3d()
-  .x(function(d) {
-    return d.x;
-  })
-  .y(function(d) {
-    return d.y;
-  })
-  .z(function(d) {
-    return d.z;
-  })
-  .origin(origin)
-  .rotateY(startAngle)
-  .rotateX(-startAngle)
-  .scale(scale);
+  var point3d = d3
+    ._3d()
+    .x(function (d) {
+      return d.x;
+    })
+    .y(function (d) {
+      return d.y;
+    })
+    .z(function (d) {
+      return d.z;
+    })
+    .origin(origin)
+    .rotateY(startAngle)
+    .rotateX(-startAngle)
+    .scale(scale);
 
-var trajectory3d = d3
-  ._3d()
-  .shape("LINE_STRIP")
-  .origin(origin)
-  .rotateY(startAngle)
-  .rotateX(-startAngle)
-  .scale(scale);
+  var trajectory3d = d3
+    ._3d()
+    .shape("LINE_STRIP")
+    .origin(origin)
+    .rotateY(startAngle)
+    .rotateX(-startAngle)
+    .scale(scale);
 
-function processData(data) {
-  var trajectoryLine = svg.selectAll("path.trajectory").data(data.trajectory);
-  trajectoryLine
-    .enter()
-    .append("path")
-    .attr("class", "_3d trajectory")
-    .merge(trajectoryLine)
-    .attr("stroke", lightColorUsed)
-    .attr("stroke-width", 0.5)
-    .attr("d", trajectory3d.draw)
-    .exit()
-    .remove();
-}
+  function processData(data) {
+    var trajectoryLine = svg.selectAll("path.trajectory").data(data.trajectory);
+    trajectoryLine
+      .enter()
+      .append("path")
+      .attr("class", "_3d trajectory")
+      .merge(trajectoryLine)
+      .attr("stroke", 'var(--primary-color)')
+      .attr("stroke-width", 0.5)
+      .attr("d", trajectory3d.draw)
+      .exit()
+      .remove();
+  }
 
-function init() {
-  d3.csv("/data/tools-of-chaos-theory/lorenz-trajectory.csv", function(error, data) {
-    data.forEach(function(d, i) {
+  async function init() {
+    const csvData = await d3.csv("/data/tools-of-chaos-theory/lorenz-trajectory.csv")
+    csvData.forEach(function (d, i) {
       const x = parseFloat(d.x);
       const y = parseFloat(d.y);
       const z = parseFloat(d.z);
@@ -74,7 +75,7 @@ function init() {
       trajectory.push([x, y, z]);
     });
 
-    var data = {
+    const data = {
       points: point3d(pointData),
       trajectory: trajectory3d([trajectory])
     };
@@ -92,7 +93,7 @@ function init() {
       .merge(points)
       .attr("r", 2)
       .attr("stroke", "black")
-      .attr("fill", darkColorUsed)
+      .attr("fill", 'var(--secondary-color)')
       .attr("cx", d => d.projected.x)
       .attr("cy", d => d.projected.y);
 
@@ -100,7 +101,7 @@ function init() {
 
     (function theLoop(loopIndex) {
       loopIndex++;
-      setTimeout(function() {
+      setTimeout(function () {
         points = svg.selectAll("circle");
 
         points
@@ -120,33 +121,34 @@ function init() {
         }
       }, 10);
     })(loopIndex);
-  });
-}
+  }
 
-function dragStart() {
-  mx = d3.event.x;
-  my = d3.event.y;
-}
+  function dragStart() {
+    mx = d3.event.x;
+    my = d3.event.y;
+  }
 
-function dragged() {
-  mouseX = mouseX || 0;
-  mouseY = mouseY || 0;
-  beta = ((d3.event.x - mx + mouseX) * Math.PI) / 230;
-  alpha = (((d3.event.y - my + mouseY) * Math.PI) / 230) * -1;
-  var data = {
-    points: point3d.rotateY(beta + startAngle).rotateX(alpha - startAngle)(
-      pointData
-    ),
-    trajectory: trajectory3d
-      .rotateY(beta + startAngle)
-      .rotateX(alpha - startAngle)([trajectory])
-  };
-  processData(data);
-}
+  function dragged() {
+    mouseX = mouseX || 0;
+    mouseY = mouseY || 0;
+    beta = ((d3.event.x - mx + mouseX) * Math.PI) / 230;
+    alpha = (((d3.event.y - my + mouseY) * Math.PI) / 230) * -1;
+    var data = {
+      points: point3d.rotateY(beta + startAngle).rotateX(alpha - startAngle)(
+        pointData
+      ),
+      trajectory: trajectory3d
+        .rotateY(beta + startAngle)
+        .rotateX(alpha - startAngle)([trajectory])
+    };
+    processData(data);
+  }
 
-function dragEnd() {
-  mouseX = d3.event.x - mx + mouseX;
-  mouseY = d3.event.y - my + mouseY;
-}
+  function dragEnd() {
+    mouseX = d3.event.x - mx + mouseX;
+    mouseY = d3.event.y - my + mouseY;
+  }
 
-init();
+  init();
+
+})()

@@ -7,7 +7,6 @@ date: 2020-12-18 12:00:36 +0200
 Back in 2016 my brother and I participated in an event called [Hack our Art](https://www.facebook.com/events/186114941758670/). The organizers brought several datasets of cultural significance and the participants had to do something cool with them. We decided to work on the data that included pictures of all public art in Denmark.
 
 <head>
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <!-- Load the sankey.js function -->
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/sankey.js"></script>
 </head>

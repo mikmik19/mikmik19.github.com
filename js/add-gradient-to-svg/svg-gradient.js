@@ -1,6 +1,6 @@
 (function () {
     function addSvg(filepath, selector) {
-        d3.xml(filepath).mimeType("image/svg+xml").get(function (error, xml) {
+        d3.xml(filepath).then((xml, error) => {
             if (error) throw error;
             document.getElementById(selector).appendChild(xml.documentElement)
 

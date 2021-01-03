@@ -6,10 +6,6 @@ date: 2020-12-29 12:00:36 +0200
 
 I recently learned that it is possible add external SVG element and add styling such as gradients. I think it is so neat that I want to share it.
 
-<head>
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-</head>
-
 I like to use consistent colors on my site. One of the many things I really like about using d3.js is that my plots and figures use the same colors as the rest of my site even though the colors change every time you refresh the page. It would't be possible for me to achieve this if I used static images or gif files.
 
 I encountered the same problem when loading external `svg` files.

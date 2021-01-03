@@ -4,10 +4,6 @@ title: "Coupled Oscillators"
 date: 2018-05-10 12:34:36 +0200
 ---
 
-<head>
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-</head>
-
 I decided that I wanted to start reproducing the results of some of the papers I'm reading. This first one was mentioned in Steven H. Strogatz' book _Sync: The Emerging Science of Spontaneous Order_ and is about a collection coupled oscillators.
 
 {:toc}

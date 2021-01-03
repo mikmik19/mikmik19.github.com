@@ -15,6 +15,15 @@ li#search:hover {
   color: var(--secondary-color);
 }
 
+path#bulb {
+  fill: var(--bulb-fill) !important;
+  stroke: var(--bulb-stroke) !important;
+}
+
+path.cap {
+  stroke: var(--cap-stroke) !important;
+}
+
 .site-footer {
   font-size: 1.2em;
   color: white;
@@ -33,6 +42,10 @@ li#search:hover {
 
 .site-footer a:hover {
   color: var(--secondary-color);
+}
+
+code {
+  background: var(--button-color);
 }
 
 /* *************************** */ /* Scroll progress indicator */ /* *************************** */

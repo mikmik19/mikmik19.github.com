@@ -1,0 +1,15 @@
+div.wrapper {
+    display: flex;
+}
+
+div.wrapper h1 {
+    text-align: center;
+}
+
+div.left {
+    flex: 0 0 50%;
+}
+div.right {
+    flex: 1;
+    color: var(--secondary-color);
+}

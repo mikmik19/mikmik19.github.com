@@ -13,6 +13,7 @@
 
 .axisLabel {
     font-weight: 20;
+    fill: var(--font-color)
 }
 
 

@@ -10,6 +10,10 @@
   --button-color-light: #ececec;
   --button-color-dark: #3a3a3a;
   --button-color: var(--button-color-light);
+
+  --bulb-fill: #FFE47A;
+  --bulb-stroke: black;
+  --cap-stroke: black;
 }
 
 %vertical-rhythm {
@@ -111,7 +115,7 @@ h5,
 h6 {
   margin: 0;
   font-weight: 200;
-  color: black;
+  color: var(--primary-color);
 }
 
 h1 {
@@ -410,7 +414,7 @@ img {
 /* blockquote */
 
 blockquote {
-  background: #f9f9f9;
+  background: var(--button-color);
   border-left: 10px solid var(--primary-color);
   margin: 1.5em 0px;
   padding: .5em 20px;

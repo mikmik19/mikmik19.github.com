@@ -1,4 +1,4 @@
-(function () {
+(async function () {
     // set the dimensions and margins of the graph
     const windowWidth = Math.min(
         parseInt(d3.select('p').style('width'), 10)/2,
@@ -21,78 +21,77 @@
             "translate(" + margin.left + "," + margin.top + ")");
 
     // Parse the Data
-    d3.json("/data/ten-years-of-reading-regularly/genre-timeline.json", function (data) {
-        let yScale = d3.scaleLinear()
-            .domain(d3.extent([0, 1]))
-            .range([height, 0])
+    const data = await d3.json("/data/ten-years-of-reading-regularly/genre-timeline.json")
+    let yScale = d3.scaleLinear()
+        .domain(d3.extent([0, 1]))
+        .range([height, 0])
 
-        let xScale = d3.scaleLinear()
-            .domain(d3.extent([2010, 2020]))
-            .range([0, width])
+    let xScale = d3.scaleLinear()
+        .domain(d3.extent([2010, 2020]))
+        .range([0, width])
 
-        data.forEach(e => {
+    data.forEach(e => {
 
-            function sigmoid(x) {
-                return Math.exp(x) / (Math.exp(x) + 1)
+        function sigmoid(x) {
+            return Math.exp(x) / (Math.exp(x) + 1)
+        }
+
+        function interpolate(data) {
+            let startLevel = data[0].y
+            let stopLevel = data[1].y
+            let startYear = data[0].x
+
+            let numPoints = 25;
+            let points = [];
+            let sigmoidXStart = 9
+            let sigmoidX = -sigmoidXStart
+            for (i = 0; i < numPoints + 2; i++) {
+                points.push(
+                    {
+                        'x': startYear + (i / numPoints),
+                        'y': startLevel + (stopLevel - startLevel) * sigmoid(sigmoidX)
+                    }
+                )
+                sigmoidX = sigmoidX + ((2 * sigmoidXStart) / numPoints)
             }
+            return points
+        }
 
-            function interpolate(data) {
-                let startLevel = data[0].y
-                let stopLevel = data[1].y
-                let startYear = data[0].x
+        const line = d3
+            .line()
+            .x(d => xScale(d.x))
+            .y(d => yScale(d.y));
 
-                let numPoints = 25;
-                let points = [];
-                let sigmoidXStart = 9
-                let sigmoidX = -sigmoidXStart
-                for (i = 0; i < numPoints + 2; i++) {
-                    points.push(
-                        {
-                            'x': startYear + (i / numPoints),
-                            'y': startLevel + (stopLevel - startLevel) * sigmoid(sigmoidX)
-                        }
-                    )
-                    sigmoidX = sigmoidX + ((2 * sigmoidXStart) / numPoints)
-                }
-                return points
-            }
+        let lines = svg.append("path")
+            .datum(interpolate(e.line))
+            .attr("d", line)
+            .classed('colorLine', true)
+            .classed('colorGrad' + e.category, true)
+            .on('mouseover', function () {
+                let clones = d3.selectAll('.colorGrad' + e.category).clone();
+                clones.classed('clone', true).raise()
+            })
+            .on('mouseout', function () {
+                d3.selectAll('.clone').remove();
+            })
 
-            const line = d3
-                .line()
-                .x(d => xScale(d.x))
-                .y(d => yScale(d.y));
+        let gradient = svg.append("linearGradient")
+            .attr("id", 'gradient-' + e.category)
+            .attr("gradientUnits", "userSpaceOnUse")
+            .attr("spreadMethod", "pad");
 
-            let lines = svg.append("path")
-                .datum(interpolate(e.line))
-                .attr("d", line)
-                .classed('colorLine', true)
-                .classed('colorGrad' + e.category, true)
-                .on('mouseover', function () {
-                    let clones = d3.selectAll('.colorGrad' + e.category).clone();
-                    clones.classed('clone', true).raise()
-                })
-                .on('mouseout', function () {
-                    d3.selectAll('.clone').remove();
-                })
+        gradient.append("svg:stop")
+            .attr("offset", "0%")
+            .attr("stop-color", 'var(--primary-color)')
+            .attr("stop-opacity", 1);
 
-            let gradient = svg.append("linearGradient")
-                .attr("id", 'gradient-' + e.category)
-                .attr("gradientUnits", "userSpaceOnUse")
-                .attr("spreadMethod", "pad");
+        gradient.append("svg:stop")
+            .attr("offset", "100%")
+            .attr("stop-color", 'var(--secondary-color)')
+            .attr("stop-opacity", 1);
 
-            gradient.append("svg:stop")
-                .attr("offset", "0%")
-                .attr("stop-color", darkColor)
-                .attr("stop-opacity", 1);
+        lines.style("stroke", 'url(#gradient-' + e.category)
+    });
 
-            gradient.append("svg:stop")
-                .attr("offset", "100%")
-                .attr("stop-color", lightColor)
-                .attr("stop-opacity", 1);
-
-            lines.style("stroke", 'url(#gradient-' + e.category)
-        });
-
-        d3.selectAll('.colorGradnon-fiction').style('stroke', 'lightgrey')
-    })
+    d3.selectAll('.colorGradnon-fiction').style('stroke', 'lightgrey')
 })()

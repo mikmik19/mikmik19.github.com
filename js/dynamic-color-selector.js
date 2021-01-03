@@ -1,4 +1,5 @@
-d3.json('/data/color-themes.json', function (error, colorThemes) {
+(async function() {
+    const colorThemes = await d3.json('/data/color-themes.json')
     let lightMode = localStorage.getItem("light-mode");
     if (lightMode == null) {
         lightMode = 'light';
@@ -10,5 +11,4 @@ d3.json('/data/color-themes.json', function (error, colorThemes) {
 
     document.documentElement.style.setProperty(`--primary-color`, color['primary']);
     document.documentElement.style.setProperty(`--secondary-color`, color['secondary']);
-})
-
+})()

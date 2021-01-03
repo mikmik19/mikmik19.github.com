@@ -6,10 +6,6 @@ date: 2020-12-25 12:00:36 +0200
 
 One of the things I wanted to achieve this year was to build a game. I tried to build one using Unity, but I overextended and couldn't finish. I decided to build something much simpler, simplty to get something done.
 
-<head>
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-</head>
-
 <center>
 <div id='oscilloscope'></div>
     <div>

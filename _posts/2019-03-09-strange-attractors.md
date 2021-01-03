@@ -32,5 +32,4 @@ I think these images are very pretty. Tweaking the parameter and changing the co
 The book [Symmetry in Chaos](https://www.goodreads.com/book/show/2715660-symmetry-in-chaos?ac=1&from_search=true) includes the Symmetric Icons shown above. It also contains a chapter on Quilts -- tilings created from symmetric icons -- and Symmetric Fractals -- anohter concept from Chaos Theory. Both topics are good candidates for weekend projects.
 
 <link rel="stylesheet" href="/css/strange-attractors.css">
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="/js/strange-attractors/strange-attractors.js"></script>

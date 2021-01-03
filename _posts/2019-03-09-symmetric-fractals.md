@@ -19,5 +19,4 @@ The idea for these illustration is taken from te book [Symmetry in Chaos](https:
 Next I want to reproduce the figures from the chapter on Quilts – tilings created from symmetric icons.
 
 <link rel="stylesheet" href="/css/strange-attractors.css">
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
 <script src="/js/symmetric-fractals/symmetric-fractals.js"></script>
