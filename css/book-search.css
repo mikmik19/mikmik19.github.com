@@ -21,7 +21,7 @@ div.book-search-results p {
 #book-search-results {
     padding: 1em;
     margin: auto;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 #book-search-results .wrapper {
