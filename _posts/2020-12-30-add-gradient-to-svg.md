@@ -97,8 +97,10 @@ svg.selectAll('path')
     .style("stroke", 'url(#gradient)')
 ```
 
-First, we grab the `svg` element. We then add a `linearGradient` section and start adding information. We add an `id` to the gradient so we can reference it later. Finally, once the gradient is defined, we can use it when setting the style by referencing the `id` we set earlier using: `svg.style("fill", 'url(#gradient)')`. 
-
+First, we grab the `svg` element. We then add a `linearGradient` section and start adding information. We add an `id` to the gradient so we can reference it later. Finally, once the gradient is defined, we can use it when setting the style by referencing the `id` we set earlier using: 
+```javascript
+svg.style("fill", 'url(#gradient)')
+```
 And with that we are done! It takes more code than I would have expected, but it works. I think I will be using this quite ofen going forward.
 
 <link rel="stylesheet" href="/css/add-gradient-to-svg.css">

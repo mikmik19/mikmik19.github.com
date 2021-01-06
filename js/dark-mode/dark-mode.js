@@ -1,12 +1,11 @@
 (async function() {
     function setBulbStatus(bulbStatus) {
-        let svg = d3.selectAll('#lightbulb svg')
         if (bulbStatus == 'off') {
-            svg.selectAll('#bulb').style('fill', 'none !important')
+            doc.style.setProperty(`--bulb-demo`, 'none');
         }
 
         if (bulbStatus == 'on') {
-            svg.selectAll('#bulb').style('fill', '#FFE47A !important')
+            doc.style.setProperty(`--bulb-demo`, '#FFE47A ');
         }
     }
 
@@ -20,7 +19,7 @@
         }
     }
 
-    let filepath = '/data/dark-mode/lightbulb.svg';
+    let filepath = '/data/dark-mode/lightbulbDemo.svg';
     await d3.xml(filepath).then((xml, error) => {
         if (error) throw error;
         document.getElementById('lightbulb').appendChild(xml.documentElement)
@@ -38,12 +37,10 @@
 
     let bulbStatus = localStorage.getItem("bulb-status");
     if (bulbStatus == null) {
-        bulbStatus = 'off';
-        localStorage.setItem('bulb-status', bulbStatus);
+        bulbStatus = 'on';
     }
 
     const colorThemes = await d3.json('/data/color-themes.json')
-    let colorTheme = colorThemes['dark'];
     doc = document.documentElement;
 
     function changeColors() {
@@ -53,6 +50,8 @@
     }
 
     function changeGradient() {
+        lightMode = localStorage.getItem("light-mode");
+        let colorTheme = colorThemes[lightMode];
         var index = Math.floor(Math.random() * (colorTheme.length));
         doc.style.setProperty(`--primary-color`, colorTheme[index]['primary']);
         doc.style.setProperty(`--secondary-color`, colorTheme[index]['secondary']);
@@ -62,12 +61,6 @@
         doc.style.setProperty(`--background-color`, `var(--background-color-${lightMode})`);
         doc.style.setProperty(`--font-color`, `var(--font-color-${lightMode})`);
         doc.style.setProperty(`--button-color`, `var(--button-color-${lightMode})`);
-    }
-
-    function toggleDarkMode (){
-        changeColors()
-        changeGradient()
-        if (lightMode == 'dark') { setBulbStatus('on') } else { setBulbStatus('off')}   
     }
 
     setColor(lightMode)

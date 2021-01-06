@@ -1,4 +1,5 @@
 (async function() {
+    document.documentElement.style.setProperty(`--primary-color`, 'var(--background-color)');
     const colorThemes = await d3.json('/data/color-themes.json')
     let lightMode = localStorage.getItem("light-mode");
     if (lightMode == null) {

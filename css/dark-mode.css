@@ -1,3 +1,7 @@
+:root {
+    --bulb-demo: var(--bulb-fill)
+}
+
 div.wrapper {
     display: flex;
 }
@@ -12,4 +16,17 @@ div.left {
 div.right {
     flex: 1;
     color: var(--secondary-color);
+}
+
+#lightbulb:hover {
+    transform: scale(1.2);
+}
+
+div#lightbulb path#bulb {
+  fill: var(--bulb-demo) !important;
+  stroke: var(--bulb-stroke) !important;
+}
+
+div#lightbulb path.cap {
+  stroke: var(--cap-stroke) !important;
 }

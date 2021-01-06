@@ -229,7 +229,7 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: var(--button-color);
+  color: var(--font-color);
   border-color: var(--primary-color);
   outline: 0;
 }

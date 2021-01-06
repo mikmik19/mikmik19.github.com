@@ -1,27 +1,8 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width" />
-
-    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/d3.css" />
-    <link rel="stylesheet" href="/css/search.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:200,200i,400,400i,700,700i"
-      rel="stylesheet"
-    />
-    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/js/dynamic-color-selector.js"></script>
-  </head>
   <body>
+    <script type="text/javascript" src="/js/dynamic-color-selector.js"></script>
     <div class="page-content">
       <div class="container">
         {% include menu.html %}
@@ -37,6 +18,5 @@
     <script type="text/javascript" src="/js/search-modal.js"></script>
     <script src="/js/lunr.min.js"></script>
     <script src="/js/search.js"></script>
-    <script src="/js/dark-mode.js"></script>
   </body>
 </html>
