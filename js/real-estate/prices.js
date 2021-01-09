@@ -1,5 +1,5 @@
 (async function () {
-    function onMouseOver(d, isMouseOver, classLabeler, m2ClassLabeler=null) {
+    function onMouseOverEffect(d, isMouseOver, classLabeler, m2ClassLabeler=null) {
         d3.selectAll('circle')
             .classed("faded", isMouseOver)
             .attr("fill", (isMouseOver == false) ? 'var(--primary-color)' : 'lightgrey')
@@ -7,7 +7,7 @@
 
         var circleSelector;
         if (m2ClassLabeler != null) {
-            circleSelector = d => 'circle.' + classLabeler(d).replace(' ', '.') + '.' + m2ClassLabeler(d)
+            circleSelector = d => 'circle.' + classLabeler(d).replaceAll(' ', '.') + '.' + m2ClassLabeler(d)
             d3.selectAll('#square-meter-legend circle.' + m2ClassLabeler(d))
                 .classed("selected", isMouseOver)
                 .classed("faded", false)
@@ -16,7 +16,7 @@
                 .raise();
         }
         else {
-            circleSelector = d => 'circle.' + classLabeler(d).replace(' ','.')
+            circleSelector = d => 'circle.' + classLabeler(d).replaceAll(' ','.')
         }
 
         d3.selectAll(circleSelector(d))
@@ -27,7 +27,7 @@
             .raise();
 
         // Selecting the address list element
-        d3.select('li.' + classLabeler(d).replace(' ','.'))
+        d3.selectAll('div.' + classLabeler(d).replaceAll(' ','.'))
             .classed("selected", isMouseOver);
 
         
@@ -46,7 +46,7 @@
 
 
         if (windowWidth > 600) {
-            width = 700;
+            width = 400;
             height = 100;
             rmin = 4;
             rmax = 10;
@@ -93,8 +93,8 @@
             .attr("class", classLabeler);
 
         circles
-            .on("mouseover", d => onMouseOver(d, true, classLabeler))
-            .on("mouseout", d => onMouseOver(d, false, classLabeler));
+            .on("mouseover", d => onMouseOverEffect(d, true, classLabeler))
+            .on("mouseout", d => onMouseOverEffect(d, false, classLabeler));
 
         var xAxis = d3
             .axisBottom()
@@ -119,7 +119,7 @@
     function plotSalesScatter(data) {
         const m2Accessor = d => parseFloat(d.m2);
         const m2PriceAccessor = d => parseFloat(d.m2Price);
-        const classLabeler = d => d.streetName.replace(' ', '').replace('.','') + ' num' + d.streetNumber.replace(/ /g, '');
+        const classLabeler = d => d.streetName.replaceAll(' ', '').replaceAll('.','') + ' num' + d.streetNumber.replaceAll(/ /g, '');
         const m2ClassLabeler = d => 'm2' + d.m2;
 
         var parseDate = d3.timeParse('%d-%m-%Y');
@@ -129,8 +129,8 @@
         var windowWidth = parseInt(d3.select('body').style('width'), 10) - margin.left - margin.right;
 
         if (windowWidth > 600) {
-            width = 700;
-            height = 600;
+            width = 400;
+            height = width;
             rmin = 4;
             rmax = 10;
         } else {
@@ -196,8 +196,8 @@
 
 
         circles
-            .on("mouseover", d => onMouseOver(d, true, classLabeler, m2ClassLabeler))
-            .on("mouseout", d => onMouseOver(d, false, classLabeler, m2ClassLabeler));
+            .on("mouseover", d => onMouseOverEffect(d, true, classLabeler, m2ClassLabeler))
+            .on("mouseout", d => onMouseOverEffect(d, false, classLabeler, m2ClassLabeler));
 
         var yAxisEl = svg
             .append("g")
@@ -237,37 +237,39 @@
 
         // Create a list for each street name
         data.streets.forEach(streetObject => {
-            var classyStreetName = streetObject.street.replace(' ', '').replace('.','')
-            var classLabeler = d => classyStreetName + ' ' + 'num' + d.replace(' ', '');
-
-            var streetName = addressContainer
-                .append("h3")
-                .text(streetObject.street);
+            var classyStreetName = streetObject.street.replaceAll(' ', '').replaceAll('.','')
+            console.log(classyStreetName)
+            var classLabeler = d => classyStreetName + ' ' + 'num' + d.replaceAll(' ', '');
 
             var street = addressContainer
                 .append("div")
                 .attr("id", streetObject.street)
+                .classed('flex-item', true)
+
+            var streetName = street
+                .append("h3")
+                .text(streetObject.street);
                 
-            var addressListUl = street.append("li")
+            var addressListUl = street.append("div")
+                .classed('flex-container', true)
 
 
-            var addressListLi = addressListUl.selectAll("li." + classyStreetName)
+            var addressListLi = addressListUl.selectAll("div." + classyStreetName)
                     .data(streetObject.numbers)
                 .enter()
-                    .append("li")
+                    .append("div")
                     .attr("class", classLabeler)
                     .classed("addressListItem", true)
                     .classed('flex-item', true)
-                    .append("div")
                     .text(d => d.split(' ', 1));
 
             streetName
-                .on("mouseover", d => onMouseOver(d, true, d => classyStreetName))
-                .on("mouseout", d => onMouseOver(d, false, d => classyStreetName));
+                .on("mouseover", d => onMouseOverEffect(d, true, d => classyStreetName))
+                .on("mouseout", d => onMouseOverEffect(d, false, d => classyStreetName));
 
             addressListLi
-                .on("mouseover", d => onMouseOver(d, true, classLabeler))
-                .on("mouseout", d => onMouseOver(d, false, classLabeler));
+                .on("mouseover", d => onMouseOverEffect(d, true, classLabeler))
+                .on("mouseout", d => onMouseOverEffect(d, false, classLabeler));
         });    
     }
 

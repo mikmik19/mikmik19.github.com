@@ -12,16 +12,14 @@ Generally the house are 120 m2 or 150m2. The apparment I live in is 62 m2 and th
 
 Let's look at how the price per square meter has changed since early 1990s. The radius of the circles indicate the square meeter of the unit. Below I list all the addresses on which we have data. Hovering over the address name highlights the data in the figure.
 
-<center>
-    <div class="svg-container" id='square-meter-legend'></div>
-</center>
-<center>
-    <div class="svg-container" id='sales-prices'></div>
-</center>
-<center>
-    <div id='addressesContainer'></div>
-</center>
-
+<div >
+    <div class='gridLayout' id='nestedColumn'>
+        <div>
+            <div class="svg-container" id='square-meter-legend'></div>
+            <div class="svg-container" id='sales-prices'></div>
+        </div>
+    <div class='gridLayout' id='addressesContainer' ></div>
+</div>
 
 
 <link rel="stylesheet" href="/css/real-estate.css">
