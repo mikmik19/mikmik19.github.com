@@ -18,7 +18,7 @@ title: Mikkel Klitzing Hartmann Hansen
     {% unless forloop.first %}
     </ul>
     {% endunless %}
-    <h1 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h1>
+    <h1 id="y{{post.date | date: "%Y"}}" style="text-align: left;">{{ currentdate }}</h1>
     <ul>
       {% assign date = currentdate %}
       {% endif %}
