@@ -15,6 +15,16 @@ What we need is the following:
 
 This could all be done manually. 
 
+## The Meta Tags
+It is important that you have default values, otherwise the card will not work.
+
+```html
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="...">
+<meta name="twitter:description"content="...">
+<meta name="twitter:image" content="...">
+```
+
 Sources:
 
 1. [Dynamic Social Sharing Images](https://24ways.org/2018/dynamic-social-sharing-images/) by Drew McLellan
