@@ -54,16 +54,20 @@ If the tags don't have any context the card generator will fail, so you need to 
 ```
 
 ## Creating the Template
+I would like my Twitter Cards to keep the simple look my site has. Below I show what the cards will look like for each blogpost I've written. This helps me find edge cases in the design.
+
+I like the look so far, but I think it needs a visual element that is unique to the post. For example Josh's Margin Collapse has an explosion because the margin collapsed. CSS Tricks Guide to Flexbox has an ilustation of how `flex-wrap` works. I would need to design these, but first I need to figure out where I can even put them.
 
 <div class='preview-grid'>
-{% for entry in site.posts %}
+{%- for entry in site.posts %}
     <div class='preview'>
         <div class='inner-grid'>
             <div class='graphic'></div>
             <div class='title'>{{ entry.title}}</div>
+            <div class='footer'> {{loop.index}} Mikkel Hansen</div>
         </div>
     </div>
-{% endfor %}
+{%- endfor %}
 </div>
 
 ## Sources

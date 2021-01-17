@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     row-gap: 1rem;
     column-gap: 1rem;
-        justify-content: center;
+    justify-content: center;
 }
 
 .screenshot {
@@ -34,6 +34,8 @@
 
 .inner-grid {
     display: flex;
+    flex-wrap: wrap;
+    height: var(--card-height);
 }
 
 .inner-grid > * {
@@ -45,15 +47,31 @@
     flex-basis: 60%;
     font-size: clamp(0.5rem, 2.5rem, 3rem);
     font-weight: bold;
-    color: white;
-    text-align: right;
+    color: var(--primary-color);
+    text-align: center;
     margin: 1rem 1rem 0 0;
-    padding: 1rem;
-    box-shadow: -3px 2px 3px black inset;
-    background: url(/assets/img/texture.png), 
+    text-shadow: -3px 2px 3px black inset;
+}
+
+.inner-grid .title::after {
+    content: " ";
+    font-weight: lighter;
+    width: 100%;
+    height: 8px;
+    display: block;
+    background: url(/assets/img/texture.png),
     linear-gradient(
-         135deg, var(--primary-color) 0%, 
-         var(--secondary-color) 100% 
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
     );
-    border-radius: calc(var(--radius)*0.6);
+    box-shadow: -3px 2px 3px black inset;
+}
+
+.inner-grid .footer {
+    align-self: flex-end;
+    margin: 0 0 1rem 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--secondary-color)
 }
