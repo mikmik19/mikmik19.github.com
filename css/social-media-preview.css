@@ -1,0 +1,59 @@
+:root {
+  --card-width: 300px;
+  --card-height: 157px;
+  --outer-size: 150px;
+  --radius: .85714em;
+}
+
+
+.preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    column-gap: 1rem;
+        justify-content: center;
+}
+
+.screenshot {
+    max-width: 300px;
+}
+
+.screenshot img {
+    border: 2px solid var(--button-color);
+    border-radius: var(--radius);
+}
+
+.preview {
+    flex-basis: var(--card-width);
+    width: var(--card-width); 
+    height: var(--card-height);
+    border: 2px solid var(--button-color);
+    border-radius: var(--radius);
+    background: url(/assets/img/texture.png);
+}
+
+.inner-grid {
+    display: flex;
+}
+
+.inner-grid > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.inner-grid .title {
+    flex-basis: 60%;
+    font-size: clamp(0.5rem, 2.5rem, 3rem);
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    margin: 1rem 1rem 0 0;
+    padding: 1rem;
+    box-shadow: -3px 2px 3px black inset;
+    background: url(/assets/img/texture.png), 
+    linear-gradient(
+         135deg, var(--primary-color) 0%, 
+         var(--secondary-color) 100% 
+    );
+    border-radius: calc(var(--radius)*0.6);
+}
