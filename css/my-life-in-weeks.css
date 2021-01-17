@@ -1,59 +1,63 @@
-.svgContainer {
+:root {
+    --calender-gap: 3px
+}
+
+.life {
     display: flex;
+    column-gap: 1rem;
 }
 
-.svgContainer p {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.svgContainer.left {
-    margin: auto;
-}
-
-.right {
-    margin-left: 30px;
-}
-
-.tooltip {
-    max-height: 200px !important;
-    margin-left: 0px;
-    background-color: var(--primary-color) !important;
-    border-radius: 12px;
+#tooltip {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 30%;
+    background-color: var(--button-color);
     padding: 8px;
     color: white;
 }
 
-.tooltip h2 {
+#weeks {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 70%;
+    flex-wrap: wrap;
+    column-gap: var(--calender-gap);
+    row-gap: var(--calender-gap);
+}
+
+.year {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    column-gap: var(--calender-gap);
+    row-gap: var(--calender-gap);
+}
+
+.week {
+    flex-basis: calc(100/52);
+    min-height: 6px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border: 2px solid var(--button-color);
+    background-color: var(--button-color);
+}
+
+
+
+#tooltip h1, h2 {
     color: white;
 }
 
-.tooltip p {
+#tooltip p {
     font-style: italic;
     text-align: left;
 }
 
-.tooltip .date {
+#tooltip .date {
     font-size: 11px;
 }
 
 .selected {
     fill: var(--primary-color) !important;
-}
-
-
-.blink {
-    fill:  var(--secondary-color) !important;
-    animation: blink-animation 1.5s steps(15, start) infinite;
-    -webkit-animation: blink-animation 1.5s steps(15, start) infinite;
-}
-@keyframes blink-animation {
-    to {
-        fill: lightgray;
-    }
-}
-@-webkit-keyframes blink-animation {
-    to {
-        fill: lightgray;
-    }
 }

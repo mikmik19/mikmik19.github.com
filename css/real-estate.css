@@ -39,6 +39,8 @@ h3 {
     background: var(--secondary-color);
     stroke: var(--secondary-color);
     stroke-width: 0.15em;
+    box-shadow: -3px 2px 3px black inset;
+    filter: url(#shadow)
 }
 
 .faded {

@@ -16,8 +16,12 @@ What I like about this approach is that it give you a single figure to stare at 
 
 Those heroes may have had very different resources and circumsatances, but in the number of weeks are the same. So let's see how I've spent thouse preciouse gem weeks:
 
-<div class="weekCalFigure">
-    <div class="svgContainer">
+<div class="life">
+    <div id="weeks"></div>
+    <div id="tooltip">
+        <h1>Title</h1>
+        <p>Timespan</p>
+        <p>Description</p>
     </div>
 </div>
 
@@ -29,4 +33,5 @@ Some observations.
 * I have practically my whole careere ahead of me. 
 
 <link rel="stylesheet" href="/css/my-life-in-weeks.css">
-<script type='text/javascript'  src='/js/my-life-in-weeks/my-life-in-weeks.js'></script>
+<script type='text/javascript'  src='/js/my-life-in-weeks/my-life-in-weeks-simple.js'></script>
+<!-- <script type='text/javascript'  src='/js/my-life-in-weeks/my-life-in-weeks.js'></script> -->

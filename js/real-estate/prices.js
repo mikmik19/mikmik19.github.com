@@ -79,6 +79,11 @@
             .attr("id", 'legend')
             .attr("height", height)
             .attr("width", width)
+            
+        svg.append('filter')
+                .attr('id', 'shadow')
+            .append('feGaussianBlur')
+                .attr('stdDeviation', 2)
 
         const circles = svg
             .append('g')
@@ -179,6 +184,24 @@
             .attr("height", height)
             .attr("width", width)
 
+        let shadow = svg.append('filter')
+                .attr('id', 'shadow')
+                .attr('height', '130%')
+            
+        shadow.append('feGaussianBlur')
+                    .attr('in', 'SourceAlpha')
+                    .attr('stdDeviation', 0.1)
+        
+        shadow.append('feOffset')
+                    .attr('dx', 2)
+                    .attr('dy', 2)
+                    .attr('result', 'offsetblur')
+                    
+        let merge = shadow.append('feMerge')
+                
+        merge.append('feMergeNode')
+        merge.append('feMergeNode')
+                .attr('in', 'SourceGraphic')
         
         d3.selectAll("circle.sale").remove();
         const circles = svg

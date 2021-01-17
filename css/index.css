@@ -28,26 +28,6 @@ li#darkModeToggle path.cap {
     transform: scale(1.2);
 }
 
-.site-footer {
-  font-size: 1.2em;
-  color: white;
-  background: url(/assets/img/texture.png),
-    linear-gradient(
-      135deg,
-      var(--primary-color) 0%,
-      var(--secondary-color) 100%
-    );
-}
-
-.site-footer a {
-  color: white;
-  font-size: 1.2em;
-}
-
-.site-footer a:hover {
-  color: var(--secondary-color);
-}
-
 code {
   background: var(--button-color);
 }
@@ -65,3 +45,5 @@ code {
   height: 100%;
   background-color: var(--primary-color);
 }
+
+

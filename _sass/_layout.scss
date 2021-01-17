@@ -34,25 +34,41 @@ body {
 }
 
 .site-footer {
+  min-height: 8rem;
   bottom: 0;
   padding-bottom: 0rem;
   width: 100%;
   position: absolute;
+  display: flex;
+  font-size: 1.2em;
+  color: white;
+  background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    align-items: center;
+}
+
+.site-footer > * {
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  text-align: center;
+  
+}
+
+.site-footer a {
+  color: white;
+  font-size: 1.2em;
+}
+
+.site-footer a:hover {
+  color: var(--secondary-color);
 }
 
 /* Effects
 —————————————————————————————————————————————————— */
-
-.logo {
-  margin-bottom: 12.5px;
-  font-weight: $font-weight-bold;
-  text-align: right;
-}
-.logo a {
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
 .nav {
   line-height: $base-line-height;
 
@@ -209,21 +225,81 @@ input#menu-toggle {
   }
 }
 
-.authorimage {
-  @media (min-width: $on-laptop+1) {
-    float: left;
-  }
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  border-radius: 5%;
-  -webkit-background-size: cover !important;
-  background-size: cover !important;
-  background-position: center center !important;
-  margin-right: 10px;
-  margin-top: 5px;
+.authorinfo {
+  text-align: center;
+  font-family: "Muli";
+  font-style: italic;
+  font-size: clamp(1.4rem, 2rem, 2.2rem);
+  margin: 0;
+  padding: 0;
 }
 
+/* *************************** */ /* Defining the page logo */ /* *************************** */
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    margin: auto;
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    border-radius: var(--border-radius);
+    box-shadow: -3px 2px 3px black inset;
+
+    .spacing {
+      flex-basis: 20%;
+      flex-grow: 1;
+    }
+}
+
+.menu > * {
+  flex-basis: 30%;
+  flex-shrink: 1;
+  color: white;
+}
+
+.menu a {
+  color: white;
+}
+
+// .logo {
+//     flex-basis: 80%;
+//     margin-top: 2rem;
+//     margin-left: 1rem;
+//     margin-bottom: 1rem;
+//     height: 70px;
+//     background: url(/assets/img/texture.png),
+//     linear-gradient(
+//       135deg,
+//       #be5273 0%,
+//       #193d91 100%
+//     );
+//     border-radius: var(--border-radius);
+//     box-shadow: -3px 2px 3px black inset;
+
+//     .layerOne {
+//       height: 40px;
+//       width: 70%;
+//       margin-top: 20px;
+//       margin-left: 15px;
+//       background: url(/assets/img/texture.png),
+//       linear-gradient(
+//         135deg,
+//         #ff5454 0%,
+//         #4a0202 100%
+//       );
+//       border-radius: var(--border-radius);
+//       box-sizing: content-box;
+//       box-shadow: -3px 2px 3px black inset;
+//     }
+
+// }
 
 /* footer */
 

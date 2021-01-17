@@ -37,7 +37,7 @@ This is a problem because we need to access the svg level to apply styling. More
 
 The [best solution ](https://bl.ocks.org/mbostock/1014829) I could find is to load the `svg` file using `d3.js` and append it to the document. 
 
-```javascript
+{% highlight javascript %}
 d3.xml(filepath)
     .mimeType("image/svg+xml")
     .get(function (error, xml) {
@@ -45,7 +45,7 @@ d3.xml(filepath)
         document.getElementById(selector)
             .appendChild(xml.documentElement)
     }
-```
+{% endhighlight %}
 
 This doesn't feel like a very clean solution, but it does give us access to the underlying svg code, as the example below shows.
 
@@ -58,7 +58,7 @@ If you open the inspector you will see that `svg` is inside the `div` and contai
 ## Adding the Gradient
 I think gradients often make things look more interesting. I wanted to add a gradient to a svg path element, but was sad to learn that the trick I use for my footer wouldn't work: 
 
-```css
+{% highlight css %}
 .myLine {
     background: url(/assets/img/texture.png),
     linear-gradient(
@@ -67,13 +67,13 @@ I think gradients often make things look more interesting. I wanted to add a gra
       var(--secondary-color) 100%
     )
 }
-```
+{% endhighlight %}
 
 It turn out that the gradient needs to be defined _inside_ the `svg` element. At first this seemed like a terribly complicated solution to me. Actually it felt more like a hack than a proper solution. The details of how gradient work with `svg` are in [this blogpost](https://vanseodesign.com/web-design/svg-linear-gradients/) and in [Mozilla's MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients). 
 
 I found the solution in [this Block](https://bl.ocks.org/mbostock/6059532) by Mike Bostock:
 
-```javascript
+{% highlight javascript %}
 let svg = d3.selectAll(selector)
 let gradient = svg.append("linearGradient")
 
@@ -95,12 +95,14 @@ gradient.append("svg:stop")
 svg.style("fill", 'url(#gradient)')
 svg.selectAll('path')
     .style("stroke", 'url(#gradient)')
-```
+{% endhighlight %}
 
 First, we grab the `svg` element. We then add a `linearGradient` section and start adding information. We add an `id` to the gradient so we can reference it later. Finally, once the gradient is defined, we can use it when setting the style by referencing the `id` we set earlier using: 
-```javascript
+
+{% highlight javascript %}
 svg.style("fill", 'url(#gradient)')
-```
+{% endhighlight %}
+
 And with that we are done! It takes more code than I would have expected, but it works. I think I will be using this quite ofen going forward.
 
 <link rel="stylesheet" href="/css/add-gradient-to-svg.css">
