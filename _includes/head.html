@@ -7,8 +7,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description"content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg">
-  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg">
+  <meta name="twitter:image" content="{% if page.twitterCardTitle %}{{ site.url }}/public/img/{{ page.twitterCardTitle | replace: ' ', ''}}.png{% else %}{{ site.url }}/public/img/{{ page.title | replace: ' ', ''}}.png{% endif %}">
+  <meta property="og:image" content="{% if page.twitterCardTitle %}{{ site.url }}/public/img/{{ page.twitterCardTitle | replace: ' ', ''}}.png{% else %}{{ site.url }}/public/img/{{ page.title | replace: ' ', ''}}.png{% endif %}">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     

@@ -54,21 +54,43 @@ If the tags don't have any context the card generator will fail, so you need to 
 ```
 
 ## Creating the Template
-I would like my Twitter Cards to keep the simple look my site has. Below I show what the cards will look like for each blogpost I've written. This helps me find edge cases in the design.
-
-I like the look so far, but I think it needs a visual element that is unique to the post. For example Josh's Margin Collapse has an explosion because the margin collapsed. CSS Tricks Guide to Flexbox has an ilustation of how `flex-wrap` works. I would need to design these, but first I need to figure out where I can even put them.
+I would like my Twitter Cards to keep the simple look my site has. Below I show what the cards will look like for a few blogpost. I've used this to style my cards.
 
 <div class='preview-grid'>
-{%- for entry in site.posts %}
+{% for entry in site.posts limit:4 %}
     <div class='preview'>
         <div class='inner-grid'>
             <div class='graphic'></div>
             <div class='title'>{{ entry.title}}</div>
             <div class='footer'> {{loop.index}} Mikkel Hansen</div>
         </div>
+        <div class='twitterMeta'>
+            <div class='title'>{{entry.title }}</div>
+            <div class='description'>{{entry.excerpt | strip_html | strip_newlines | truncate: 95}}</div>
+        </div>
     </div>
-{%- endfor %}
+{% endfor %}
 </div>
+
+I like the look so far. For the examples above I've used the post title for the card and the post exerpt for the description. These are fine as default values, but I should add variables to each post that allow me to use a different title and description for the twitter card. Let me tell you why.
+
+I want to have different title on the card because the full title will be included in the lower part of the card by Twitter. Josh does this well. The title on the card says Margin Collapse and the full title is The Rules of Margin Collapse.
+
+For the description I need something short and sweet that tells the reader why they should click on the card. My exerpt are usually more long winded and give my motivation for writing the blogpost.
+
+I also think it needs a visual element that is unique to the post. Again Josh's get's it right -- Margin Collapse has an explosion because the margin collapsed. CSS Tricks Guide to Flexbox has an ilustation of how `flex-wrap` works. I think I will get back to this once I have everything set up. Perfect is the enemy of good after all. 
+
+We now have workable cards. Now we need to prepare them for screenshots. I've created a sperate [preview page]('previews/') that has all the cards. 
+
+## Automating Screenshots
+Now we need to navitage to the previews page and screenshot all the cards.
+
+I've created a JavaScript file that takes the screenshots. I can run it using:
+```bash
+node run js/screenshots.js
+```
+
+Taking several screenshots of the same page [can sometimes lead to blank creenshots](https://github.com/puppeteer/puppeteer/issues/2357). A workaround is to set the viewport to a very large number. This seems hacky, but it works for me. Your milage may vary.
 
 ## Sources
 1. [Dynamic Social Sharing Images](https://24ways.org/2018/dynamic-social-sharing-images/) by Drew McLellan

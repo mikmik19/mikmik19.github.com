@@ -1,8 +1,13 @@
 {
     "dependencies": {
+        "chrome-aws-lambda": "^5.5.0",
         "d3": "^4.4.0",
         "d3-3d": "^0.0.7",
         "page-flip": "^2.0.0",
+        "puppeteer-core": "^5.5.0",
         "three": "^0.101.1"
+    },
+    "devDependencies": {
+        "puppeteer": "^5.5.0"
     }
 }
