@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Adding a Gradient to External SVG"
+twitterCardTitle: "Add Gradient to SVG"
 date: 2020-12-29 12:00:36 +0200
 ---
 

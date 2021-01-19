@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Creating images of strange attractors"
+twitterCardTitle: "Strange Attractors"
 date: 2019-03-18 08:00:36 +0200
 ---
 My fascination with mathematics and generative art continues. Here I want to describe my current workflow for making images of strange attractors.

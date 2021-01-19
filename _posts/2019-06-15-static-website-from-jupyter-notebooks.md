@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Static website from Jupyter Notebooks"
+twitterCardTitle: "Notebooks to Website"
+twitterCardDescription: "A workflow that lets you easily generate a static website from a collection of notebooks to make sharing easier."
 date: 2019-05-14 10:00:36 +0200
 ---
 

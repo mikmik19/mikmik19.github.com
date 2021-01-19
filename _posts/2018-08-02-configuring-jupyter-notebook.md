@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Configuring Jupyter Notebook"
+twitterCardTitle: "Styling Notebooks"
 date:   2018-08-02 16:45:00 +0200
 ---
 

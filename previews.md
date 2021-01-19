@@ -8,8 +8,8 @@ permalink: /previews/
     <div class='preview'>
         <div class='inner-grid'>
             <div class='spacer'></div>
-            <div class='title'>{{ entry.title}}</div>
-            <div class='footer'> {{loop.index}} Mikkel Hansen</div>
+            <div class='title'>{% if entry.twitterCardTitle %}{{ entry.twitterCardTitle}}{% else %}{{ entry.title}}{% endif %}</div>
+            <div class='footer'> Mikkel Hansen</div>
         </div>
     </div>
 {% endfor %}

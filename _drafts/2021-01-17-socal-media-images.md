@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Generating Twitter Cards"
+twitterCardTitle: "Twitter Cards"
+twitterCardDescription: "How to get nice twitter card previews using GitHub pages and Jekyll."
 date: 2021-01-17 12:00:36 +0200
 ---
 

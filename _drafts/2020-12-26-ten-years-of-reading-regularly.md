@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "10 Years of Reading Regularly"
+twitterCardTitle: "10 Years of Reading"
 date: 2020-12-26 12:00:36 +0200
 ---
 

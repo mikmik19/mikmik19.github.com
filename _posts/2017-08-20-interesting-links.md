@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "A Collection of Interesting Links"
+twitterCardTitle: "Interesting Links"
 date:   2017-07-20 12:34:36 +0200
 ---
 
