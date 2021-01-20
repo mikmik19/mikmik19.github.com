@@ -16,8 +16,37 @@ cyan      #2aa198  strings, numbers
 green     #859900  operators, other keywords
 */
 
+.highlighter-rouge {
+  box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 15px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  padding: 0 5px;
+}
+
+code {
+  background: black;
+  margin: 0 0.2rem;
+  font-size: 90%;
+  white-space: nowrap;
+  height: auto;
+  min-width: inherit;
+}
+
+pre {
+  background-color: black;
+}
+
+pre > code {
+  display: block;
+  padding: 18px;
+  white-space: pre;
+}
+
 .highlight {
-    background-color: #eef;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background-color: black;
     color: #586e75;
     .c { color: #93a1a1 } /* Comment */
     .err{ color: #586e75 } /* Error */

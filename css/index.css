@@ -28,10 +28,6 @@ li#darkModeToggle path.cap {
     transform: scale(1.2);
 }
 
-code {
-  background: var(--button-color);
-}
-
 /* *************************** */ /* Scroll progress indicator */ /* *************************** */
 .scroll-indicator-container {
   height: 10px;

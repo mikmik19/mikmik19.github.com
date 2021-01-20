@@ -41,10 +41,13 @@ This could all be done manually.
 ## The Meta Tags
 I set the following tags:
 ```html
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="...">
-<meta name="twitter:description" content="...">
-<meta name="twitter:image" content="...">
+<head>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="...">
+    <meta name="twitter:description" content="...">
+    <meta name="twitter:image" content="...">
+    // ...
+</head>
 ```
 
 The "twitter:card" can be one of the following: “summary”, “summary_large_image”, “app”, or “player”. The examples I showed in the motivation section all use "summary_large_image" so I will do the same.
@@ -52,7 +55,7 @@ The "twitter:card" can be one of the following: “summary”, “summary_large_
 If the tags don't have any context the card generator will fail, so you need to set default values. I default to the overall site description using this condition:
 
 ```html
-<meta name="twitter:title" content=`{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}`>
+<meta name="twitter:title" content={% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}>
 ```
 
 ## Creating the Template
