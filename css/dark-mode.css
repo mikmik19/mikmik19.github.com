@@ -36,17 +36,17 @@ div.right {
     );
 }
 
-.darkModeToggle:before {
+.darkModeTogglePrototype:before {
     background: var(--primary-color);
 }
-.darkModeToggle:after {
+.darkModeTogglePrototype:after {
     background: var(--secondary-color);
 }
 
-form#darkMode, .darkModeToggle {
+form#darkModePrototype, .darkModeTogglePrototype {
 	position: relative;
 }
-form#darkMode {
+form#darkModePrototype {
 	display: flex;
 	justify-content: center;
     align-items: center;
@@ -54,16 +54,16 @@ form#darkMode {
     border-radius: 12px;
     box-shadow: -0px 0px 6px 0px black;
 }
-.sr, .darkModeToggle:before, .darkModeToggle:after {
+.sr, .darkModeTogglePrototype:before, .darkModeTogglePrototype:after {
 	position: absolute;
 }
-.darkModeToggle:before, .darkModeToggle:after {
+.darkModeTogglePrototype:before, .darkModeTogglePrototype:after {
 	transition: transform var(--dur);
 }
-.darkModeToggle:before, .darkModeToggle:checked:after  {
+.darkModeTogglePrototype:before, .darkModeTogglePrototype:checked:after  {
 	transition-timing-function: ease-out;
 }
-.sr, .darkModeToggle {
+.sr, .darkModeTogglePrototype {
 	overflow: hidden;
 }
 .sr {
@@ -72,7 +72,7 @@ form#darkMode {
 	width: 1px;
 	height: 1px;
 }
-.darkModeToggle {
+.darkModeTogglePrototype {
 	background: var(--background-color);
 	border-radius: 0.75em;
 	cursor: pointer;
@@ -82,7 +82,7 @@ form#darkMode {
 	appearance: none;
 	-webkit-tap-highlight-color: transparent;
 }
-.darkModeToggle:before, .darkModeToggle:after {
+.darkModeTogglePrototype:before, .darkModeTogglePrototype:after {
 	border-radius: 50%;
 	content: "";
 	display: block;
@@ -91,25 +91,25 @@ form#darkMode {
 	width: 1em;
 	height: 1em;
 }
-.darkModeToggle:before, .darkModeToggle:checked:after {
+.darkModeTogglePrototype:before, .darkModeTogglePrototype:checked:after {
 	transition-delay: 0s;
 }
-.darkModeToggle:checked:before, .darkModeToggle:after {
+.darkModeTogglePrototype:checked:before, .darkModeTogglePrototype:after {
 	transition-delay: calc(var(--dur) * 0.75);
 	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
 }
-.darkModeToggle:before {
+.darkModeTogglePrototype:before {
 	transform: translateX(-1.5em);
 }
-.darkModeToggle:checked:before {
+.darkModeTogglePrototype:checked:before {
 	transform: translateX(1.5em);
 }
-.darkModeToggle:checked:after {
+.darkModeTogglePrototype:checked:after {
 	transform: translateX(3em);
 }
-.darkModeToggle:checked ~ .curtain {
+.darkModeTogglePrototype:checked ~ .curtain {
 	transform: scaleX(1);
 }
-.darkModeToggle:focus {
+.darkModeTogglePrototype:focus {
 	outline: transparent;
 }
