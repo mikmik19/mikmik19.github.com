@@ -15,19 +15,6 @@ li#search:hover {
   color: var(--secondary-color);
 }
 
-li#darkModeToggle path#bulb {
-  fill: var(--bulb-fill) !important;
-  stroke: var(--bulb-stroke) !important;
-}
-
-li#darkModeToggle path.cap {
-  stroke: var(--cap-stroke) !important;
-}
-
-#darkModeToggle:hover {
-    transform: scale(1.2);
-}
-
 /* *************************** */ /* Scroll progress indicator */ /* *************************** */
 .scroll-indicator-container {
   height: 10px;

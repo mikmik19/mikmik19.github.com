@@ -268,38 +268,93 @@ input#menu-toggle {
   color: white;
 }
 
-// .logo {
-//     flex-basis: 80%;
-//     margin-top: 2rem;
-//     margin-left: 1rem;
-//     margin-bottom: 1rem;
-//     height: 70px;
-//     background: url(/assets/img/texture.png),
-//     linear-gradient(
-//       135deg,
-//       #be5273 0%,
-//       #193d91 100%
-//     );
-//     border-radius: var(--border-radius);
-//     box-shadow: -3px 2px 3px black inset;
+.darkModeToggle:before {
+    background: var(--primary-color);
+}
 
-//     .layerOne {
-//       height: 40px;
-//       width: 70%;
-//       margin-top: 20px;
-//       margin-left: 15px;
-//       background: url(/assets/img/texture.png),
-//       linear-gradient(
-//         135deg,
-//         #ff5454 0%,
-//         #4a0202 100%
-//       );
-//       border-radius: var(--border-radius);
-//       box-sizing: content-box;
-//       box-shadow: -3px 2px 3px black inset;
-//     }
+.darkModeToggle:after {
+    background: var(--secondary-color);
+}
 
-// }
+form#darkMode, .darkModeToggle {
+	position: relative;
+}
+
+form#darkMode {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  background: none;
+}
+
+.sr, .darkModeToggle:before, .darkModeToggle:after {
+	position: absolute;
+}
+
+.darkModeToggle:before, .darkModeToggle:after {
+	transition: transform var(--dark-mode-toggle-duration);
+}
+
+.darkModeToggle:before, .darkModeToggle:checked:after  {
+	transition-timing-function: ease-out;
+}
+
+.sr, .darkModeToggle {
+	overflow: hidden;
+}
+
+.sr {
+	clip: rect(1px,1px,1px,1px);
+	color: transparent;
+	width: 1px;
+	height: 1px;
+}
+
+.darkModeToggle {
+	background: var(--background-color);
+	border-radius: 0.75em;
+	cursor: pointer;
+	width: 3em;
+	height: 1.5em;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.darkModeToggle:before, .darkModeToggle:after {
+	border-radius: 50%;
+	content: "";
+	display: block;
+	top: 0.25em;
+	left: 0.25em;
+	width: 1em;
+	height: 1em;
+}
+
+.darkModeToggle:before, .darkModeToggle:checked:after {
+	transition-delay: 0s;
+}
+
+.darkModeToggle:checked:before, .darkModeToggle:after {
+	transition-delay: calc(var(--dark-mode-toggle-duration) * 0.75);
+	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
+}
+
+.darkModeToggle:before {
+	transform: translateX(-1.5em);
+}
+
+.darkModeToggle:checked:before {
+	transform: translateX(1.5em);
+}
+
+.darkModeToggle:checked:after {
+	transform: translateX(3em);
+}
+
+.darkModeToggle:focus {
+	outline: transparent;
+}
 
 /* footer */
 

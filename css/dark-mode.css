@@ -1,5 +1,6 @@
 :root {
-    --bulb-demo: var(--bulb-fill)
+    --bulb-demo: var(--bulb-fill);
+    --dur: 0.3s;
 }
 
 div.wrapper {
@@ -18,15 +19,97 @@ div.right {
     color: var(--secondary-color);
 }
 
-#lightbulb:hover {
-    transform: scale(1.2);
+/* Everything below is about the darkmode toggle */
+
+#toggleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    margin: auto;
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
 }
 
-div#lightbulb path#bulb {
-  fill: var(--bulb-demo) !important;
-  stroke: var(--bulb-stroke) !important;
+.darkModeToggle:before {
+    background: var(--primary-color);
+}
+.darkModeToggle:after {
+    background: var(--secondary-color);
 }
 
-div#lightbulb path.cap {
-  stroke: var(--cap-stroke) !important;
+form#darkMode, .darkModeToggle {
+	position: relative;
+}
+form#darkMode {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    background: none;
+    border-radius: 12px;
+    box-shadow: -0px 0px 6px 0px black;
+}
+.sr, .darkModeToggle:before, .darkModeToggle:after {
+	position: absolute;
+}
+.darkModeToggle:before, .darkModeToggle:after {
+	transition: transform var(--dur);
+}
+.darkModeToggle:before, .darkModeToggle:checked:after  {
+	transition-timing-function: ease-out;
+}
+.sr, .darkModeToggle {
+	overflow: hidden;
+}
+.sr {
+	clip: rect(1px,1px,1px,1px);
+	color: transparent;
+	width: 1px;
+	height: 1px;
+}
+.darkModeToggle {
+	background: var(--background-color);
+	border-radius: 0.75em;
+	cursor: pointer;
+	width: 3em;
+	height: 1.5em;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.darkModeToggle:before, .darkModeToggle:after {
+	border-radius: 50%;
+	content: "";
+	display: block;
+	top: 0.25em;
+	left: 0.25em;
+	width: 1em;
+	height: 1em;
+}
+.darkModeToggle:before, .darkModeToggle:checked:after {
+	transition-delay: 0s;
+}
+.darkModeToggle:checked:before, .darkModeToggle:after {
+	transition-delay: calc(var(--dur) * 0.75);
+	transition-timing-function: cubic-bezier(0.3,1.6,0.5,0.7);
+}
+.darkModeToggle:before {
+	transform: translateX(-1.5em);
+}
+.darkModeToggle:checked:before {
+	transform: translateX(1.5em);
+}
+.darkModeToggle:checked:after {
+	transform: translateX(3em);
+}
+.darkModeToggle:checked ~ .curtain {
+	transform: scaleX(1);
+}
+.darkModeToggle:focus {
+	outline: transparent;
 }

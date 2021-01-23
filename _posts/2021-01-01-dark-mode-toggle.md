@@ -69,16 +69,19 @@ My solution here is to set the primiary color to be the background color untill 
 ## Selecting the button and animation
 I've been wanting to add more playful elements to my blog and the dark mode toggle seems like a good oppotunity to do so. The button that toggle between dark and light mode should be a nice visual element with a cute On Click animation. Janessa Garrow has a nice blogpost on how she did her [Dark Mode Toggle.](https://janessagarrow.com/blog/css-dark-mode-toggle/) This [Code Pen](https://codepen.io/jh3y/pen/VwjgdLj) by @jh3y is also very nice. I like the idea of a light bulb, but I won't go as far as to implement the tuggable string even though it is a fun element.
 
-<center>
-    <div id='lightbulb'></div>
-</center>
+<div id='toggleWrapper'>
+    <form id='darkMode'>
+        <input id="dark-mode" class="darkModeToggle" type="checkbox" name="Dark mode" role="switch" value="on">
+        <label for="dark-mode" class="sr">Dark Mode</label>
+    </form>
+</div>
 
 Clicking the lamp will turn it on and off. It isn't nearly as nice as [this day/night](https://codepen.io/ste-vg/pen/oNgrYOb) toggle by @ste-vg, but it's better than the buttons above. I think I will come back to this later and play around with it some more.
 
 Ok, so we have control over all the colors and a lamp we can turn on and off. Everything has been put together in the lamp icon at top right of the page.
 
 ## Closing thoughts
-This was a lot more work than I woule have though. My plan was to spend an evening getting it done, but it ended up taking almost a week. 
+This was a lot more work than I would have thought. My plan was to spend an evening getting it done, but it ended up taking almost a week. 
 
 There is still a bit of polishing to do but I'm very happy with the result. It has been surprisingly fun to look at my content in darkmode. I'm already a big fan of `D3.js`, but it is really amazing how easy it was for me to get everything working with darkmode. It wouldn't have been feasibily to update all those figures if I had relyed on static files. 
 
