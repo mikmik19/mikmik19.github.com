@@ -21,13 +21,13 @@ Ok, so this button now changes the background color and the text. It turned out 
 
 My strategy here has been to define for the main elements such as background, button, font, etc. I then define a light and dark version for each and set the default to be light. So for the background color it looks like this: 
 
-{% highlight css %}
+```css
 :root {
     --background-color-light: #fdfdfd;
     --background-color-dark: #222;
     --background-color: var(--background-color-light);
 }
-{% endhighlight  %}
+```
 
 This got a good deal of the way to dark mode. You may have noticed that the button above doesn't change the colors used for the links, heads, and gradients. That's because setting those are slightly more complicated.
 

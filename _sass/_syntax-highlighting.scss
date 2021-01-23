@@ -16,8 +16,11 @@ cyan      #2aa198  strings, numbers
 green     #859900  operators, other keywords
 */
 
-.highlighter-rouge {
+div .highlight {
   box-shadow: rgba(0, 0, 0, 0.55) 0px 15px 15px;
+}
+
+.highlighter-rouge {
   background: black;
   border-radius: 5px;
   color: white;
@@ -40,7 +43,7 @@ pre {
 pre > code {
   display: block;
   padding: 18px;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
 .highlight {
