@@ -238,11 +238,14 @@ input#menu-toggle {
 
 .menu {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     width: 100%;
     min-height: 50px;
     margin: auto;
+    padding: 0.5em;
     background: url(/assets/img/texture.png),
     linear-gradient(
       135deg,
@@ -259,9 +262,11 @@ input#menu-toggle {
 }
 
 .menu > * {
-  flex-basis: 30%;
+  flex-basis: 15%;
   flex-shrink: 1;
   color: white;
+  margin: 0.1em;
+  font-weight: 400;
 }
 
 .menu a {

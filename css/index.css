@@ -6,15 +6,6 @@ a:hover {
   color: var(--secondary-color);
 }
 
-li#search {
-  font-weight: 400;
-  color: var(--primary-color);
-}
-
-li#search:hover {
-  color: var(--secondary-color);
-}
-
 /* *************************** */ /* Scroll progress indicator */ /* *************************** */
 .scroll-indicator-container {
   height: 10px;
