@@ -2,9 +2,30 @@
 
 (function() {
 
+    async function loadData(datasets) {
+        let data;
+        await Promise.all(
+            datasets.map( name => d3.csv(`data/${name}.csv`))
+        ).then(function (allData) {
+            data = d3.merge(allData);
+        });
+        return data
+    }
+
+    function checkData () {
+        let inputs = document.getElementsByClassName('stockInput');
+        let datasets = []
+        for (input of inputs) {
+            if (input.checked) {
+                datasets.push(input.value)
+            }
+        }
+        return datasets
+    }
+
     async function fillHoldingsTable(filename = '') {
-        const data = await d3.csv(`data/${filename}.csv`)
-        console.log(data)
+        let datasets = checkData()
+        const data = await loadData(datasets)
 
         d3.selectAll('div.row').remove()
         
@@ -41,6 +62,6 @@
         let filename = d3.select(this).property('value')
         fillHoldingsTable(filename = filename)
     }
-    d3.selectAll('button').on('click', buttonClick)
+    d3.selectAll('input').on('click', buttonClick)
 }
 )()
