@@ -10,11 +10,6 @@
         
         let table = d3.select('#holdings') 
         
-        tableHeader = table.append('div').classed('row', true)
-        tableHeader.append('div').classed('tableHeader', true).classed('ticker', true).text('Ticker')
-        tableHeader.append('div').classed('tableHeader', true).classed('name', true).text('Name')
-        tableHeader.append('div').classed('tableHeader', true).classed('weight', true).text('Weight(%)')
-
         table.selectAll('div.row')
             .data(data).enter()
             .append('div').classed('row', true)
@@ -33,6 +28,11 @@
                     .classed('weight', true)
                     .text(d => d.Weight)
             })
+
+        let tableHeader = table.insert('div', ":first-child").classed('row', true)
+        tableHeader.append('div').classed('tableHeader', true).classed('ticker', true).text('Ticker')
+        tableHeader.append('div').classed('tableHeader', true).classed('name', true).text('Name')
+        tableHeader.append('div').classed('tableHeader', true).classed('weight', true).text('Weight(%)')
     };
 
     fillHoldingsTable(filename='ICLN')
@@ -42,7 +42,5 @@
         fillHoldingsTable(filename = filename)
     }
     d3.selectAll('button').on('click', buttonClick)
-    // d3.select('#NewEnergy').on('click', fillHoldingsTable('NewEnergy'))
-    // d3.select('#ECAR').on('click', fillHoldingsTable('ECAR_holdings'))
 }
 )()

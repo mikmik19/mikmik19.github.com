@@ -6,9 +6,11 @@ permalink: /etffinder/
 
 <div id="book-search-container">
     <div class='flexbox' id='buttons'>
-        <button type="button" id="ICLN" value='ICLN'>iShares Global Clean Energy ETF</button>
-        <button type="button" id="NewEnergy" value='NewEnergy'>Lyxor New Energy (DR) UCITS ETF</button>
-        <button type="button" id="ECAR" value='ECAR_holdings'>iShares Electric Vehicles and Driving Technology</button>
+        <button type="button" value='ICLN'>iShares Global Clean Energy ETF</button>
+        <button type="button" value='NewEnergy'>Lyxor New Energy (DR) UCITS ETF</button>
+        <button type="button" value='ECAR'>iShares Electric Vehicles and Driving Technology</button>
+        <button type="button" value='GlobalXBattery'>Global X Lithium and Battery Tech ETF</button>
+        <button type="button" value='UCTESPO'>VanEck Vectors Video Gaming and eSports UCITS ETF</button>
     </div>
     <div class='flexbox' id='holdings'></div>
 </div>
