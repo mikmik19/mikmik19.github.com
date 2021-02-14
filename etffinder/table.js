@@ -7,9 +7,15 @@
         console.log(data)
 
         d3.selectAll('div.row').remove()
+        
+        let table = d3.select('#holdings') 
+        
+        tableHeader = table.append('div').classed('row', true)
+        tableHeader.append('div').classed('tableHeader', true).classed('ticker', true).text('Ticker')
+        tableHeader.append('div').classed('tableHeader', true).classed('name', true).text('Name')
+        tableHeader.append('div').classed('tableHeader', true).classed('weight', true).text('Weight(%)')
 
-        d3.select('#holdings')
-            .selectAll('div.row')
+        table.selectAll('div.row')
             .data(data).enter()
             .append('div').classed('row', true)
             .each(function (d, i) {
