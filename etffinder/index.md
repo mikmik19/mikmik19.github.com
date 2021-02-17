@@ -30,5 +30,7 @@ permalink: /etffinder/
     <div class='flexbox' id='holdings'></div>
 </div>
 
+ 
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>
 <script src="/etffinder/table.js"></script>
 <link rel="stylesheet" href="/etffinder/style.css" />

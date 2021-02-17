@@ -3,12 +3,39 @@
 (function() {
 
     async function loadData(datasets) {
-        let data;
+        let merge_df;
         await Promise.all(
-            datasets.map( name => d3.csv(`data/${name}.csv`))
-        ).then(function (allData) {
-            data = d3.merge(allData);
+            datasets.map( name => dfd.read_csv(`data/${name}.csv`))
+        ).then(function (dfs) {
+            // TODO: This needs to handle the case of 1 or more data frames.
+            merge_df = dfd.merge({ "left": dfs[0], "right": dfs[1], "on": ["Ticker"] })
+            merge_df['Weight'] = merge_df['Weight'].add(merge_df['Weight_1'], axis = 1)
+            
+            // Average the weight. This should take into account the fraction of the 
+            // portfolio going into the ETF.
+            merge_df['Weight'] = merge_df['Weight'].div(2, axis = 1)
+            return merge_df
         });
+
+        // let json = await merge_df.to_json().then(json => json)
+        return merge_df
+    }
+
+    function formatDataFrameToListOfObjects(df) {
+        // This function is here because we need the data to 
+        // be formatted as a list of JavaScript Dictionaries.
+        let data = []
+        colNames = df.columns
+        for (row of df.data) {
+            colIdx = 0;
+            let obj = {}
+            for (col of row) {
+                colIdx = colIdx % 5
+                obj[colNames[colIdx]] = col
+                colIdx++
+            }
+            data.push(obj)
+        }
         return data
     }
 
@@ -25,7 +52,8 @@
 
     async function fillHoldingsTable(filename = '') {
         let datasets = checkData()
-        const data = await loadData(datasets)
+        const rawData = await loadData(datasets)
+        const data = formatDataFrameToListOfObjects(rawData)
 
         d3.selectAll('div.row').remove()
         

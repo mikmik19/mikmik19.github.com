@@ -1,26 +1,45 @@
 async function request(stockName) {
-    let stocks = new Stocks('2UKNH1MJSSKVW71F');
+    // let stocks = new Stocks('2UKNH1MJSSKVW71F');
     // let data = await stocks.timeSeries({
     //     symbol: stockName,
     //     interval: '60min',
-    //     amount: 10
+    //     amount: 48
     // });
     // console.log(stockName)
     // console.log(JSON.stringify(data))
     let data = await d3.json(`/data/investment-portfolio/${stockName}.json`)
 
-    let parseDate = d3.utcParse("%Y-%m-%dT%H:%M:%S.000Z")
-    let formatDate = d3.timeFormat("%b %d %H:%M")
-
     let stockDiv = d3.select('#stock')
 
-    let title = stockDiv.append('p')
+    let title = stockDiv.append('div').append('p')
         .classed('stockName', true)
         .text(stockName)
+    
+    let infoDiv = stockDiv.append('div')
+
+    infoDiv.append('div').text('GA')
+    infoDiv.append('div').text('Current Price')
+    infoDiv.append('div').text('Earning')
+
+    
+    let svg = drawStockPrices(data, stockDiv);
+    addGradient(svg);
+}
+
+for (const stock of ['AMC', 'GME']) {
+    request(stock);
+}
+
+
+function drawStockPrices(data, stockDiv) {
+
+    let parseDate = d3.utcParse("%Y-%m-%dT%H:%M:%S.000Z")
+    let formatDate = d3.timeFormat("%b %d %H:%M")
 
     let margin = { top: 20, right: 20, bottom: 40, left: 45 };
     let width = 600
     let height = 250
+
     let svg = stockDiv
         .append("svg")
         .attr("height", height)
@@ -28,12 +47,12 @@ async function request(stockName) {
 
     var xScale = d3
         .scaleTime()
-        .domain([parseDate('2021-01-30T00:00:00.000Z'), parseDate('2021-01-29T15:00:00.000Z')])
+        .domain(d3.extent(data, d => parseDate(d.date)))
         .range([margin.left, width - margin.right]);
 
     var yScale = d3
         .scaleLinear()
-        .domain([d3.min(data, d => d.close)*0.9, d3.max(data, d => d.close)*1.1])
+        .domain([d3.min(data, d => d.close) * 0.9, d3.max(data, d => d.close) * 1.1])
         .range([height - margin.bottom, margin.top]);
 
     var xAxis = d3
@@ -71,34 +90,17 @@ async function request(stockName) {
     let line = d3.line()
         .x(d => xScale(parseDate(d.date)))
         .y(d => yScale(d.close))
-    
+
     let fullLine = svg
         .append('g')
         .append("path")
         .data([data])
         .attr("d", line)
         .classed('line', true);
-    
-    svg
-        .append('g')
-        .selectAll('circle')
-        .data(data)
-        .enter()
-        .append('circle')
-        .attr("cx", d => xScale(parseDate(d.date)))
-        .attr("cy", d => yScale(d.close))
-        .attr("r", 2)
-        .attr("fill", 'var(--primary-color)');
 
-
-    addGradient(svg)
+    return svg
 }
 
-let myStocks = ['AMC', 'GME']
-
-for (const stock of myStocks) {
-    request(stock);
-}
 
 function addGradient(svg) {
     let backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
@@ -114,10 +116,10 @@ function addGradient(svg) {
     gradient.append("svg:stop")
         .attr("offset", "0%")
         .attr("stop-color", '#34a853')
-        .attr("stop-opacity", 0.38);
+        .attr("stop-opacity", 0.6);
 
     gradient.append("svg:stop")
-        .attr("offset", "70%")
+        .attr("offset", "90%")
         .attr("stop-color", backgroundColor)
         .attr("stop-opacity", 0);
 
