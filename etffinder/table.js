@@ -1,24 +1,32 @@
-
-
 (function() {
 
     async function loadData(datasets) {
-        let merge_df;
+        let return_value;
         await Promise.all(
             datasets.map( name => dfd.read_csv(`data/${name}.csv`))
         ).then(function (dfs) {
-            // TODO: This needs to handle the case of 1 or more data frames.
-            merge_df = dfd.merge({ "left": dfs[0], "right": dfs[1], "on": ["Ticker"] })
-            merge_df['Weight'] = merge_df['Weight'].add(merge_df['Weight_1'], axis = 1)
-            
-            // Average the weight. This should take into account the fraction of the 
-            // portfolio going into the ETF.
-            merge_df['Weight'] = merge_df['Weight'].div(2, axis = 1)
-            return merge_df
+            if (dfs.length == 1) {
+                return_value = dfs[0]
+            } else {
+                return_value = dfs[0]
+                for (idx = 1; idx < dfs.length; idx++) {
+                    return_value = dfd.merge({ 
+                        "left": return_value, 
+                        "right": dfs[idx], 
+                        "on": ["Ticker"],
+                        "how": "outer"
+                    })
+                    return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 1)
+                    return_value.drop({ columns: ["Weight_1"], axis: 1, inplace: true });
+                }
+                
+                // Average the weight. This should take into account the fraction of the 
+                // portfolio going into the ETF.
+                return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
+                return return_value
+            }
         });
-
-        // let json = await merge_df.to_json().then(json => json)
-        return merge_df
+        return return_value
     }
 
     function formatDataFrameToListOfObjects(df) {
@@ -51,11 +59,17 @@
     }
 
     async function fillHoldingsTable(filename = '') {
+        d3.selectAll('div.row').remove()
+
         let datasets = checkData()
+
+        if (datasets.length == 0) {
+            
+            return null
+        }
+
         const rawData = await loadData(datasets)
         const data = formatDataFrameToListOfObjects(rawData)
-
-        d3.selectAll('div.row').remove()
         
         let table = d3.select('#holdings') 
         
