@@ -10,19 +10,20 @@
             } else {
                 return_value = dfs[0]
                 for (idx = 1; idx < dfs.length; idx++) {
-                    return_value = dfd.merge({ 
-                        "left": return_value, 
-                        "right": dfs[idx], 
-                        "on": ["Ticker"],
-                        "how": "outer"
-                    })
-                    return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 1)
-                    return_value.drop({ columns: ["Weight_1"], axis: 1, inplace: true });
+                    return_value = dfd.concat({ df_list: [return_value, dfs[idx]], axis: 0 })
+                    // return_value = dfd.merge({ 
+                    //     "left": return_value, 
+                    //     "right": dfs[idx], 
+                    //     "on": ["Ticker"],
+                    //     "how": "outer"
+                    // })
+                    // return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 1)
+                    // return_value.drop({ columns: ["Weight_1"], axis: 1, inplace: true });
                 }
                 
                 // Average the weight. This should take into account the fraction of the 
                 // portfolio going into the ETF.
-                return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
+                // return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
                 return return_value
             }
         });

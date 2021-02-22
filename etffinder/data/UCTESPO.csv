@@ -1,27 +1,27 @@
-﻿Name,Ticker,Weight
-"Tencent Holdings Ltd","700 HK",863
-"Bilibili Inc","BILI US",786
-"Nvidia Corp","NVDA US",772
-"Sea Ltd","SE US",738
-"Netease Inc","NTES US",619
-"Advanced Micro Devices Inc","AMD US",609
-"Activision Blizzard Inc","ATVI US",576
-"Nintendo Co Ltd","7974 JP",553
-"Ncsoft Corp","036570 KS",425
-"Electronic Arts Inc","EA US",416
-"Nexon Co Ltd","3659 JP",412
-"Take-Two Interactive Software Inc","TTWO US",408
-"Zynga Inc","ZNGA US",384
-"Bandai Namco Holdings Inc","7832 JP",345
-"Unity Software Inc","U US",311
-"Ubisoft Entertainment Sa","UBI FP",234
-"Kingsoft Corp Ltd","3888 HK",216
-"Embracer Group Ab","EMBRACB SS",206
-"Konami Holdings Corp","9766 JP",202
-"Cd Projekt Sa","CDR PW",192
-"Capcom Co Ltd","9697 JP",165
-"Square Enix Holdings Co Ltd","9684 JP",152
-"Micro-Star International Co Ltd","2377 TT",138
-"Stillfront Group Ab","SF SS",123
-"Netmarble Corp","251270 KS",122
-"Other/Cash","Cash",34
+﻿Ticker,Name,Weight
+"700 HK","Tencent Holdings Ltd",863
+"BILI US","Bilibili Inc",786
+"NVDA US","Nvidia Corp",772
+"SE US","Sea Ltd",738
+"NTES US","Netease Inc",619
+"AMD US","Advanced Micro Devices Inc",609
+"ATVI US","Activision Blizzard Inc",576
+"7974 JP","Nintendo Co Ltd",553
+"036570 KS","Ncsoft Corp",425
+"EA US","Electronic Arts Inc",416
+"3659 JP","Nexon Co Ltd",412
+"TTWO US","Take-Two Interactive Software Inc",408
+"ZNGA US","Zynga Inc",384
+"7832 JP","Bandai Namco Holdings Inc",345
+"U US","Unity Software Inc",311
+"UBI FP","Ubisoft Entertainment Sa",234
+"3888 HK","Kingsoft Corp Ltd",216
+"EMBRACB SS","Embracer Group Ab",206
+"9766 JP","Konami Holdings Corp",202
+"CDR PW","Cd Projekt Sa",192
+"9697 JP","Capcom Co Ltd",165
+"9684 JP","Square Enix Holdings Co Ltd",152
+"2377 TT","Micro-Star International Co Ltd",138
+"SF SS","Stillfront Group Ab",123
+"251270 KS","Netmarble Corp",122
+"Cash","Other/Cash",34
