@@ -8,22 +8,70 @@
             if (dfs.length == 1) {
                 return_value = dfs[0]
             } else {
+                function ReplaceName(row) {
+                    console.log(row)
+                    if (row.Name == NaN) {
+                        return row.Name_1
+                    }
+                    return row.Name
+                }
+
                 return_value = dfs[0]
                 for (idx = 1; idx < dfs.length; idx++) {
-                    return_value = dfd.concat({ df_list: [return_value, dfs[idx]], axis: 0 })
-                    // return_value = dfd.merge({ 
-                    //     "left": return_value, 
-                    //     "right": dfs[idx], 
-                    //     "on": ["Ticker"],
-                    //     "how": "outer"
-                    // })
-                    // return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 1)
-                    // return_value.drop({ columns: ["Weight_1"], axis: 1, inplace: true });
+                    return_value = dfd.merge({ 
+                        "left": return_value, 
+                        "right": dfs[idx], 
+                        "on": ["Ticker"],
+                        "how": "outer"
+                    })
+
+                    // After the outer mege we have to fill the NaN values of both Name and 
+                    // Weight. These will be tranfered over from Name_1 and Weight_1
+                    let nRows = return_value.shape[0];
+                    for (idx = 0; idx < nRows; idx++) {
+                        let row = return_value.iloc({ rows: [idx] })
+
+                        if (isNaN(row.Name.values[0])) {
+                            row.Name = row.Name_1
+                            row.Weight = row.Weight_1
+                            return_value = dfd.concat({ df_list: [return_value, row], axis:0})
+                        }
+
+                        if (isNaN(row.Name_1.values[0])) {
+                            row.Name_1 = row.Name
+                            row.Weight_1 = row.Weight
+                            return_value = dfd.concat({ df_list: [return_value, row], axis: 0 })
+                        }
+                    }
+                    
+                    return_value.dropna({ axis: 0, inplace:true })
+
+                    return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 0)
+                    
+                    return_value.drop({ 
+                        columns: ["Weight_1", "Name_1"], 
+                        axis: 1, 
+                        inplace: true
+                     });
                 }
                 
+                
+                // return_value.fillna({
+                //     columns: ['Name'],
+                //     values: ['Filled'], 
+                //     inplace: "True" 
+                // })
+                // return_value.query({
+                //     column: "Name",
+                //     is: "==",
+                //     to: "Filled"
+                // }).print()
+
+                
+
                 // Average the weight. This should take into account the fraction of the 
                 // portfolio going into the ETF.
-                // return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
+                return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
                 return return_value
             }
         });
