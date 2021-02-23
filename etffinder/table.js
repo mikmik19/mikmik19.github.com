@@ -32,13 +32,13 @@
 
                         if (typeof row.Name_1.values[0] != "string") {
                             row.Name_1 = row.Name
-                            row.Weight_1 = row.Weight
+                            row.Weight_1 = [0]
                             return_value = dfd.concat({ df_list: [row, return_value], axis: 0 })
                         }
                     }
                     
                     return_value = return_value.dropna({ axis: 0, inplace:false })
-
+                    
                     return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 0)
                     
                     return_value.drop({ 
@@ -50,7 +50,8 @@
 
                 // Average the weight. This should take into account the fraction of the 
                 // portfolio going into the ETF.
-                return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 1)
+
+                return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 0)
                 return return_value
             }
         });
