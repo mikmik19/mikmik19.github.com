@@ -27,22 +27,26 @@
                         if (typeof row.Name.values[0] != "string") {
                             row.Name = row.Name_1
                             row.Weight = row.Weight_1
+                            row.Sector = row.Sector_1
+                            row.Country = row.Country_1
                             return_value = dfd.concat({ df_list: [row, return_value], axis:0})
                         }
 
                         if (typeof row.Name_1.values[0] != "string") {
                             row.Name_1 = row.Name
                             row.Weight_1 = [0]
+                            row.Sector_1 = row.Sector
+                            row.Country_1 = row.Country
                             return_value = dfd.concat({ df_list: [row, return_value], axis: 0 })
                         }
                     }
                     
                     return_value = return_value.dropna({ axis: 0, inplace:false })
-                    
+
                     return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 0)
-                    
+                    return_value.sort_values({ by: "Weight", ascending: false, inplace: true })
                     return_value.drop({ 
-                        columns: ["Weight_1", "Name_1"], 
+                        columns: ["Weight_1", "Name_1", "Sector_1", "Country_1"], 
                         axis: 1, 
                         inplace: true
                      });
@@ -118,7 +122,7 @@
 
                 row.append('div')
                     .classed('weight', true)
-                    .text(d => d.Weight)
+                    .text(d => d.Weight.toFixed(2))
             })
 
         let tableHeader = table.insert('div', ":first-child").classed('row', true)
