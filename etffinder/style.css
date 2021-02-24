@@ -32,7 +32,7 @@ div.row, div.headerRow {
 }
 
 .name {
-    flex-basis: 50%;
+    flex-basis: 60%;
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -44,10 +44,11 @@ div.row, div.headerRow {
 }
 
 .weight {
-    flex-basis: 30%;
+    flex-basis: 20%;
     flex-shrink: 1;
     flex-grow: 1;
     color: var(--primary-color);
+    text-align: right;
 }
 
 #buttons {
