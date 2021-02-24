@@ -29,6 +29,11 @@
                             row.Weight = row.Weight_1
                             row.Sector = row.Sector_1
                             row.Country = row.Country_1
+
+                            // I have to set weight 1 to 0 otherwise it will be
+                            // counted twice later.
+                            row.Weight_1 = [0]
+
                             return_value = dfd.concat({ df_list: [row, return_value], axis:0})
                         }
 
@@ -43,6 +48,7 @@
                     
                     return_value = return_value.dropna({ axis: 0, inplace:false })
 
+                    
                     return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 0)
                     return_value.sort_values({ by: "Weight", ascending: false, inplace: true })
                     return_value.drop({ 
