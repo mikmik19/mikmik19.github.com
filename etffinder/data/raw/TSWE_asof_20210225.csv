@@ -1,0 +1,250 @@
+Number,Holding,Ticker,Shares,Market Value,% of net assets
+1,Tesla Inc,TSLA US,4021,€2244116.00,1.96%
+2,Shopify Inc,SHOP US,974,€992087.00,0.87%
+3,Infineon Technologies Ag,IFX GR,24907,€880462.00,0.77%
+4,Adyen Nv,ADYEN NA,438,€847311.00,0.74%
+5,Softbank Group Corp,9984 JP,10254,€818199.00,0.71%
+6,Naver Corp,035420 KS,2850,€806063.00,0.70%
+7,Deere & Co,DE US,2730,€777260.00,0.68%
+8,Nidec Corp,6594 JP,6916,€751240.00,0.66%
+9,Xiaomi Corp,1810 HK,264800,€750097.00,0.65%
+10,Paypal Holdings Inc,PYPL US,3535,€734357.00,0.64%
+11,Capgemini Se,CAP FP,5411,€724803.00,0.63%
+12,Applied Materials Inc,AMAT US,7719,€719426.00,0.63%
+13,Tokyo Electron Ltd,8035 JP,2045,€719459.00,0.63%
+14,Asml Holding Nv,ASML NA,1488,€706726.00,0.62%
+15,Vestas Wind Systems A/S,VWS DC,4393,€699178.00,0.61%
+16,Nvidia Corp,NVDA US,1592,€693244.00,0.60%
+17,Fast Retailing Co Ltd,9983 JP,800,€674682.00,0.59%
+18,Micron Technology Inc,MU US,9263,€667748.00,0.58%
+19,Dsv Panalpina A/S,DSV DC,4380,€662356.00,0.58%
+20,Morgan Stanley,MS US,10239,€656941.00,0.57%
+21,Broadcom Inc,AVGO US,1734,€648491.00,0.57%
+22,Sandvik Ab,SAND SS,28030,€641800.00,0.56%
+23,Capital One Financial Corp,COF US,6422,€626439.00,0.55%
+24,Ing Groep Nv,INGA NA,67666,€624422.00,0.54%
+25,Deutsche Post Ag,DPW GR,15033,€621164.00,0.54%
+26,Prudential Plc,PRU LN,36769,€616602.00,0.54%
+27,Hong Kong Exchanges & Clearing Ltd,388 HK,11542,€608845.00,0.53%
+28,Lowe's Cos Inc,LOW US,4689,€608066.00,0.53%
+29,Siemens Ag,SIE GR,4661,€606769.00,0.53%
+30,Denso Corp,6902 JP,11670,€599230.00,0.52%
+31,Prosus Nv,PRX NA,6003,€596218.00,0.52%
+32,T-Mobile Us Inc,TMUS US,5984,€591791.00,0.52%
+33,Kubota Corp,6326 JP,30281,€587678.00,0.51%
+34,Sk Hynix Inc,000660 KS,5356,€587344.00,0.51%
+35,Nintendo Co Ltd,7974 JP,1116,€587304.00,0.51%
+36,Recruit Holdings Co Ltd,6098 JP,13784,€585217.00,0.51%
+37,Ferguson Plc,FERG LN,5879,€584395.00,0.51%
+38,Murata Manufacturing Co Ltd,6981 JP,7870,€580352.00,0.51%
+39,Walt Disney Co/The,DIS US,3702,€578377.00,0.50%
+40,Schlumberger Nv,SLB US,24733,€576847.00,0.50%
+41,Crh Plc,CRH LN,15596,€575188.00,0.50%
+42,Samsung Electronics Co Ltd,005930 KS,9105,€573528.00,0.50%
+43,Conocophillips,COP US,13191,€572250.00,0.50%
+44,Sony Corp,6758 JP,6412,€571115.00,0.50%
+45,Panasonic Corp,6752 JP,51272,€569565.00,0.50%
+46,Abbvie Inc,ABBV US,6482,€569137.00,0.50%
+47,Truist Financial Corp,TFC US,11830,€567403.00,0.49%
+48,Atlas Copco Ab,ATCOA SS,11586,€564389.00,0.49%
+49,Equinor Asa,EQNR NO,33848,€562805.00,0.49%
+50,American International Group Inc,AIG US,15549,€559047.00,0.49%
+51,Qualcomm Inc,QCOM US,5024,€557021.00,0.49%
+52,Advanced Micro Devices Inc,AMD US,8261,€556996.00,0.49%
+53,Bank Of Montreal,BMO CN,8000,€553667.00,0.48%
+54,National Australia Bank Ltd,NAB AU,33670,€551245.00,0.48%
+55,Nike Inc,NKE US,4954,€549301.00,0.48%
+56,Australia & New Zealand Banking Group L,ANZ AU,31492,€548797.00,0.48%
+57,Simon Property Group Inc,SPG US,5819,€546579.00,0.48%
+58,Apple Inc,AAPL US,5473,€541704.00,0.47%
+59,Schneider Electric Se,SU FP,4296,€536570.00,0.47%
+60,Adidas Ag,ADS GR,1823,€534321.00,0.47%
+61,Lonza Group Ag,LONN SW,1009,€533470.00,0.47%
+62,Charles Schwab Corp/The,SCHW US,10281,€530703.00,0.46%
+63,Banco Bilbao Vizcaya Argentaria Sa,BBVA SM,111909,€526420.00,0.46%
+64,Macquarie Group Ltd,MQG AU,5546,€524649.00,0.46%
+65,London Stock Exchange Group Plc,LSEG LN,4669,€524142.00,0.46%
+66,Emerson Electric Co,EMR US,7302,€521665.00,0.45%
+67,Servicenow Inc,NOW US,1204,€520831.00,0.45%
+68,Abb Ltd,ABBN SW,21449,€519620.00,0.45%
+69,Kbc Group Nv,KBC BB,8308,€516259.00,0.45%
+70,Keyence Corp,6861 JP,1250,€515692.00,0.45%
+71,Norfolk Southern Corp,NSC US,2479,€515309.00,0.45%
+72,Nordea Bank Abp,NDA SS,66864,€515195.00,0.45%
+73,Legal & General Group Plc,LGEN LN,164079,€511611.00,0.45%
+74,Pnc Financial Services Group Inc/The,PNC US,3607,€511248.00,0.45%
+75,Cie Generale Des Etablissements Micheli,ML FP,4312,€509678.00,0.44%
+76,Woodside Petroleum Ltd,WPL AU,30659,€507537.00,0.44%
+77,Dai-Ichi Life Holdings Inc,8750 JP,34810,€506346.00,0.44%
+78,Starbucks Corp,SBUX US,5871,€496951.00,0.43%
+79,Aviva Plc,AV/ LN,115263,€496788.00,0.43%
+80,Stryker Corp,SYK US,2470,€496627.00,0.43%
+81,Muenchener Rueckversicherungs-Gesellsch,MUV2 GR,2022,€495390.00,0.43%
+82,Dassault Systemes Se,DSY FP,2862,€494697.00,0.43%
+83,Sampo Oyj,SAMPO FH,13100,€494656.00,0.43%
+84,Vivendi Se,VIV FP,17035,€493504.00,0.43%
+85,Intuitive Surgical Inc,ISRG US,813,€493354.00,0.43%
+86,Allianz Se,ALV GR,2429,€490658.00,0.43%
+87,Fujitsu Ltd,6702 JP,4100,€490334.00,0.43%
+88,Axa Sa,CS FP,23140,€489411.00,0.43%
+89,Salesforce.Com Inc,CRM US,2555,€482992.00,0.42%
+90,Csx Corp,CSX US,6376,€480860.00,0.42%
+91,Netflix Inc,NFLX US,1071,€478989.00,0.42%
+92,Koninklijke Philips Nv,PHIA NA,10476,€477758.00,0.42%
+93,Kb Financial Group Inc,105560 KS,14417,€476424.00,0.42%
+94,Daiichi Sankyo Co Ltd,4568 JP,19400,€474776.00,0.41%
+95,Citigroup Inc,C US,8603,€474418.00,0.41%
+96,Danaher Corp,DHR US,2628,€471380.00,0.41%
+97,Smc Corp,6273 JP,929,€471157.00,0.41%
+98,Booking Holdings Inc,BKNG US,253,€470484.00,0.41%
+99,Johnson & Johnson,JNJ US,3514,€467882.00,0.41%
+100,Commonwealth Bank Of Australia,CBA AU,8567,€466786.00,0.41%
+101,Suzuki Motor Corp,7269 JP,12600,€466080.00,0.41%
+102,Suncor Energy Inc,SU CN,27148,€462398.00,0.40%
+103,Nokia Oyj,NOKIA FH,134351,€461899.00,0.40%
+104,United Parcel Service Inc,UPS US,3574,€460521.00,0.40%
+105,Olympus Corp,7733 JP,26200,€459867.00,0.40%
+106,Union Pacific Corp,UNP US,2692,€459538.00,0.40%
+107,Bank Of America Corp,BAC US,15583,€458031.00,0.40%
+108,Accenture Plc,ACN US,2196,€455907.00,0.40%
+109,Assicurazioni Generali Spa,G IM,28772,€455605.00,0.40%
+110,Intuit Inc,INTU US,1432,€454505.00,0.40%
+111,Dbs Group Holdings Ltd,DBS SP,27251,€454064.00,0.40%
+112,Compass Group Plc,CPG LN,26551,€453692.00,0.40%
+113,Texas Instruments Inc,TXN US,3227,€450180.00,0.39%
+114,Tjx Cos Inc/The,TJX US,8057,€446088.00,0.39%
+115,Swiss Re Ag,SREN SW,5655,€446073.00,0.39%
+116,Bank Of Nova Scotia/The,BNS CN,8996,€444739.00,0.39%
+117,Banco Santander Sa,SAN SM,149763,€444122.00,0.39%
+118,American Express Co,AXP US,3956,€443626.00,0.39%
+119,Microsoft Corp,MSFT US,2337,€437786.00,0.38%
+120,Canadian National Railway Co,CNR CN,4796,€437716.00,0.38%
+121,Transurban Group,TCL AU,53023,€436290.00,0.38%
+122,Essilorluxottica Sa,EL FP,3221,€434513.00,0.38%
+123,Charter Communications Inc,CHTR US,881,€433545.00,0.38%
+124,Shiseido Co Ltd,4911 JP,6900,€432809.00,0.38%
+125,L'Oreal Sa,OR FP,1402,€430274.00,0.38%
+126,Toronto-Dominion Bank/The,TD CN,8420,€429635.00,0.37%
+127,Hoya Corp,7741 JP,4400,€429505.00,0.37%
+128,Us Bancorp,USB US,10157,€428997.00,0.37%
+129,Legrand Sa,LR FP,5890,€428674.00,0.37%
+130,Abbott Laboratories,ABT US,4309,€428574.00,0.37%
+131,Mitsui Fudosan Co Ltd,8801 JP,22302,€428019.00,0.37%
+132,Amadeus It Group Sa,AMS SM,7175,€422751.00,0.37%
+133,Chubb Ltd,CB US,3111,€419771.00,0.37%
+134,Alcon Inc,ALC SW,7245,€418614.00,0.37%
+135,Societe Generale Sa,GLE FP,19936,€417061.00,0.36%
+136,Aia Group Ltd,1299 HK,39156,€416816.00,0.36%
+137,Adobe Inc,ADBE US,1098,€412433.00,0.36%
+138,Home Depot Inc/The,HD US,1973,€411983.00,0.36%
+139,Medtronic Plc,MDT US,4270,€411770.00,0.36%
+140,Vonovia Se,VNA GR,7731,€410516.00,0.36%
+141,Sumitomo Mitsui Financial Group Inc,8316 JP,13977,€410062.00,0.36%
+142,Industria De Diseno Textil Sa,ITX SM,14823,€409115.00,0.36%
+143,Intercontinental Exchange Inc,ICE US,4460,€408639.00,0.36%
+144,Zurich Insurance Group Ag,ZURN SW,1190,€408560.00,0.36%
+145,Deutsche Telekom Ag,DTE GR,27282,€408412.00,0.36%
+146,S&P Global Inc,SPGI US,1504,€406698.00,0.35%
+147,Bridgestone Corp,5108 JP,12246,€406697.00,0.35%
+148,Prologis Inc,PLD US,4845,€401861.00,0.35%
+149,Eli Lilly And Co,LLY US,2392,€398836.00,0.35%
+150,Smith & Nephew Plc,SN/ LN,24498,€398077.00,0.35%
+151,Ferrari Nv,RACE IM,2475,€395134.00,0.34%
+152,Zoetis Inc,ZTS US,3084,€394784.00,0.34%
+153,Fresenius Se & Co Kgaa,FRE GR,11203,€394570.00,0.34%
+154,Fujifilm Holdings Corp,4901 JP,8100,€394093.00,0.34%
+155,Oriental Land Co Ltd/Japan,4661 JP,2800,€394139.00,0.34%
+156,Royal Bank Of Canada,RY CN,5454,€393361.00,0.34%
+157,Air Products And Chemicals Inc,APD US,1843,€392572.00,0.34%
+158,Oracle Corp,ORCL US,7309,€390443.00,0.34%
+159,Mizuho Financial Group Inc,8411 JP,31840,€390468.00,0.34%
+160,Oversea-Chinese Banking Corp Ltd,OCBC SP,56900,€390160.00,0.34%
+161,Terumo Corp,4543 JP,12200,€386479.00,0.34%
+162,United Overseas Bank Ltd,UOB SP,25300,€386296.00,0.34%
+163,Boston Scientific Corp,BSX US,11897,€386088.00,0.34%
+164,Deutsche Boerse Ag,DB1 GR,2857,€385838.00,0.34%
+165,Chugai Pharmaceutical Co Ltd,4519 JP,10000,€384455.00,0.34%
+166,Svenska Handelsbanken Ab,SHBA SS,42657,€384247.00,0.34%
+167,Comcast Corp,CMCSA US,8961,€382954.00,0.33%
+168,Honda Motor Co Ltd,7267 JP,16428,€382693.00,0.33%
+169,Orix Corp,8591 JP,26924,€382413.00,0.33%
+170,Daiwa House Industry Co Ltd,1925 JP,15800,€382173.00,0.33%
+171,Vodafone Group Plc,VOD LN,264724,€381650.00,0.33%
+172,Glaxosmithkline Plc,GSK LN,27111,€381140.00,0.33%
+173,Automatic Data Processing Inc,ADP US,2647,€380095.00,0.33%
+174,Cigna Corp,CI US,2208,€378127.00,0.33%
+175,Global Payments Inc,GPN US,2317,€377934.00,0.33%
+176,Unitedhealth Group Inc,UNH US,1402,€377189.00,0.33%
+177,Woolworths Group Ltd,WOW AU,14383,€375267.00,0.33%
+178,M3 Inc,2413 JP,5700,€374695.00,0.33%
+179,Novo Nordisk A/S,NOVOB DC,6291,€374742.00,0.33%
+180,Givaudan Sa,GIVN SW,118,€372426.00,0.32%
+181,Otsuka Holdings Co Ltd,4578 JP,11016,€371869.00,0.32%
+182,Experian Plc,EXPN LN,13843,€370499.00,0.32%
+183,Enbridge Inc,ENB CN,12798,€369381.00,0.32%
+184,Relx Plc,REN NA,18493,€368288.00,0.32%
+185,Wolters Kluwer Nv,WKL NA,5555,€363964.00,0.32%
+186,Mitsubishi Estate Co Ltd,8802 JP,24567,€362552.00,0.32%
+187,Marsh & Mclennan Cos Inc,MMC US,3727,€360474.00,0.31%
+188,Cisco Systems Inc/Delaware,CSCO US,9648,€359274.00,0.31%
+189,Fiserv Inc,FISV US,3768,€358459.00,0.31%
+190,Kyocera Corp,6971 JP,6509,€358225.00,0.31%
+191,Tokio Marine Holdings Inc,8766 JP,8543,€353168.00,0.31%
+192,Anthem Inc,ANTM US,1437,€352949.00,0.31%
+193,Sun Hung Kai Properties Ltd,16 HK,26500,€349471.00,0.30%
+194,Sap Se,SAP GR,3380,€347194.00,0.30%
+195,Bt Group Plc,BT/A LN,235282,€346004.00,0.30%
+196,Cme Group Inc,CME US,2063,€345634.00,0.30%
+197,Standard Chartered Plc,STAN LN,62467,€345211.00,0.30%
+198,Astrazeneca Plc,AZN LN,4243,€343872.00,0.30%
+199,Nippon Telegraph & Telephone Corp,9432 JP,15974,€342603.00,0.30%
+200,Kddi Corp,9433 JP,13154,€342576.00,0.30%
+201,Reckitt Benckiser Group Plc,RB/ LN,4978,€342435.00,0.30%
+202,Fidelity National Information Services,FIS US,3005,€341234.00,0.30%
+203,Koninklijke Ahold Delhaize Nv,AD NA,15310,€341107.00,0.30%
+204,Telstra Corp Ltd,TLS AU,165181,€340865.00,0.30%
+205,Csl Ltd,CSL AU,1931,€339712.00,0.30%
+206,Astellas Pharma Inc,4503 JP,24900,€339768.00,0.30%
+207,Intel Corp,INTC US,6839,€337922.00,0.29%
+208,Takeda Pharmaceutical Co Ltd,4502 JP,12155,€337799.00,0.29%
+209,Sse Plc,SSE LN,21457,€336879.00,0.29%
+210,Cvs Health Corp,CVS US,5905,€334910.00,0.29%
+211,Ck Asset Holdings Ltd,1113 HK,66000,€330745.00,0.29%
+212,Eisai Co Ltd,4523 JP,5626,€329032.00,0.29%
+213,Bristol-Myers Squibb Co,BMY US,6332,€321676.00,0.28%
+214,Kerry Group Plc,KYG ID,3143,€320586.00,0.28%
+215,Novartis Ag,NOVN SW,4468,€319827.00,0.28%
+216,Canon Inc,7751 JP,17266,€316282.00,0.28%
+217,Danone Sa,BN FP,5371,€314204.00,0.27%
+218,Central Japan Railway Co,9022 JP,2291,€313760.00,0.27%
+219,Equinix Inc,EQIX US,595,€310725.00,0.27%
+220,Merck & Co Inc,MRK US,5082,€310225.00,0.27%
+221,Mondelez International Inc,MDLZ US,7016,€310164.00,0.27%
+222,Nestle Sa,NESN SW,3521,€306758.00,0.27%
+223,Amgen Inc,AMGN US,1648,€306735.00,0.27%
+224,Colgate-Palmolive Co,CL US,4879,€306095.00,0.27%
+225,Crown Castle International Corp,CCI US,2332,€304492.00,0.27%
+226,Sanofi,SAN FP,3979,€301011.00,0.26%
+227,Procter & Gamble Co/The,PG US,2897,€299986.00,0.26%
+228,Fresenius Medical Care Ag & Co Kgaa,FME GR,5146,€298571.00,0.26%
+229,Coca-Cola Co/The,KO US,7260,€297967.00,0.26%
+230,Roche Holding Ag,ROG SW,1104,€296998.00,0.26%
+231,Orange Sa,ORA FP,29843,€292282.00,0.25%
+232,Verizon Communications Inc,VZ US,6306,€291467.00,0.25%
+233,National Grid Plc,NG/ LN,30064,€286752.00,0.25%
+234,Pepsico Inc,PEP US,2682,€285226.00,0.25%
+235,Link Reit,823 HK,36400,€285137.00,0.25%
+236,Softbank Corp,9434 JP,25600,€283693.00,0.25%
+237,Vertex Pharmaceuticals Inc,VRTX US,1628,€283648.00,0.25%
+238,East Japan Railway Co,9020 JP,4653,€282981.00,0.25%
+239,Becton Dickinson And Co,BDX US,1378,€278610.00,0.24%
+240,American Tower Corp,AMT US,1505,€276709.00,0.24%
+241,Telefonica Sa,TEF SM,71969,€264054.00,0.23%
+242,Tesco Plc,TSCO LN,99657,€261771.00,0.23%
+243,Biogen Inc,BIIB US,1122,€254488.00,0.22%
+244,Kimberly-Clark Corp,KMB US,2377,€253879.00,0.22%
+245,At&T Inc,T US,10151,€237748.00,0.21%
+246,Gilead Sciences Inc,GILD US,4596,€236079.00,0.21%
+247,Hong Kong & China Gas Co Ltd,3 HK,189850,€233942.00,0.20%
+248,Siemens Energy Ag,ENR GR,2307,€70317.00,0.06%
+249,Other/Cash,,0,€494679.00,0.43%

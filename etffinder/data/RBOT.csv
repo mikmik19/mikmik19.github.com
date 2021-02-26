@@ -1,0 +1,168 @@
+Ticker,Name,Sector,Weight,Country
+SNAP,SNAP INC CLASS A,Communication,4.59,United States
+6594,NIDEC CORP,Industrials,2.67,Japan
+TER,TERADYNE INC,Information Technology,2.44,United States
+KLAC,KLA CORP,Information Technology,2.37,United States
+QCOM,QUALCOMM INC,Information Technology,2.19,United States
+NVDA,NVIDIA CORP,Information Technology,2.14,United States
+AMD,ADVANCED MICRO DEVICES INC,Information Technology,2.14,United States
+MCHP,MICROCHIP TECHNOLOGY INC,Information Technology,2.1,United States
+HEXA B,HEXAGON B,Information Technology,2.04,Sweden
+6201,TOYOTA INDUSTRIES CORP,Consumer Discretionary,1.94,Japan
+AAPL,APPLE INC,Information Technology,1.94,United States
+XLNX,XILINX INC,Information Technology,1.94,United States
+MRVL,MARVELL TECHNOLOGY GROUP LTD,Information Technology,1.92,United States
+EMR,EMERSON ELECTRIC,Industrials,1.91,United States
+NOW,SERVICENOW INC,Information Technology,1.91,United States
+6857,ADVANTEST CORP,Information Technology,1.91,Japan
+ANSS,ANSYS INC,Information Technology,1.84,United States
+GRMN,GARMIN LTD,Consumer Discretionary,1.83,United States
+AME,AMETEK INC,Industrials,1.82,United States
+ISRG,INTUITIVE SURGICAL INC,Health Care,1.8,United States
+ADSK,AUTODESK INC,Information Technology,1.78,United States
+6954,FANUC CORP,Industrials,1.7,Japan
+6645,OMRON CORP,Information Technology,1.63,Japan
+PTC,PTC INC,Information Technology,1.62,United States
+DSY,DASSAULT SYSTEMES,Information Technology,1.62,France
+CGNX,COGNEX CORP,Information Technology,1.57,United States
+ROK,ROCKWELL AUTOMATION INC,Industrials,1.56,United States
+6861,KEYENCE CORP,Information Technology,1.56,Japan
+6506,YASKAWA ELECTRIC CORP,Industrials,1.49,Japan
+INTC,INTEL CORPORATION CORP,Information Technology,1.38,United States
+HLMA,HALMA PLC,Information Technology,1.37,United Kingdom
+OTEX,OPEN TEXT CORP,Information Technology,1.34,Canada
+6383,DAIFUKU LTD,Industrials,1.32,Japan
+6920,LASERTEC CORP,Information Technology,1.29,Japan
+SAP,SAP,Information Technology,1.23,Germany
+6723,RENESAS ELECTRONICS CORP,Information Technology,1.23,Japan
+6479,MINEBEA MITSUMI INC,Industrials,1.16,Japan
+3008,LARGAN PRECISION LTD,Information Technology,1.15,Taiwan
+SPLK,SPLUNK INC,Information Technology,1.14,United States
+AZPN,ASPEN TECHNOLOGY INC,Information Technology,1.14,United States
+6963,ROHM LTD,Information Technology,1.03,Japan
+ESTC,ELASTIC NV,Information Technology,1.01,United States
+SGE,SAGE GROUP PLC,Information Technology,0.98,United Kingdom
+IPGP,IPG PHOTONICS CORP,Information Technology,0.97,United States
+IPHI,INPHI CORP,Information Technology,0.82,United States
+LECO,LINCOLN ELECTRIC HOLDINGS INC,Industrials,0.79,United States
+SLAB,SILICON LABORATORIES INC,Information Technology,0.77,United States
+MSTR,MICROSTRATEGY INC CLASS A,Information Technology,0.73,United States
+LSCC,LATTICE SEMICONDUCTOR CORP,Information Technology,0.72,United States
+6845,AZBIL CORP,Information Technology,0.71,Japan
+CDK,CDK GLOBAL INC,Information Technology,0.69,United States
+COHR,COHERENT INC,Information Technology,0.65,United States
+KGX,KION GROUP AG,Industrials,0.61,Germany
+6841,YOKOGAWA ELECTRIC CORP,Information Technology,0.58,Japan
+SXS,SPECTRIS PLC,Information Technology,0.57,United Kingdom
+AYX,ALTERYX INC CLASS A,Information Technology,0.57,United States
+G1A,GEA GROUP AG,Industrials,0.56,Germany
+TDC,TERADATA CORP,Information Technology,0.53,United States
+NOVT,NOVANTA INC,Information Technology,0.53,United States
+KRNT,KORNIT DIGITAL LTD,Industrials,0.51,Israel
+JBT,JOHN BEAN TECHNOLOGIES CORP,Industrials,0.5,United States
+VALMT,VALMET,Industrials,0.49,Finland
+DDD,3D SYSTEMS CORP,Information Technology,0.48,United States
+AMBA,AMBARELLA INC,Information Technology,0.44,United States
+PRLB,PROTO LABS INC,Industrials,0.44,United States
+CRNC,CERENCE INC,Information Technology,0.44,United States
+AIMC,ALTRA INDUSTRIAL MOTION CORP,Industrials,0.43,United States
+HI,HILLENBRAND INC,Industrials,0.39,United States
+DIOD,DIODES INC,Information Technology,0.38,United States
+NEM,NEMETSCHEK,Information Technology,0.38,Germany
+IRBT,IROBOT CORP,Consumer Discretionary,0.37,United States
+CLDR,CLOUDERA INC,Information Technology,0.37,United States
+ONTO,ONTO INNOVATION INC,Information Technology,0.36,United States
+MXL,MAXLINEAR INC,Information Technology,0.32,United States
+TOTS3,TOTVS SA,Information Technology,0.31,Brazil
+KCR,KONECRANES,Industrials,0.31,Finland
+RSW,RENISHAW PLC,Information Technology,0.3,United Kingdom
+6856,HORIBA LTD,Information Technology,0.29,Japan
+ALTR,ALTAIR ENGINEERING INC CLASS A,Information Technology,0.27,United States
+NVMI,NOVA MEASURING INSTRUMENTS LTD,Information Technology,0.25,Israel
+INRN,INTERROLL HOLDING AG,Industrials,0.25,Switzerland
+JUN3,JUNGHEINRICH PREF AG,Industrials,0.23,Germany
+CGCBV,CARGOTEC CORP,Industrials,0.23,Finland
+CON,CONZZETA AG,Industrials,0.22,Switzerland
+DUE,DUERR AG,Industrials,0.22,Germany
+5631,JAPAN STEEL WORKS LTD,Industrials,0.21,Japan
+SSYS,STRATASYS LTD,Information Technology,0.21,United States
+YEXT,YEXT INC,Information Technology,0.21,United States
+IFCN,INFICON HOLDING AG,Information Technology,0.21,Switzerland
+KAI,KADANT INC,Industrials,0.21,United States
+5269,ASMEDIA TECHNOLOGY INC,Information Technology,0.2,Taiwan
+ATA,ATS AUTOMATION TOOLING SYSTEMS INC,Industrials,0.2,Canada
+MOCORP,METSO OUTOTEC CORP,Industrials,0.2,Finland
+FARO,FARO TECHNOLOGIES INC,Information Technology,0.18,United States
+DOMO,DOMO INC CLASS B,Information Technology,0.17,United States
+TNE,TECHNOLOGY ONE LTD,Information Technology,0.17,Australia
+JPY,JPY CASH,Cash and/or Derivatives,0.17,Japan
+3406,GENIUS ELECTRONIC OPTICAL LTD,Information Technology,0.17,Taiwan
+ZUO,ZUORA INC CLASS A,Information Technology,0.16,United States
+7732,TOPCON CORP,Information Technology,0.15,Japan
+6707,SANKEN ELECTRIC LTD,Information Technology,0.15,Japan
+3443,GLOBAL UNICHIP CORP,Information Technology,0.15,Taiwan
+KARN,KARDEX HOLDING AG,Industrials,0.14,Switzerland
+HY,HYSTER YALE MATERIALS HANDLING INC,Industrials,0.14,United States
+CMCO,COLUMBUS MCKINNON CORP,Industrials,0.13,United States
+900926,SHANGHAI BAOSIGHT SOFTWARE LTD B,Information Technology,0.13,China
+MLAB,MESA LABORATORIES INC,Health Care,0.13,United States
+MTSC,MTS SYSTEMS CORP,Information Technology,0.12,United States
+KOMN,KOMAX HOLDING AG,Industrials,0.11,Switzerland
+ACP,ASSECO POLAND SA,Information Technology,0.1,Poland
+2498,HTC CORP,Information Technology,0.09,Taiwan
+7105,MITSUBISHI LOGISNEXT LTD,Industrials,0.08,Japan
+3019,ASIA OPTICAL INC,Information Technology,0.08,Taiwan
+056190,SFA ENGINEERING CORP,Industrials,0.08,Korea (South)
+6222,SHIMA SEIKI MFG LTD,Industrials,0.07,Japan
+3632,GREE INC,Communication,0.07,Japan
+6258,HIRATA CORP,Industrials,0.07,Japan
+MTRN,MAYTRONICS LTD,Consumer Discretionary,0.07,Israel
+6202,HOLTEK SEMICONDUCTOR INC,Information Technology,0.07,Taiwan
+6104,SHIBAURA MACHINE LTD,Industrials,0.06,Japan
+6875,MEGACHIPS CORP,Information Technology,0.06,Japan
+6516,SANYO DENKI LTD,Industrials,0.06,Japan
+6652,IDEC CORP,Industrials,0.06,Japan
+7717,V TECHNOLOGY LTD,Information Technology,0.05,Japan
+GBP,GBP CASH,Cash and/or Derivatives,0.05,United Kingdom
+EUR,EUR CASH,Cash and/or Derivatives,0.05,European Union
+5471,SONIX TECHNOLOGY LTD,Information Technology,0.05,Taiwan
+6877,OBARA GROUP INC,Industrials,0.04,Japan
+3035,FARADAY TECHNOLOGY CORP,Information Technology,0.04,Taiwan
+TWD,TWD CASH,Cash and/or Derivatives,0.02,Taiwan
+SEK,SEK CASH,Cash and/or Derivatives,0.02,Sweden
+CHF,CHF CASH,Cash and/or Derivatives,0.01,Switzerland
+HSBFT,CASH COLLATERAL USD HSBFT,Cash and/or Derivatives,0.01,United States
+KRW,KRW CASH,Cash and/or Derivatives,0.01,Korea (South)
+MARGIN_KRW,FUTURES KRW MARGIN BALANCE,Cash and/or Derivatives,0.0,Korea (South)
+BRL,BRL CASH,Cash and/or Derivatives,0.0,Brazil
+AUD,AUD CASH,Cash and/or Derivatives,0.0,Australia
+ILS,ILS CASH,Cash and/or Derivatives,0.0,Israel
+CAD,CAD CASH,Cash and/or Derivatives,0.0,Canada
+PLN,PLN CASH,Cash and/or Derivatives,0.0,Poland
+HKD,HKD CASH,Cash and/or Derivatives,0.0,Hong Kong
+MYR,MYR CASH,Cash and/or Derivatives,0.0,Malaysia
+CZK,CZK CASH,Cash and/or Derivatives,0.0,Czech Republic
+HUF,HUF CASH,Cash and/or Derivatives,0.0,Hungary
+ZAR,ZAR CASH,Cash and/or Derivatives,0.0,South Africa
+MXN,MXN CASH,Cash and/or Derivatives,0.0,Mexico
+TRY,TRY CASH,Cash and/or Derivatives,0.0,Turkey
+DKK,DKK CASH,Cash and/or Derivatives,0.0,Denmark
+NZD,NZD CASH,Cash and/or Derivatives,0.0,New Zealand
+NOK,NOK CASH,Cash and/or Derivatives,0.0,Norway
+SGD,SGD CASH,Cash and/or Derivatives,0.0,Singapore
+AED,AED CASH,Cash and/or Derivatives,0.0,United Arab Emirates
+MESH1,MSCI EMER MKT INDEX (ICE) MAR 21,Cash and/or Derivatives,0.0,-
+TWD,TWD/USD,Cash and/or Derivatives,0.0,United States
+JPY,JPY/USD,Cash and/or Derivatives,0.0,United States
+EUR,EUR/USD,Cash and/or Derivatives,0.0,United States
+GBP,GBP/USD,Cash and/or Derivatives,0.0,United States
+BRL,BRL/USD,Cash and/or Derivatives,0.0,United States
+KRW,KRW/USD,Cash and/or Derivatives,0.0,United States
+SEK,SEK/USD,Cash and/or Derivatives,0.0,United States
+CHF,CHF/USD,Cash and/or Derivatives,0.0,United States
+ILS,ILS/USD,Cash and/or Derivatives,0.0,United States
+AUD,AUD/USD,Cash and/or Derivatives,0.0,United States
+CAD,CAD/USD,Cash and/or Derivatives,0.0,United States
+PLN,PLN/USD,Cash and/or Derivatives,0.0,United States
+MARGIN_JPY,FUTURES JPY MARGIN BALANCE,Cash and/or Derivatives,0.0,Japan
+USD,USD CASH,Cash and/or Derivatives,-0.19,United States
