@@ -1,0 +1,56 @@
+﻿<table cellpadding="0" cellspacing="0" border="1">
+<tr><td colspan="6">All Fund Holdings as of 02/23/2021</td></tr>
+<tr><td>Number</td><td>Holding</td><td>Ticker</td><td>Shares</td><td>Market Value</td><td>% of net assets</td></tr>
+<tr>
+<td>1</td><td>Tencent Holdings Ltd</td><td>700 HK</td><td>1,097,540</td><td>$100,076,193.00</td><td>8.60%</td></tr>
+<tr>
+<td>2</td><td>Nvidia Corp</td><td>NVDA US</td><td>160,131</td><td>$90,582,904.00</td><td>7.78%</td></tr>
+<tr>
+<td>3</td><td>Sea Ltd</td><td>SE US</td><td>332,026</td><td>$83,607,467.00</td><td>7.18%</td></tr>
+<tr>
+<td>4</td><td>Bilibili Inc</td><td>BILI US</td><td>637,680</td><td>$82,426,517.00</td><td>7.08%</td></tr>
+<tr>
+<td>5</td><td>Nintendo Co Ltd</td><td>7974 JP</td><td>109,770</td><td>$71,042,697.00</td><td>6.10%</td></tr>
+<tr>
+<td>6</td><td>Netease Inc</td><td>NTES US</td><td>581,569</td><td>$69,933,672.00</td><td>6.01%</td></tr>
+<tr>
+<td>7</td><td>Advanced Micro Devices Inc</td><td>AMD US</td><td>806,764</td><td>$68,365,181.00</td><td>5.87%</td></tr>
+<tr>
+<td>8</td><td>Activision Blizzard Inc</td><td>ATVI US</td><td>689,537</td><td>$66,485,158.00</td><td>5.71%</td></tr>
+<tr>
+<td>9</td><td>Nexon Co Ltd</td><td>3659 JP</td><td>1,637,405</td><td>$54,364,681.00</td><td>4.67%</td></tr>
+<tr>
+<td>10</td><td>Electronic Arts Inc</td><td>EA US</td><td>349,845</td><td>$49,387,619.00</td><td>4.24%</td></tr>
+<tr>
+<td>11</td><td>Ncsoft Corp</td><td>036570 KS</td><td>57,489</td><td>$48,190,032.00</td><td>4.14%</td></tr>
+<tr>
+<td>12</td><td>Take-Two Interactive Software Inc</td><td>TTWO US</td><td>253,642</td><td>$47,164,730.00</td><td>4.05%</td></tr>
+<tr>
+<td>13</td><td>Zynga Inc</td><td>ZNGA US</td><td>4,112,660</td><td>$46,884,324.00</td><td>4.03%</td></tr>
+<tr>
+<td>14</td><td>Bandai Namco Holdings Inc</td><td>7832 JP</td><td>516,402</td><td>$42,956,943.00</td><td>3.69%</td></tr>
+<tr>
+<td>15</td><td>Unity Software Inc</td><td>U US</td><td>306,506</td><td>$33,902,629.00</td><td>2.91%</td></tr>
+<tr>
+<td>16</td><td>Ubisoft Entertainment Sa</td><td>UBI FP</td><td>317,520</td><td>$26,864,042.00</td><td>2.31%</td></tr>
+<tr>
+<td>17</td><td>Konami Holdings Corp</td><td>9766 JP</td><td>369,208</td><td>$26,202,651.00</td><td>2.25%</td></tr>
+<tr>
+<td>18</td><td>Cd Projekt Sa</td><td>CDR PW</td><td>335,694</td><td>$23,351,287.00</td><td>2.01%</td></tr>
+<tr>
+<td>19</td><td>Embracer Group Ab</td><td>EMBRACB SS</td><td>821,888</td><td>$23,347,260.00</td><td>2.01%</td></tr>
+<tr>
+<td>20</td><td>Kingsoft Corp Ltd</td><td>3888 HK</td><td>2,681,059</td><td>$22,855,927.00</td><td>1.96%</td></tr>
+<tr>
+<td>21</td><td>Micro-Star International Co Ltd</td><td>2377 TT</td><td>3,784,001</td><td>$21,912,837.00</td><td>1.88%</td></tr>
+<tr>
+<td>22</td><td>Capcom Co Ltd</td><td>9697 JP</td><td>316,208</td><td>$20,155,007.00</td><td>1.73%</td></tr>
+<tr>
+<td>23</td><td>Square Enix Holdings Co Ltd</td><td>9684 JP</td><td>280,205</td><td>$17,353,704.00</td><td>1.49%</td></tr>
+<tr>
+<td>24</td><td>Netmarble Corp</td><td>251270 KS</td><td>122,700</td><td>$13,864,719.00</td><td>1.19%</td></tr>
+<tr>
+<td>25</td><td>Stillfront Group Ab</td><td>SF SS</td><td>1,056,675</td><td>$12,491,077.00</td><td>1.07%</td></tr>
+<tr>
+<td>26</td><td>Other/Cash</td><td></td><td>0</td><td>$6,677.00</td><td>0.00%</td></tr>
+</table>

@@ -7,7 +7,6 @@ date: 2018-06-6 10:00:00 +0200
 In this post I summaries what I consider to be the main tools to come out of the field of Chaos theory.
 
 <head>
-    <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
     <script src="https://unpkg.com/d3-3d/build/d3-3d.min.js"></script>
     <style type="text/css">
         path {
@@ -68,6 +67,6 @@ This was a brief introduction to some of the tools of Chaos Theory. We can use t
 
 If this post has mad you want more, then you can have a look at the list I created of the reference which I found particularly help when getting into this field.
 
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lorenz-system.js'></script>
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/ln-c-ln-epsilon.js'></script>
-<script type='text/javascript' src='../../../../js/tools-of-chaos-theory/lagtimes.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/lorenz-system.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/ln-c-ln-epsilon.js'></script>
+<script type='text/javascript' src='/js/tools-of-chaos-theory/lagtimes.js'></script>

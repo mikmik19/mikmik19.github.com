@@ -1,0 +1,15 @@
+button {
+    width: 45%;
+}
+
+div#oscilloscope {
+    border: solid grey;
+    border-radius: 10px;
+}
+
+.line {
+    fill: none;
+    stroke: --var(dark-color);
+    stroke-width: 15px;
+    stroke-linecap: round;
+}

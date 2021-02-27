@@ -63,20 +63,14 @@ jQuery(function() {
           // If there are no results, let the user know.
           $search_results.html('<p>No results found</p>');
         }
-      });
+      }); 
     }
 
     function format_result_string(item) {
 
-      var appendString = `<div class="book-search-results">\
-                            <div class="wrapper">
-                              <div class="left">
-                                <h3>${return_link(item)}</h3>
-                                </div>\
-                                <div class="right">${'★'.repeat(item.stars)}</div>\
-                              </div>\
-                            <div class="author">${item.author}</div>\
-                          </div>`;
+      var appendString = `<div class="title">${return_link(item)}</div>\
+                          <div class="author">${item.author}</div>\
+                          <div class="stars">${'★'.repeat(item.stars)}</div>`;
       
       return appendString
     }

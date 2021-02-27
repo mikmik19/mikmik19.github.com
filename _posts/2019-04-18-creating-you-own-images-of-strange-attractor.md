@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Creating images of strange attractors"
+twitterCardTitle: "Strange Attractors"
 date: 2019-03-18 08:00:36 +0200
 ---
 My fascination with mathematics and generative art continues. Here I want to describe my current workflow for making images of strange attractors.
@@ -20,7 +21,7 @@ Given the point $$(x_n, y_n)$$ you can calculate the point  $$(x_{n+1}, y_{n+1})
 
 <center>
     <div>
-        <img src="../../../../assets/img/creating-you-own-strange-attractor/clifford_discovery_5.png">
+        <img src="/assets/img/creating-you-own-strange-attractor/clifford_discovery_5.png">
     </div>
 </center>
 
@@ -31,7 +32,7 @@ To make the process of discovery fast I generate images that are only 200 by 200
 
 <center>
     <div id="shape_selection">
-        <img id="shape_selection_main_image" src="../../../../assets/img/creating-you-own-strange-attractor/clifford_discovery_0.png" width="30%">
+        <img id="shape_selection_main_image" src="/assets/img/creating-you-own-strange-attractor/clifford_discovery_0.png" width="30%">
     </div>
     <div id="shape_selection_small"></div>
 </center>
@@ -40,7 +41,7 @@ Once I have my favorite pattern I need to decide on a color scheme. For this, I 
 
 <center>
     <div id="color_selection">
-        <img id="color_selection_main_image" src="../../../../assets/img/creating-you-own-strange-attractor/color_selection_0.png" width="70%">
+        <img id="color_selection_main_image" src="/assets/img/creating-you-own-strange-attractor/color_selection_0.png" width="70%">
     </div>
     <div id="color_selection_small"></div>
 </center>
@@ -49,7 +50,7 @@ This gives you an idea that the shape looks like in different colors. However, t
 
 <center>
     <div>
-        <img src="../../../../assets/img/creating-you-own-strange-attractor/selected_color.png" width="70%">
+        <img src="/assets/img/creating-you-own-strange-attractor/selected_color.png" width="70%">
     </div>
 </center>
 
@@ -58,6 +59,5 @@ And thats it. I love that equation can produce a seemingly endless number of pat
 To force myself to make the final design decision when creating these images, I've created a profile on [Society6](https://society6.com/). This allows me to sell merchandise without worrying about storage and production. It will be interesting to see if anything comes of it. If nothing else it is motivating thing thinnk that the images can end up on real physical things. The pattern shown above is available for poster prints and other merchandise together with a collection of other patterns at my [Society6 profile](https://society6.com/mikkelhartmann).
 
 
-<link rel="stylesheet" href="../../../../css/strange-attractors.css">
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-<script src="../../../../js/creating-you-own-strange-attractor/creating-you-own-strange-attractor.js"></script>
+<link rel="stylesheet" href="/css/strange-attractors.css">
+<script src="/js/creating-you-own-strange-attractor/creating-you-own-strange-attractor.js"></script>

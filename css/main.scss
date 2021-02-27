@@ -36,48 +36,10 @@ $on-laptop: 780px;
   hyphens: auto;
 }
 @import "normalize", "base", "layout", "color", "syntax-highlighting"; /* *************************** */ /* Headder */ /* *************************** */
-.menu {
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  a {
-    text-decoration: none;
-  }
-  > a {
-    display: flex;
-    align-items: center;
-    color: inherit;
-  }
-  > a img {
-    padding: 0;
-    margin-right: 10px;
-    border-radius: 45px;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-  }
-  ul li {
-    &:first-child {
-      padding-left: 0;
-    }
-    padding-left: 1em;
-  }
-}
 
-@media (max-width: 500px) {
-  ul {
-    font-size: 0.7em;
-    padding-left: 0;
-  }
-}
 
 /* *************************** */ /* Posts */ /* *************************** */ /* Posts headder */
 p.appetizer, div.appetizer {
-  color: black;
   text-align: center;
   font-family: "Muli";
   font-style: italic;
@@ -91,14 +53,15 @@ p.appetizer, div.appetizer {
     content: " ";
     font-weight: lighter;
     width: 100%;
-    height: 5px;
+    height: 8px;
     display: block;
     background: url(/assets/img/texture.png),
     linear-gradient(
       135deg,
-      var(--dynamic-color-dark) 0%,
-      var(--dynamic-color-light) 100%
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
     );
+    box-shadow: -3px 2px 3px black inset;
 }
 
 .appetizer::after {
@@ -106,7 +69,7 @@ p.appetizer, div.appetizer {
 }
 
 .article_title, .post-title {
-  color: var(--dynamic-color-dark);
+  color: var(--primary-color);
   text-align: center;
   margin: 30px;
   font-size: clamp(2rem, 3.5rem, 5rem);
@@ -134,4 +97,10 @@ p.appetizer, div.appetizer {
   display: flex;
   justify-content: space-between;
   margin: 5px 0px;
+}
+
+.posts a {
+  text-align: left;
+  padding-right: 3rem;
+  max-width: 70%;
 }

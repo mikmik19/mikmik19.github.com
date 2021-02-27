@@ -1,0 +1,7 @@
+#mySvgPlainD3 svg{
+  fill: var(--primary-color);
+}
+
+#mySvgPlainD3 path{
+  stroke: var(--primary-color);
+}

@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Getting Into: Tableau"
+twitterCardTitle: Getting Into Tableau
 date:   2017-12-09 10:15:00 +0200
 ---
 Recently I had to learn Tableau at work. This is a list of links that I found particularly interesting during the learning process.

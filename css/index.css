@@ -1,38 +1,9 @@
 a {
-  color: var(--dynamic-color-dark);
+  color: var(--primary-color);
 }
 
 a:hover {
-  color: var(--dynamic-color-light);
-}
-
-li#search {
-  font-weight: 400;
-  color: var(--dynamic-color-dark);
-}
-
-li#search:hover {
-  color: var(--dynamic-color-light);
-}
-
-.site-footer {
-  font-size: 1.2em;
-  color: white;
-  background: url(/assets/img/texture.png),
-    linear-gradient(
-      135deg,
-      var(--dynamic-color-dark) 0%,
-      var(--dynamic-color-light) 100%
-    );
-}
-
-.site-footer a {
-  color: white;
-  font-size: 1.2em;
-}
-
-.site-footer a:hover {
-  color: var(--dynamic-color-light);
+  color: var(--secondary-color);
 }
 
 /* *************************** */ /* Scroll progress indicator */ /* *************************** */
@@ -46,5 +17,7 @@ li#search:hover {
 }
 .scroll-indicator-progress {
   height: 100%;
-  background-color: var(--dynamic-color-dark);
+  background-color: var(--primary-color);
 }
+
+

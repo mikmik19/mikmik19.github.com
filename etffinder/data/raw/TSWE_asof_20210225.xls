@@ -1,0 +1,502 @@
+﻿<table cellpadding="0" cellspacing="0" border="1">
+<tr><td colspan="6">All Fund Holdings as of 02/25/2021</td></tr>
+<tr><td>Number</td><td>Holding</td><td>Ticker</td><td>Shares</td><td>Market Value</td><td>% of net assets</td></tr>
+<tr>
+<td>1</td><td>Tesla Inc</td><td>TSLA US</td><td>4,021</td><td>€2,244,116.00</td><td>1.96%</td></tr>
+<tr>
+<td>2</td><td>Shopify Inc</td><td>SHOP US</td><td>974</td><td>€992,087.00</td><td>0.87%</td></tr>
+<tr>
+<td>3</td><td>Infineon Technologies Ag</td><td>IFX GR</td><td>24,907</td><td>€880,462.00</td><td>0.77%</td></tr>
+<tr>
+<td>4</td><td>Adyen Nv</td><td>ADYEN NA</td><td>438</td><td>€847,311.00</td><td>0.74%</td></tr>
+<tr>
+<td>5</td><td>Softbank Group Corp</td><td>9984 JP</td><td>10,254</td><td>€818,199.00</td><td>0.71%</td></tr>
+<tr>
+<td>6</td><td>Naver Corp</td><td>035420 KS</td><td>2,850</td><td>€806,063.00</td><td>0.70%</td></tr>
+<tr>
+<td>7</td><td>Deere & Co</td><td>DE US</td><td>2,730</td><td>€777,260.00</td><td>0.68%</td></tr>
+<tr>
+<td>8</td><td>Nidec Corp</td><td>6594 JP</td><td>6,916</td><td>€751,240.00</td><td>0.66%</td></tr>
+<tr>
+<td>9</td><td>Xiaomi Corp</td><td>1810 HK</td><td>264,800</td><td>€750,097.00</td><td>0.65%</td></tr>
+<tr>
+<td>10</td><td>Paypal Holdings Inc</td><td>PYPL US</td><td>3,535</td><td>€734,357.00</td><td>0.64%</td></tr>
+<tr>
+<td>11</td><td>Capgemini Se</td><td>CAP FP</td><td>5,411</td><td>€724,803.00</td><td>0.63%</td></tr>
+<tr>
+<td>12</td><td>Applied Materials Inc</td><td>AMAT US</td><td>7,719</td><td>€719,426.00</td><td>0.63%</td></tr>
+<tr>
+<td>13</td><td>Tokyo Electron Ltd</td><td>8035 JP</td><td>2,045</td><td>€719,459.00</td><td>0.63%</td></tr>
+<tr>
+<td>14</td><td>Asml Holding Nv</td><td>ASML NA</td><td>1,488</td><td>€706,726.00</td><td>0.62%</td></tr>
+<tr>
+<td>15</td><td>Vestas Wind Systems A/S</td><td>VWS DC</td><td>4,393</td><td>€699,178.00</td><td>0.61%</td></tr>
+<tr>
+<td>16</td><td>Nvidia Corp</td><td>NVDA US</td><td>1,592</td><td>€693,244.00</td><td>0.60%</td></tr>
+<tr>
+<td>17</td><td>Fast Retailing Co Ltd</td><td>9983 JP</td><td>800</td><td>€674,682.00</td><td>0.59%</td></tr>
+<tr>
+<td>18</td><td>Micron Technology Inc</td><td>MU US</td><td>9,263</td><td>€667,748.00</td><td>0.58%</td></tr>
+<tr>
+<td>19</td><td>Dsv Panalpina A/S</td><td>DSV DC</td><td>4,380</td><td>€662,356.00</td><td>0.58%</td></tr>
+<tr>
+<td>20</td><td>Morgan Stanley</td><td>MS US</td><td>10,239</td><td>€656,941.00</td><td>0.57%</td></tr>
+<tr>
+<td>21</td><td>Broadcom Inc</td><td>AVGO US</td><td>1,734</td><td>€648,491.00</td><td>0.57%</td></tr>
+<tr>
+<td>22</td><td>Sandvik Ab</td><td>SAND SS</td><td>28,030</td><td>€641,800.00</td><td>0.56%</td></tr>
+<tr>
+<td>23</td><td>Capital One Financial Corp</td><td>COF US</td><td>6,422</td><td>€626,439.00</td><td>0.55%</td></tr>
+<tr>
+<td>24</td><td>Ing Groep Nv</td><td>INGA NA</td><td>67,666</td><td>€624,422.00</td><td>0.54%</td></tr>
+<tr>
+<td>25</td><td>Deutsche Post Ag</td><td>DPW GR</td><td>15,033</td><td>€621,164.00</td><td>0.54%</td></tr>
+<tr>
+<td>26</td><td>Prudential Plc</td><td>PRU LN</td><td>36,769</td><td>€616,602.00</td><td>0.54%</td></tr>
+<tr>
+<td>27</td><td>Hong Kong Exchanges & Clearing Ltd</td><td>388 HK</td><td>11,542</td><td>€608,845.00</td><td>0.53%</td></tr>
+<tr>
+<td>28</td><td>Lowe's Cos Inc</td><td>LOW US</td><td>4,689</td><td>€608,066.00</td><td>0.53%</td></tr>
+<tr>
+<td>29</td><td>Siemens Ag</td><td>SIE GR</td><td>4,661</td><td>€606,769.00</td><td>0.53%</td></tr>
+<tr>
+<td>30</td><td>Denso Corp</td><td>6902 JP</td><td>11,670</td><td>€599,230.00</td><td>0.52%</td></tr>
+<tr>
+<td>31</td><td>Prosus Nv</td><td>PRX NA</td><td>6,003</td><td>€596,218.00</td><td>0.52%</td></tr>
+<tr>
+<td>32</td><td>T-Mobile Us Inc</td><td>TMUS US</td><td>5,984</td><td>€591,791.00</td><td>0.52%</td></tr>
+<tr>
+<td>33</td><td>Kubota Corp</td><td>6326 JP</td><td>30,281</td><td>€587,678.00</td><td>0.51%</td></tr>
+<tr>
+<td>34</td><td>Sk Hynix Inc</td><td>000660 KS</td><td>5,356</td><td>€587,344.00</td><td>0.51%</td></tr>
+<tr>
+<td>35</td><td>Nintendo Co Ltd</td><td>7974 JP</td><td>1,116</td><td>€587,304.00</td><td>0.51%</td></tr>
+<tr>
+<td>36</td><td>Recruit Holdings Co Ltd</td><td>6098 JP</td><td>13,784</td><td>€585,217.00</td><td>0.51%</td></tr>
+<tr>
+<td>37</td><td>Ferguson Plc</td><td>FERG LN</td><td>5,879</td><td>€584,395.00</td><td>0.51%</td></tr>
+<tr>
+<td>38</td><td>Murata Manufacturing Co Ltd</td><td>6981 JP</td><td>7,870</td><td>€580,352.00</td><td>0.51%</td></tr>
+<tr>
+<td>39</td><td>Walt Disney Co/The</td><td>DIS US</td><td>3,702</td><td>€578,377.00</td><td>0.50%</td></tr>
+<tr>
+<td>40</td><td>Schlumberger Nv</td><td>SLB US</td><td>24,733</td><td>€576,847.00</td><td>0.50%</td></tr>
+<tr>
+<td>41</td><td>Crh Plc</td><td>CRH LN</td><td>15,596</td><td>€575,188.00</td><td>0.50%</td></tr>
+<tr>
+<td>42</td><td>Samsung Electronics Co Ltd</td><td>005930 KS</td><td>9,105</td><td>€573,528.00</td><td>0.50%</td></tr>
+<tr>
+<td>43</td><td>Conocophillips</td><td>COP US</td><td>13,191</td><td>€572,250.00</td><td>0.50%</td></tr>
+<tr>
+<td>44</td><td>Sony Corp</td><td>6758 JP</td><td>6,412</td><td>€571,115.00</td><td>0.50%</td></tr>
+<tr>
+<td>45</td><td>Panasonic Corp</td><td>6752 JP</td><td>51,272</td><td>€569,565.00</td><td>0.50%</td></tr>
+<tr>
+<td>46</td><td>Abbvie Inc</td><td>ABBV US</td><td>6,482</td><td>€569,137.00</td><td>0.50%</td></tr>
+<tr>
+<td>47</td><td>Truist Financial Corp</td><td>TFC US</td><td>11,830</td><td>€567,403.00</td><td>0.49%</td></tr>
+<tr>
+<td>48</td><td>Atlas Copco Ab</td><td>ATCOA SS</td><td>11,586</td><td>€564,389.00</td><td>0.49%</td></tr>
+<tr>
+<td>49</td><td>Equinor Asa</td><td>EQNR NO</td><td>33,848</td><td>€562,805.00</td><td>0.49%</td></tr>
+<tr>
+<td>50</td><td>American International Group Inc</td><td>AIG US</td><td>15,549</td><td>€559,047.00</td><td>0.49%</td></tr>
+<tr>
+<td>51</td><td>Qualcomm Inc</td><td>QCOM US</td><td>5,024</td><td>€557,021.00</td><td>0.49%</td></tr>
+<tr>
+<td>52</td><td>Advanced Micro Devices Inc</td><td>AMD US</td><td>8,261</td><td>€556,996.00</td><td>0.49%</td></tr>
+<tr>
+<td>53</td><td>Bank Of Montreal</td><td>BMO CN</td><td>8,000</td><td>€553,667.00</td><td>0.48%</td></tr>
+<tr>
+<td>54</td><td>National Australia Bank Ltd</td><td>NAB AU</td><td>33,670</td><td>€551,245.00</td><td>0.48%</td></tr>
+<tr>
+<td>55</td><td>Nike Inc</td><td>NKE US</td><td>4,954</td><td>€549,301.00</td><td>0.48%</td></tr>
+<tr>
+<td>56</td><td>Australia & New Zealand Banking Group L</td><td>ANZ AU</td><td>31,492</td><td>€548,797.00</td><td>0.48%</td></tr>
+<tr>
+<td>57</td><td>Simon Property Group Inc</td><td>SPG US</td><td>5,819</td><td>€546,579.00</td><td>0.48%</td></tr>
+<tr>
+<td>58</td><td>Apple Inc</td><td>AAPL US</td><td>5,473</td><td>€541,704.00</td><td>0.47%</td></tr>
+<tr>
+<td>59</td><td>Schneider Electric Se</td><td>SU FP</td><td>4,296</td><td>€536,570.00</td><td>0.47%</td></tr>
+<tr>
+<td>60</td><td>Adidas Ag</td><td>ADS GR</td><td>1,823</td><td>€534,321.00</td><td>0.47%</td></tr>
+<tr>
+<td>61</td><td>Lonza Group Ag</td><td>LONN SW</td><td>1,009</td><td>€533,470.00</td><td>0.47%</td></tr>
+<tr>
+<td>62</td><td>Charles Schwab Corp/The</td><td>SCHW US</td><td>10,281</td><td>€530,703.00</td><td>0.46%</td></tr>
+<tr>
+<td>63</td><td>Banco Bilbao Vizcaya Argentaria Sa</td><td>BBVA SM</td><td>111,909</td><td>€526,420.00</td><td>0.46%</td></tr>
+<tr>
+<td>64</td><td>Macquarie Group Ltd</td><td>MQG AU</td><td>5,546</td><td>€524,649.00</td><td>0.46%</td></tr>
+<tr>
+<td>65</td><td>London Stock Exchange Group Plc</td><td>LSEG LN</td><td>4,669</td><td>€524,142.00</td><td>0.46%</td></tr>
+<tr>
+<td>66</td><td>Emerson Electric Co</td><td>EMR US</td><td>7,302</td><td>€521,665.00</td><td>0.45%</td></tr>
+<tr>
+<td>67</td><td>Servicenow Inc</td><td>NOW US</td><td>1,204</td><td>€520,831.00</td><td>0.45%</td></tr>
+<tr>
+<td>68</td><td>Abb Ltd</td><td>ABBN SW</td><td>21,449</td><td>€519,620.00</td><td>0.45%</td></tr>
+<tr>
+<td>69</td><td>Kbc Group Nv</td><td>KBC BB</td><td>8,308</td><td>€516,259.00</td><td>0.45%</td></tr>
+<tr>
+<td>70</td><td>Keyence Corp</td><td>6861 JP</td><td>1,250</td><td>€515,692.00</td><td>0.45%</td></tr>
+<tr>
+<td>71</td><td>Norfolk Southern Corp</td><td>NSC US</td><td>2,479</td><td>€515,309.00</td><td>0.45%</td></tr>
+<tr>
+<td>72</td><td>Nordea Bank Abp</td><td>NDA SS</td><td>66,864</td><td>€515,195.00</td><td>0.45%</td></tr>
+<tr>
+<td>73</td><td>Legal & General Group Plc</td><td>LGEN LN</td><td>164,079</td><td>€511,611.00</td><td>0.45%</td></tr>
+<tr>
+<td>74</td><td>Pnc Financial Services Group Inc/The</td><td>PNC US</td><td>3,607</td><td>€511,248.00</td><td>0.45%</td></tr>
+<tr>
+<td>75</td><td>Cie Generale Des Etablissements Micheli</td><td>ML FP</td><td>4,312</td><td>€509,678.00</td><td>0.44%</td></tr>
+<tr>
+<td>76</td><td>Woodside Petroleum Ltd</td><td>WPL AU</td><td>30,659</td><td>€507,537.00</td><td>0.44%</td></tr>
+<tr>
+<td>77</td><td>Dai-Ichi Life Holdings Inc</td><td>8750 JP</td><td>34,810</td><td>€506,346.00</td><td>0.44%</td></tr>
+<tr>
+<td>78</td><td>Starbucks Corp</td><td>SBUX US</td><td>5,871</td><td>€496,951.00</td><td>0.43%</td></tr>
+<tr>
+<td>79</td><td>Aviva Plc</td><td>AV/ LN</td><td>115,263</td><td>€496,788.00</td><td>0.43%</td></tr>
+<tr>
+<td>80</td><td>Stryker Corp</td><td>SYK US</td><td>2,470</td><td>€496,627.00</td><td>0.43%</td></tr>
+<tr>
+<td>81</td><td>Muenchener Rueckversicherungs-Gesellsch</td><td>MUV2 GR</td><td>2,022</td><td>€495,390.00</td><td>0.43%</td></tr>
+<tr>
+<td>82</td><td>Dassault Systemes Se</td><td>DSY FP</td><td>2,862</td><td>€494,697.00</td><td>0.43%</td></tr>
+<tr>
+<td>83</td><td>Sampo Oyj</td><td>SAMPO FH</td><td>13,100</td><td>€494,656.00</td><td>0.43%</td></tr>
+<tr>
+<td>84</td><td>Vivendi Se</td><td>VIV FP</td><td>17,035</td><td>€493,504.00</td><td>0.43%</td></tr>
+<tr>
+<td>85</td><td>Intuitive Surgical Inc</td><td>ISRG US</td><td>813</td><td>€493,354.00</td><td>0.43%</td></tr>
+<tr>
+<td>86</td><td>Allianz Se</td><td>ALV GR</td><td>2,429</td><td>€490,658.00</td><td>0.43%</td></tr>
+<tr>
+<td>87</td><td>Fujitsu Ltd</td><td>6702 JP</td><td>4,100</td><td>€490,334.00</td><td>0.43%</td></tr>
+<tr>
+<td>88</td><td>Axa Sa</td><td>CS FP</td><td>23,140</td><td>€489,411.00</td><td>0.43%</td></tr>
+<tr>
+<td>89</td><td>Salesforce.Com Inc</td><td>CRM US</td><td>2,555</td><td>€482,992.00</td><td>0.42%</td></tr>
+<tr>
+<td>90</td><td>Csx Corp</td><td>CSX US</td><td>6,376</td><td>€480,860.00</td><td>0.42%</td></tr>
+<tr>
+<td>91</td><td>Netflix Inc</td><td>NFLX US</td><td>1,071</td><td>€478,989.00</td><td>0.42%</td></tr>
+<tr>
+<td>92</td><td>Koninklijke Philips Nv</td><td>PHIA NA</td><td>10,476</td><td>€477,758.00</td><td>0.42%</td></tr>
+<tr>
+<td>93</td><td>Kb Financial Group Inc</td><td>105560 KS</td><td>14,417</td><td>€476,424.00</td><td>0.42%</td></tr>
+<tr>
+<td>94</td><td>Daiichi Sankyo Co Ltd</td><td>4568 JP</td><td>19,400</td><td>€474,776.00</td><td>0.41%</td></tr>
+<tr>
+<td>95</td><td>Citigroup Inc</td><td>C US</td><td>8,603</td><td>€474,418.00</td><td>0.41%</td></tr>
+<tr>
+<td>96</td><td>Danaher Corp</td><td>DHR US</td><td>2,628</td><td>€471,380.00</td><td>0.41%</td></tr>
+<tr>
+<td>97</td><td>Smc Corp</td><td>6273 JP</td><td>929</td><td>€471,157.00</td><td>0.41%</td></tr>
+<tr>
+<td>98</td><td>Booking Holdings Inc</td><td>BKNG US</td><td>253</td><td>€470,484.00</td><td>0.41%</td></tr>
+<tr>
+<td>99</td><td>Johnson & Johnson</td><td>JNJ US</td><td>3,514</td><td>€467,882.00</td><td>0.41%</td></tr>
+<tr>
+<td>100</td><td>Commonwealth Bank Of Australia</td><td>CBA AU</td><td>8,567</td><td>€466,786.00</td><td>0.41%</td></tr>
+<tr>
+<td>101</td><td>Suzuki Motor Corp</td><td>7269 JP</td><td>12,600</td><td>€466,080.00</td><td>0.41%</td></tr>
+<tr>
+<td>102</td><td>Suncor Energy Inc</td><td>SU CN</td><td>27,148</td><td>€462,398.00</td><td>0.40%</td></tr>
+<tr>
+<td>103</td><td>Nokia Oyj</td><td>NOKIA FH</td><td>134,351</td><td>€461,899.00</td><td>0.40%</td></tr>
+<tr>
+<td>104</td><td>United Parcel Service Inc</td><td>UPS US</td><td>3,574</td><td>€460,521.00</td><td>0.40%</td></tr>
+<tr>
+<td>105</td><td>Olympus Corp</td><td>7733 JP</td><td>26,200</td><td>€459,867.00</td><td>0.40%</td></tr>
+<tr>
+<td>106</td><td>Union Pacific Corp</td><td>UNP US</td><td>2,692</td><td>€459,538.00</td><td>0.40%</td></tr>
+<tr>
+<td>107</td><td>Bank Of America Corp</td><td>BAC US</td><td>15,583</td><td>€458,031.00</td><td>0.40%</td></tr>
+<tr>
+<td>108</td><td>Accenture Plc</td><td>ACN US</td><td>2,196</td><td>€455,907.00</td><td>0.40%</td></tr>
+<tr>
+<td>109</td><td>Assicurazioni Generali Spa</td><td>G IM</td><td>28,772</td><td>€455,605.00</td><td>0.40%</td></tr>
+<tr>
+<td>110</td><td>Intuit Inc</td><td>INTU US</td><td>1,432</td><td>€454,505.00</td><td>0.40%</td></tr>
+<tr>
+<td>111</td><td>Dbs Group Holdings Ltd</td><td>DBS SP</td><td>27,251</td><td>€454,064.00</td><td>0.40%</td></tr>
+<tr>
+<td>112</td><td>Compass Group Plc</td><td>CPG LN</td><td>26,551</td><td>€453,692.00</td><td>0.40%</td></tr>
+<tr>
+<td>113</td><td>Texas Instruments Inc</td><td>TXN US</td><td>3,227</td><td>€450,180.00</td><td>0.39%</td></tr>
+<tr>
+<td>114</td><td>Tjx Cos Inc/The</td><td>TJX US</td><td>8,057</td><td>€446,088.00</td><td>0.39%</td></tr>
+<tr>
+<td>115</td><td>Swiss Re Ag</td><td>SREN SW</td><td>5,655</td><td>€446,073.00</td><td>0.39%</td></tr>
+<tr>
+<td>116</td><td>Bank Of Nova Scotia/The</td><td>BNS CN</td><td>8,996</td><td>€444,739.00</td><td>0.39%</td></tr>
+<tr>
+<td>117</td><td>Banco Santander Sa</td><td>SAN SM</td><td>149,763</td><td>€444,122.00</td><td>0.39%</td></tr>
+<tr>
+<td>118</td><td>American Express Co</td><td>AXP US</td><td>3,956</td><td>€443,626.00</td><td>0.39%</td></tr>
+<tr>
+<td>119</td><td>Microsoft Corp</td><td>MSFT US</td><td>2,337</td><td>€437,786.00</td><td>0.38%</td></tr>
+<tr>
+<td>120</td><td>Canadian National Railway Co</td><td>CNR CN</td><td>4,796</td><td>€437,716.00</td><td>0.38%</td></tr>
+<tr>
+<td>121</td><td>Transurban Group</td><td>TCL AU</td><td>53,023</td><td>€436,290.00</td><td>0.38%</td></tr>
+<tr>
+<td>122</td><td>Essilorluxottica Sa</td><td>EL FP</td><td>3,221</td><td>€434,513.00</td><td>0.38%</td></tr>
+<tr>
+<td>123</td><td>Charter Communications Inc</td><td>CHTR US</td><td>881</td><td>€433,545.00</td><td>0.38%</td></tr>
+<tr>
+<td>124</td><td>Shiseido Co Ltd</td><td>4911 JP</td><td>6,900</td><td>€432,809.00</td><td>0.38%</td></tr>
+<tr>
+<td>125</td><td>L'Oreal Sa</td><td>OR FP</td><td>1,402</td><td>€430,274.00</td><td>0.38%</td></tr>
+<tr>
+<td>126</td><td>Toronto-Dominion Bank/The</td><td>TD CN</td><td>8,420</td><td>€429,635.00</td><td>0.37%</td></tr>
+<tr>
+<td>127</td><td>Hoya Corp</td><td>7741 JP</td><td>4,400</td><td>€429,505.00</td><td>0.37%</td></tr>
+<tr>
+<td>128</td><td>Us Bancorp</td><td>USB US</td><td>10,157</td><td>€428,997.00</td><td>0.37%</td></tr>
+<tr>
+<td>129</td><td>Legrand Sa</td><td>LR FP</td><td>5,890</td><td>€428,674.00</td><td>0.37%</td></tr>
+<tr>
+<td>130</td><td>Abbott Laboratories</td><td>ABT US</td><td>4,309</td><td>€428,574.00</td><td>0.37%</td></tr>
+<tr>
+<td>131</td><td>Mitsui Fudosan Co Ltd</td><td>8801 JP</td><td>22,302</td><td>€428,019.00</td><td>0.37%</td></tr>
+<tr>
+<td>132</td><td>Amadeus It Group Sa</td><td>AMS SM</td><td>7,175</td><td>€422,751.00</td><td>0.37%</td></tr>
+<tr>
+<td>133</td><td>Chubb Ltd</td><td>CB US</td><td>3,111</td><td>€419,771.00</td><td>0.37%</td></tr>
+<tr>
+<td>134</td><td>Alcon Inc</td><td>ALC SW</td><td>7,245</td><td>€418,614.00</td><td>0.37%</td></tr>
+<tr>
+<td>135</td><td>Societe Generale Sa</td><td>GLE FP</td><td>19,936</td><td>€417,061.00</td><td>0.36%</td></tr>
+<tr>
+<td>136</td><td>Aia Group Ltd</td><td>1299 HK</td><td>39,156</td><td>€416,816.00</td><td>0.36%</td></tr>
+<tr>
+<td>137</td><td>Adobe Inc</td><td>ADBE US</td><td>1,098</td><td>€412,433.00</td><td>0.36%</td></tr>
+<tr>
+<td>138</td><td>Home Depot Inc/The</td><td>HD US</td><td>1,973</td><td>€411,983.00</td><td>0.36%</td></tr>
+<tr>
+<td>139</td><td>Medtronic Plc</td><td>MDT US</td><td>4,270</td><td>€411,770.00</td><td>0.36%</td></tr>
+<tr>
+<td>140</td><td>Vonovia Se</td><td>VNA GR</td><td>7,731</td><td>€410,516.00</td><td>0.36%</td></tr>
+<tr>
+<td>141</td><td>Sumitomo Mitsui Financial Group Inc</td><td>8316 JP</td><td>13,977</td><td>€410,062.00</td><td>0.36%</td></tr>
+<tr>
+<td>142</td><td>Industria De Diseno Textil Sa</td><td>ITX SM</td><td>14,823</td><td>€409,115.00</td><td>0.36%</td></tr>
+<tr>
+<td>143</td><td>Intercontinental Exchange Inc</td><td>ICE US</td><td>4,460</td><td>€408,639.00</td><td>0.36%</td></tr>
+<tr>
+<td>144</td><td>Zurich Insurance Group Ag</td><td>ZURN SW</td><td>1,190</td><td>€408,560.00</td><td>0.36%</td></tr>
+<tr>
+<td>145</td><td>Deutsche Telekom Ag</td><td>DTE GR</td><td>27,282</td><td>€408,412.00</td><td>0.36%</td></tr>
+<tr>
+<td>146</td><td>S&P Global Inc</td><td>SPGI US</td><td>1,504</td><td>€406,698.00</td><td>0.35%</td></tr>
+<tr>
+<td>147</td><td>Bridgestone Corp</td><td>5108 JP</td><td>12,246</td><td>€406,697.00</td><td>0.35%</td></tr>
+<tr>
+<td>148</td><td>Prologis Inc</td><td>PLD US</td><td>4,845</td><td>€401,861.00</td><td>0.35%</td></tr>
+<tr>
+<td>149</td><td>Eli Lilly And Co</td><td>LLY US</td><td>2,392</td><td>€398,836.00</td><td>0.35%</td></tr>
+<tr>
+<td>150</td><td>Smith & Nephew Plc</td><td>SN/ LN</td><td>24,498</td><td>€398,077.00</td><td>0.35%</td></tr>
+<tr>
+<td>151</td><td>Ferrari Nv</td><td>RACE IM</td><td>2,475</td><td>€395,134.00</td><td>0.34%</td></tr>
+<tr>
+<td>152</td><td>Zoetis Inc</td><td>ZTS US</td><td>3,084</td><td>€394,784.00</td><td>0.34%</td></tr>
+<tr>
+<td>153</td><td>Fresenius Se & Co Kgaa</td><td>FRE GR</td><td>11,203</td><td>€394,570.00</td><td>0.34%</td></tr>
+<tr>
+<td>154</td><td>Fujifilm Holdings Corp</td><td>4901 JP</td><td>8,100</td><td>€394,093.00</td><td>0.34%</td></tr>
+<tr>
+<td>155</td><td>Oriental Land Co Ltd/Japan</td><td>4661 JP</td><td>2,800</td><td>€394,139.00</td><td>0.34%</td></tr>
+<tr>
+<td>156</td><td>Royal Bank Of Canada</td><td>RY CN</td><td>5,454</td><td>€393,361.00</td><td>0.34%</td></tr>
+<tr>
+<td>157</td><td>Air Products And Chemicals Inc</td><td>APD US</td><td>1,843</td><td>€392,572.00</td><td>0.34%</td></tr>
+<tr>
+<td>158</td><td>Oracle Corp</td><td>ORCL US</td><td>7,309</td><td>€390,443.00</td><td>0.34%</td></tr>
+<tr>
+<td>159</td><td>Mizuho Financial Group Inc</td><td>8411 JP</td><td>31,840</td><td>€390,468.00</td><td>0.34%</td></tr>
+<tr>
+<td>160</td><td>Oversea-Chinese Banking Corp Ltd</td><td>OCBC SP</td><td>56,900</td><td>€390,160.00</td><td>0.34%</td></tr>
+<tr>
+<td>161</td><td>Terumo Corp</td><td>4543 JP</td><td>12,200</td><td>€386,479.00</td><td>0.34%</td></tr>
+<tr>
+<td>162</td><td>United Overseas Bank Ltd</td><td>UOB SP</td><td>25,300</td><td>€386,296.00</td><td>0.34%</td></tr>
+<tr>
+<td>163</td><td>Boston Scientific Corp</td><td>BSX US</td><td>11,897</td><td>€386,088.00</td><td>0.34%</td></tr>
+<tr>
+<td>164</td><td>Deutsche Boerse Ag</td><td>DB1 GR</td><td>2,857</td><td>€385,838.00</td><td>0.34%</td></tr>
+<tr>
+<td>165</td><td>Chugai Pharmaceutical Co Ltd</td><td>4519 JP</td><td>10,000</td><td>€384,455.00</td><td>0.34%</td></tr>
+<tr>
+<td>166</td><td>Svenska Handelsbanken Ab</td><td>SHBA SS</td><td>42,657</td><td>€384,247.00</td><td>0.34%</td></tr>
+<tr>
+<td>167</td><td>Comcast Corp</td><td>CMCSA US</td><td>8,961</td><td>€382,954.00</td><td>0.33%</td></tr>
+<tr>
+<td>168</td><td>Honda Motor Co Ltd</td><td>7267 JP</td><td>16,428</td><td>€382,693.00</td><td>0.33%</td></tr>
+<tr>
+<td>169</td><td>Orix Corp</td><td>8591 JP</td><td>26,924</td><td>€382,413.00</td><td>0.33%</td></tr>
+<tr>
+<td>170</td><td>Daiwa House Industry Co Ltd</td><td>1925 JP</td><td>15,800</td><td>€382,173.00</td><td>0.33%</td></tr>
+<tr>
+<td>171</td><td>Vodafone Group Plc</td><td>VOD LN</td><td>264,724</td><td>€381,650.00</td><td>0.33%</td></tr>
+<tr>
+<td>172</td><td>Glaxosmithkline Plc</td><td>GSK LN</td><td>27,111</td><td>€381,140.00</td><td>0.33%</td></tr>
+<tr>
+<td>173</td><td>Automatic Data Processing Inc</td><td>ADP US</td><td>2,647</td><td>€380,095.00</td><td>0.33%</td></tr>
+<tr>
+<td>174</td><td>Cigna Corp</td><td>CI US</td><td>2,208</td><td>€378,127.00</td><td>0.33%</td></tr>
+<tr>
+<td>175</td><td>Global Payments Inc</td><td>GPN US</td><td>2,317</td><td>€377,934.00</td><td>0.33%</td></tr>
+<tr>
+<td>176</td><td>Unitedhealth Group Inc</td><td>UNH US</td><td>1,402</td><td>€377,189.00</td><td>0.33%</td></tr>
+<tr>
+<td>177</td><td>Woolworths Group Ltd</td><td>WOW AU</td><td>14,383</td><td>€375,267.00</td><td>0.33%</td></tr>
+<tr>
+<td>178</td><td>M3 Inc</td><td>2413 JP</td><td>5,700</td><td>€374,695.00</td><td>0.33%</td></tr>
+<tr>
+<td>179</td><td>Novo Nordisk A/S</td><td>NOVOB DC</td><td>6,291</td><td>€374,742.00</td><td>0.33%</td></tr>
+<tr>
+<td>180</td><td>Givaudan Sa</td><td>GIVN SW</td><td>118</td><td>€372,426.00</td><td>0.32%</td></tr>
+<tr>
+<td>181</td><td>Otsuka Holdings Co Ltd</td><td>4578 JP</td><td>11,016</td><td>€371,869.00</td><td>0.32%</td></tr>
+<tr>
+<td>182</td><td>Experian Plc</td><td>EXPN LN</td><td>13,843</td><td>€370,499.00</td><td>0.32%</td></tr>
+<tr>
+<td>183</td><td>Enbridge Inc</td><td>ENB CN</td><td>12,798</td><td>€369,381.00</td><td>0.32%</td></tr>
+<tr>
+<td>184</td><td>Relx Plc</td><td>REN NA</td><td>18,493</td><td>€368,288.00</td><td>0.32%</td></tr>
+<tr>
+<td>185</td><td>Wolters Kluwer Nv</td><td>WKL NA</td><td>5,555</td><td>€363,964.00</td><td>0.32%</td></tr>
+<tr>
+<td>186</td><td>Mitsubishi Estate Co Ltd</td><td>8802 JP</td><td>24,567</td><td>€362,552.00</td><td>0.32%</td></tr>
+<tr>
+<td>187</td><td>Marsh & Mclennan Cos Inc</td><td>MMC US</td><td>3,727</td><td>€360,474.00</td><td>0.31%</td></tr>
+<tr>
+<td>188</td><td>Cisco Systems Inc/Delaware</td><td>CSCO US</td><td>9,648</td><td>€359,274.00</td><td>0.31%</td></tr>
+<tr>
+<td>189</td><td>Fiserv Inc</td><td>FISV US</td><td>3,768</td><td>€358,459.00</td><td>0.31%</td></tr>
+<tr>
+<td>190</td><td>Kyocera Corp</td><td>6971 JP</td><td>6,509</td><td>€358,225.00</td><td>0.31%</td></tr>
+<tr>
+<td>191</td><td>Tokio Marine Holdings Inc</td><td>8766 JP</td><td>8,543</td><td>€353,168.00</td><td>0.31%</td></tr>
+<tr>
+<td>192</td><td>Anthem Inc</td><td>ANTM US</td><td>1,437</td><td>€352,949.00</td><td>0.31%</td></tr>
+<tr>
+<td>193</td><td>Sun Hung Kai Properties Ltd</td><td>16 HK</td><td>26,500</td><td>€349,471.00</td><td>0.30%</td></tr>
+<tr>
+<td>194</td><td>Sap Se</td><td>SAP GR</td><td>3,380</td><td>€347,194.00</td><td>0.30%</td></tr>
+<tr>
+<td>195</td><td>Bt Group Plc</td><td>BT/A LN</td><td>235,282</td><td>€346,004.00</td><td>0.30%</td></tr>
+<tr>
+<td>196</td><td>Cme Group Inc</td><td>CME US</td><td>2,063</td><td>€345,634.00</td><td>0.30%</td></tr>
+<tr>
+<td>197</td><td>Standard Chartered Plc</td><td>STAN LN</td><td>62,467</td><td>€345,211.00</td><td>0.30%</td></tr>
+<tr>
+<td>198</td><td>Astrazeneca Plc</td><td>AZN LN</td><td>4,243</td><td>€343,872.00</td><td>0.30%</td></tr>
+<tr>
+<td>199</td><td>Nippon Telegraph & Telephone Corp</td><td>9432 JP</td><td>15,974</td><td>€342,603.00</td><td>0.30%</td></tr>
+<tr>
+<td>200</td><td>Kddi Corp</td><td>9433 JP</td><td>13,154</td><td>€342,576.00</td><td>0.30%</td></tr>
+<tr>
+<td>201</td><td>Reckitt Benckiser Group Plc</td><td>RB/ LN</td><td>4,978</td><td>€342,435.00</td><td>0.30%</td></tr>
+<tr>
+<td>202</td><td>Fidelity National Information Services</td><td>FIS US</td><td>3,005</td><td>€341,234.00</td><td>0.30%</td></tr>
+<tr>
+<td>203</td><td>Koninklijke Ahold Delhaize Nv</td><td>AD NA</td><td>15,310</td><td>€341,107.00</td><td>0.30%</td></tr>
+<tr>
+<td>204</td><td>Telstra Corp Ltd</td><td>TLS AU</td><td>165,181</td><td>€340,865.00</td><td>0.30%</td></tr>
+<tr>
+<td>205</td><td>Csl Ltd</td><td>CSL AU</td><td>1,931</td><td>€339,712.00</td><td>0.30%</td></tr>
+<tr>
+<td>206</td><td>Astellas Pharma Inc</td><td>4503 JP</td><td>24,900</td><td>€339,768.00</td><td>0.30%</td></tr>
+<tr>
+<td>207</td><td>Intel Corp</td><td>INTC US</td><td>6,839</td><td>€337,922.00</td><td>0.29%</td></tr>
+<tr>
+<td>208</td><td>Takeda Pharmaceutical Co Ltd</td><td>4502 JP</td><td>12,155</td><td>€337,799.00</td><td>0.29%</td></tr>
+<tr>
+<td>209</td><td>Sse Plc</td><td>SSE LN</td><td>21,457</td><td>€336,879.00</td><td>0.29%</td></tr>
+<tr>
+<td>210</td><td>Cvs Health Corp</td><td>CVS US</td><td>5,905</td><td>€334,910.00</td><td>0.29%</td></tr>
+<tr>
+<td>211</td><td>Ck Asset Holdings Ltd</td><td>1113 HK</td><td>66,000</td><td>€330,745.00</td><td>0.29%</td></tr>
+<tr>
+<td>212</td><td>Eisai Co Ltd</td><td>4523 JP</td><td>5,626</td><td>€329,032.00</td><td>0.29%</td></tr>
+<tr>
+<td>213</td><td>Bristol-Myers Squibb Co</td><td>BMY US</td><td>6,332</td><td>€321,676.00</td><td>0.28%</td></tr>
+<tr>
+<td>214</td><td>Kerry Group Plc</td><td>KYG ID</td><td>3,143</td><td>€320,586.00</td><td>0.28%</td></tr>
+<tr>
+<td>215</td><td>Novartis Ag</td><td>NOVN SW</td><td>4,468</td><td>€319,827.00</td><td>0.28%</td></tr>
+<tr>
+<td>216</td><td>Canon Inc</td><td>7751 JP</td><td>17,266</td><td>€316,282.00</td><td>0.28%</td></tr>
+<tr>
+<td>217</td><td>Danone Sa</td><td>BN FP</td><td>5,371</td><td>€314,204.00</td><td>0.27%</td></tr>
+<tr>
+<td>218</td><td>Central Japan Railway Co</td><td>9022 JP</td><td>2,291</td><td>€313,760.00</td><td>0.27%</td></tr>
+<tr>
+<td>219</td><td>Equinix Inc</td><td>EQIX US</td><td>595</td><td>€310,725.00</td><td>0.27%</td></tr>
+<tr>
+<td>220</td><td>Merck & Co Inc</td><td>MRK US</td><td>5,082</td><td>€310,225.00</td><td>0.27%</td></tr>
+<tr>
+<td>221</td><td>Mondelez International Inc</td><td>MDLZ US</td><td>7,016</td><td>€310,164.00</td><td>0.27%</td></tr>
+<tr>
+<td>222</td><td>Nestle Sa</td><td>NESN SW</td><td>3,521</td><td>€306,758.00</td><td>0.27%</td></tr>
+<tr>
+<td>223</td><td>Amgen Inc</td><td>AMGN US</td><td>1,648</td><td>€306,735.00</td><td>0.27%</td></tr>
+<tr>
+<td>224</td><td>Colgate-Palmolive Co</td><td>CL US</td><td>4,879</td><td>€306,095.00</td><td>0.27%</td></tr>
+<tr>
+<td>225</td><td>Crown Castle International Corp</td><td>CCI US</td><td>2,332</td><td>€304,492.00</td><td>0.27%</td></tr>
+<tr>
+<td>226</td><td>Sanofi</td><td>SAN FP</td><td>3,979</td><td>€301,011.00</td><td>0.26%</td></tr>
+<tr>
+<td>227</td><td>Procter & Gamble Co/The</td><td>PG US</td><td>2,897</td><td>€299,986.00</td><td>0.26%</td></tr>
+<tr>
+<td>228</td><td>Fresenius Medical Care Ag & Co Kgaa</td><td>FME GR</td><td>5,146</td><td>€298,571.00</td><td>0.26%</td></tr>
+<tr>
+<td>229</td><td>Coca-Cola Co/The</td><td>KO US</td><td>7,260</td><td>€297,967.00</td><td>0.26%</td></tr>
+<tr>
+<td>230</td><td>Roche Holding Ag</td><td>ROG SW</td><td>1,104</td><td>€296,998.00</td><td>0.26%</td></tr>
+<tr>
+<td>231</td><td>Orange Sa</td><td>ORA FP</td><td>29,843</td><td>€292,282.00</td><td>0.25%</td></tr>
+<tr>
+<td>232</td><td>Verizon Communications Inc</td><td>VZ US</td><td>6,306</td><td>€291,467.00</td><td>0.25%</td></tr>
+<tr>
+<td>233</td><td>National Grid Plc</td><td>NG/ LN</td><td>30,064</td><td>€286,752.00</td><td>0.25%</td></tr>
+<tr>
+<td>234</td><td>Pepsico Inc</td><td>PEP US</td><td>2,682</td><td>€285,226.00</td><td>0.25%</td></tr>
+<tr>
+<td>235</td><td>Link Reit</td><td>823 HK</td><td>36,400</td><td>€285,137.00</td><td>0.25%</td></tr>
+<tr>
+<td>236</td><td>Softbank Corp</td><td>9434 JP</td><td>25,600</td><td>€283,693.00</td><td>0.25%</td></tr>
+<tr>
+<td>237</td><td>Vertex Pharmaceuticals Inc</td><td>VRTX US</td><td>1,628</td><td>€283,648.00</td><td>0.25%</td></tr>
+<tr>
+<td>238</td><td>East Japan Railway Co</td><td>9020 JP</td><td>4,653</td><td>€282,981.00</td><td>0.25%</td></tr>
+<tr>
+<td>239</td><td>Becton Dickinson And Co</td><td>BDX US</td><td>1,378</td><td>€278,610.00</td><td>0.24%</td></tr>
+<tr>
+<td>240</td><td>American Tower Corp</td><td>AMT US</td><td>1,505</td><td>€276,709.00</td><td>0.24%</td></tr>
+<tr>
+<td>241</td><td>Telefonica Sa</td><td>TEF SM</td><td>71,969</td><td>€264,054.00</td><td>0.23%</td></tr>
+<tr>
+<td>242</td><td>Tesco Plc</td><td>TSCO LN</td><td>99,657</td><td>€261,771.00</td><td>0.23%</td></tr>
+<tr>
+<td>243</td><td>Biogen Inc</td><td>BIIB US</td><td>1,122</td><td>€254,488.00</td><td>0.22%</td></tr>
+<tr>
+<td>244</td><td>Kimberly-Clark Corp</td><td>KMB US</td><td>2,377</td><td>€253,879.00</td><td>0.22%</td></tr>
+<tr>
+<td>245</td><td>At&T Inc</td><td>T US</td><td>10,151</td><td>€237,748.00</td><td>0.21%</td></tr>
+<tr>
+<td>246</td><td>Gilead Sciences Inc</td><td>GILD US</td><td>4,596</td><td>€236,079.00</td><td>0.21%</td></tr>
+<tr>
+<td>247</td><td>Hong Kong & China Gas Co Ltd</td><td>3 HK</td><td>189,850</td><td>€233,942.00</td><td>0.20%</td></tr>
+<tr>
+<td>248</td><td>Siemens Energy Ag</td><td>ENR GR</td><td>2,307</td><td>€70,317.00</td><td>0.06%</td></tr>
+<tr>
+<td>249</td><td>Other/Cash</td><td></td><td>0</td><td>€494,679.00</td><td>0.43%</td></tr>
+</table>

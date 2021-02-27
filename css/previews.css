@@ -1,0 +1,70 @@
+:root {
+  --card-width: 600px;
+  --card-height: 314px;
+  --spacing: 2rem;
+}
+
+
+.preview-grid {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--spacing);
+    column-gap: var(--spacing);
+    justify-content: center;
+}
+
+.preview {
+    flex-basis: var(--card-width);
+    width: var(--card-width); 
+    height: var(--card-height);
+    border: 2px solid var(--button-color);
+    border-radius: var(--radius);
+    background: url(/assets/img/texture.png);
+}
+
+.spacer {
+    min-width: 200px;
+}
+
+.inner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: var(--card-height);
+}
+
+.inner-grid > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.inner-grid .title {
+    flex-basis: 60%;
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+    margin: var(--spacing) var(--spacing) 0 0;
+}
+
+.inner-grid .title::after {
+    content: " ";
+    font-weight: lighter;
+    width: 100%;
+    height: 12px;
+    display: block;
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    box-shadow: -3px 2px 3px black inset;
+}
+
+.inner-grid .footer {
+    align-self: flex-end;
+    margin: 0 0 var(--spacing) var(--spacing);
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--secondary-color)
+}

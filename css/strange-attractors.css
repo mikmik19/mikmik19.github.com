@@ -24,7 +24,7 @@ button:focus,
 .selectedButton,
 .selectedButton:focus {
   color: white;
-  border-color: var(--dynamic-color-dark);
-  background: var(--dynamic-color-light);
+  border-color: var(--primary-color);
+  background: var(--secondary-color);
   outline: 0;
 }

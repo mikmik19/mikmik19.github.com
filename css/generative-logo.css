@@ -1,0 +1,80 @@
+:root {
+    --border-radius: 0%;
+    --logo-width: 60px;
+}
+
+ .authorimage {
+    display: block;
+    width: var(--logo-width);
+    height: var(--logo-width);
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+    border-radius: var(--border-radius);
+    box-shadow: -3px 2px 3px black inset;
+}
+
+.authorimage:before {
+    content: "";
+    position: absolute;
+    width: var(--logo-width);
+    height: var(--logo-width);
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      #be5273 0%,
+      #193d91 100%
+    );
+    border-radius: var(--border-radius);
+    box-sizing: content-box;
+    transform: scale(0.7) translate(-5px, 5px);
+    box-shadow: 
+        -3px 2px 3px black inset;
+}
+
+.authorimage:after {
+    content: "";
+    position: absolute;
+    width: var(--logo-width);
+    height: var(--logo-width);
+    background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      #ff5454 0%,
+      #4a0202 100%
+    );
+    border-radius: var(--border-radius);
+    box-sizing: content-box;
+    transform: scale(0.4)  translate(-15px, 15px);
+    box-shadow: 
+        -6px 8px 3px black inset;
+}
+
+#book {
+  border: 2px solid var(--primary-color)
+}
+
+.stackedPaper {
+  width: 200px;
+  margin: auto;
+  margin-bottom: 20px; /* To create spacing to next paragraph */
+  text-align: center;
+  min-height: 300px;
+  background: #fff;
+  box-shadow:
+    /* The top layer shadow */
+    1px 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    8px 8px 0 -5px #eee,
+    /* The second layer shadow */
+    8px 8px 1px -4px rgba(0,0,0,0.15),
+     /* The third layer */
+    16px 16px 0 -10px #eee,
+    /* The third layer shadow */
+    16px 16px 1px -9px rgba(0,0,0,0.15);
+    /* Padding for demo purposes */
+  padding: 30px;
+}

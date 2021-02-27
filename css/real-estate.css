@@ -1,14 +1,46 @@
+h3 {
+  font-size: 1.7rem;
+}
+
+.gridLayout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridLayout > * {
+  flex-grow: 1;
+  flex-basis: 30%;
+  flex-wrap: wrap;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 5px;
+}
+
+.flex-item {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 30%;
+  padding: 1rem;
+}
+
 .addressListItem {
-    display: flex;
-    width: 16.5%;
-    float: left;
     font-size: 0.6em;  
+    padding: 0.2rem;
+    flex-basis: 20%;
+    flex-grow: 0;
 }
 
 .selected {
-    background: var(--dynamic-color-light);
-    stroke: var(--dynamic-color-light);
+    background: var(--secondary-color);
+    stroke: var(--secondary-color);
     stroke-width: 0.15em;
+    box-shadow: -3px 2px 3px black inset;
+    filter: url(#shadow)
 }
 
 .faded {
@@ -19,30 +51,6 @@
 
 .circle {
     opacity: 0.3;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0;
-  margin: 5px;
-  list-style: none;
-  border-radius: 12px;
-}
-
-.flex-item {
-  flex: 1;
-  text-align: left;
-  font-size: clamp(0.1rem, 0.9rem, 2rem);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.88px;
-  color: #333333;
-  justify-content: space-evenly;
 }
 
 .axisLabel {

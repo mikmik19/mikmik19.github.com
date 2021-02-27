@@ -1,0 +1,23 @@
+{
+    "light": [
+        { "primary": "#2D5489", "secondary": "#84A7CF"},
+        { "primary": "#2F6E91", "secondary": "#7DAFCA"},
+        { "primary": "#AE3B42", "secondary": "#E4989C"},
+        { "primary": "#673453", "secondary": "#FF954D"},
+        { "primary": "#491133", "secondary": "#fa9dd6"},
+        { "primary": "#f7797d", "secondary": "#C6FFDD"},
+        { "primary": "#240b36", "secondary": "#c31432"},
+        { "primary": "#DD2476", "secondary": "#FF512F"},
+        { "primary": "#5C258D", "secondary": "#4389A2"},
+        { "primary": "#3D7EAA", "secondary": "#FFE47A"},
+        { "primary": "#134E5E", "secondary": "#71B280"},
+        { "primary": "#0a192f", "secondary": "#64ffda"}
+    ],
+    "dark": [
+        { "primary": "#FFE47A", "secondary": "#ad3800" },
+        { "primary": "#ff5454", "secondary": "#4a0202" },
+        { "primary": "#9f74e8", "secondary": "#400071" },
+        { "primary": "#49bba9", "secondary": "#004e41" },
+        { "primary": "#be5273", "secondary": "#193d91" }
+    ]
+}

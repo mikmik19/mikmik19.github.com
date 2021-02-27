@@ -1,0 +1,101 @@
+Ticker,Name,Weight,Sector,Country
+IFX,Infineon Technologies Ag,1.76,Unknown,Unknown
+DAI,Daimler Ag,1.71,Unknown,Unknown
+BHP,Bhp Group Plc,1.68,Unknown,Unknown
+ASML,Asml Holding Nv,1.61,Unknown,Unknown
+GLEN,Glencore Plc,1.58,Unknown,Unknown
+RIO,Rio Tinto Plc,1.55,Unknown,Unknown
+DBK,Deutsche Bank Ag,1.43,Unknown,Unknown
+VOLVB,Volvo Ab,1.42,Unknown,Unknown
+DSV,Dsv Panalpina A/S,1.41,Unknown,Unknown
+DPW,Deutsche Post Ag,1.37,Unknown,Unknown
+PRX,Prosus Nv,1.34,Unknown,Unknown
+ATCOA,Atlas Copco Ab,1.32,Unknown,Unknown
+EQNR,Equinor Asa,1.30,Unknown,Unknown
+ERICB,Telefonaktiebolaget Lm Ericsson,1.30,Unknown,Unknown
+SIE,Siemens Ag,1.29,Unknown,Unknown
+MC,Lvmh Moet Hennessy Louis Vuitton Se,1.26,Unknown,Unknown
+SU,Schneider Electric Se,1.23,Unknown,Unknown
+UBSG,Ubs Group Ag,1.22,Unknown,Unknown
+LONN,Lonza Group Ag,1.21,Unknown,Unknown
+SGO,Cie De Saint-Gobain,1.21,Unknown,Unknown
+BAS,Basf Se,1.17,Unknown,Unknown
+CSGN,Credit Suisse Group Ag,1.16,Unknown,Unknown
+BNP,Bnp Paribas Sa,1.15,Unknown,Unknown
+INGA,Ing Groep Nv,1.14,Unknown,Unknown
+ABBN,Abb Ltd,1.13,Unknown,Unknown
+BMW,Bayerische Motoren Werke Ag,1.13,Unknown,Unknown
+CFR,Cie Financiere Richemont Sa,1.12,Unknown,Unknown
+BARC,Barclays Plc,1.12,Unknown,Unknown
+LSEG,London Stock Exchange Group Plc,1.11,Unknown,Unknown
+VIV,Vivendi Se,1.09,Unknown,Unknown
+BBVA,Banco Bilbao Vizcaya Argentaria Sa,1.08,Unknown,Unknown
+PHIA,Koninklijke Philips Nv,1.08,Unknown,Unknown
+CRH,Crh Plc,1.07,Unknown,Unknown
+PRU,Prudential Plc,1.06,Unknown,Unknown
+ADS,Adidas Ag,1.05,Unknown,Unknown
+OR,L'Oreal Sa,1.04,Unknown,Unknown
+VOW3,Volkswagen Ag,1.03,Unknown,Unknown
+NDA,Nordea Bank Abp,1.02,Unknown,Unknown
+ISP,Intesa Sanpaolo Spa,1.00,Unknown,Unknown
+EL,Essilorluxottica Sa,1.00,Unknown,Unknown
+FP,Total Se,1.00,Unknown,Unknown
+LHN,Lafargeholcim Ltd,0.97,Unknown,Unknown
+NOKIA,Nokia Oyj,0.96,Unknown,Unknown
+CS,Axa Sa,0.95,Unknown,Unknown
+ENI,Eni Spa,0.94,Unknown,Unknown
+ALC,Alcon Inc,0.94,Unknown,Unknown
+KER,Kering Sa,0.93,Unknown,Unknown
+ENEL,Enel Spa,0.93,Unknown,Unknown
+G,Assicurazioni Generali Spa,0.93,Unknown,Unknown
+SAN,Banco Santander Sa,0.93,Unknown,Unknown
+ALV,Allianz Se,0.93,Unknown,Unknown
+DG,Vinci Sa,0.92,Unknown,Unknown
+ABI,Anheuser-Busch Inbev Sa/Nv,0.92,Unknown,Unknown
+MUV2,Muenchener Rueckversicherungs-Gesellsch,0.92,Unknown,Unknown
+GLE,Societe Generale Sa,0.92,Unknown,Unknown
+RI,Pernod Ricard Sa,0.91,Unknown,Unknown
+DTE,Deutsche Telekom Ag,0.91,Unknown,Unknown
+NOVOB,Novo Nordisk A/S,0.91,Unknown,Unknown
+GIVN,Givaudan Sa,0.90,Unknown,Unknown
+ITX,Industria De Diseno Textil Sa,0.90,Unknown,Unknown
+AMS,Amadeus It Group Sa,0.90,Unknown,Unknown
+VNA,Vonovia Se,0.90,Unknown,Unknown
+AI,Air Liquide Sa,0.90,Unknown,Unknown
+DGE,Diageo Plc,0.90,Unknown,Unknown
+AD,Koninklijke Ahold Delhaize Nv,0.88,Unknown,Unknown
+AIR,Airbus Se,0.88,Unknown,Unknown
+IBE,Iberdrola Sa,0.88,Unknown,Unknown
+SAF,Safran Sa,0.88,Unknown,Unknown
+ZURN,Zurich Insurance Group Ag,0.87,Unknown,Unknown
+RB/,Reckitt Benckiser Group Plc,0.86,Unknown,Unknown
+SHBA,Svenska Handelsbanken Ab,0.85,Unknown,Unknown
+UCG,Unicredit Spa,0.83,Unknown,Unknown
+CPG,Compass Group Plc,0.83,Unknown,Unknown
+VOD,Vodafone Group Plc,0.82,Unknown,Unknown
+HEIA,Heineken Nv,0.82,Unknown,Unknown
+REN,Relx Plc,0.82,Unknown,Unknown
+AZN,Astrazeneca Plc,0.81,Unknown,Unknown
+SREN,Swiss Re Ag,0.81,Unknown,Unknown
+BN,Danone Sa,0.81,Unknown,Unknown
+SAP,Sap Se,0.81,Unknown,Unknown
+DB1,Deutsche Boerse Ag,0.79,Unknown,Unknown
+NOVN,Novartis Ag,0.78,Unknown,Unknown
+EXPN,Experian Plc,0.77,Unknown,Unknown
+ENGI,Engie Sa,0.77,Unknown,Unknown
+SAN,Sanofi,0.77,Unknown,Unknown
+FRE,Fresenius Se & Co Kgaa,0.76,Unknown,Unknown
+ROG,Roche Holding Ag,0.76,Unknown,Unknown
+NESN,Nestle Sa,0.76,Unknown,Unknown
+BP/,Bp Plc,0.75,Unknown,Unknown
+LLOY,Lloyds Banking Group Plc,0.74,Unknown,Unknown
+HSBA,Hsbc Holdings Plc,0.73,Unknown,Unknown
+BAYN,Bayer Ag,0.73,Unknown,Unknown
+ORA,Orange Sa,0.72,Unknown,Unknown
+NG/,National Grid Plc,0.71,Unknown,Unknown
+BATS,British American Tobacco Plc,0.71,Unknown,Unknown
+EOAN,E.On Se,0.71,Unknown,Unknown
+TEF,Telefonica Sa,0.66,Unknown,Unknown
+GSK,Glaxosmithkline Plc,0.65,Unknown,Unknown
+URW,Unibail-Rodamco-Westfield,0.54,Unknown,Unknown
+ENR,Siemens Energy Ag,0.15,Unknown,Unknown

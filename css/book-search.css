@@ -4,38 +4,38 @@
     padding: 1em;
 }
 
-div.book-search-results {
-    margin-bottom: 0.5em;
-}
-
-div.book-search-results h3 {
-    margin: 0;
-    padding-top: 0.2em;
-}
-
-div.book-search-results p {
-    margin: 0;
-    padding-bottom: 1.2em;
-}
-
 #book-search-results {
-    padding: 1em;
     margin: auto;
-    background-color: white;
+    background-color: var(--background-color);
 }
 
-#book-search-results .wrapper {
+.tableHeader {
+    color: var(--button-color);
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+div.flexbox {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
 }
 
-#book-search-results div.left {
-    flex: 0 0 70%;
-}
-#book-search-results div.right {
-    flex: 1;
-    color: var(--dynamic-color-light);
+div.title {
+    flex-basis: 55%;
+    flex-grow: 1;
 }
 
-#book-search-results div.author {
-    font-size: 0.8em
+div.author {
+    flex-basis: 20%;
+    flex-shrink: 1;
+    flex-grow: 1;
 }
+
+div.stars {
+    flex-basis: 15%;
+    flex-shrink: 1;
+    color: var(--primary-color);
+}
+

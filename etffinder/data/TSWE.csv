@@ -1,0 +1,249 @@
+Ticker,Name,Weight,Sector,Country
+TSLA,Tesla Inc,1.96,Unknown,Unknown
+SHOP,Shopify Inc,0.87,Unknown,Unknown
+IFX,Infineon Technologies Ag,0.77,Unknown,Unknown
+ADYEN,Adyen Nv,0.74,Unknown,Unknown
+9984,Softbank Group Corp,0.71,Unknown,Unknown
+035420,Naver Corp,0.70,Unknown,Unknown
+DE,Deere & Co,0.68,Unknown,Unknown
+6594,Nidec Corp,0.66,Unknown,Unknown
+1810,Xiaomi Corp,0.65,Unknown,Unknown
+PYPL,Paypal Holdings Inc,0.64,Unknown,Unknown
+CAP,Capgemini Se,0.63,Unknown,Unknown
+AMAT,Applied Materials Inc,0.63,Unknown,Unknown
+8035,Tokyo Electron Ltd,0.63,Unknown,Unknown
+ASML,Asml Holding Nv,0.62,Unknown,Unknown
+VWS,Vestas Wind Systems A/S,0.61,Unknown,Unknown
+NVDA,Nvidia Corp,0.60,Unknown,Unknown
+9983,Fast Retailing Co Ltd,0.59,Unknown,Unknown
+MU,Micron Technology Inc,0.58,Unknown,Unknown
+DSV,Dsv Panalpina A/S,0.58,Unknown,Unknown
+MS,Morgan Stanley,0.57,Unknown,Unknown
+AVGO,Broadcom Inc,0.57,Unknown,Unknown
+SAND,Sandvik Ab,0.56,Unknown,Unknown
+COF,Capital One Financial Corp,0.55,Unknown,Unknown
+INGA,Ing Groep Nv,0.54,Unknown,Unknown
+DPW,Deutsche Post Ag,0.54,Unknown,Unknown
+PRU,Prudential Plc,0.54,Unknown,Unknown
+388,Hong Kong Exchanges & Clearing Ltd,0.53,Unknown,Unknown
+LOW,Lowe's Cos Inc,0.53,Unknown,Unknown
+SIE,Siemens Ag,0.53,Unknown,Unknown
+6902,Denso Corp,0.52,Unknown,Unknown
+PRX,Prosus Nv,0.52,Unknown,Unknown
+TMUS,T-Mobile Us Inc,0.52,Unknown,Unknown
+6326,Kubota Corp,0.51,Unknown,Unknown
+000660,Sk Hynix Inc,0.51,Unknown,Unknown
+7974,Nintendo Co Ltd,0.51,Unknown,Unknown
+6098,Recruit Holdings Co Ltd,0.51,Unknown,Unknown
+FERG,Ferguson Plc,0.51,Unknown,Unknown
+6981,Murata Manufacturing Co Ltd,0.51,Unknown,Unknown
+DIS,Walt Disney Co/The,0.50,Unknown,Unknown
+SLB,Schlumberger Nv,0.50,Unknown,Unknown
+CRH,Crh Plc,0.50,Unknown,Unknown
+005930,Samsung Electronics Co Ltd,0.50,Unknown,Unknown
+COP,Conocophillips,0.50,Unknown,Unknown
+6758,Sony Corp,0.50,Unknown,Unknown
+6752,Panasonic Corp,0.50,Unknown,Unknown
+ABBV,Abbvie Inc,0.50,Unknown,Unknown
+TFC,Truist Financial Corp,0.49,Unknown,Unknown
+ATCOA,Atlas Copco Ab,0.49,Unknown,Unknown
+EQNR,Equinor Asa,0.49,Unknown,Unknown
+AIG,American International Group Inc,0.49,Unknown,Unknown
+QCOM,Qualcomm Inc,0.49,Unknown,Unknown
+AMD,Advanced Micro Devices Inc,0.49,Unknown,Unknown
+BMO,Bank Of Montreal,0.48,Unknown,Unknown
+NAB,National Australia Bank Ltd,0.48,Unknown,Unknown
+NKE,Nike Inc,0.48,Unknown,Unknown
+ANZ,Australia & New Zealand Banking Group L,0.48,Unknown,Unknown
+SPG,Simon Property Group Inc,0.48,Unknown,Unknown
+AAPL,Apple Inc,0.47,Unknown,Unknown
+SU,Schneider Electric Se,0.47,Unknown,Unknown
+ADS,Adidas Ag,0.47,Unknown,Unknown
+LONN,Lonza Group Ag,0.47,Unknown,Unknown
+SCHW,Charles Schwab Corp/The,0.46,Unknown,Unknown
+BBVA,Banco Bilbao Vizcaya Argentaria Sa,0.46,Unknown,Unknown
+MQG,Macquarie Group Ltd,0.46,Unknown,Unknown
+LSEG,London Stock Exchange Group Plc,0.46,Unknown,Unknown
+EMR,Emerson Electric Co,0.45,Unknown,Unknown
+NOW,Servicenow Inc,0.45,Unknown,Unknown
+ABBN,Abb Ltd,0.45,Unknown,Unknown
+KBC,Kbc Group Nv,0.45,Unknown,Unknown
+6861,Keyence Corp,0.45,Unknown,Unknown
+NSC,Norfolk Southern Corp,0.45,Unknown,Unknown
+NDA,Nordea Bank Abp,0.45,Unknown,Unknown
+LGEN,Legal & General Group Plc,0.45,Unknown,Unknown
+PNC,Pnc Financial Services Group Inc/The,0.45,Unknown,Unknown
+ML,Cie Generale Des Etablissements Micheli,0.44,Unknown,Unknown
+WPL,Woodside Petroleum Ltd,0.44,Unknown,Unknown
+8750,Dai-Ichi Life Holdings Inc,0.44,Unknown,Unknown
+SBUX,Starbucks Corp,0.43,Unknown,Unknown
+AV/,Aviva Plc,0.43,Unknown,Unknown
+SYK,Stryker Corp,0.43,Unknown,Unknown
+MUV2,Muenchener Rueckversicherungs-Gesellsch,0.43,Unknown,Unknown
+DSY,Dassault Systemes Se,0.43,Unknown,Unknown
+SAMPO,Sampo Oyj,0.43,Unknown,Unknown
+VIV,Vivendi Se,0.43,Unknown,Unknown
+ISRG,Intuitive Surgical Inc,0.43,Unknown,Unknown
+ALV,Allianz Se,0.43,Unknown,Unknown
+6702,Fujitsu Ltd,0.43,Unknown,Unknown
+CS,Axa Sa,0.43,Unknown,Unknown
+CRM,Salesforce.Com Inc,0.42,Unknown,Unknown
+CSX,Csx Corp,0.42,Unknown,Unknown
+NFLX,Netflix Inc,0.42,Unknown,Unknown
+PHIA,Koninklijke Philips Nv,0.42,Unknown,Unknown
+105560,Kb Financial Group Inc,0.42,Unknown,Unknown
+4568,Daiichi Sankyo Co Ltd,0.41,Unknown,Unknown
+C,Citigroup Inc,0.41,Unknown,Unknown
+DHR,Danaher Corp,0.41,Unknown,Unknown
+6273,Smc Corp,0.41,Unknown,Unknown
+BKNG,Booking Holdings Inc,0.41,Unknown,Unknown
+JNJ,Johnson & Johnson,0.41,Unknown,Unknown
+CBA,Commonwealth Bank Of Australia,0.41,Unknown,Unknown
+7269,Suzuki Motor Corp,0.41,Unknown,Unknown
+SU,Suncor Energy Inc,0.40,Unknown,Unknown
+NOKIA,Nokia Oyj,0.40,Unknown,Unknown
+UPS,United Parcel Service Inc,0.40,Unknown,Unknown
+7733,Olympus Corp,0.40,Unknown,Unknown
+UNP,Union Pacific Corp,0.40,Unknown,Unknown
+BAC,Bank Of America Corp,0.40,Unknown,Unknown
+ACN,Accenture Plc,0.40,Unknown,Unknown
+G,Assicurazioni Generali Spa,0.40,Unknown,Unknown
+INTU,Intuit Inc,0.40,Unknown,Unknown
+DBS,Dbs Group Holdings Ltd,0.40,Unknown,Unknown
+CPG,Compass Group Plc,0.40,Unknown,Unknown
+TXN,Texas Instruments Inc,0.39,Unknown,Unknown
+TJX,Tjx Cos Inc/The,0.39,Unknown,Unknown
+SREN,Swiss Re Ag,0.39,Unknown,Unknown
+BNS,Bank Of Nova Scotia/The,0.39,Unknown,Unknown
+SAN,Banco Santander Sa,0.39,Unknown,Unknown
+AXP,American Express Co,0.39,Unknown,Unknown
+MSFT,Microsoft Corp,0.38,Unknown,Unknown
+CNR,Canadian National Railway Co,0.38,Unknown,Unknown
+TCL,Transurban Group,0.38,Unknown,Unknown
+EL,Essilorluxottica Sa,0.38,Unknown,Unknown
+CHTR,Charter Communications Inc,0.38,Unknown,Unknown
+4911,Shiseido Co Ltd,0.38,Unknown,Unknown
+OR,L'Oreal Sa,0.38,Unknown,Unknown
+TD,Toronto-Dominion Bank/The,0.37,Unknown,Unknown
+7741,Hoya Corp,0.37,Unknown,Unknown
+USB,Us Bancorp,0.37,Unknown,Unknown
+LR,Legrand Sa,0.37,Unknown,Unknown
+ABT,Abbott Laboratories,0.37,Unknown,Unknown
+8801,Mitsui Fudosan Co Ltd,0.37,Unknown,Unknown
+AMS,Amadeus It Group Sa,0.37,Unknown,Unknown
+CB,Chubb Ltd,0.37,Unknown,Unknown
+ALC,Alcon Inc,0.37,Unknown,Unknown
+GLE,Societe Generale Sa,0.36,Unknown,Unknown
+1299,Aia Group Ltd,0.36,Unknown,Unknown
+ADBE,Adobe Inc,0.36,Unknown,Unknown
+HD,Home Depot Inc/The,0.36,Unknown,Unknown
+MDT,Medtronic Plc,0.36,Unknown,Unknown
+VNA,Vonovia Se,0.36,Unknown,Unknown
+8316,Sumitomo Mitsui Financial Group Inc,0.36,Unknown,Unknown
+ITX,Industria De Diseno Textil Sa,0.36,Unknown,Unknown
+ICE,Intercontinental Exchange Inc,0.36,Unknown,Unknown
+ZURN,Zurich Insurance Group Ag,0.36,Unknown,Unknown
+DTE,Deutsche Telekom Ag,0.36,Unknown,Unknown
+SPGI,S&P Global Inc,0.35,Unknown,Unknown
+5108,Bridgestone Corp,0.35,Unknown,Unknown
+PLD,Prologis Inc,0.35,Unknown,Unknown
+LLY,Eli Lilly And Co,0.35,Unknown,Unknown
+SN/,Smith & Nephew Plc,0.35,Unknown,Unknown
+RACE,Ferrari Nv,0.34,Unknown,Unknown
+ZTS,Zoetis Inc,0.34,Unknown,Unknown
+FRE,Fresenius Se & Co Kgaa,0.34,Unknown,Unknown
+4901,Fujifilm Holdings Corp,0.34,Unknown,Unknown
+4661,Oriental Land Co Ltd/Japan,0.34,Unknown,Unknown
+RY,Royal Bank Of Canada,0.34,Unknown,Unknown
+APD,Air Products And Chemicals Inc,0.34,Unknown,Unknown
+ORCL,Oracle Corp,0.34,Unknown,Unknown
+8411,Mizuho Financial Group Inc,0.34,Unknown,Unknown
+OCBC,Oversea-Chinese Banking Corp Ltd,0.34,Unknown,Unknown
+4543,Terumo Corp,0.34,Unknown,Unknown
+UOB,United Overseas Bank Ltd,0.34,Unknown,Unknown
+BSX,Boston Scientific Corp,0.34,Unknown,Unknown
+DB1,Deutsche Boerse Ag,0.34,Unknown,Unknown
+4519,Chugai Pharmaceutical Co Ltd,0.34,Unknown,Unknown
+SHBA,Svenska Handelsbanken Ab,0.34,Unknown,Unknown
+CMCSA,Comcast Corp,0.33,Unknown,Unknown
+7267,Honda Motor Co Ltd,0.33,Unknown,Unknown
+8591,Orix Corp,0.33,Unknown,Unknown
+1925,Daiwa House Industry Co Ltd,0.33,Unknown,Unknown
+VOD,Vodafone Group Plc,0.33,Unknown,Unknown
+GSK,Glaxosmithkline Plc,0.33,Unknown,Unknown
+ADP,Automatic Data Processing Inc,0.33,Unknown,Unknown
+CI,Cigna Corp,0.33,Unknown,Unknown
+GPN,Global Payments Inc,0.33,Unknown,Unknown
+UNH,Unitedhealth Group Inc,0.33,Unknown,Unknown
+WOW,Woolworths Group Ltd,0.33,Unknown,Unknown
+2413,M3 Inc,0.33,Unknown,Unknown
+NOVOB,Novo Nordisk A/S,0.33,Unknown,Unknown
+GIVN,Givaudan Sa,0.32,Unknown,Unknown
+4578,Otsuka Holdings Co Ltd,0.32,Unknown,Unknown
+EXPN,Experian Plc,0.32,Unknown,Unknown
+ENB,Enbridge Inc,0.32,Unknown,Unknown
+REN,Relx Plc,0.32,Unknown,Unknown
+WKL,Wolters Kluwer Nv,0.32,Unknown,Unknown
+8802,Mitsubishi Estate Co Ltd,0.32,Unknown,Unknown
+MMC,Marsh & Mclennan Cos Inc,0.31,Unknown,Unknown
+CSCO,Cisco Systems Inc/Delaware,0.31,Unknown,Unknown
+FISV,Fiserv Inc,0.31,Unknown,Unknown
+6971,Kyocera Corp,0.31,Unknown,Unknown
+8766,Tokio Marine Holdings Inc,0.31,Unknown,Unknown
+ANTM,Anthem Inc,0.31,Unknown,Unknown
+16,Sun Hung Kai Properties Ltd,0.30,Unknown,Unknown
+SAP,Sap Se,0.30,Unknown,Unknown
+BT/A,Bt Group Plc,0.30,Unknown,Unknown
+CME,Cme Group Inc,0.30,Unknown,Unknown
+STAN,Standard Chartered Plc,0.30,Unknown,Unknown
+AZN,Astrazeneca Plc,0.30,Unknown,Unknown
+9432,Nippon Telegraph & Telephone Corp,0.30,Unknown,Unknown
+9433,Kddi Corp,0.30,Unknown,Unknown
+RB/,Reckitt Benckiser Group Plc,0.30,Unknown,Unknown
+FIS,Fidelity National Information Services,0.30,Unknown,Unknown
+AD,Koninklijke Ahold Delhaize Nv,0.30,Unknown,Unknown
+TLS,Telstra Corp Ltd,0.30,Unknown,Unknown
+CSL,Csl Ltd,0.30,Unknown,Unknown
+4503,Astellas Pharma Inc,0.30,Unknown,Unknown
+INTC,Intel Corp,0.29,Unknown,Unknown
+4502,Takeda Pharmaceutical Co Ltd,0.29,Unknown,Unknown
+SSE,Sse Plc,0.29,Unknown,Unknown
+CVS,Cvs Health Corp,0.29,Unknown,Unknown
+1113,Ck Asset Holdings Ltd,0.29,Unknown,Unknown
+4523,Eisai Co Ltd,0.29,Unknown,Unknown
+BMY,Bristol-Myers Squibb Co,0.28,Unknown,Unknown
+KYG,Kerry Group Plc,0.28,Unknown,Unknown
+NOVN,Novartis Ag,0.28,Unknown,Unknown
+7751,Canon Inc,0.28,Unknown,Unknown
+BN,Danone Sa,0.27,Unknown,Unknown
+9022,Central Japan Railway Co,0.27,Unknown,Unknown
+EQIX,Equinix Inc,0.27,Unknown,Unknown
+MRK,Merck & Co Inc,0.27,Unknown,Unknown
+MDLZ,Mondelez International Inc,0.27,Unknown,Unknown
+NESN,Nestle Sa,0.27,Unknown,Unknown
+AMGN,Amgen Inc,0.27,Unknown,Unknown
+CL,Colgate-Palmolive Co,0.27,Unknown,Unknown
+CCI,Crown Castle International Corp,0.27,Unknown,Unknown
+SAN,Sanofi,0.26,Unknown,Unknown
+PG,Procter & Gamble Co/The,0.26,Unknown,Unknown
+FME,Fresenius Medical Care Ag & Co Kgaa,0.26,Unknown,Unknown
+KO,Coca-Cola Co/The,0.26,Unknown,Unknown
+ROG,Roche Holding Ag,0.26,Unknown,Unknown
+ORA,Orange Sa,0.25,Unknown,Unknown
+VZ,Verizon Communications Inc,0.25,Unknown,Unknown
+NG/,National Grid Plc,0.25,Unknown,Unknown
+PEP,Pepsico Inc,0.25,Unknown,Unknown
+823,Link Reit,0.25,Unknown,Unknown
+9434,Softbank Corp,0.25,Unknown,Unknown
+VRTX,Vertex Pharmaceuticals Inc,0.25,Unknown,Unknown
+9020,East Japan Railway Co,0.25,Unknown,Unknown
+BDX,Becton Dickinson And Co,0.24,Unknown,Unknown
+AMT,American Tower Corp,0.24,Unknown,Unknown
+TEF,Telefonica Sa,0.23,Unknown,Unknown
+TSCO,Tesco Plc,0.23,Unknown,Unknown
+BIIB,Biogen Inc,0.22,Unknown,Unknown
+KMB,Kimberly-Clark Corp,0.22,Unknown,Unknown
+T,At&T Inc,0.21,Unknown,Unknown
+GILD,Gilead Sciences Inc,0.21,Unknown,Unknown
+3,Hong Kong & China Gas Co Ltd,0.20,Unknown,Unknown
+ENR,Siemens Energy Ag,0.06,Unknown,Unknown

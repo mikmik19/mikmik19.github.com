@@ -1,0 +1,89 @@
+.grid {
+  --gap: 0.5em;
+  --columns: 2;
+  max-width: 80rem;
+  margin: 0 auto;
+  display: column;
+  columns: var(--columns);
+  gap: var(--gap);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.grid > * {
+  break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+.featured {
+  grid-column: span 2;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+
+.book {
+  padding: 1em;
+  color: white;
+  background: url(/assets/img/texture.png),
+    linear-gradient(
+      135deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
+}
+
+
+div h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 2.4rem, 2.6rem);
+}
+
+.notRead, .total {
+    fill: #CCCCCC;
+    color: #CCCCCC;
+}
+
+.read {
+    color: var(--primary-color);
+    font-weight: 800;
+    fill: var(--primary-color);
+}
+
+.highlight {
+    color: white;
+    font-weight: 400;
+    fill: var(--primary-color);
+    background: url(/assets/img/texture.png),
+      linear-gradient(
+        135deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+      );
+    padding: 0 1rem 0 1rem;
+    line-height: 1.4;
+    border-radius: 1rem;
+}
+
+
+.selected {
+    background: var(--secondary-color);
+    stroke: var(--secondary-color);
+    stroke-width: 0.15em;
+    color: white;
+}
+
+
+.colorLine {
+    fill: none;
+    stroke-width: 15px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.clone {
+    pointer-events: none;
+}

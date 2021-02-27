@@ -1,5 +1,5 @@
 (function() {
-  d3.json("../../../../data/coupled-oscillators/synchTimeVsK.json", function(error, data) {
+  d3.json("/data/coupled-oscillators/synchTimeVsK.json", function(error, data) {
     drawFinalPase(data);
   });
 
@@ -58,7 +58,7 @@
       .append("svg:path")
       .datum(data.data)
       .attr("fill", "none")
-      .attr("stroke", lightColorUsed)
+      .attr("stroke", 'var(--secondary-color)')
       .attr("stroke-width", 1)
       .attr("opacity", 1)
       .attr("d", line)
@@ -143,7 +143,7 @@
         .append("svg:path")
         .datum(data.data)
         .attr("fill", "none")
-        .attr("stroke", lightColorUsed)
+        .attr("stroke", 'var(--secondary-color)')
         .attr("stroke-width", 1)
         .attr("opacity", 1)
         .attr("d", line)

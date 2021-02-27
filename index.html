@@ -5,10 +5,10 @@ title: Mikkel Klitzing Hartmann Hansen
 
 <div id="home">
   <div class="authorinfo box">
-    <p class="appetizer">
-      I'm {{site.position}} at <a href="{{site.company_url}}"> {{site.company}}</a>
+    <p>
+      Hi! My name is Mikkel Hansen. I'm {{site.position}} at <a href="{{site.company_url}}"> {{site.company}}</a>
       where I work on a clinical decision support system. I have Ph.D. in experimental physics.
-      This is where I write about data science and related topics.
+      This is where I document my recreational coding activities.
     </p>
   </div>
   <div class="posts">
@@ -18,13 +18,13 @@ title: Mikkel Klitzing Hartmann Hansen
     {% unless forloop.first %}
     </ul>
     {% endunless %}
-    <h1 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h1>
+    <h1 id="y{{post.date | date: "%Y"}}" style="text-align: left;">{{ currentdate }}</h1>
     <ul>
       {% assign date = currentdate %}
       {% endif %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="date">{{ post.date | date_to_string }}</span>
+        <span class="date">{{ post.date | date: "%d %b" }}</span>
       </li>
       {% if forloop.last %}
     </ul>

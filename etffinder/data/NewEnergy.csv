@@ -1,0 +1,40 @@
+Ticker,Name,Sector,Weight,Country
+VWS,VESTAS WIND SYSTEMS A/S,Industrials,9.08,DNK
+ORSTED,Orsted A/S,Utilities,7.33,DNK
+CARR,CARRIER GLOBAL CORP,Industrials,6.24,USA
+PLUG,PLUG POWER INC,Industrials,5.41,USA
+STM,STMICROELECTRONICS NV,Information Technology,4.8,NLD
+ENPH,ENPHASE ENERGY INC,Industrials,3.92,USA
+6762,TDK CORP,Information Technology,3.61,JPN
+NIBEB,NIBE INDUSTRIER AB-B SHS,Industrials,3.12,SWE
+SEDG,SOLAREDGE TECHNOLOGIES INC,Information Technology,3.1,ISR
+RUN,SUNRUN INC,Industrials,3.01,USA
+VER,Verbund AG,Utilities,2.35,AUT
+CREE,CREE INC,Information Technology,2.17,USA
+KSP,KINGSPAN GROUP PLC,Industrials,2.12,IRL
+AQN,Algonquin Power & Utilities Co,Utilities,1.95,CAN
+OLED,UNIVERSAL DISPLAY CORP,Information Technology,1.91,USA
+SGRE,Siemens  Gamesa Renewable Ener,Industrials,1.89,ESP
+BWA,BORGWARNER INC,Consumer Discretionary,1.86,USA
+FSLR,FIRST SOLAR INC,Information Technology,1.78,USA
+NPI,Northland Power Inc,Utilities,1.49,CAN
+BLDP,BALLARD POWER SYSTEMS INC,Industrials,1.25,CAN
+CWEN,Clearway Energy Inc,Utilities,1.23,USA
+NEL,NEL ASA,Industrials,1.11,NOR
+FCEL,FUELCELL ENERGY INC,Industrials,1.11,USA
+BE,BLOOM ENERGY CORP- A,Industrials,1.09,USA
+NEP,NEXTERA ENERGY PARTNERS LP,Utilities,1.05,USA
+ORA,ORMAT TECHNOLOGIES INC,Utilities,1.04,USA
+RBC,REGAL-BELOIT CORP,Industrials,1.01,USA
+SCATC,SCATEC SOLAR ASA,Utilities,0.97,NOR
+EDPR,EDP RENOVAVEIS SA,Utilities,0.86,ESP
+SOI,S.O.I.T.E.C.,Information Technology,0.85,FRA
+BLX,BORALEX INC -A,Utilities,0.81,CAN
+AYI,ACUITY BRANDS INC,Industrials,0.78,USA
+AEIS,ADV ENERGY INDS,Information Technology,0.74,USA
+DLG,DIALOG SEMI,Information Technology,0.7,GBR
+REGI,RENEWABLE ENERGY GROUP INC,Energy,0.61,USA
+NEOEN,NEOEN SA,Utilities,0.6,FRA
+INE,INNERGEX RENEWABLE ENERGY,Utilities,0.6,CAN
+ACA,ARCOSA INC - W/I,Industrials,0.53,USA
+AY,Atlantica Yield plc,Utilities,0.5,ESP

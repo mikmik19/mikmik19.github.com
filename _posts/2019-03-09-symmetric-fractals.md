@@ -9,7 +9,7 @@ Hovering over the small images will bring them in focus.
 
 <center>
     <div>
-        <img id="main_image" src="../../../../assets/img/symmetric-fractals/fractal-0.png" width="70%">
+        <img id="main_image" src="/assets/img/symmetric-fractals/fractal-0.png" width="70%">
     </div>
     <div id="placeholder"></div>
 </center>
@@ -18,6 +18,5 @@ The idea for these illustration is taken from te book [Symmetry in Chaos](https:
 
 Next I want to reproduce the figures from the chapter on Quilts – tilings created from symmetric icons.
 
-<link rel="stylesheet" href="../../../../css/strange-attractors.css">
-<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
-<script src="../../../../js/symmetric-fractals/symmetric-fractals.js"></script>
+<link rel="stylesheet" href="/css/strange-attractors.css">
+<script src="/js/symmetric-fractals/symmetric-fractals.js"></script>

@@ -1,0 +1,97 @@
+Ticker,Name,Sector,Weight,Country
+TSLA,TESLA INC,Consumer Discretionary,5.68,United States
+1211,BYD LTD H,Consumer Discretionary,4.6,China
+000270,KIA MOTORS CORP,Consumer Discretionary,3.45,Korea (South)
+006400,SAMSUNG SDI LTD,Information Technology,2.83,Korea (South)
+GM,GENERAL MOTORS,Consumer Discretionary,2.67,United States
+005380,HYUNDAI MOTOR,Consumer Discretionary,2.56,Korea (South)
+APTV,APTIV PLC,Consumer Discretionary,2.56,United States
+IFX,INFINEON TECHNOLOGIES AG,Information Technology,2.5,Germany
+F,FORD MOTOR CO,Consumer Discretionary,2.4,United States
+STLA,STELLANTIS NV,Consumer Discretionary,2.31,Italy
+012330,HYUNDAI MOBIS LTD,Consumer Discretionary,2.3,Korea (South)
+QRVO,QORVO INC,Information Technology,2.22,United States
+HEXA B,HEXAGON B,Information Technology,2.2,Sweden
+MRVL,MARVELL TECHNOLOGY GROUP LTD,Information Technology,2.16,United States
+MXIM,MAXIM INTEGRATED PRODUCTS INC,Information Technology,2.15,United States
+VOLV B,VOLVO CLASS B,Industrials,2.09,Sweden
+NVDA,NVIDIA CORP,Information Technology,2.06,United States
+6902,DENSO CORP,Consumer Discretionary,2.05,Japan
+XLNX,XILINX INC,Information Technology,2.02,United States
+ABBN,ABB LTD,Industrials,1.95,Switzerland
+M&M,MAHINDRA AND MAHINDRA LTD,Consumer Discretionary,1.94,India
+RNO,RENAULT SA,Consumer Discretionary,1.93,France
+ETN,EATON PLC,Industrials,1.93,United States
+MARUTI,MARUTI SUZUKI INDIA LTD,Consumer Discretionary,1.92,India
+FR,VALEO SA,Consumer Discretionary,1.82,France
+LEA,LEAR CORP,Consumer Discretionary,1.82,United States
+7276,KOITO MANUFACTURING LTD,Consumer Discretionary,1.79,Japan
+BWA,BORGWARNER INC,Consumer Discretionary,1.79,United States
+7201,NISSAN MOTOR LTD,Consumer Discretionary,1.78,Japan
+ADI,ANALOG DEVICES INC,Information Technology,1.77,United States
+GRMN,GARMIN LTD,Consumer Discretionary,1.75,United States
+GNTX,GENTEX CORP,Consumer Discretionary,1.75,United States
+ALV,AUTOLIV INC,Consumer Discretionary,1.69,United States
+BMW,BMW AG,Consumer Discretionary,1.65,Germany
+7203,TOYOTA MOTOR CORP,Consumer Discretionary,1.51,Japan
+TATAMOTORS,TATA MOTORS LTD,Consumer Discretionary,1.41,India
+7267,HONDA MOTOR LTD,Consumer Discretionary,1.36,Japan
+INTC,INTEL CORPORATION CORP,Information Technology,1.29,United States
+7259,AISIN SEIKI LTD,Consumer Discretionary,1.23,Japan
+EO,FAURECIA,Consumer Discretionary,0.85,France
+VC,VISTEON CORP,Consumer Discretionary,0.77,United States
+AMBA,AMBARELLA INC,Information Technology,0.69,United States
+ADNT,ADIENT PLC,Consumer Discretionary,0.66,United States
+ASHOKLEY,ASHOK LEYLAND LTD,Industrials,0.64,India
+VNE,VEONEER INC,Consumer Discretionary,0.64,United States
+HLE,HELLA GMBH & CO KGAA,Consumer Discretionary,0.59,Germany
+MOTHERSUMI,MOTHERSON SUMI SYSTEMS LTD,Consumer Discretionary,0.57,India
+OSR,OSRAM LICHT N AG,Industrials,0.55,Germany
+6674,GS YUASA CORP,Industrials,0.55,Japan
+POM,COMPAGNIIE PLASTIC OMNIUM,Consumer Discretionary,0.53,France
+018880,HANON SYSTEMS,Consumer Discretionary,0.52,Korea (South)
+THRM,GENTHERM INC,Consumer Discretionary,0.44,United States
+7282,TOYODA GOSEI LTD,Consumer Discretionary,0.43,Japan
+EUR,EUR CASH,Cash and/or Derivatives,0.41,European Union
+BOSCHLTD,BOSCH LTD,Consumer Discretionary,0.4,India
+CIE,CIE AUTOMOTIVE SA,Consumer Discretionary,0.35,Spain
+7313,TS TECH LTD,Consumer Discretionary,0.33,Japan
+MEI,METHODE ELECTRONICS INC,Information Technology,0.3,United States
+3116,TOYOTA BOSHOKU CORP,Consumer Discretionary,0.3,Japan
+020150,ILJIN MATERIALS,Information Technology,0.3,Korea (South)
+011210,HYUNDAI WIA CORP,Consumer Discretionary,0.3,Korea (South)
+EXIDEIND,EXIDE INDUSTRIES LTD,Consumer Discretionary,0.27,India
+VOLV A,VOLVO CLASS A,Industrials,0.27,Sweden
+005387,HYUNDAI MOTOR S2 PREF,Consumer Discretionary,0.27,Korea (South)
+179,JOHNSON ELECTRIC HOLDINGS LTD,Consumer Discretionary,0.24,Hong Kong
+BMW3,BMW PREF AG,Consumer Discretionary,0.23,Germany
+CTS,CTS CORP,Information Technology,0.22,United States
+6995,TOKAI RIKA LTD,Consumer Discretionary,0.21,Japan
+SMP,STANDARD MOTOR PRODUCTS INC,Consumer Discretionary,0.19,United States
+005385,HYUNDAI MOTOR S1 PREF,Consumer Discretionary,0.18,Korea (South)
+MRE,MARTINREA INTERNATIONAL INC,Consumer Discretionary,0.18,Canada
+GUD,GUD HOLDINGS LTD,Consumer Discretionary,0.18,Australia
+AMARAJABAT,AMARA RAJA BATTERIES LTD,Industrials,0.17,India
+SRI,STONERIDGE INC,Consumer Discretionary,0.16,United States
+7220,MUSASHI SEIMITSU INDUSTRY LTD,Consumer Discretionary,0.15,Japan
+TATAMTRDVR,TATA MOTORS LTD CLASS A DVR,Consumer Discretionary,0.14,India
+7915,NISSHA LTD,Information Technology,0.14,Japan
+7296,FCC LTD,Consumer Discretionary,0.13,Japan
+7278,EXEDY CORP,Consumer Discretionary,0.12,Japan
+TEN,TENNECO INC CLASS A,Consumer Discretionary,0.11,United States
+6463,TPR LTD,Consumer Discretionary,0.11,Japan
+KRW,KRW CASH,Cash and/or Derivatives,0.09,Korea (South)
+7241,FUTABA INDUSTRIAL LTD,Consumer Discretionary,0.06,Japan
+HSBFT,CASH COLLATERAL USD HSBFT,Cash and/or Derivatives,0.06,United States
+USD,USD CASH,Cash and/or Derivatives,0.03,United States
+MYR,MYR CASH,Cash and/or Derivatives,0.02,Malaysia
+JPY,JPY CASH,Cash and/or Derivatives,0.02,Japan
+TWD,TWD CASH,Cash and/or Derivatives,0.02,Taiwan
+HKD,HKD CASH,Cash and/or Derivatives,0.01,Hong Kong
+SEK,SEK CASH,Cash and/or Derivatives,0.01,Sweden
+CAD,CAD CASH,Cash and/or Derivatives,0.01,Canada
+GBP,GBP CASH,Cash and/or Derivatives,0.0,United Kingdom
+AUD,AUD CASH,Cash and/or Derivatives,0.0,Australia
+CHF,CHF CASH,Cash and/or Derivatives,0.0,Switzerland
+SXH1,STOXX 600 AUTO MAR 21,Cash and/or Derivatives,0.0,European Union
+MARGIN_USD,FUTURES USD MARGIN BALANCE,Cash and/or Derivatives,0.0,United States

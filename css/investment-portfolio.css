@@ -1,0 +1,21 @@
+
+.stockName {
+    font-size: 3rem;
+}
+
+.row {
+    display: flex;
+}
+
+.row > * {
+    flex-basis: 20%;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.line {
+    fill: none;
+    stroke: #34a853;
+    stroke-width: 2px;
+}

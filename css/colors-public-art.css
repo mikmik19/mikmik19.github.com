@@ -1,0 +1,15 @@
+
+.colorLine {
+    fill: none;
+    stroke-width: min(3vw, 18px);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.colorLine:hover {
+    z-index: 10;
+}
+
+.clone {
+    pointer-events: none;
+}
