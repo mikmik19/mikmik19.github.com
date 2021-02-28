@@ -147,7 +147,7 @@
         data = await mergeData()
         fillHoldingsTable(data)
     }
-    d3.selectAll('input#stockInput').on('click', buttonClick)
+    d3.selectAll('input.stockInput').on('click', buttonClick)
     d3.select("#stockSearch").on('input', d => fillHoldingsTable(data))
 }
 )()

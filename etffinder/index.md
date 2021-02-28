@@ -7,7 +7,7 @@ permalink: /etffinder/
     <title>ETF Finder</title>
     <h1>ETF Finder</h1>
     <p class="subtitle">Navigating the ETF jungle.</p>
-    <input type="text">
+    Seach ETFs <input type="text">
     <div class='flexbox' id='buttons'>
         <div>
             <input type="checkbox" role="switch" value='ICLN' name="iShares Global Clean Energy" checked='true' class='stockInput'>
@@ -51,7 +51,7 @@ permalink: /etffinder/
             VanEck Vectors European Equal Weight
         </div>
     </div>
-    <input type="text" id="stockSearch">
+    Search Assets <input type="text" id="stockSearch">
     <div class='flexbox' id='holdings'></div>
 </div>
 
