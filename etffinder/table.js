@@ -1,5 +1,4 @@
-(function() {
-
+(async function() {
     async function loadData(datasets) {
         let return_value;
         await Promise.all(
@@ -45,10 +44,9 @@
                             return_value = dfd.concat({ df_list: [row, return_value], axis: 0 })
                         }
                     }
-                    
+
                     return_value = return_value.dropna({ axis: 0, inplace:false })
 
-                    
                     return_value['Weight'] = return_value['Weight'].add(return_value['Weight_1'], axis = 0)
                     return_value.sort_values({ by: "Weight", ascending: false, inplace: true })
                     return_value.drop({ 
@@ -58,9 +56,8 @@
                      });
                 }
 
-                // Average the weight. This should take into account the fraction of the 
+                // Average the weight. This should take into account the fraction of the
                 // portfolio going into the ETF.
-
                 return_value['Weight'] = return_value['Weight'].div(dfs.length, axis = 0)
                 return return_value
             }
@@ -69,7 +66,7 @@
     }
 
     function formatDataFrameToListOfObjects(df) {
-        // This function is here because we need the data to 
+        // This function is here because we need the data to
         // be formatted as a list of JavaScript Dictionaries.
         let data = []
         colNames = df.columns
@@ -97,38 +94,43 @@
         return datasets
     }
 
-    async function fillHoldingsTable(filename = '') {
+    async function mergeData() {
         d3.selectAll('div.row').remove()
-
         let datasets = checkData()
 
         if (datasets.length == 0) {
-            
             return null
         }
 
         const rawData = await loadData(datasets)
         const data = formatDataFrameToListOfObjects(rawData)
-        
+        return data
+    }
+
+    function fillHoldingsTable(data) {
+        d3.selectAll('div.row').remove()
+        let searchString = d3.select("#stockSearch")[0][0].value.toUpperCase()
         let table = d3.select('#holdings') 
-        
         table.selectAll('div.row')
             .data(data).enter()
             .append('div').classed('row', true)
             .each(function (d, i) {
-                let row = d3.select(this);
+                let row = d3.select(this)
+                if (d.Name.includes(searchString)) {
+                    row.append('div')
+                        .classed('ticker', true)
+                        .text(d => d.Ticker)
 
-                row.append('div')
-                    .classed('ticker', true)
-                    .text(d => d.Ticker)
+                    row.append('div')
+                        .classed('name', true)
+                        .text(d => d.Name)
 
-                row.append('div')
-                    .classed('name', true)
-                    .text(d => d.Name)
-
-                row.append('div')
-                    .classed('weight', true)
-                    .text(d => d.Weight.toFixed(2))
+                    row.append('div')
+                        .classed('weight', true)
+                        .text(d => d.Weight.toFixed(2))
+                } else {
+                    row.remove()
+                }
             })
 
         let tableHeader = table.insert('div', ":first-child").classed('row', true)
@@ -137,12 +139,15 @@
         tableHeader.append('div').classed('tableHeader', true).classed('weight', true).text('Weight(%)')
     };
 
-    fillHoldingsTable(filename='ICLN')
 
-    function buttonClick() {
-        let filename = d3.select(this).property('value')
-        fillHoldingsTable(filename = filename)
+    let data = await mergeData()
+    fillHoldingsTable(data)
+
+    async function buttonClick() {
+        data = await mergeData()
+        fillHoldingsTable(data)
     }
-    d3.selectAll('input').on('click', buttonClick)
+    d3.selectAll('input#stockInput').on('click', buttonClick)
+    d3.select("#stockSearch").on('input', d => fillHoldingsTable(data))
 }
 )()

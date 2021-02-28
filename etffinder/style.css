@@ -1,3 +1,31 @@
+:root {
+    --background-color: white;
+    --primary-color: #59f68d;
+}
+
+body {
+    width: 80%;
+    align-content: center;
+    margin: auto;
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+p.subtitle {
+    margin-top: 0;
+}
+
+div.header {
+    
+}
+
 #book-search {
     margin: auto;
     text-align: center;
@@ -28,7 +56,6 @@ div.row, div.headerRow {
     flex-shrink: 1;
     column-gap: 2rem;
     text-align: left;
-    font-size: 1.5rem;
 }
 
 .name {
