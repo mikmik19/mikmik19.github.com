@@ -5,6 +5,7 @@
 
 body {
     width: 80%;
+    max-width: 800px;
     align-content: center;
     margin: auto;
     font-size: 1rem;
@@ -23,7 +24,7 @@ p.subtitle {
 }
 
 div.header {
-    
+
 }
 
 #book-search {
