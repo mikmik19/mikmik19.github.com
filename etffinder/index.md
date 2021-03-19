@@ -1,11 +1,13 @@
 ---
-layout: page
-title: ETF Finder
 permalink: /etffinder/
 ---
 
+
 <div id="book-search-container">
-    <h2>Select One Or More ETFs</h2>
+    <title>ETF Finder</title>
+    <h1>ETF Finder</h1>
+    <p class="subtitle">Navigating the ETF jungle.</p>
+    Seach ETFs <input type="text">
     <div class='flexbox' id='buttons'>
         <div>
             <input type="checkbox" role="switch" value='ICLN' name="iShares Global Clean Energy" checked='true' class='stockInput'>
@@ -52,6 +54,7 @@ permalink: /etffinder/
     <h2>Number of Assets</h2>
     <div class='flexbox' id='overview'></div>
     <h2>All Assets</h2>
+    Search Assets <input type="text" id="stockSearch">
     <div class='flexbox' id='holdings'></div>
 </div>
 
