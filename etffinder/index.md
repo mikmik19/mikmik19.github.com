@@ -5,6 +5,7 @@ permalink: /etffinder/
 ---
 
 <div id="book-search-container">
+    <h2>Select One Or More ETFs</h2>
     <div class='flexbox' id='buttons'>
         <div>
             <input type="checkbox" role="switch" value='ICLN' name="iShares Global Clean Energy" checked='true' class='stockInput'>
@@ -48,6 +49,9 @@ permalink: /etffinder/
             VanEck Vectors European Equal Weight
         </div>
     </div>
+    <h2>Number of Assets</h2>
+    <div class='flexbox' id='overview'></div>
+    <h2>All Assets</h2>
     <div class='flexbox' id='holdings'></div>
 </div>
 
