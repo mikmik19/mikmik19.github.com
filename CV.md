@@ -7,108 +7,48 @@ permalink: /cv/
 <link rel="stylesheet" href="/css/cv.css" />
 <link rel="stylesheet" type="text/css" media="print" href="/css/cv-print.css" />
 
-# Mikkel Hansen
+# About
 
-<div id="contact-container">
-    <div class="flex-item">
-        <table style="width:100%; margin:auto">
-        <tr>
-            <td>🗓</td>
-            <td>19-09-1989</td> 
-            <td>✉️</td>
-            <td>mikkelheart@gmail.com</td> 
-        </tr>
-        <tr>
-            <td>🌍</td>
-            <td>Danish</td> 
-            <td>📞</td>
-            <td>+45 31 43 47 83</td> 
-        </tr>
-        <tr>
-            <td>🏠</td>
-            <td>Lindeskellet 10</td>
-            <td>🔗</td>
-            <td>linkedin.com/in/mikkelhartmann</td> 
-        </tr>
-        <tr>
-            <td></td>
-            <td>Frederiksberg</td> 
-            <td>🐙</td>
-            <td>github.com/mikkelhartmann</td> 
-        </tr>
-        <tr>
-            <td></td>
-            <td>Denmark</td> 
-            <td>📝</td>
-            <td>mikkelhartmann.dk</td> 
-        </tr>
-        </table>
-    </div>
-    <div class="fixed">
-        <img src="/assets/img/MikkelHartmannJensenNarrow.jpg" width="90%">
-    </div>
-</div>
-
-I am Head of Data Science at <a href="{{site.company_url}}"> {{site.company}}</a> where I work on a clinical decision support system. I have a strong background in mathematics and physics.
+I am Mikkel Hansen, an experience Data Scientist. I have a strong background in mathematics and physics.
 
 # Work Experience
 
-<hr>
 
-<table style="width:100%">
-  <tr>
-    <td style="width:20%">2019 - now</td>
-    <td><b>Head of Data Science</b> at Vital Beats</td> 
-  </tr>
-  <tr>
-    <td style="width:20%">2017 - 2019</td>
-    <td><b>Data Scientist</b> at Vital Beats</td> 
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-        I work on a clinical decision support system. Some main project I work on include:
-    <ul>
-        <li>
-            Analyzing electrocardiograms: I build a tool that clinicians use to quickly review large amounts of ECG data. It used a mixture of signal processing and machine learning.
-        </li>
-        <li>
-            Predicting reoccurring cardiac events: Using a combination of cardiac device data and medical history to assess the likelihood that a patient will experience another cardiac event within three weeks. 
-        </li>
-        <li>
-            Patient risk stratification: Identify patients in need of clinical attention.
-        </li>
-    </ul>
-    </td> 
-  </tr>
-  <tr>
-    <td style="width:20%">2013 - 2017</td>
-    <td><b>Ph.D.</b> at Roskilde University and Laboratoire Léon Brillouin</td> 
-  </tr>
-  <tr>
-    <td></td>
-    <td>
-        I studied the structure and dynamics of hydrogen-bonded liquids using a variety of different experimental techniques.
-    </td>
-  </tr>
-</table>
+## Vital Beats
+4 years
+
+I focused on understanding our data and finding problems that could be meaningfully addressed using data science and machine learning. I help set the direction of Vital Beats' Data Science efforts while remaining hands-on.
+
+- Grew the Data Science team from 1 to 5 employees.
+- Assisted in attracting soft funding and investments. 
+- Developed algorithm to predict severe cardiac arrhythmia for cardiac device patients.
+- Developed algorithms to characterise ECG data and suggest medical diagnoses.
+- Set up system for reproducible research based on Jupiter Notebook and internal Python Modules.
+- Conduct user studies of arrhythmia prediction at the hospital.
+- Set up a Data Warehouse on a Windows machine.
+
+### Head of Data Science 
+Mar 2019 - Mar 2021 (2 years)
+
+### Data Scientist
+Apr 2017 - Mar 2019 (2 years)
+
+
+
+## Roskilde University and Laboratoire Léon Brillouin
+3 years
+I studied the structure and dynamics of hydrogen-bonded liquids using a variety of different experimental techniques. The focus was on understanding the dynamics of supra-molecular clusters in a large range of temperatures, including how the dynamics influence the crystallization process.
+
+- Presentation.
+
+
+### Ph. D. Student
+Dec 2013 - Mar 2017 (3 years)
+
 
 # Education
-
-<hr>
-
-<table style="width:100%">
-  <tr>
-    <td style="width:20%">2011 - 2013</td>
-    <td><b>Masters in Math and Physics</b> from Roskilde University</td> 
-  </tr>
-  <tr>
-    <td style="width:20%">2008 - 2011</td>
-    <td><b>Bachelor in Math and Physics</b> from Roskilde University</td> 
-  </tr>
-</table>
-
-<hr>
+## Masters in Math and Physics from Roskilde University
+## Bachelor in Math and Physics from Roskilde University 
 
 # Skills
 

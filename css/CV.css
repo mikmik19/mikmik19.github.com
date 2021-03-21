@@ -17,20 +17,23 @@ td {
 
 #contact-container {
   display: flex;
+  flex-wrap: wrap;
   padding: 0.5em;
-  /* border: solid 2px var(--secondary-color); */
   border-radius: 1em;
 }
+
 #contact-container img {
   border-radius: 1em;
   vertical-align: middle;
+  max-width: 200px;
 }
-
 .fixed {
   width: 31%;
 }
 .flex-item {
+  flex-basis: 40%;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
 table {
